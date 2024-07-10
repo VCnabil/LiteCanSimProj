@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Drawing;
 
 namespace LiteCanSimProj._Globalz
 {
@@ -70,6 +71,30 @@ namespace LiteCanSimProj._Globalz
             if (number > 7) number = 7;
             if (number < 0) number = 0;
             return (number, text);
+        }
+
+        private static readonly Color[] colors = new Color[]
+{
+                        Color.FromArgb(255, 0, 0, 0),       // Black
+                        Color.FromArgb(255, 150, 60, 60),   // Brown
+                        Color.FromArgb(255, 255, 0, 0),     // Red
+                        Color.FromArgb(255, 255, 165, 0),   // Orange
+                        Color.FromArgb(255, 255, 255, 0),   // Yellow
+                        Color.FromArgb(255, 0, 128, 0),     // Green
+                        Color.FromArgb(255, 0, 0, 255),     // Blue
+                        Color.FromArgb(255, 120, 0, 120),   // Purple
+                        Color.FromArgb(255, 128, 128, 128)  // Gray
+};
+        public static Color GetColorByIndex(int index)
+        {
+            if (index >= 0 && index < colors.Length)
+            {
+                return colors[index];
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException("Index out of range");
+            }
         }
     }
 }

@@ -84,10 +84,65 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_Globalz\EventsManagerLib.cs" />
     <Compile Include="_Globalz\G_Paths.cs" />
     <Compile Include="_Globalz\G_Properties.cs" />
     <Compile Include="_Globalz\Helpers.cs" />
     <Compile Include="_Globalz\KvsrManager.cs" />
+    <Compile Include="_MainUIs\CanManipUCs\UCManipMultiByte_CTRL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\CanManipUCs\UCManipMultiByte_CTRL.Designer.cs">
+      <DependentUpon>UCManipMultiByte_CTRL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MainUIs\CanManipUCs\UC_DataDisplayCTRL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\CanManipUCs\UC_DataDisplayCTRL.Designer.cs">
+      <DependentUpon>UC_DataDisplayCTRL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MainUIs\DynPosUCs\UC_360Heading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\DynPosUCs\UC_360Heading.Designer.cs">
+      <DependentUpon>UC_360Heading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MainUIs\DynPosUCs\UC_360Rot2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\DynPosUCs\UC_360Rot2.Designer.cs">
+      <DependentUpon>UC_360Rot2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MainUIs\DynPosUCs\UC_360Rotor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\DynPosUCs\UC_360Rotor.Designer.cs">
+      <DependentUpon>UC_360Rotor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MainUIs\KvaserUCs\ucf_KvaserCanModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\KvaserUCs\ucf_KvaserCanModule.Designer.cs">
+      <DependentUpon>ucf_KvaserCanModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MainUIs\MainForms\CanManip_V0Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\MainForms\CanManip_V0Form.Designer.cs">
+      <DependentUpon>CanManip_V0Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MainUIs\MainForms\PGN_Manager_ViewerGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\MainForms\PGN_Manager_ViewerGUI.Designer.cs">
+      <DependentUpon>PGN_Manager_ViewerGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MainUIs\_SizingUCs\UCSizing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\_SizingUCs\UCSizing.Designer.cs">
+      <DependentUpon>UCSizing.cs</DependentUpon>
+    </Compile>
     <Compile Include="_Serialization\DataObjectsDefinition\Project_DataObject.cs" />
     <Compile Include="_Serialization\DataObjectsDefinition\Root_VC_PGN_Text_Object.cs" />
     <Compile Include="_Serialization\Logic\CTRL_typeCaster.cs" />
@@ -96,6 +151,9 @@
     <Compile Include="_Serialization\SerializerDeserializers\Handler_JSONtoJSON.cs" />
     <Compile Include="_Serialization\SerializerDeserializers\Handler_JSONtoTEXT.cs" />
     <Compile Include="_Serialization\SerializerDeserializers\Handler_TEXTtoJSON.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -105,6 +163,33 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="_MainUIs\CanManipUCs\UCManipMultiByte_CTRL.resx">
+      <DependentUpon>UCManipMultiByte_CTRL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\CanManipUCs\UC_DataDisplayCTRL.resx">
+      <DependentUpon>UC_DataDisplayCTRL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\DynPosUCs\UC_360Heading.resx">
+      <DependentUpon>UC_360Heading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\DynPosUCs\UC_360Rot2.resx">
+      <DependentUpon>UC_360Rot2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\DynPosUCs\UC_360Rotor.resx">
+      <DependentUpon>UC_360Rotor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\KvaserUCs\ucf_KvaserCanModule.resx">
+      <DependentUpon>ucf_KvaserCanModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\MainForms\CanManip_V0Form.resx">
+      <DependentUpon>CanManip_V0Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\MainForms\PGN_Manager_ViewerGUI.resx">
+      <DependentUpon>PGN_Manager_ViewerGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\_SizingUCs\UCSizing.resx">
+      <DependentUpon>UCSizing.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -125,14 +210,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="_MainUIs\" />
-    <Folder Include="_Proj_Data_Dir\_OutDir\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="_Proj_Data_Dir\_BaseDir\_GroundZero_bkp.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="_Proj_Data_Dir\_BaseDir\_GroundZero.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="_Proj_Data_Dir\_OutDir\keephere.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

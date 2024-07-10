@@ -1,0 +1,28 @@
+{
+  "Title": "ln",
+  "AllPgnList": [
+    {
+      "IDpgn": 1,
+      "PGN_int": 419364928,
+      "PGN_strHEX": "0x18FF0040",
+      "DESCpgn": "from Drive Control Unit  left NOZZ   ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Noz2 ",
+          "MIN": 0,
+          "MAX": 1024,
+          "DEF": 512,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    }
+  ]
+}

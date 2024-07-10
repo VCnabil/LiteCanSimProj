@@ -1,0 +1,600 @@
+{
+  "Title": "B_E_B",
+  "AllPgnList": [
+    {
+      "IDpgn": 1,
+      "PGN_int": 419390761,
+      "PGN_strHEX": "0x18FF6529",
+      "DESCpgn": "from Control Unit    Dynamic Positioning Informati",
+      "CtrlList": [
+        {
+          "ID": 1,
+          "DESC": "tryOVRb2b3 ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. isBlocked",
+            "1. ovrANDhelm",
+            "2. ovrANDjoy"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 0,
+          "DESC": "DP Off,blocked,ovr,on ",
+          "MIN": 0,
+          "MAX": 4,
+          "DEF": 0,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 2,
+      "PGN_int": 419386153,
+      "PGN_strHEX": "0x18FF5329",
+      "DESCpgn": "from Control Unit    System Information    ",
+      "CtrlList": [
+        {
+          "ID": 4,
+          "DESC": "opMode ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 1,
+          "INDEXLO": 4,
+          "INDEXHI": 4,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. tr_dk"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 6,
+          "DESC": "AUTOPILOT ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 6,
+          "INDEXHI": 6,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. AutopilotON",
+            "1. Turn to Port",
+            "2. Turn to Stbd",
+            "4. TillerSelection",
+            "5. DPSwitch_Sta2",
+            "6. bAP_OverrideInEffect",
+            "7. apState"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "AciveStation ",
+          "MIN": 0,
+          "MAX": 2,
+          "DEF": 1,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 3,
+      "PGN_int": 419387689,
+      "PGN_strHEX": "0x18FF5929",
+      "DESCpgn": "from Control Unit    Raw Switch states    ",
+      "CtrlList": [
+        {
+          "ID": 6,
+          "DESC": "Autopilot ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 6,
+          "INDEXHI": 6,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Autopilot Switch",
+            "1. Autopilot Steer Port",
+            "2. Autopilot Steer Starboard",
+            "3. Operating Mode Docking",
+            "4. AutoPilot Override",
+            "5. DPSwitch_Sta2",
+            "6. bAP_OverrideInEffect",
+            "7. if Blocked_DPinControl"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 7,
+          "DESC": "tillerselect ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 7,
+          "INDEXHI": 7,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "3. Sta1 Tiller Selec",
+            "6. Flip_Dutycycle"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 4,
+      "PGN_int": 419363881,
+      "PGN_strHEX": "0x18FEFC29",
+      "DESCpgn": "from Control Unit    Indication    ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Port BucketPos ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 128,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "AP_OVERRIDE_HELM_PERCENT ",
+          "MIN": 0,
+          "MAX": 100,
+          "DEF": 0,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "Stbd NozzlePos ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 128,
+          "INDEXLO": 2,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 3,
+          "DESC": "Port NozzlePos ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 128,
+          "INDEXLO": 3,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 5,
+          "DESC": "Stbd BucketPos ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 128,
+          "INDEXLO": 5,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 6,
+          "DESC": "Port EngineCMD ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 141,
+          "INDEXLO": 6,
+          "INDEXHI": 6,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 7,
+          "DESC": "Stbd EngineCMD ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 142,
+          "INDEXLO": 7,
+          "INDEXHI": 7,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 5,
+      "PGN_int": 419391017,
+      "PGN_strHEX": "0x18FF6629",
+      "DESCpgn": "from Control Unit    DP Diagnostics 1    ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "JoyX ",
+          "MIN": 0,
+          "MAX": 1000,
+          "DEF": 430,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "JoyY ",
+          "MIN": 0,
+          "MAX": 1000,
+          "DEF": 390,
+          "INDEXLO": 2,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 4,
+          "DESC": "Helm ",
+          "MIN": 0,
+          "MAX": 1000,
+          "DEF": 270,
+          "INDEXLO": 4,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 6,
+          "DESC": "IdleRPM ",
+          "MIN": 0,
+          "MAX": 4000,
+          "DEF": 700,
+          "INDEXLO": 6,
+          "INDEXHI": 7,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 6,
+      "PGN_int": 419377193,
+      "PGN_strHEX": "0x18FF3029",
+      "DESCpgn": "from Control Unit    CU to Clutch Panel Message   ",
+      "CtrlList": [
+        {
+          "ID": 3,
+          "DESC": "Minor Software Version ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 1048,
+          "INDEXLO": 3,
+          "INDEXHI": 4,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 5,
+          "DESC": "Software Revision ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 9166,
+          "INDEXLO": 5,
+          "INDEXHI": 6,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "Major Software Version ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 18,
+          "INDEXLO": 2,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 7,
+      "PGN_int": 419390505,
+      "PGN_strHEX": "0x18FF6429",
+      "DESCpgn": "from Control Unit    Calibration    ",
+      "CtrlList": [
+        {
+          "ID": 1,
+          "DESC": "CalStatus ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 8,
+      "PGN_int": 419383593,
+      "PGN_strHEX": "0x18FF4929",
+      "DESCpgn": "from Control Unit    Faults    ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Sensor Faults ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Stbd Bucket",
+            "1. Port Bucket",
+            "2. Stbd Nozzle",
+            "3. Port Nozzle",
+            "4. Stbd Tab",
+            "5. Port Tab"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "Non Follow Up Faults ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Stbd Bucket NFU",
+            "1. Port Bucket NFU",
+            "2. Stbd Nozzle NFU",
+            "3. Port Nozzle NFU",
+            "4. Stbd Tab NFU",
+            "5. Port Tab NFU"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "Local Station 1 Comm Faults ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 2,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. LocalSta 1 Idle Knob Fault",
+            "1. LocalSta 1 JoyStick Z Fault",
+            "2. LocalSta 1 Stbd Lever Fault",
+            "3. LocalSta 1 Port Lever Fault",
+            "4. LocalSta 1 Joy-Y Fault",
+            "5. LocalSta 1 Joy-X Fault",
+            "6. LocalSta 1 Tiller 2 Fault"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 3,
+          "DESC": "Local Station 2 comm Faults ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 3,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. LocalSta 2 Idle Knob Fault",
+            "1. LocalSta 2 JoyStick Z Fault",
+            "2. LocalSta 2 Stbd Lever Fault",
+            "3. LocalSta 2 Port Lever Fault",
+            "4. LocalSta 2 Joy-Y Fault",
+            "5. LocalSta 2 Joy-X Fault"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 4,
+          "DESC": "Remote Station Faults ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 4,
+          "INDEXHI": 4,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. RemoteSta Idle Knob Fault",
+            "1. RemoteSta JoyStick Z Fault",
+            "2. RemoteSta Stbd Lever Fault",
+            "3. RemoteSta Port Lever Fault",
+            "4. RemoteSta Joy-Y Fault",
+            "5. RemoteSta Joy-X Fault"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 5,
+          "DESC": "General Faults ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 5,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Port Trim Fault",
+            "1. Port Roll Fault",
+            "2. AutoCal Fault",
+            "3. Autopilot Out of Range Fault",
+            "4. Stbd Trim Joystick Fault",
+            "5. Stbd Roll Joystick Fault",
+            "6. Hardware Fault"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 6,
+          "DESC": "Docking Faults ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 6,
+          "INDEXHI": 6,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Docking Mode Interlock Fault",
+            "1. Docking_Mode Clutch Mismatch",
+            "2. Docking_Mode Inboard Clutch In"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 7,
+          "DESC": "Communication Faults ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 7,
+          "INDEXHI": 7,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. CAN Fault",
+            "1. Station 1 Clutch Panel CAN Fau",
+            "2. Station 2 Clutch Panel CAN Fau",
+            "3. Station 3 Clutch Panel CAN Fau",
+            "5. DP LCD CAN Fault",
+            "6. Remote Station Controller CAN "
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    }
+  ]
+}

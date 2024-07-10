@@ -15,6 +15,8 @@ namespace LiteCanSimProj
         public Form1()
         {
             InitializeComponent();
+
+
         }
     }
 }
