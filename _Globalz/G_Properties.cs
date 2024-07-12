@@ -8,6 +8,8 @@ namespace LiteCanSimProj._Globalz
 {
     public static class G_Properties
     {
+
+        public static readonly string G_DefaultPortName = "COM11";
         public static bool USER_IS_NABIL = true;
         public static bool G_SuppressMessageBoxes = true;
         public static readonly int G_PGN_Description_MaxLength = 50;

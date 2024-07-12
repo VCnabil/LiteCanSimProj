@@ -1,0 +1,43 @@
+{
+  "Title": "FF78_pingCOMMAND",
+  "AllPgnList": [
+    {
+      "IDpgn": 1,
+      "PGN_int": 419395625,
+      "PGN_strHEX": "0x18FF7829",
+      "DESCpgn": "from Control Unit   Ping 78 commands  ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "PingComannand ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 7,
+          "DESC": "ResetPingCommand ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 7,
+          "INDEXHI": 7,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    }
+  ]
+}

@@ -59,7 +59,7 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 132);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(2390, 1115);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(2390, 1307);
             this.flowLayoutPanel1.TabIndex = 8;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -84,7 +84,7 @@
             // cb_DoPingpong
             // 
             this.cb_DoPingpong.AutoSize = true;
-            this.cb_DoPingpong.Location = new System.Drawing.Point(1891, 24);
+            this.cb_DoPingpong.Location = new System.Drawing.Point(1757, 17);
             this.cb_DoPingpong.Name = "cb_DoPingpong";
             this.cb_DoPingpong.Size = new System.Drawing.Size(160, 29);
             this.cb_DoPingpong.TabIndex = 41;
@@ -156,18 +156,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Display.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Display.Location = new System.Drawing.Point(13, 1263);
+            this.textBox_Display.Location = new System.Drawing.Point(4, 1466);
             this.textBox_Display.Margin = new System.Windows.Forms.Padding(0);
             this.textBox_Display.Multiline = true;
             this.textBox_Display.Name = "textBox_Display";
             this.textBox_Display.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_Display.Size = new System.Drawing.Size(375, 410);
+            this.textBox_Display.Size = new System.Drawing.Size(2398, 460);
             this.textBox_Display.TabIndex = 45;
             // 
             // CanManip_V0Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(2425, 1969);
             this.Controls.Add(this.textBox_Display);
             this.Controls.Add(this.label_selectedFilePath);

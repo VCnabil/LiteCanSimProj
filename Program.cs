@@ -17,8 +17,8 @@ namespace LiteCanSimProj
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-            Application.Run(new CanManip_V0Form());
+            Application.Run(new Form1());
+            //Application.Run(new CanManip_V0Form());
         }
     }
 }
