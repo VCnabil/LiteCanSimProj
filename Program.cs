@@ -17,9 +17,10 @@ namespace LiteCanSimProj
         {
             Application.EnableVisualStyles();
             //Application.Run(new Form1());
-            Application.Run(new FormBridge());
-           // Application.Run(new Form2());
+            //  Application.Run(new FormBridge());
+            // Application.Run(new Form2());
             //Application.Run(new CanManip_V0Form());
+            Application.Run(new BridgeForm());
         }
     }
 }

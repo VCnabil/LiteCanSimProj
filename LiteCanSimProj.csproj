@@ -76,6 +76,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BridgeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BridgeForm.Designer.cs">
+      <DependentUpon>BridgeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     <Compile Include="_Serialization\SerializerDeserializers\Handler_JSONtoJSON.cs" />
     <Compile Include="_Serialization\SerializerDeserializers\Handler_JSONtoTEXT.cs" />
     <Compile Include="_Serialization\SerializerDeserializers\Handler_TEXTtoJSON.cs" />
+    <EmbeddedResource Include="BridgeForm.resx">
+      <DependentUpon>BridgeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
