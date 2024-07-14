@@ -343,12 +343,12 @@ namespace LiteCanSimProj
 
         private bool IsValid103Message(string message)
         {
-            int numberOfGTs = message.Count(c => c == '[');
-            int numberOfSTs = message.Count(c => c == ']');
+            int numberOfGTs = message.Count(c => c == '<');
+            int numberOfSTs = message.Count(c => c == '>');
             if (numberOfGTs > 1) return false;
             if (numberOfSTs > 1) return false;
 
-            if (message.StartsWith("[A") && message.Count(c => c == ';') == 3 && message.EndsWith("]"))
+            if (message.StartsWith("<A") && message.Count(c => c == ',') == 3 && message.EndsWith(">"))
             {
                 return true;
             }
