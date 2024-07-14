@@ -106,5 +106,9 @@ namespace LiteCanSimProj._Globalz
             }
         }
 
+
+        public SerialPort GetActivatedPort() {
+            return this._serialPort;
+        }
     }
 }

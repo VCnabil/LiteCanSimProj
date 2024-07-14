@@ -43,13 +43,14 @@
             this.textBoxReceived2 = new System.Windows.Forms.TextBox();
             this.uC_SerialConUI_ALT1 = new LiteCanSimProj._MainUIs.KvaserUCs.UC_SerialConUI_ALT();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.button_bridge = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBoxReceived
+            // textBoxReceived1
             // 
             this.textBoxReceived1.Location = new System.Drawing.Point(565, 12);
             this.textBoxReceived1.Multiline = true;
-            this.textBoxReceived1.Name = "textBoxReceived";
+            this.textBoxReceived1.Name = "textBoxReceived1";
             this.textBoxReceived1.Size = new System.Drawing.Size(1061, 428);
             this.textBoxReceived1.TabIndex = 1;
             // 
@@ -60,20 +61,20 @@
             this.textBox_messageToSend.Size = new System.Drawing.Size(386, 31);
             this.textBox_messageToSend.TabIndex = 2;
             // 
-            // button_send
+            // button_send1
             // 
             this.button_send1.Location = new System.Drawing.Point(443, 239);
-            this.button_send1.Name = "button_send";
+            this.button_send1.Name = "button_send1";
             this.button_send1.Size = new System.Drawing.Size(90, 38);
             this.button_send1.TabIndex = 3;
             this.button_send1.Text = "send";
             this.button_send1.UseVisualStyleBackColor = true;
             // 
-            // checkBox_autoSend
+            // checkBox_autoSend1
             // 
             this.checkBox_autoSend1.AutoSize = true;
             this.checkBox_autoSend1.Location = new System.Drawing.Point(22, 199);
-            this.checkBox_autoSend1.Name = "checkBox_autoSend";
+            this.checkBox_autoSend1.Name = "checkBox_autoSend1";
             this.checkBox_autoSend1.Size = new System.Drawing.Size(139, 29);
             this.checkBox_autoSend1.TabIndex = 4;
             this.checkBox_autoSend1.Text = "auto send";
@@ -147,11 +148,21 @@
             this.uC_SerialConUI_ALT1.Size = new System.Drawing.Size(545, 182);
             this.uC_SerialConUI_ALT1.TabIndex = 11;
             // 
+            // button_bridge
+            // 
+            this.button_bridge.Location = new System.Drawing.Point(77, 350);
+            this.button_bridge.Name = "button_bridge";
+            this.button_bridge.Size = new System.Drawing.Size(226, 70);
+            this.button_bridge.TabIndex = 12;
+            this.button_bridge.Text = "button1";
+            this.button_bridge.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1676, 979);
+            this.Controls.Add(this.button_bridge);
             this.Controls.Add(this.uC_SerialConUI_ALT1);
             this.Controls.Add(this.lblPortStatus2);
             this.Controls.Add(this.checkBox_autoSend2);
@@ -188,6 +199,7 @@
         private System.Windows.Forms.TextBox textBoxReceived2;
         private _MainUIs.KvaserUCs.UC_SerialConUI_ALT uC_SerialConUI_ALT1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Button button_bridge;
     }
 }
 
