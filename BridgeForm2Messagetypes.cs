@@ -296,7 +296,7 @@ namespace LiteCanSimProj
                         break;
                     }
                 }
-                else
+                else if (startIdx103 != -1)
                 {
                     endIdx103 = bufferContent.IndexOf(']', startIdx103);
                     if (endIdx103 != -1)
@@ -342,7 +342,6 @@ namespace LiteCanSimProj
                 messageBuffer.Append(bufferContent);
             }
         }
-
         private void WriteToPort(SerialPort port, string message)
         {
             if (port.IsOpen)
