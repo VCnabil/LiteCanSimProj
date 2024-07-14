@@ -259,6 +259,16 @@ namespace LiteCanSimProj
                 if (endIdx != -1)
                 {
                     string message = bufferContent.Substring(startIdx, endIdx - startIdx + 1);
+                    //if message contains more than 1 '<' trim the message to the last '<'
+                    if (message.Count(c => c == '<') > 1)
+                    {
+                        int index_of_last_ST = message.LastIndexOf('<');
+                        message = message.Substring(index_of_last_ST);
+                    }
+                    if (message.Count(c => c == '>') > 1)
+                    {
+                        message = message.Substring(message.LastIndexOf('<'));
+                    }
 
                     if (IsValid104Message(message)) // Check if it is a valid 104 message
                     {
@@ -319,6 +329,10 @@ namespace LiteCanSimProj
             int numberOfSTs = message.Count(c => c == '<');
             if (numberOfGTs > 1) return false;
             if (numberOfSTs > 1) return false;
+
+            int index_of_last_ST = message.LastIndexOf('<');           
+            int index_of_first_GT = message.IndexOf('>');
+
 
             if (message.StartsWith("<") && message.Count(c => c == ',') == 7 && message.EndsWith(">"))
             {
