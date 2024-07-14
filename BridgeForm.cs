@@ -14,6 +14,7 @@ namespace LiteCanSimProj
 {
     public partial class BridgeForm : Form
     {
+        bool DisplayLog = false;
         StringBuilder messageBuffer;
         private const int BaudRate = 19200;
         private SerialPort PCURSCport;
@@ -29,9 +30,10 @@ namespace LiteCanSimProj
         public BridgeForm()
         {
             InitializeComponent();
+             lbl_PCname.Text = Environment.MachineName;
             messageBuffer = new StringBuilder();
-            PCURSCbuffer = new byte[8192]; // Increase buffer size to 8192 bytes
-            AntennaSCbuffer = new byte[8192]; // Increase buffer size to 8192 bytes
+            PCURSCbuffer = new byte[8192]; 
+            AntennaSCbuffer = new byte[8192]; 
 
             comboBox_PCURSC.DropDown += new EventHandler(Serial_DropDown);
             comboBox_AntennaSC.DropDown += new EventHandler(Serial_DropDown);
@@ -45,6 +47,17 @@ namespace LiteCanSimProj
         private void CheckBoxLaptopType_CheckedChanged(object sender, EventArgs e)
         {
             isLaptopA_PCU = checkBoxLaptopType.Checked;
+            if (isLaptopA_PCU)
+            {
+                lbl_104.Text = "Received over Radio";
+                lbl_103.Text = "Sending Over Radio";
+
+            }
+            else {
+                lbl_103.Text = "Received over Radio";
+                lbl_104.Text = "Sending Over Radio";
+            
+            }
         }
 
         private void PopulateSerialPorts(ComboBox comboBox)
@@ -84,6 +97,7 @@ namespace LiteCanSimProj
             if (PCURSCport != null && AntennaSCport != null && PCURSCport.IsOpen && AntennaSCport.IsOpen)
             {
                 stop_bridge();
+                checkBoxLaptopType.Enabled = true; 
             }
             else if (comboBox_PCURSC.SelectedItem == null || comboBox_AntennaSC.SelectedItem == null)
             {
@@ -114,6 +128,7 @@ namespace LiteCanSimProj
                 btnBridge.Text = "Stop Bridge";
                 comboBox_PCURSC.Enabled = false;
                 comboBox_AntennaSC.Enabled = false;
+                checkBoxLaptopType.Enabled = false;
             }
         }
 
@@ -258,23 +273,29 @@ namespace LiteCanSimProj
             }
         }
 
-        // Method to check if the message is a valid 104 message
         private bool IsValid104Message(string message)
         {
+            int numberOfGTs = message.Count(c => c == '>');
+            int numberOfSTs = message.Count(c => c == '<');
+            if (numberOfGTs > 1) return false;
+            if (numberOfSTs > 1) return false;
+
             if (message.StartsWith("<") && message.Count(c => c == ',') == 7 && message.EndsWith(">"))
             {
-                // Further validation can be added here if needed
                 return true;
             }
             return false;
         }
 
-        // Method to check if the message is a valid 103 message
         private bool IsValid103Message(string message)
         {
+            int numberOfGTs = message.Count(c => c == '>');
+            int numberOfSTs = message.Count(c => c == '<');
+            if (numberOfGTs > 1) return false;
+            if (numberOfSTs > 1) return false;
+
             if (message.StartsWith("<A") && message.Count(c => c == ',') == 3 && message.EndsWith(">"))
             {
-                // Further validation can be added here if needed
                 return true;
             }
             return false;
@@ -335,7 +356,7 @@ namespace LiteCanSimProj
         private void Log(string message)
         {
             // Implement your logging logic here, e.g., write to a log file or console
-            Console.WriteLine(message);
+            if(DisplayLog)Console.WriteLine(message);
         }
 
         private enum State

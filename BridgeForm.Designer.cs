@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_104 = new System.Windows.Forms.Label();
+            this.lbl_103 = new System.Windows.Forms.Label();
             this.tb_104types = new System.Windows.Forms.TextBox();
             this.tb_103types = new System.Windows.Forms.TextBox();
             this.comboBox_AntennaSC = new System.Windows.Forms.ComboBox();
@@ -38,25 +38,26 @@
             this.comboBox_PCURSC = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBoxLaptopType = new System.Windows.Forms.CheckBox();
+            this.lbl_PCname = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label4
+            // lbl_104
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(804, 207);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(188, 25);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Messagestype104";
+            this.lbl_104.AutoSize = true;
+            this.lbl_104.Location = new System.Drawing.Point(804, 207);
+            this.lbl_104.Name = "lbl_104";
+            this.lbl_104.Size = new System.Drawing.Size(188, 25);
+            this.lbl_104.TabIndex = 34;
+            this.lbl_104.Text = "Messagestype104";
             // 
-            // label3
+            // lbl_103
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 207);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 25);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Messagestype103";
+            this.lbl_103.AutoSize = true;
+            this.lbl_103.Location = new System.Drawing.Point(23, 207);
+            this.lbl_103.Name = "lbl_103";
+            this.lbl_103.Size = new System.Drawing.Size(188, 25);
+            this.lbl_103.TabIndex = 33;
+            this.lbl_103.Text = "Messagestype103";
             // 
             // tb_104types
             // 
@@ -127,13 +128,23 @@
             this.checkBoxLaptopType.Text = "is laptop PCU ?";
             this.checkBoxLaptopType.UseVisualStyleBackColor = true;
             // 
+            // lbl_PCname
+            // 
+            this.lbl_PCname.AutoSize = true;
+            this.lbl_PCname.Location = new System.Drawing.Point(239, 9);
+            this.lbl_PCname.Name = "lbl_PCname";
+            this.lbl_PCname.Size = new System.Drawing.Size(188, 25);
+            this.lbl_PCname.TabIndex = 35;
+            this.lbl_PCname.Text = "Messagestype104";
+            // 
             // BridgeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1526, 1062);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_PCname);
+            this.Controls.Add(this.lbl_104);
+            this.Controls.Add(this.lbl_103);
             this.Controls.Add(this.tb_104types);
             this.Controls.Add(this.tb_103types);
             this.Controls.Add(this.comboBox_AntennaSC);
@@ -151,8 +162,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_104;
+        private System.Windows.Forms.Label lbl_103;
         private System.Windows.Forms.TextBox tb_104types;
         private System.Windows.Forms.TextBox tb_103types;
         private System.Windows.Forms.ComboBox comboBox_AntennaSC;
@@ -161,5 +172,6 @@
         private System.Windows.Forms.ComboBox comboBox_PCURSC;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBoxLaptopType;
+        private System.Windows.Forms.Label lbl_PCname;
     }
 }
