@@ -248,7 +248,7 @@ namespace LiteCanSimProj
         // Method to check if the message is a valid 104 message
         private bool IsValid104Message(string message)
         {
-            if (message.StartsWith("<") && message.Count(c => c == ',') == 7)
+            if (message.StartsWith("<") && message.Count(c => c == ',') == 7 && message.EndsWith(">"))
             {
                 // Further validation can be added here if needed
                 return true;
@@ -259,7 +259,7 @@ namespace LiteCanSimProj
         // Method to check if the message is a valid 103 message
         private bool IsValid103Message(string message)
         {
-            if (message.StartsWith("<A") && message.Count(c => c == ',') == 3)
+            if (message.StartsWith("<A") && message.Count(c => c == ',') == 3 && message.EndsWith(">"))
             {
                 // Further validation can be added here if needed
                 return true;
