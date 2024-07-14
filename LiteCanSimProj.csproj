@@ -82,6 +82,12 @@
     <Compile Include="BridgeForm.Designer.cs">
       <DependentUpon>BridgeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BridgeForm2Messagetypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BridgeForm2Messagetypes.Designer.cs">
+      <DependentUpon>BridgeForm2Messagetypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     <Compile Include="_Serialization\SerializerDeserializers\Handler_TEXTtoJSON.cs" />
     <EmbeddedResource Include="BridgeForm.resx">
       <DependentUpon>BridgeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BridgeForm2Messagetypes.resx">
+      <DependentUpon>BridgeForm2Messagetypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
