@@ -1,6 +1,74 @@
 ﻿============================================================================
 CAN Messages From : Control Unit
 VC_PGN_ID : 500
+PGN_32bit : 65400
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: N/A
+Configuration : B_E_B
+Project : remote
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFF78    (  Ping 78 commands )
+
+            - Byte0 : PingComannand |BL(0,0,255)
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : ResetPingCommand |BL(0,0,255)
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 500
+PGN_32bit : 65399
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: N/A
+Configuration : B_E_B
+Project : remote
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFF77    (  Ping 77 )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : PingReceivedCntr |BL(0,0,255)
+ 
+            - Byte2 : SerialStatus |BL(0,0,255)
+ 
+            - Byte3 : PingCounter |BL(0,0,255)
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 500
 PGN_32bit : 65381
 address Port: 29
 address Stbd: 29

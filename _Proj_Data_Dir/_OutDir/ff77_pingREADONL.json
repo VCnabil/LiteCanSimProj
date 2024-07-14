@@ -1,0 +1,58 @@
+{
+  "Title": "ff77_pingREADONL",
+  "AllPgnList": [
+    {
+      "IDpgn": 1,
+      "PGN_int": 419395369,
+      "PGN_strHEX": "0x18FF7729",
+      "DESCpgn": "from Control Unit   Ping 77  ",
+      "CtrlList": [
+        {
+          "ID": 1,
+          "DESC": "PingReceivedCntr ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "SerialStatus ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 2,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 3,
+          "DESC": "PingCounter ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 3,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    }
+  ]
+}

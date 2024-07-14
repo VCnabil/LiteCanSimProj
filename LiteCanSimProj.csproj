@@ -82,8 +82,52 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBridge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBridge.Designer.cs">
+      <DependentUpon>FormBridge.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_Globalz\SERIALMNGR_1.cs" />
+    <Compile Include="_Globalz\SERIALMNGR_2.cs" />
+    <Compile Include="_MainUIs\KvaserUCs\CU_SerialConUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\KvaserUCs\CU_SerialConUI.Designer.cs">
+      <DependentUpon>CU_SerialConUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MainUIs\KvaserUCs\UC_SerialConUI_ALT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\KvaserUCs\UC_SerialConUI_ALT.Designer.cs">
+      <DependentUpon>UC_SerialConUI_ALT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MainUIs\MainForms\SerialRadioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\MainForms\SerialRadioForm.Designer.cs">
+      <DependentUpon>SerialRadioForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="_Globalz\EventsManagerLib.cs" />
     <Compile Include="_Globalz\G_Paths.cs" />
     <Compile Include="_Globalz\G_Properties.cs" />
@@ -154,6 +198,18 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBridge.resx">
+      <DependentUpon>FormBridge.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -178,8 +234,14 @@
     <EmbeddedResource Include="_MainUIs\DynPosUCs\UC_360Rotor.resx">
       <DependentUpon>UC_360Rotor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\KvaserUCs\CU_SerialConUI.resx">
+      <DependentUpon>CU_SerialConUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="_MainUIs\KvaserUCs\ucf_KvaserCanModule.resx">
       <DependentUpon>ucf_KvaserCanModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\KvaserUCs\UC_SerialConUI_ALT.resx">
+      <DependentUpon>UC_SerialConUI_ALT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="_MainUIs\MainForms\CanManip_V0Form.resx">
       <DependentUpon>CanManip_V0Form.cs</DependentUpon>
