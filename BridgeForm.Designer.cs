@@ -64,7 +64,7 @@
             this.tb_104types.Location = new System.Drawing.Point(809, 252);
             this.tb_104types.Multiline = true;
             this.tb_104types.Name = "tb_104types";
-            this.tb_104types.Size = new System.Drawing.Size(684, 477);
+            this.tb_104types.Size = new System.Drawing.Size(684, 574);
             this.tb_104types.TabIndex = 32;
             // 
             // tb_103types
@@ -72,13 +72,13 @@
             this.tb_103types.Location = new System.Drawing.Point(19, 252);
             this.tb_103types.Multiline = true;
             this.tb_103types.Name = "tb_103types";
-            this.tb_103types.Size = new System.Drawing.Size(684, 477);
+            this.tb_103types.Size = new System.Drawing.Size(684, 574);
             this.tb_103types.TabIndex = 31;
             // 
             // comboBox_AntennaSC
             // 
             this.comboBox_AntennaSC.FormattingEnabled = true;
-            this.comboBox_AntennaSC.Location = new System.Drawing.Point(12, 72);
+            this.comboBox_AntennaSC.Location = new System.Drawing.Point(121, 57);
             this.comboBox_AntennaSC.Name = "comboBox_AntennaSC";
             this.comboBox_AntennaSC.Size = new System.Drawing.Size(163, 33);
             this.comboBox_AntennaSC.TabIndex = 29;
@@ -86,7 +86,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(112, 108);
+            this.label2.Location = new System.Drawing.Point(32, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 25);
             this.label2.TabIndex = 27;
@@ -94,25 +94,25 @@
             // 
             // btnBridge
             // 
-            this.btnBridge.Location = new System.Drawing.Point(224, 68);
+            this.btnBridge.Location = new System.Drawing.Point(314, 57);
             this.btnBridge.Name = "btnBridge";
-            this.btnBridge.Size = new System.Drawing.Size(283, 113);
+            this.btnBridge.Size = new System.Drawing.Size(259, 79);
             this.btnBridge.TabIndex = 30;
-            this.btnBridge.Text = "bridge";
+            this.btnBridge.Text = "Connect";
             this.btnBridge.UseVisualStyleBackColor = true;
             // 
             // comboBox_PCURSC
             // 
             this.comboBox_PCURSC.FormattingEnabled = true;
-            this.comboBox_PCURSC.Location = new System.Drawing.Point(4, 148);
+            this.comboBox_PCURSC.Location = new System.Drawing.Point(121, 99);
             this.comboBox_PCURSC.Name = "comboBox_PCURSC";
-            this.comboBox_PCURSC.Size = new System.Drawing.Size(178, 33);
+            this.comboBox_PCURSC.Size = new System.Drawing.Size(163, 33);
             this.comboBox_PCURSC.TabIndex = 28;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 44);
+            this.label1.Location = new System.Drawing.Point(23, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 25);
             this.label1.TabIndex = 26;
@@ -121,7 +121,7 @@
             // checkBoxLaptopType
             // 
             this.checkBoxLaptopType.AutoSize = true;
-            this.checkBoxLaptopType.Location = new System.Drawing.Point(12, 12);
+            this.checkBoxLaptopType.Location = new System.Drawing.Point(19, 12);
             this.checkBoxLaptopType.Name = "checkBoxLaptopType";
             this.checkBoxLaptopType.Size = new System.Drawing.Size(193, 29);
             this.checkBoxLaptopType.TabIndex = 25;
@@ -131,17 +131,18 @@
             // lbl_PCname
             // 
             this.lbl_PCname.AutoSize = true;
-            this.lbl_PCname.Location = new System.Drawing.Point(239, 9);
+            this.lbl_PCname.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PCname.Location = new System.Drawing.Point(812, 12);
             this.lbl_PCname.Name = "lbl_PCname";
-            this.lbl_PCname.Size = new System.Drawing.Size(188, 25);
+            this.lbl_PCname.Size = new System.Drawing.Size(161, 55);
             this.lbl_PCname.TabIndex = 35;
-            this.lbl_PCname.Text = "Messagestype104";
+            this.lbl_PCname.Text = "laptop";
             // 
             // BridgeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1526, 1062);
+            this.ClientSize = new System.Drawing.Size(1526, 845);
             this.Controls.Add(this.lbl_PCname);
             this.Controls.Add(this.lbl_104);
             this.Controls.Add(this.lbl_103);

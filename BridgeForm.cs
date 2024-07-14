@@ -31,7 +31,7 @@ namespace LiteCanSimProj
         public BridgeForm()
         {
             InitializeComponent();
-             lbl_PCname.Text = Environment.MachineName;
+             
             messageBuffer = new StringBuilder();
             PCURSCbuffer = new byte[8192]; 
             AntennaSCbuffer = new byte[8192]; 
@@ -48,6 +48,9 @@ namespace LiteCanSimProj
             {
                 AutoSetupConfiguration();
             }
+            else {
+                lbl_PCname.Text = Environment.MachineName;
+            }
         }
         private void AutoSetupConfiguration()
         {
@@ -56,12 +59,14 @@ namespace LiteCanSimProj
                 isLaptopA_PCU = false;
                 comboBox_AntennaSC.SelectedItem = "COM10";
                 comboBox_PCURSC.SelectedItem = "COM9";
+                lbl_PCname.Text = "Remote Station Contoler";
             }
             else
             {
                 isLaptopA_PCU = true;
                 comboBox_AntennaSC.SelectedItem = "COM3";
                 comboBox_PCURSC.SelectedItem = "COM4";
+                lbl_PCname.Text = "Propulsion Control Unit";
             }
 
             checkBoxLaptopType.Enabled = false;
