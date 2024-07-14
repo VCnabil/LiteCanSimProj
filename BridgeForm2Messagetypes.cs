@@ -16,7 +16,8 @@ namespace LiteCanSimProj
     {
         bool DisplayLog = false;
         bool AutoSetup = true;
-        StringBuilder messageBuffer;
+        StringBuilder messageBuffer104;
+        StringBuilder messageBuffer103;
         private const int BaudRate = 19200;
         private SerialPort PCURSCport;
         private SerialPort AntennaSCport;
@@ -31,7 +32,8 @@ namespace LiteCanSimProj
         public BridgeForm2Messagetypes()
         {
             InitializeComponent();
-            messageBuffer = new StringBuilder();
+            messageBuffer104 = new StringBuilder();
+            messageBuffer103 = new StringBuilder();
             PCURSCbuffer = new byte[8192];
             AntennaSCbuffer = new byte[8192];
 
@@ -52,6 +54,7 @@ namespace LiteCanSimProj
                 lbl_PCname.Text = Environment.MachineName;
             }
         }
+
         private void AutoSetupConfiguration()
         {
             if (Environment.MachineName.Contains("NABIL"))
@@ -212,8 +215,12 @@ namespace LiteCanSimProj
 
             if (count > 0)
             {
-                messageBuffer.Append(Encoding.ASCII.GetString(read_buffer, 0, count));
-                ProcessMessages();
+                string receivedData = Encoding.ASCII.GetString(read_buffer, 0, count);
+                messageBuffer104.Append(receivedData);
+                messageBuffer103.Append(receivedData);
+
+                ProcessMessages104();
+                ProcessMessages103();
 
                 if (write_port.IsOpen)
                 {
@@ -246,102 +253,92 @@ namespace LiteCanSimProj
             }
         }
 
-        private void ProcessMessages()
+        private void ProcessMessages104()
         {
-            string bufferContent = messageBuffer.ToString();
+            string bufferContent = messageBuffer104.ToString();
             if (string.IsNullOrEmpty(bufferContent))
                 return;
 
             int startIdx = bufferContent.IndexOf('<');
-            int startIdx103 = bufferContent.IndexOf('[');
-            int endIdx, endIdx103;
-
-            while (startIdx != -1 || startIdx103 != -1)
+            while (startIdx != -1)
             {
-                if (startIdx != -1 && (startIdx103 == -1 || startIdx < startIdx103))
+                int endIdx = bufferContent.IndexOf('>', startIdx);
+                if (endIdx != -1)
                 {
-                    endIdx = bufferContent.IndexOf('>', startIdx);
-                    if (endIdx != -1)
+                    string message = bufferContent.Substring(startIdx, endIdx - startIdx + 1);
+
+                    if (IsValid104Message(message)) // Check if it is a valid 104 message
                     {
-                        string message = bufferContent.Substring(startIdx, endIdx - startIdx + 1);
-
-                        if (message.Count(c => c == '<') > 1)
+                        if (isLaptopA_PCU)
                         {
-                            int index_of_last_ST = message.LastIndexOf('<');
-                            message = message.Substring(index_of_last_ST);
+                            WriteToPort(AntennaSCport, message); // Write to AntennaC port
                         }
-                        if (message.Count(c => c == '>') > 1)
+                        else
                         {
-                            message = message.Substring(message.LastIndexOf('<'));
+                            WriteToPort(AntennaSCport, message); // Write to AntennaS port
                         }
-
-                        if (IsValid104Message(message)) // Check if it is a valid 104 message
-                        {
-                            if (isLaptopA_PCU)
-                            {
-                                WriteToPort(AntennaSCport, message); // Write to AntennaC port
-                            }
-                            else
-                            {
-                                WriteToPort(AntennaSCport, message); // Write to AntennaS port
-                            }
-                            DisplayMessage104(message);
-                        }
-
-                        bufferContent = bufferContent.Substring(endIdx + 1);
-                        startIdx = bufferContent.IndexOf('<');
+                        DisplayMessage104(message);
                     }
-                    else
-                    {
-                        break;
-                    }
+
+                    bufferContent = bufferContent.Substring(endIdx + 1);
+                    startIdx = bufferContent.IndexOf('<');
                 }
-                else if (startIdx103 != -1)
+                else
                 {
-                    endIdx103 = bufferContent.IndexOf(']', startIdx103);
-                    if (endIdx103 != -1)
-                    {
-                        string message = bufferContent.Substring(startIdx103, endIdx103 - startIdx103 + 1);
-
-                        if (message.Count(c => c == '[') > 1)
-                        {
-                            int index_of_last_ST = message.LastIndexOf('[');
-                            message = message.Substring(index_of_last_ST);
-                        }
-                        if (message.Count(c => c == ']') > 1)
-                        {
-                            message = message.Substring(message.LastIndexOf('['));
-                        }
-
-                        if (IsValid103Message(message)) // Check if it is a valid 103 message
-                        {
-                            if (isLaptopA_PCU)
-                            {
-                                WriteToPort(PCURSCport, message); // Write to PCUdevice port
-                            }
-                            else
-                            {
-                                WriteToPort(PCURSCport, message); // Write to RSCdevice port
-                            }
-                            DisplayMessage103(message);
-                        }
-
-                        bufferContent = bufferContent.Substring(endIdx103 + 1);
-                        startIdx103 = bufferContent.IndexOf('[');
-                    }
-                    else
-                    {
-                        break;
-                    }
+                    break;
                 }
             }
 
-            messageBuffer.Clear();
+            messageBuffer104.Clear();
             if (!string.IsNullOrEmpty(bufferContent))
             {
-                messageBuffer.Append(bufferContent);
+                messageBuffer104.Append(bufferContent);
             }
         }
+
+        private void ProcessMessages103()
+        {
+            string bufferContent = messageBuffer103.ToString();
+            if (string.IsNullOrEmpty(bufferContent))
+                return;
+
+            int startIdx = bufferContent.IndexOf('[');
+            while (startIdx != -1)
+            {
+                int endIdx = bufferContent.IndexOf(']', startIdx);
+                if (endIdx != -1)
+                {
+                    string message = bufferContent.Substring(startIdx, endIdx - startIdx + 1);
+
+                    if (IsValid103Message(message)) // Check if it is a valid 103 message
+                    {
+                        if (isLaptopA_PCU)
+                        {
+                            WriteToPort(PCURSCport, message); // Write to PCUdevice port
+                        }
+                        else
+                        {
+                            WriteToPort(PCURSCport, message); // Write to RSCdevice port
+                        }
+                        DisplayMessage103(message);
+                    }
+
+                    bufferContent = bufferContent.Substring(endIdx + 1);
+                    startIdx = bufferContent.IndexOf('[');
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            messageBuffer103.Clear();
+            if (!string.IsNullOrEmpty(bufferContent))
+            {
+                messageBuffer103.Append(bufferContent);
+            }
+        }
+
         private void WriteToPort(SerialPort port, string message)
         {
             if (port.IsOpen)
@@ -357,10 +354,10 @@ namespace LiteCanSimProj
 
         private bool IsValid104Message(string message)
         {
+            if (message.Contains('[') || message.Contains(']') || message.Contains('A') || message.Contains(';')) return false;
             int numberOfGTs = message.Count(c => c == '>');
             int numberOfSTs = message.Count(c => c == '<');
-            if (numberOfGTs > 1) return false;
-            if (numberOfSTs > 1) return false;
+            if (numberOfGTs > 1 || numberOfSTs > 1) return false;
 
             if (message.StartsWith("<") && message.Count(c => c == ',') == 7 && message.EndsWith(">"))
             {
@@ -371,10 +368,10 @@ namespace LiteCanSimProj
 
         private bool IsValid103Message(string message)
         {
+            if (message.Contains('<') || message.Contains('>') || message.Contains(',')) return false;
             int numberOfOpenBrackets = message.Count(c => c == '[');
             int numberOfCloseBrackets = message.Count(c => c == ']');
-            if (numberOfOpenBrackets > 1) return false;
-            if (numberOfCloseBrackets > 1) return false;
+            if (numberOfOpenBrackets > 1 || numberOfCloseBrackets > 1) return false;
 
             if (message.StartsWith("[A") && message.Count(c => c == ';') == 3 && message.EndsWith("]"))
             {
