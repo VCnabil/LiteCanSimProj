@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxBridgeContent1 = new System.Windows.Forms.TextBox();
             this.checkBox_is104 = new System.Windows.Forms.CheckBox();
+            this.textBoxBridgeContent2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // comboSerial2
@@ -82,10 +83,10 @@
             // 
             // textBoxBridgeContent1
             // 
-            this.textBoxBridgeContent1.Location = new System.Drawing.Point(24, 150);
+            this.textBoxBridgeContent1.Location = new System.Drawing.Point(12, 253);
             this.textBoxBridgeContent1.Multiline = true;
             this.textBoxBridgeContent1.Name = "textBoxBridgeContent1";
-            this.textBoxBridgeContent1.Size = new System.Drawing.Size(1021, 221);
+            this.textBoxBridgeContent1.Size = new System.Drawing.Size(684, 477);
             this.textBoxBridgeContent1.TabIndex = 13;
             // 
             // checkBox_is104
@@ -98,11 +99,20 @@
             this.checkBox_is104.Text = "is104";
             this.checkBox_is104.UseVisualStyleBackColor = true;
             // 
+            // textBoxBridgeContent2
+            // 
+            this.textBoxBridgeContent2.Location = new System.Drawing.Point(811, 253);
+            this.textBoxBridgeContent2.Multiline = true;
+            this.textBoxBridgeContent2.Name = "textBoxBridgeContent2";
+            this.textBoxBridgeContent2.Size = new System.Drawing.Size(684, 477);
+            this.textBoxBridgeContent2.TabIndex = 15;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1217, 460);
+            this.ClientSize = new System.Drawing.Size(1560, 1185);
+            this.Controls.Add(this.textBoxBridgeContent2);
             this.Controls.Add(this.checkBox_is104);
             this.Controls.Add(this.textBoxBridgeContent1);
             this.Controls.Add(this.comboSerial2);
@@ -125,5 +135,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxBridgeContent1;
         private System.Windows.Forms.CheckBox checkBox_is104;
+        private System.Windows.Forms.TextBox textBoxBridgeContent2;
     }
 }
