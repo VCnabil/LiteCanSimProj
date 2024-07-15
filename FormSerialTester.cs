@@ -114,7 +114,8 @@ namespace LiteCanSimProj
 
         private void SendTimer_Tick(object sender, EventArgs e)
         {
-            string message = $"<1,{trackBarSlider.Value},500,500,0,1,0>";
+            // Generate the message string with expected format
+            string message = $"<1,{trackBarSlider.Value},900,1000,0,1,0,0>"; // Adjust values as needed
             try
             {
                 serialPort.Write(message);
@@ -126,12 +127,21 @@ namespace LiteCanSimProj
                 MessageBox.Show("Error writing to port: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 StopSendingData();
             }
+        
         }
 
         private void Log(string message)
         {
             // Implement logging logic here, such as writing to a log file or console
             Console.WriteLine(message);
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            if (serialPort != null)
+            {
+                serialPort.Dispose();
+            }
         }
     }
 }
