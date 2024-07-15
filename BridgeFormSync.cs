@@ -293,8 +293,14 @@ namespace LiteCanSimProj
         {
             if (port.IsOpen)
             {
-                port.Write(message);
-                Log($"Message '{message}' written to {port.PortName}.");
+                if (message.Count(c => c == '<') == 1 && message.Count(c => c == '>') == 1)
+                {
+                    port.Write(message);
+                    Log($"Message '{message}' written to {port.PortName}.");
+                }
+                else {
+                    Log($"Message '{message}' was Malformed");
+                }
             }
             else
             {
