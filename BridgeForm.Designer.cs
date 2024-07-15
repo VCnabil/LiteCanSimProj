@@ -141,7 +141,7 @@
             // 
             // btn_openSerialTester
             // 
-            this.btn_openSerialTester.Location = new System.Drawing.Point(1213, 30);
+            this.btn_openSerialTester.Location = new System.Drawing.Point(1188, 30);
             this.btn_openSerialTester.Name = "btn_openSerialTester";
             this.btn_openSerialTester.Size = new System.Drawing.Size(259, 79);
             this.btn_openSerialTester.TabIndex = 36;
