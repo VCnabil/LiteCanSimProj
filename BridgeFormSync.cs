@@ -108,7 +108,7 @@ namespace LiteCanSimProj
 
                         if (writePort.IsOpen)
                         {
-                            writePort.Write(readBuffer, 0, count);
+                            //writePort.Write(readBuffer, 0, count);
                             Log($"Wrote {count} bytes to {writePort.PortName}.");
                         }
                         else
