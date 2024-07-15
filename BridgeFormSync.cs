@@ -249,33 +249,43 @@ namespace LiteCanSimProj
                         message = message.Substring(message.LastIndexOf('<'));
                     }
 
-                    if (IsValid104Message(message)) // Check if it is a valid 104 message
+                    if (message.Count(c => c == '<') == 1 && message.Count(c => c == '>') == 1)
                     {
-                        if (isLaptopA_PCU)
+                        if (message.StartsWith("<") && message.EndsWith(">"))
                         {
-                            WriteToPort(AntennaSCport, message); // Write to AntennaC port
+
+                            if (IsValid104Message(message)) // Check if it is a valid 104 message
+                            {
+                                if (isLaptopA_PCU)
+                                {
+                                    WriteToPort(AntennaSCport, message); // Write to AntennaC port
+                                }
+                                else
+                                {
+                                    WriteToPort(AntennaSCport, message); // Write to AntennaS port
+                                }
+                                DisplayMessage104(message);
+                            }
+                            else if (IsValid103Message(message)) // Check if it is a valid 103 message
+                            {
+                                if (isLaptopA_PCU)
+                                {
+                                    WriteToPort(PCURSCport, message); // Write to PCUdevice port
+                                }
+                                else
+                                {
+                                    WriteToPort(PCURSCport, message); // Write to RSCdevice port
+                                }
+                                DisplayMessage103(message);
+                            }
+
+                            bufferContent = bufferContent.Substring(endIdx + 1);
+                            startIdx = bufferContent.IndexOf('<');
+
                         }
-                        else
-                        {
-                            WriteToPort(AntennaSCport, message); // Write to AntennaS port
-                        }
-                        DisplayMessage104(message);
-                    }
-                    else if (IsValid103Message(message)) // Check if it is a valid 103 message
-                    {
-                        if (isLaptopA_PCU)
-                        {
-                            WriteToPort(PCURSCport, message); // Write to PCUdevice port
-                        }
-                        else
-                        {
-                            WriteToPort(PCURSCport, message); // Write to RSCdevice port
-                        }
-                        DisplayMessage103(message);
                     }
 
-                    bufferContent = bufferContent.Substring(endIdx + 1);
-                    startIdx = bufferContent.IndexOf('<');
+
                 }
                 else
                 {
@@ -295,8 +305,11 @@ namespace LiteCanSimProj
             {
                 if (message.Count(c => c == '<') == 1 && message.Count(c => c == '>') == 1)
                 {
-                    port.Write(message);
-                    Log($"Message '{message}' written to {port.PortName}.");
+                    if (message.StartsWith("<") && message.EndsWith(">"))
+                    {
+                        port.Write(message);
+                        Log($"Message '{message}' written to {port.PortName}.");
+                    }
                 }
                 else {
                     Log($"Message '{message}' was Malformed");
