@@ -20,8 +20,9 @@ namespace LiteCanSimProj
             //  Application.Run(new FormBridge());
             // Application.Run(new Form2());
             //Application.Run(new CanManip_V0Form());
-            Application.Run(new BridgeForm());
-           // Application.Run(new BridgeForm2Messagetypes());
+            //Application.Run(new BridgeForm());
+            Application.Run(new FormSerialTester());
+            // Application.Run(new BridgeForm2Messagetypes());
         }
     }
 }

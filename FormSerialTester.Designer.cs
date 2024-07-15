@@ -38,7 +38,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(125, 288);
+            this.lblStatus.Location = new System.Drawing.Point(218, 77);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(188, 25);
             this.lblStatus.TabIndex = 47;
@@ -63,9 +63,10 @@
             // 
             // trackBarSlider
             // 
-            this.trackBarSlider.Location = new System.Drawing.Point(116, 12);
+            this.trackBarSlider.Location = new System.Drawing.Point(194, 256);
+            this.trackBarSlider.Maximum = 1000;
             this.trackBarSlider.Name = "trackBarSlider";
-            this.trackBarSlider.Size = new System.Drawing.Size(104, 90);
+            this.trackBarSlider.Size = new System.Drawing.Size(481, 90);
             this.trackBarSlider.TabIndex = 48;
             // 
             // FormSerialTester

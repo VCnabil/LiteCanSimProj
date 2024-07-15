@@ -16,13 +16,17 @@ namespace LiteCanSimProj
     {
         private const int BaudRate = 19200;
         private SerialPort serialPort;
-        private CancellationTokenSource cancellationTokenSource;
+        private System.Windows.Forms.Timer sendTimer;
         public FormSerialTester()
         {
             InitializeComponent();
             comboBoxPorts.DropDown += new EventHandler(Serial_DropDown);
             PopulateSerialPorts(comboBoxPorts);
             btnStart.Click += btnStart_Click;
+
+            sendTimer = new System.Windows.Forms.Timer();
+            sendTimer.Interval = 250; // Set the timer interval to 250 ms
+            sendTimer.Tick += SendTimer_Tick;
         }
         private void PopulateSerialPorts(ComboBox comboBox)
         {
@@ -79,6 +83,7 @@ namespace LiteCanSimProj
             try
             {
                 serialPort.Open();
+                Log("Serial port opened.");
             }
             catch (Exception ex)
             {
@@ -89,43 +94,44 @@ namespace LiteCanSimProj
             btnStart.Text = "Stop";
             comboBoxPorts.Enabled = false;
 
-            cancellationTokenSource = new CancellationTokenSource();
-            Task.Run(() => SendDataAsync(cancellationTokenSource.Token));
+            sendTimer.Start();
         }
 
         private void StopSendingData()
         {
-            cancellationTokenSource.Cancel();
-            serialPort.Close();
+            sendTimer.Stop();
+
+            if (serialPort != null && serialPort.IsOpen)
+            {
+                serialPort.Close();
+            }
+
             btnStart.Text = "Start";
             comboBoxPorts.Enabled = true;
+            lblStatus.Text = "Stopped";
+            Log("Serial port closed.");
         }
 
-        private async Task SendDataAsync(CancellationToken cancellationToken)
+        private void SendTimer_Tick(object sender, EventArgs e)
         {
-            while (!cancellationToken.IsCancellationRequested)
+            string message = $"<1,{trackBarSlider.Value},500,500,0,1,0>";
+            try
             {
-                string message = $"<1,{trackBarSlider.Value},600,800,0,1,0,0>";
-                try
-                {
-                    serialPort.Write(message);
-                    Invoke(new Action(() =>
-                    {
-                        lblStatus.Text = $"Sent: {message}";
-                    }));
-                }
-                catch (Exception ex)
-                {
-                    Invoke(new Action(() =>
-                    {
-                        MessageBox.Show("Error writing to port: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        StopSendingData();
-                    }));
-                    break;
-                }
-
-                await Task.Delay(250, cancellationToken);
+                serialPort.Write(message);
+                Log($"Sent: {message}");
+                lblStatus.Text = $"Sent: {message}";
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error writing to port: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                StopSendingData();
+            }
+        }
+
+        private void Log(string message)
+        {
+            // Implement logging logic here, such as writing to a log file or console
+            Console.WriteLine(message);
         }
     }
 }
