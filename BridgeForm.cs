@@ -41,7 +41,7 @@ namespace LiteCanSimProj
 
             PopulateSerialPorts(comboBox_PCURSC);
             PopulateSerialPorts(comboBox_AntennaSC);
-
+            btn_openSerialTester.Click += OnOpenTesterForm;
             btnBridge.Click += btnBridge_Click;
             checkBoxLaptopType.CheckedChanged += CheckBoxLaptopType_CheckedChanged;
             if (AutoSetup)
@@ -51,6 +51,14 @@ namespace LiteCanSimProj
             else {
                 lbl_PCname.Text = Environment.MachineName;
             }
+        }
+        private void OnOpenTesterForm(object sender, EventArgs e) {
+
+            //open the FormSerialTester 
+            FormSerialTester formSerialTester = new FormSerialTester();
+            formSerialTester.Show();
+
+
         }
         private void AutoSetupConfiguration()
         {
