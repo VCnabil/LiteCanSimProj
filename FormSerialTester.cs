@@ -112,13 +112,38 @@ namespace LiteCanSimProj
             Log("Serial port closed.");
         }
 
+        //private void SendTimer_Tick(object sender, EventArgs e)
+        //{
+        //    // Generate the message string with expected format
+        //    string message = $"<1,{trackBarSlider.Value},900,1000,0,1,0,0>"; // Adjust values as needed
+        //    try
+        //    {
+        //        serialPort.Write(message);
+        //        Log($"Sent: {message}");
+        //        lblStatus.Text = $"Sent: {message}";
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error writing to port: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        StopSendingData();
+        //    }
+
+        //}
+
+
         private void SendTimer_Tick(object sender, EventArgs e)
         {
             // Generate the message string with expected format
-            string message = $"<1,{trackBarSlider.Value},900,1000,0,1,0,0>"; // Adjust values as needed
+            string message = $"<A,{trackBarSlider.Value},500,400>"; // Adjust values as needed
+            if (checkBox1.Checked) {
+
+                message = textBox1.Text;
+            }
+
+
             try
             {
-                serialPort.Write(message);
+                serialPort.Write(message+"\n");
                 Log($"Sent: {message}");
                 lblStatus.Text = $"Sent: {message}";
             }
@@ -127,7 +152,7 @@ namespace LiteCanSimProj
                 MessageBox.Show("Error writing to port: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 StopSendingData();
             }
-        
+
         }
 
         private void Log(string message)
@@ -140,6 +165,10 @@ namespace LiteCanSimProj
             base.OnFormClosing(e);
             if (serialPort != null)
             {
+                if (serialPort.IsOpen)
+                {
+                    serialPort.Close();
+                }
                 serialPort.Dispose();
             }
         }

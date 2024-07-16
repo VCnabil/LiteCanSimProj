@@ -32,6 +32,8 @@
             this.comboBoxPorts = new System.Windows.Forms.ComboBox();
             this.btnStart = new System.Windows.Forms.Button();
             this.trackBarSlider = new System.Windows.Forms.TrackBar();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSlider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,11 +71,30 @@
             this.trackBarSlider.Size = new System.Drawing.Size(481, 90);
             this.trackBarSlider.TabIndex = 48;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(209, 393);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(150, 29);
+            this.checkBox1.TabIndex = 49;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(433, 390);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(410, 31);
+            this.textBox1.TabIndex = 50;
+            // 
             // FormSerialTester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1169, 594);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.trackBarSlider);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.comboBoxPorts);
@@ -92,5 +113,7 @@
         private System.Windows.Forms.ComboBox comboBoxPorts;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.TrackBar trackBarSlider;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

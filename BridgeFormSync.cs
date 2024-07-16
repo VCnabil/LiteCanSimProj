@@ -307,7 +307,7 @@ namespace LiteCanSimProj
                 {
                     if (message.StartsWith("<") && message.EndsWith(">"))
                     {
-                        port.Write(message);
+                        port.Write(message+"\n");
                         Log($"Message '{message}' written to {port.PortName}.");
                     }
                 }
