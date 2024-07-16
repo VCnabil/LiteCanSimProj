@@ -28,9 +28,13 @@ namespace LiteCanSimProj
         private bool isLaptopA_PCU;
         private int lineNumber104 = 1;
         private int lineNumber103 = 1;
+        private Color _initialBackGroundColor;
+        private Color _Beige = Color.Beige;
+        private Color _paleblue = Color.PaleTurquoise;
         public BridgeFormSync()
         {
             InitializeComponent();
+            _initialBackGroundColor = this.BackColor;
             messageBuffer = new StringBuilder();
             PCURSCbuffer = new byte[8192];
             AntennaSCbuffer = new byte[8192];
@@ -152,6 +156,7 @@ namespace LiteCanSimProj
                 comboBox_AntennaSC.SelectedItem = "COM10";
                 comboBox_PCURSC.SelectedItem = "COM9";
                 lbl_PCname.Text = "Remote Station Contoler";
+                this.BackColor = _Beige;
             }
             else
             {
@@ -159,6 +164,7 @@ namespace LiteCanSimProj
                 comboBox_AntennaSC.SelectedItem = "COM3";
                 comboBox_PCURSC.SelectedItem = "COM4";
                 lbl_PCname.Text = "Propulsion Control Unit";
+                this.BackColor = _paleblue;
             }
 
             checkBoxLaptopType.Enabled = false;
