@@ -58,6 +58,7 @@
             this.btn_openSerialTester.TabIndex = 48;
             this.btn_openSerialTester.Text = "openSerial tester";
             this.btn_openSerialTester.UseVisualStyleBackColor = true;
+            this.btn_openSerialTester.Visible = false;
             // 
             // lbl_PCname
             // 

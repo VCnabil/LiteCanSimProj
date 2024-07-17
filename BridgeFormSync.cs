@@ -44,7 +44,7 @@ namespace LiteCanSimProj
 
             PopulateSerialPorts(comboBox_PCURSC);
             PopulateSerialPorts(comboBox_AntennaSC);
-            btn_openSerialTester.Click += OnOpenTesterForm;
+            //btn_openSerialTester.Click += OnOpenTesterForm;
             btnBridge.Click += btnBridge_Click;
             checkBoxLaptopType.CheckedChanged += CheckBoxLaptopType_CheckedChanged;
             if (AutoSetup)

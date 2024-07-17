@@ -157,6 +157,7 @@
             this.btn_openSerialTester.TabIndex = 36;
             this.btn_openSerialTester.Text = "serial Sender ";
             this.btn_openSerialTester.UseVisualStyleBackColor = true;
+            this.btn_openSerialTester.Visible = false;
             // 
             // label103
             // 

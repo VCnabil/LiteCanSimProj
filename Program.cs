@@ -23,8 +23,8 @@ namespace LiteCanSimProj
             // Application.Run(new FormSerialTester());
             // Application.Run(new BridgeForm2Messagetypes());
             //  Application.Run(new BridgeForm()); //working for my compiled 103
-            Application.Run(new BridgeFormSync());
-            // Application.Run(new SerialBridgeForm());
+           // Application.Run(new BridgeFormSync());
+             Application.Run(new MainForm());
         }
     }
 }
