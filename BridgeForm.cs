@@ -61,6 +61,33 @@ namespace LiteCanSimProj
             }
             checkBoxLaptopType.Text = " isLaptopA_PCU PCU ? ASYNC";
         }
+        public BridgeForm(bool argAuto)
+        {
+            AutoSetup = argAuto;
+            InitializeComponent();
+            _initialBackGroundColor = this.BackColor;
+            messageBuffer = new StringBuilder();
+            PCURSCbuffer = new byte[8192];
+            AntennaSCbuffer = new byte[8192];
+
+            comboBox_PCURSC.DropDown += new EventHandler(Serial_DropDown);
+            comboBox_AntennaSC.DropDown += new EventHandler(Serial_DropDown);
+
+            PopulateSerialPorts(comboBox_PCURSC);
+            PopulateSerialPorts(comboBox_AntennaSC);
+            //btn_openSerialTester.Click += OnOpenTesterForm;
+            btnBridge.Click += btnBridge_Click;
+            checkBoxLaptopType.CheckedChanged += CheckBoxLaptopType_CheckedChanged;
+            if (AutoSetup)
+            {
+                AutoSetupConfiguration();
+            }
+            else
+            {
+                lbl_PCname.Text = Environment.MachineName;
+            }
+            checkBoxLaptopType.Text = " isLaptopA_PCU PCU ? ASYNC";
+        }
         private void OnOpenTesterForm(object sender, EventArgs e) {
 
             //open the FormSerialTester 
