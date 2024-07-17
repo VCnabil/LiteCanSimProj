@@ -114,7 +114,7 @@ namespace LiteCanSimProj
                         ProcessMessages();
                         if (isLaptopA_PCU)
                         {
-                            if (readPort == AntennaSCport)
+                            if (readPort == PCURSCport)
                             {
                                 DisplayMessageRAWserial104(message);
                             }
