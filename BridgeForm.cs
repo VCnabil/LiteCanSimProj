@@ -28,12 +28,18 @@ namespace LiteCanSimProj
         private bool isLaptopA_PCU;
         private int lineNumber104 = 1;
         private int lineNumber103 = 1;
-        string helmA, joyYA, joyXA;
-        string helm1, joyY1, joyX1;
+        private Color _initialBackGroundColor;
+        private Color _Beige = Color.Beige;
+        private Color _paleblue = Color.PaleTurquoise;
+
+  
+
+        int helmA_int, joyYA_int, joyXA_int;
+        int helm1_int, joyY1_int, joyX1_int;
         public BridgeForm()
         {
             InitializeComponent();
-             
+            _initialBackGroundColor = this.BackColor;
             messageBuffer = new StringBuilder();
             PCURSCbuffer = new byte[8192]; 
             AntennaSCbuffer = new byte[8192]; 
@@ -70,6 +76,7 @@ namespace LiteCanSimProj
                 comboBox_AntennaSC.SelectedItem = "COM10";
                 comboBox_PCURSC.SelectedItem = "COM9";
                 lbl_PCname.Text = "Remote Station Contoler";
+                this.BackColor = _Beige;
             }
             else
             {
@@ -77,6 +84,7 @@ namespace LiteCanSimProj
                 comboBox_AntennaSC.SelectedItem = "COM3";
                 comboBox_PCURSC.SelectedItem = "COM4";
                 lbl_PCname.Text = "Propulsion Control Unit";
+                this.BackColor = _paleblue;
             }
 
             checkBoxLaptopType.Enabled = false;
@@ -222,8 +230,21 @@ namespace LiteCanSimProj
 
             if (count > 0)
             {
-                messageBuffer.Append(Encoding.ASCII.GetString(read_buffer, 0, count));
+                string message = Encoding.ASCII.GetString(read_buffer, 0, count);
+                messageBuffer.Append(message);
                 ProcessMessages();
+
+                // Append the raw message to the respective text box
+                if (read_port == PCURSCport)
+                {
+                    DisplayMessageRAWserial104(message);
+                }
+                else if (read_port == AntennaSCport)
+                {
+                    DisplayMessageRAWserial103(message);
+                }
+
+
 
                 if (write_port.IsOpen)
                 {
@@ -269,7 +290,7 @@ namespace LiteCanSimProj
                 if (endIdx != -1)
                 {
                     string message = bufferContent.Substring(startIdx, endIdx - startIdx + 1);
-                    //if message contains more than 1 '<' trim the message to the last '<'
+                    // If message contains more than 1 '<' trim the message to the last '<'
                     if (message.Count(c => c == '<') > 1)
                     {
                         int index_of_last_ST = message.LastIndexOf('<');
@@ -277,32 +298,32 @@ namespace LiteCanSimProj
                     }
                     if (message.Count(c => c == '>') > 1)
                     {
-                        message = message.Substring(message.LastIndexOf('<'));
+                        message = message.Substring(message.LastIndexOf('>') + 1);
                     }
 
-                    if (IsValid104Message(message)) // Check if it is a valid 104 message
+                    if (IsValid104Message(message, out helm1_int, out joyX1_int, out joyY1_int)) // Check if it is a valid 104 message
                     {
                         if (isLaptopA_PCU)
                         {
-                            WriteToPort(AntennaSCport, message); // Write to AntennaC port
+                            WriteToPort(AntennaSCport, message); // Write to AntennaSC port
                         }
                         else
                         {
-                            WriteToPort(AntennaSCport, message); // Write to AntennaS port
+                            WriteToPort(AntennaSCport, message); // Write to AntennaSC port
                         }
-                        DisplayMessage104(message);
+                        DisplayMessage104(message, helm1_int, joyX1_int, joyY1_int);
                     }
-                    else if (IsValid103Message(message)) // Check if it is a valid 103 message
+                    else if (IsValid103Message(message, out helmA_int, out joyXA_int, out joyYA_int)) // Check if it is a valid 103 message
                     {
                         if (isLaptopA_PCU)
                         {
-                            WriteToPort(PCURSCport, message); // Write to PCUdevice port
+                            WriteToPort(PCURSCport, message); // Write to PCU device port
                         }
                         else
                         {
-                            WriteToPort(PCURSCport, message); // Write to RSCdevice port
+                            WriteToPort(PCURSCport, message); // Write to RSC device port
                         }
-                        DisplayMessage103(message);
+                        DisplayMessage103(message, helmA_int, joyXA_int, joyYA_int);
                     }
 
                     bufferContent = bufferContent.Substring(endIdx + 1);
@@ -320,6 +341,8 @@ namespace LiteCanSimProj
                 messageBuffer.Append(bufferContent);
             }
         }
+
+
         private void WriteToPort(SerialPort port, string message)
         {
             if (port.IsOpen)
@@ -333,25 +356,42 @@ namespace LiteCanSimProj
             }
         }
 
-        private bool IsValid104Message(string message)
+     
+        private bool IsValid104Message(string message, out int helm1_int, out int joyx1_int, out int joyy1_int)
         {
-            int numberOfGTs = message.Count(c => c == '>');
-            int numberOfSTs = message.Count(c => c == '<');
-            if (numberOfGTs > 1) return false;
-            if (numberOfSTs > 1) return false;
+            helm1_int = joyx1_int = joyy1_int = 0; // Initialize output parameters
 
-            int index_of_last_ST = message.LastIndexOf('<');           
-            int index_of_first_GT = message.IndexOf('>');
-
-
-            if (message.StartsWith("<") && message.Count(c => c == ',') == 7 && message.EndsWith(">"))
+            // Check the basic structure
+            if (message.StartsWith("<") && message.EndsWith(">"))
             {
-                return true;
+                // Remove the start and end characters
+                string content = message.Substring(1, message.Length - 2);
+
+                // Split the content by commas
+                string[] parts = content.Split(',');
+
+                // Ensure there are exactly eight parts
+                if (parts.Length != 8)
+                {
+                    return false;
+                }
+
+                // Validate and extract the specific integer values
+                if (int.TryParse(parts[1], out helm1_int) &&
+                    int.TryParse(parts[2], out joyx1_int) &&
+                    int.TryParse(parts[3], out joyy1_int))
+                {
+                    // All checks passed and values extracted
+                    return true;
+                }
             }
+
+            // Structure does not match or parsing failed
             return false;
         }
 
-        private bool IsValid103Message(string message)
+
+        private bool IsValid103Messagesimple(string message)
         {
             int numberOfGTs = message.Count(c => c == '<');
             int numberOfSTs = message.Count(c => c == '>');
@@ -364,35 +404,50 @@ namespace LiteCanSimProj
             }
             return false;
         }
-
-        private void DisplayMessage104(string message)
+        private bool IsValid103Message(string message, out int value1, out int value2, out int value3)
         {
-            Invoke(new Action(() =>
+            value1 = value2 = value3 = 0; // Initialize output parameters
+
+            // Check the basic structure
+            if (message.StartsWith("<A") && message.Count(c => c == ',') == 3 && message.EndsWith(">"))
             {
-                string formattedMessage = $"{lineNumber104}: {message}{Environment.NewLine}";
-                lineNumber104++;
+          
+                string content = message.Substring(0, message.Length - 1);
 
-                if (tb_104types.Lines.Length >= 24)
+                // Split the content by commas
+                string[] parts = content.Split(',');
+
+       
+
+                //string helm = parts[1];
+                //string joyX = parts[2];
+                //string joyY = parts[3];
+
+
+                //// Validate and extract the specific integer values
+                //if (int.TryParse(helm, out value1) &&
+                //    int.TryParse(joyX, out value2) &&
+                //    int.TryParse(joyY, out value3))
+                //{
+                //    // All checks passed and values extracted
+                //    return true;
+                //}
+
+                // Validate that each part is an integer and extract the values
+                if (int.TryParse(parts[1], out value1) && int.TryParse(parts[2], out value2) && int.TryParse(parts[3], out value3))
                 {
-                    tb_104types.Clear();
+                    // All checks passed and values extracted
+                    return true;
                 }
+            }
 
-                tb_104types.AppendText(formattedMessage);
-                //message template  <1,Helm,JoyX,JoyY,0,1,0,0> 
-                string[] messageParts = message.Split(',');
-                helm1 = messageParts[1];
-                joyX1 = messageParts[2];
-                joyY1 = messageParts[3];
-
-                lbl_1helm.Text = helm1;
-                lbl_1joyX.Text = joyX1;
-                lbl_1joyY.Text = joyY1;
-
-                Log($"Message '{message}' displayed in tb_104types.");
-            }));
+            // Structure does not match or parsing failed
+            return false;
         }
 
-        private void DisplayMessage103(string message)
+
+
+        private void DisplayMessage103(string message, int helmA_int, int joyXA_int, int joyYA_int)
         {
             Invoke(new Action(() =>
             {
@@ -405,16 +460,52 @@ namespace LiteCanSimProj
                 }
 
                 tb_103types.AppendText(formattedMessage);
-                //message template  <A,Helm,JoyX,JoyY>
 
-                string[] messageParts = message.Split(',');
-                helmA = messageParts[1];
-                joyXA = messageParts[2];
-                joyYA = messageParts[3];
-                lbl_Ahelm.Text = helmA;
-                lbl_AjoyX.Text = joyXA;
-                lbl_AjoyY.Text = joyYA;
+                // Display the extracted values
+                lbl_Ahelm.Text = helmA_int.ToString();
+                lbl_AjoyX.Text = joyXA_int.ToString();
+                lbl_AjoyY.Text = joyYA_int.ToString();
+
                 Log($"Message '{message}' displayed in tb_103types.");
+            }));
+        }
+
+        private void DisplayMessageRAWserial103(string message)
+        {
+            Invoke(new Action(() =>
+            {
+                tb_RAW103.AppendText(message);
+            }));
+        }
+        private void DisplayMessageRAWserial104(string message)
+        {
+            Invoke(new Action(() =>
+            {
+                tb_RAW104.AppendText(message);
+            }));
+        }
+
+
+        private void DisplayMessage104(string message, int helm1_int, int joyx1_int, int joyy1_int)
+        {
+            Invoke(new Action(() =>
+            {
+                string formattedMessage = $"{lineNumber104}: {message}{Environment.NewLine}";
+                lineNumber104++;
+
+                if (tb_104types.Lines.Length >= 24)
+                {
+                    tb_104types.Clear();
+                }
+
+                tb_104types.AppendText(formattedMessage);
+
+                // Display the extracted values
+                lbl_1helm.Text = helm1_int.ToString();
+                lbl_1joyX.Text = joyx1_int.ToString();
+                lbl_1joyY.Text = joyy1_int.ToString();
+
+                Log($"Message '{message}' displayed in tb_104types.");
             }));
         }
 
@@ -452,3 +543,110 @@ namespace LiteCanSimProj
         }
     }
 }
+
+
+/*        
+ *        
+         private void DisplayMessage103(string message, int helmA_int, int joyXA_int, int joyYA_int)
+        {
+            Invoke(new Action(() =>
+            {
+                string formattedMessage = $"{lineNumber103}: {message}{Environment.NewLine}";
+                lineNumber103++;
+
+                if (tb_103types.Lines.Length >= 24)
+                {
+                    tb_103types.Clear();
+                }
+
+                tb_103types.AppendText(formattedMessage);
+
+                // Display the extracted values
+                lbl_Ahelm.Text = helmA_int.ToString();
+                lbl_AjoyX.Text = joyXA_int.ToString();
+                lbl_AjoyY.Text = joyYA_int.ToString();
+
+                Log($"Message '{message}' displayed in tb_103types.");
+            }));
+        }
+
+
+   private bool IsValid104MessageSimple(string message)
+        {
+            int numberOfGTs = message.Count(c => c == '>');
+            int numberOfSTs = message.Count(c => c == '<');
+            if (numberOfGTs > 1) return false;
+            if (numberOfSTs > 1) return false;
+
+            int index_of_last_ST = message.LastIndexOf('<');           
+            int index_of_first_GT = message.IndexOf('>');
+
+
+            if (message.StartsWith("<") && message.Count(c => c == ',') == 7 && message.EndsWith(">"))
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+
+
+        private void DisplayMessage103Simple(string message)
+        {
+            Invoke(new Action(() =>
+            {
+                string formattedMessage = $"{lineNumber103}: {message}{Environment.NewLine}";
+                lineNumber103++;
+
+                if (tb_103types.Lines.Length >= 24)
+                {
+                    tb_103types.Clear();
+                }
+
+                tb_103types.AppendText(formattedMessage);
+                //message template  <A,Helm,JoyX,JoyY>
+
+                string[] messageParts = message.Split(',');
+                helmA = messageParts[1];
+                joyXA = messageParts[2];
+                //remove the last > from joyYA
+                joyYA = messageParts[3].Remove(joyYA.Length - 1);      
+
+                lbl_Ahelm.Text = helmA;
+                lbl_AjoyX.Text = joyXA;
+                lbl_AjoyY.Text = joyYA;
+                Log($"Message '{message}' displayed in tb_103types.");
+            }));
+        }
+
+
+    private void DisplayMessage104Simple(string message)
+        {
+            Invoke(new Action(() =>
+            {
+                string formattedMessage = $"{lineNumber104}: {message}{Environment.NewLine}";
+                lineNumber104++;
+
+                if (tb_104types.Lines.Length >= 24)
+                {
+                    tb_104types.Clear();
+                }
+
+                tb_104types.AppendText(formattedMessage);
+                //message template  <1,Helm,JoyX,JoyY,0,1,0,0> 
+                string[] messageParts = message.Split(',');
+                helm1 = messageParts[1];
+                joyX1 = messageParts[2];
+                joyY1 = messageParts[3];
+
+                lbl_1helm.Text = helm1;
+                lbl_1joyX.Text = joyX1;
+                lbl_1joyY.Text = joyY1;
+
+                Log($"Message '{message}' displayed in tb_104types.");
+            }));
+        }
+
+
+*/

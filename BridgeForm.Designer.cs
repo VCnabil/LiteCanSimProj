@@ -48,12 +48,14 @@
             this.lbl_1joyY = new System.Windows.Forms.Label();
             this.lbl_1joyX = new System.Windows.Forms.Label();
             this.lbl_1helm = new System.Windows.Forms.Label();
+            this.tb_RAW104 = new System.Windows.Forms.TextBox();
+            this.tb_RAW103 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbl_104
             // 
             this.lbl_104.AutoSize = true;
-            this.lbl_104.Location = new System.Drawing.Point(804, 207);
+            this.lbl_104.Location = new System.Drawing.Point(811, 623);
             this.lbl_104.Name = "lbl_104";
             this.lbl_104.Size = new System.Drawing.Size(188, 25);
             this.lbl_104.TabIndex = 34;
@@ -62,7 +64,7 @@
             // lbl_103
             // 
             this.lbl_103.AutoSize = true;
-            this.lbl_103.Location = new System.Drawing.Point(23, 207);
+            this.lbl_103.Location = new System.Drawing.Point(30, 623);
             this.lbl_103.Name = "lbl_103";
             this.lbl_103.Size = new System.Drawing.Size(188, 25);
             this.lbl_103.TabIndex = 33;
@@ -70,7 +72,7 @@
             // 
             // tb_104types
             // 
-            this.tb_104types.Location = new System.Drawing.Point(809, 252);
+            this.tb_104types.Location = new System.Drawing.Point(816, 668);
             this.tb_104types.Multiline = true;
             this.tb_104types.Name = "tb_104types";
             this.tb_104types.Size = new System.Drawing.Size(684, 574);
@@ -78,7 +80,7 @@
             // 
             // tb_103types
             // 
-            this.tb_103types.Location = new System.Drawing.Point(19, 252);
+            this.tb_103types.Location = new System.Drawing.Point(26, 668);
             this.tb_103types.Multiline = true;
             this.tb_103types.Name = "tb_103types";
             this.tb_103types.Size = new System.Drawing.Size(684, 574);
@@ -159,18 +161,18 @@
             // label103
             // 
             this.label103.AutoSize = true;
-            this.label103.Location = new System.Drawing.Point(14, 846);
+            this.label103.Location = new System.Drawing.Point(21, 1262);
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(412, 50);
+            this.label103.Size = new System.Drawing.Size(206, 25);
             this.label103.TabIndex = 37;
             this.label103.Text = "A , HHH,  XXX, YYY";
             // 
             // label104
             // 
             this.label104.AutoSize = true;
-            this.label104.Location = new System.Drawing.Point(817, 846);
+            this.label104.Location = new System.Drawing.Point(824, 1262);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(724, 50);
+            this.label104.Size = new System.Drawing.Size(362, 25);
             this.label104.TabIndex = 38;
             this.label104.Text = "1 , HHHH ,  XXXX, YYYY , 0 ,1 ,0 , 0";
             // 
@@ -178,48 +180,48 @@
             // 
             this.lbl_Ahelm.AutoSize = true;
             this.lbl_Ahelm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Ahelm.Location = new System.Drawing.Point(38, 947);
+            this.lbl_Ahelm.Location = new System.Drawing.Point(45, 1363);
             this.lbl_Ahelm.Name = "lbl_Ahelm";
             this.lbl_Ahelm.Size = new System.Drawing.Size(132, 55);
             this.lbl_Ahelm.TabIndex = 39;
             this.lbl_Ahelm.Text = "HHH";
             // 
-            // lbl_Ajoyx
+            // lbl_AjoyX
             // 
             this.lbl_AjoyX.AutoSize = true;
             this.lbl_AjoyX.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AjoyX.Location = new System.Drawing.Point(197, 947);
-            this.lbl_AjoyX.Name = "lbl_Ajoyx";
+            this.lbl_AjoyX.Location = new System.Drawing.Point(204, 1363);
+            this.lbl_AjoyX.Name = "lbl_AjoyX";
             this.lbl_AjoyX.Size = new System.Drawing.Size(123, 55);
             this.lbl_AjoyX.TabIndex = 40;
             this.lbl_AjoyX.Text = "XXX";
             // 
-            // lbl_Ajoyy
+            // lbl_AjoyY
             // 
             this.lbl_AjoyY.AutoSize = true;
             this.lbl_AjoyY.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AjoyY.Location = new System.Drawing.Point(365, 947);
-            this.lbl_AjoyY.Name = "lbl_Ajoyy";
+            this.lbl_AjoyY.Location = new System.Drawing.Point(372, 1363);
+            this.lbl_AjoyY.Name = "lbl_AjoyY";
             this.lbl_AjoyY.Size = new System.Drawing.Size(123, 55);
             this.lbl_AjoyY.TabIndex = 41;
             this.lbl_AjoyY.Text = "YYY";
             // 
-            // lbl_1joy
+            // lbl_1joyY
             // 
             this.lbl_1joyY.AutoSize = true;
             this.lbl_1joyY.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_1joyY.Location = new System.Drawing.Point(1223, 947);
-            this.lbl_1joyY.Name = "lbl_1joy";
+            this.lbl_1joyY.Location = new System.Drawing.Point(1230, 1363);
+            this.lbl_1joyY.Name = "lbl_1joyY";
             this.lbl_1joyY.Size = new System.Drawing.Size(156, 55);
             this.lbl_1joyY.TabIndex = 44;
             this.lbl_1joyY.Text = "YYYY";
             // 
-            // lbl_1joyx
+            // lbl_1joyX
             // 
             this.lbl_1joyX.AutoSize = true;
             this.lbl_1joyX.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_1joyX.Location = new System.Drawing.Point(1045, 947);
-            this.lbl_1joyX.Name = "lbl_1joyx";
+            this.lbl_1joyX.Location = new System.Drawing.Point(1052, 1363);
+            this.lbl_1joyX.Name = "lbl_1joyX";
             this.lbl_1joyX.Size = new System.Drawing.Size(156, 55);
             this.lbl_1joyX.TabIndex = 43;
             this.lbl_1joyX.Text = "XXXX";
@@ -228,17 +230,35 @@
             // 
             this.lbl_1helm.AutoSize = true;
             this.lbl_1helm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_1helm.Location = new System.Drawing.Point(824, 947);
+            this.lbl_1helm.Location = new System.Drawing.Point(831, 1363);
             this.lbl_1helm.Name = "lbl_1helm";
             this.lbl_1helm.Size = new System.Drawing.Size(168, 55);
             this.lbl_1helm.TabIndex = 42;
             this.lbl_1helm.Text = "HHHH";
             // 
+            // tb_RAW104
+            // 
+            this.tb_RAW104.Location = new System.Drawing.Point(816, 171);
+            this.tb_RAW104.Multiline = true;
+            this.tb_RAW104.Name = "tb_RAW104";
+            this.tb_RAW104.Size = new System.Drawing.Size(684, 435);
+            this.tb_RAW104.TabIndex = 46;
+            // 
+            // tb_RAW103
+            // 
+            this.tb_RAW103.Location = new System.Drawing.Point(26, 171);
+            this.tb_RAW103.Multiline = true;
+            this.tb_RAW103.Name = "tb_RAW103";
+            this.tb_RAW103.Size = new System.Drawing.Size(684, 435);
+            this.tb_RAW103.TabIndex = 45;
+            // 
             // BridgeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1526, 1181);
+            this.ClientSize = new System.Drawing.Size(1526, 1439);
+            this.Controls.Add(this.tb_RAW104);
+            this.Controls.Add(this.tb_RAW103);
             this.Controls.Add(this.lbl_1joyY);
             this.Controls.Add(this.lbl_1joyX);
             this.Controls.Add(this.lbl_1helm);
@@ -288,5 +308,7 @@
         private System.Windows.Forms.Label lbl_1joyY;
         private System.Windows.Forms.Label lbl_1joyX;
         private System.Windows.Forms.Label lbl_1helm;
+        private System.Windows.Forms.TextBox tb_RAW104;
+        private System.Windows.Forms.TextBox tb_RAW103;
     }
 }
