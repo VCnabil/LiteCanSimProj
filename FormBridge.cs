@@ -14,6 +14,8 @@ namespace LiteCanSimProj
 {
     public partial class FormBridge : Form
     {
+        bool DisplayLog = false;
+        bool AutoSetup = true;
         StringBuilder messageBuffer;
         private const int BaudRate = 19200;
         private SerialPort PCURSCport;
@@ -24,6 +26,11 @@ namespace LiteCanSimProj
         private object state_lock = new object();
         private bool stopping;
         private bool isLaptopA_PCU;
+        private int lineNumber104 = 1;
+        private int lineNumber103 = 1;
+        private Color _initialBackGroundColor;
+        private Color _Beige = Color.Beige;
+        private Color _paleblue = Color.PaleTurquoise;
         public FormBridge()
         {
             InitializeComponent();
@@ -39,7 +46,49 @@ namespace LiteCanSimProj
 
             btnBridge.Click += btnBridge_Click;
             checkBoxLaptopType.CheckedChanged += CheckBoxLaptopType_CheckedChanged;
+            if (AutoSetup)
+            {
+                AutoSetupConfiguration();
+            }
+            else
+            {
+                lbl_PCname.Text = Environment.MachineName;
+            }
 
+        }
+        private void AutoSetupConfiguration()
+        {
+            if (Environment.MachineName.Contains("NABIL"))
+            {
+                isLaptopA_PCU = false;
+                comboBox_AntennaSC.SelectedItem = "COM10";
+                comboBox_PCURSC.SelectedItem = "COM9";
+                lbl_PCname.Text = "Remote Station Contoler";
+                this.BackColor = _Beige;
+            }
+            else
+            {
+                isLaptopA_PCU = true;
+                comboBox_AntennaSC.SelectedItem = "COM3";
+                comboBox_PCURSC.SelectedItem = "COM4";
+                lbl_PCname.Text = "Propulsion Control Unit";
+                this.BackColor = _paleblue;
+            }
+
+            checkBoxLaptopType.Enabled = false;
+            comboBox_AntennaSC.Enabled = false;
+            comboBox_PCURSC.Enabled = false;
+
+            if (isLaptopA_PCU)
+            {
+                lbl_104.Text = "Received over Radio";
+                lbl_103.Text = "Sending Over Radio";
+            }
+            else
+            {
+                lbl_103.Text = "Received over Radio";
+                lbl_104.Text = "Sending Over Radio";
+            }
         }
         private void CheckBoxLaptopType_CheckedChanged(object sender, EventArgs e)
         {

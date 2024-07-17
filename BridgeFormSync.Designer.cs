@@ -44,7 +44,7 @@
             // 
             // btn_openSerialTester
             // 
-            this.btn_openSerialTester.Location = new System.Drawing.Point(1571, 12);
+            this.btn_openSerialTester.Location = new System.Drawing.Point(1215, 12);
             this.btn_openSerialTester.Name = "btn_openSerialTester";
             this.btn_openSerialTester.Size = new System.Drawing.Size(259, 52);
             this.btn_openSerialTester.TabIndex = 48;
@@ -152,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1508, 852);
+            this.ClientSize = new System.Drawing.Size(1500, 852);
             this.Controls.Add(this.btn_openSerialTester);
             this.Controls.Add(this.lbl_PCname);
             this.Controls.Add(this.lbl_104);

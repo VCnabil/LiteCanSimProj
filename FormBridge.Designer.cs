@@ -36,8 +36,11 @@
             this.btnBridge = new System.Windows.Forms.Button();
             this.comboBox_PCURSC = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_103 = new System.Windows.Forms.Label();
+            this.lbl_104 = new System.Windows.Forms.Label();
+            this.lbl_PCname = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // checkBoxLaptopType
@@ -109,31 +112,62 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Antenna";
             // 
-            // label3
+            // lbl_103
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 215);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 25);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Messagestype103";
+            this.lbl_103.AutoSize = true;
+            this.lbl_103.Location = new System.Drawing.Point(21, 215);
+            this.lbl_103.Name = "lbl_103";
+            this.lbl_103.Size = new System.Drawing.Size(188, 25);
+            this.lbl_103.TabIndex = 23;
+            this.lbl_103.Text = "Messagestype103";
             // 
-            // label4
+            // lbl_104
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(802, 215);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(188, 25);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Messagestype104";
+            this.lbl_104.AutoSize = true;
+            this.lbl_104.Location = new System.Drawing.Point(802, 215);
+            this.lbl_104.Name = "lbl_104";
+            this.lbl_104.Size = new System.Drawing.Size(188, 25);
+            this.lbl_104.TabIndex = 24;
+            this.lbl_104.Text = "Messagestype104";
+            // 
+            // lbl_PCname
+            // 
+            this.lbl_PCname.AutoSize = true;
+            this.lbl_PCname.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PCname.Location = new System.Drawing.Point(212, -3);
+            this.lbl_PCname.Name = "lbl_PCname";
+            this.lbl_PCname.Size = new System.Drawing.Size(161, 55);
+            this.lbl_PCname.TabIndex = 36;
+            this.lbl_PCname.Text = "laptop";
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Location = new System.Drawing.Point(824, 750);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(362, 25);
+            this.label104.TabIndex = 40;
+            this.label104.Text = "1 , HHHH ,  XXXX, YYYY , 0 ,1 ,0 , 0";
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Location = new System.Drawing.Point(21, 750);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(206, 25);
+            this.label103.TabIndex = 39;
+            this.label103.Text = "A , HHH,  XXX, YYY";
             // 
             // FormBridge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1513, 1446);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(1513, 832);
+            this.Controls.Add(this.label104);
+            this.Controls.Add(this.label103);
+            this.Controls.Add(this.lbl_PCname);
+            this.Controls.Add(this.lbl_104);
+            this.Controls.Add(this.lbl_103);
             this.Controls.Add(this.tb_104types);
             this.Controls.Add(this.tb_103types);
             this.Controls.Add(this.comboBox_AntennaSC);
@@ -159,7 +193,10 @@
         private System.Windows.Forms.Button btnBridge;
         private System.Windows.Forms.ComboBox comboBox_PCURSC;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_103;
+        private System.Windows.Forms.Label lbl_104;
+        private System.Windows.Forms.Label lbl_PCname;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.Label label103;
     }
 }

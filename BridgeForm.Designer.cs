@@ -40,6 +40,8 @@
             this.checkBoxLaptopType = new System.Windows.Forms.CheckBox();
             this.lbl_PCname = new System.Windows.Forms.Label();
             this.btn_openSerialTester = new System.Windows.Forms.Button();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_104
@@ -133,7 +135,7 @@
             // 
             this.lbl_PCname.AutoSize = true;
             this.lbl_PCname.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PCname.Location = new System.Drawing.Point(812, 12);
+            this.lbl_PCname.Location = new System.Drawing.Point(327, -1);
             this.lbl_PCname.Name = "lbl_PCname";
             this.lbl_PCname.Size = new System.Drawing.Size(161, 55);
             this.lbl_PCname.TabIndex = 35;
@@ -141,18 +143,38 @@
             // 
             // btn_openSerialTester
             // 
-            this.btn_openSerialTester.Location = new System.Drawing.Point(1188, 30);
+            this.btn_openSerialTester.Location = new System.Drawing.Point(1352, 7);
             this.btn_openSerialTester.Name = "btn_openSerialTester";
-            this.btn_openSerialTester.Size = new System.Drawing.Size(259, 79);
+            this.btn_openSerialTester.Size = new System.Drawing.Size(162, 37);
             this.btn_openSerialTester.TabIndex = 36;
-            this.btn_openSerialTester.Text = "openSerial";
+            this.btn_openSerialTester.Text = "serial Sender ";
             this.btn_openSerialTester.UseVisualStyleBackColor = true;
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Location = new System.Drawing.Point(14, 846);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(412, 50);
+            this.label103.TabIndex = 37;
+            this.label103.Text = "A , HHH,  XXX, YYY";
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Location = new System.Drawing.Point(817, 846);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(724, 50);
+            this.label104.TabIndex = 38;
+            this.label104.Text = "1 , HHHH ,  XXXX, YYYY , 0 ,1 ,0 , 0";
             // 
             // BridgeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1526, 845);
+            this.ClientSize = new System.Drawing.Size(1526, 1058);
+            this.Controls.Add(this.label104);
+            this.Controls.Add(this.label103);
             this.Controls.Add(this.btn_openSerialTester);
             this.Controls.Add(this.lbl_PCname);
             this.Controls.Add(this.lbl_104);
@@ -186,5 +208,7 @@
         private System.Windows.Forms.CheckBox checkBoxLaptopType;
         private System.Windows.Forms.Label lbl_PCname;
         private System.Windows.Forms.Button btn_openSerialTester;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.Label label104;
     }
 }
