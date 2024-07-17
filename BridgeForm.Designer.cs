@@ -42,6 +42,12 @@
             this.btn_openSerialTester = new System.Windows.Forms.Button();
             this.label103 = new System.Windows.Forms.Label();
             this.label104 = new System.Windows.Forms.Label();
+            this.lbl_Ahelm = new System.Windows.Forms.Label();
+            this.lbl_AjoyX = new System.Windows.Forms.Label();
+            this.lbl_AjoyY = new System.Windows.Forms.Label();
+            this.lbl_1joyY = new System.Windows.Forms.Label();
+            this.lbl_1joyX = new System.Windows.Forms.Label();
+            this.lbl_1helm = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_104
@@ -168,11 +174,77 @@
             this.label104.TabIndex = 38;
             this.label104.Text = "1 , HHHH ,  XXXX, YYYY , 0 ,1 ,0 , 0";
             // 
+            // lbl_Ahelm
+            // 
+            this.lbl_Ahelm.AutoSize = true;
+            this.lbl_Ahelm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Ahelm.Location = new System.Drawing.Point(38, 947);
+            this.lbl_Ahelm.Name = "lbl_Ahelm";
+            this.lbl_Ahelm.Size = new System.Drawing.Size(132, 55);
+            this.lbl_Ahelm.TabIndex = 39;
+            this.lbl_Ahelm.Text = "HHH";
+            // 
+            // lbl_Ajoyx
+            // 
+            this.lbl_AjoyX.AutoSize = true;
+            this.lbl_AjoyX.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_AjoyX.Location = new System.Drawing.Point(197, 947);
+            this.lbl_AjoyX.Name = "lbl_Ajoyx";
+            this.lbl_AjoyX.Size = new System.Drawing.Size(123, 55);
+            this.lbl_AjoyX.TabIndex = 40;
+            this.lbl_AjoyX.Text = "XXX";
+            // 
+            // lbl_Ajoyy
+            // 
+            this.lbl_AjoyY.AutoSize = true;
+            this.lbl_AjoyY.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_AjoyY.Location = new System.Drawing.Point(365, 947);
+            this.lbl_AjoyY.Name = "lbl_Ajoyy";
+            this.lbl_AjoyY.Size = new System.Drawing.Size(123, 55);
+            this.lbl_AjoyY.TabIndex = 41;
+            this.lbl_AjoyY.Text = "YYY";
+            // 
+            // lbl_1joy
+            // 
+            this.lbl_1joyY.AutoSize = true;
+            this.lbl_1joyY.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_1joyY.Location = new System.Drawing.Point(1223, 947);
+            this.lbl_1joyY.Name = "lbl_1joy";
+            this.lbl_1joyY.Size = new System.Drawing.Size(156, 55);
+            this.lbl_1joyY.TabIndex = 44;
+            this.lbl_1joyY.Text = "YYYY";
+            // 
+            // lbl_1joyx
+            // 
+            this.lbl_1joyX.AutoSize = true;
+            this.lbl_1joyX.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_1joyX.Location = new System.Drawing.Point(1045, 947);
+            this.lbl_1joyX.Name = "lbl_1joyx";
+            this.lbl_1joyX.Size = new System.Drawing.Size(156, 55);
+            this.lbl_1joyX.TabIndex = 43;
+            this.lbl_1joyX.Text = "XXXX";
+            // 
+            // lbl_1helm
+            // 
+            this.lbl_1helm.AutoSize = true;
+            this.lbl_1helm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_1helm.Location = new System.Drawing.Point(824, 947);
+            this.lbl_1helm.Name = "lbl_1helm";
+            this.lbl_1helm.Size = new System.Drawing.Size(168, 55);
+            this.lbl_1helm.TabIndex = 42;
+            this.lbl_1helm.Text = "HHHH";
+            // 
             // BridgeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1526, 1058);
+            this.ClientSize = new System.Drawing.Size(1526, 1181);
+            this.Controls.Add(this.lbl_1joyY);
+            this.Controls.Add(this.lbl_1joyX);
+            this.Controls.Add(this.lbl_1helm);
+            this.Controls.Add(this.lbl_AjoyY);
+            this.Controls.Add(this.lbl_AjoyX);
+            this.Controls.Add(this.lbl_Ahelm);
             this.Controls.Add(this.label104);
             this.Controls.Add(this.label103);
             this.Controls.Add(this.btn_openSerialTester);
@@ -210,5 +282,11 @@
         private System.Windows.Forms.Button btn_openSerialTester;
         private System.Windows.Forms.Label label103;
         private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.Label lbl_Ahelm;
+        private System.Windows.Forms.Label lbl_AjoyX;
+        private System.Windows.Forms.Label lbl_AjoyY;
+        private System.Windows.Forms.Label lbl_1joyY;
+        private System.Windows.Forms.Label lbl_1joyX;
+        private System.Windows.Forms.Label lbl_1helm;
     }
 }

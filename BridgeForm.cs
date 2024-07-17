@@ -28,6 +28,8 @@ namespace LiteCanSimProj
         private bool isLaptopA_PCU;
         private int lineNumber104 = 1;
         private int lineNumber103 = 1;
+        string helmA, joyYA, joyXA;
+        string helm1, joyY1, joyX1;
         public BridgeForm()
         {
             InitializeComponent();
@@ -376,6 +378,16 @@ namespace LiteCanSimProj
                 }
 
                 tb_104types.AppendText(formattedMessage);
+                //message template  <1,Helm,JoyX,JoyY,0,1,0,0> 
+                string[] messageParts = message.Split(',');
+                helm1 = messageParts[1];
+                joyX1 = messageParts[2];
+                joyY1 = messageParts[3];
+
+                lbl_1helm.Text = helm1;
+                lbl_1joyX.Text = joyX1;
+                lbl_1joyY.Text = joyY1;
+
                 Log($"Message '{message}' displayed in tb_104types.");
             }));
         }
@@ -393,6 +405,15 @@ namespace LiteCanSimProj
                 }
 
                 tb_103types.AppendText(formattedMessage);
+                //message template  <A,Helm,JoyX,JoyY>
+
+                string[] messageParts = message.Split(',');
+                helmA = messageParts[1];
+                joyXA = messageParts[2];
+                joyYA = messageParts[3];
+                lbl_Ahelm.Text = helmA;
+                lbl_AjoyX.Text = joyXA;
+                lbl_AjoyY.Text = joyYA;
                 Log($"Message '{message}' displayed in tb_103types.");
             }));
         }
