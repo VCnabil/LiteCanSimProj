@@ -29,22 +29,23 @@ namespace LiteCanSimProj
         private int lineNumber104 = 1;
         private int lineNumber103 = 1;
         private Color _initialBackGroundColor;
-        private Color _Beige = Color.MistyRose;
-        private Color _paleblue = Color.CornflowerBlue;
+        private Color _Beige = Color.Beige;
+        private Color _paleblue = Color.PaleTurquoise;
+        int helmA_int, joyYA_int, joyXA_int;
+        int helm1_int, joyY1_int, joyX1_int;
         public BridgeFormSync()
         {
             InitializeComponent();
-            _initialBackGroundColor = this.BackColor;
             messageBuffer = new StringBuilder();
-            PCURSCbuffer = new byte[8192];
-            AntennaSCbuffer = new byte[8192];
+            PCURSCbuffer = new byte[8192]; // Increase buffer size to 8192 bytes
+            AntennaSCbuffer = new byte[8192]; // Increase buffer size to 8192 bytes
 
             comboBox_PCURSC.DropDown += new EventHandler(Serial_DropDown);
             comboBox_AntennaSC.DropDown += new EventHandler(Serial_DropDown);
 
             PopulateSerialPorts(comboBox_PCURSC);
             PopulateSerialPorts(comboBox_AntennaSC);
-            //btn_openSerialTester.Click += OnOpenTesterForm;
+
             btnBridge.Click += btnBridge_Click;
             checkBoxLaptopType.CheckedChanged += CheckBoxLaptopType_CheckedChanged;
             if (AutoSetup)
@@ -55,109 +56,39 @@ namespace LiteCanSimProj
             {
                 lbl_PCname.Text = Environment.MachineName;
             }
-            checkBoxLaptopType.Text = " isLaptopA_PCU PCU ? sync";
+            checkBoxLaptopType.Text = " isLaptopA_PCU PCU ? SIMPLE";
 
 
         }
 
-        private void btnBridge_Click(object sender, EventArgs e)
+        public BridgeFormSync(bool argIsAuto)
         {
-            if (PCURSCport != null && AntennaSCport != null && PCURSCport.IsOpen && AntennaSCport.IsOpen)
+            AutoSetup = argIsAuto;
+            InitializeComponent();
+            messageBuffer = new StringBuilder();
+            PCURSCbuffer = new byte[8192]; // Increase buffer size to 8192 bytes
+            AntennaSCbuffer = new byte[8192]; // Increase buffer size to 8192 bytes
+
+            comboBox_PCURSC.DropDown += new EventHandler(Serial_DropDown);
+            comboBox_AntennaSC.DropDown += new EventHandler(Serial_DropDown);
+
+            PopulateSerialPorts(comboBox_PCURSC);
+            PopulateSerialPorts(comboBox_AntennaSC);
+
+            btnBridge.Click += btnBridge_Click;
+            checkBoxLaptopType.CheckedChanged += CheckBoxLaptopType_CheckedChanged;
+            if (AutoSetup)
             {
-                stop_bridge();
-                checkBoxLaptopType.Enabled = true;
-            }
-            else if (comboBox_PCURSC.SelectedItem == null || comboBox_AntennaSC.SelectedItem == null)
-            {
-                MessageBox.Show("Both serial ports must be selected to begin bridging", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                AutoSetupConfiguration();
             }
             else
             {
-                PCURSCport = new SerialPort((string)comboBox_PCURSC.SelectedItem, BaudRate);
-                AntennaSCport = new SerialPort((string)comboBox_AntennaSC.SelectedItem, BaudRate);
-                state = State.Running;
-
-                try
-                {
-                    PCURSCport.Open();
-                    AntennaSCport.Open();
-                    Log("Ports opened successfully.");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error opening port: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    stop_bridge();
-                    return;
-                }
-
-                Task.Run(() => BridgePorts(PCURSCport, PCURSCbuffer, AntennaSCport));
-                Task.Run(() => BridgePorts(AntennaSCport, AntennaSCbuffer, PCURSCport));
-
-                btnBridge.Text = "Stop Bridge";
-                comboBox_PCURSC.Enabled = false;
-                comboBox_AntennaSC.Enabled = false;
-                checkBoxLaptopType.Enabled = false;
+                lbl_PCname.Text = Environment.MachineName;
             }
+            checkBoxLaptopType.Text = " isLaptopA_PCU PCU ? SIMPLE";
+
+
         }
-        private void BridgePorts(SerialPort readPort, byte[] readBuffer, SerialPort writePort)
-        {
-        
-            try
-            {
-                while (state == State.Running)
-                {
-                    int count = readPort.Read(readBuffer, 0, readBuffer.Length);
-                    if (count > 0)
-                    {
-                        string message = Encoding.ASCII.GetString(readBuffer, 0, count);
-                        messageBuffer.Append(message);
-                        ProcessMessages();
-                        if (isLaptopA_PCU)
-                        {
-                            if (readPort == PCURSCport)
-                            {
-                                DisplayMessageRAWserial104(message);
-                            }
-                           
-
-                        }
-                        else
-                        {
-                             if (readPort == AntennaSCport)
-                            {
-                                DisplayMessageRAWserial103(message);
-                            }
-
-                        }
-                        if (writePort.IsOpen)
-                        {
-                            //writePort.Write(readBuffer, 0, count);
-                            Log($"Wrote {count} bytes to {writePort.PortName}.");
-                        }
-                        else
-                        {
-                            Invoke(new Action(() =>
-                            {
-                                MessageBox.Show("Write port is closed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                                stop_bridge();
-                            }));
-                            return;
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Invoke(new Action(() =>
-                {
-                    MessageBox.Show("Error during bridging: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    stop_bridge();
-                }));
-            }
-        }
-
-
-
         private void OnOpenTesterForm(object sender, EventArgs e)
         {
 
@@ -176,7 +107,6 @@ namespace LiteCanSimProj
                 comboBox_PCURSC.SelectedItem = "COM9";
                 lbl_PCname.Text = "Remote Station Contoler";
                 this.BackColor = _Beige;
-                tb_RAW104.Hide();
             }
             else
             {
@@ -185,7 +115,6 @@ namespace LiteCanSimProj
                 comboBox_PCURSC.SelectedItem = "COM4";
                 lbl_PCname.Text = "Propulsion Control Unit";
                 this.BackColor = _paleblue;
-                tb_RAW103.Hide();
             }
 
             checkBoxLaptopType.Enabled = false;
@@ -252,6 +181,125 @@ namespace LiteCanSimProj
             comboBox.SelectedItem = selectedItem;
         }
 
+        private void btnBridge_Click(object sender, EventArgs e)
+        {
+            if (PCURSCport != null && AntennaSCport != null && PCURSCport.IsOpen && AntennaSCport.IsOpen)
+            {
+                stop_bridge();
+                checkBoxLaptopType.Enabled = true;
+            }
+            else if (comboBox_PCURSC.SelectedItem == null || comboBox_AntennaSC.SelectedItem == null)
+            {
+                MessageBox.Show("Both serial ports must be selected to begin bridging", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+            else
+            {
+                PCURSCport = new SerialPort((string)comboBox_PCURSC.SelectedItem, BaudRate);
+                AntennaSCport = new SerialPort((string)comboBox_AntennaSC.SelectedItem, BaudRate);
+                state = State.Running;
+
+                try
+                {
+                    PCURSCport.Open();
+                    AntennaSCport.Open();
+                    Log("Ports opened successfully.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error opening port: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    stop_bridge();
+                    return;
+                }
+
+                bridge(PCURSCport, PCURSCbuffer, AntennaSCport);
+                bridge(AntennaSCport, AntennaSCbuffer, PCURSCport);
+
+                btnBridge.Text = "Stop Bridge";
+                comboBox_PCURSC.Enabled = false;
+                comboBox_AntennaSC.Enabled = false;
+                checkBoxLaptopType.Enabled = false;
+            }
+        }
+
+        private void bridge(SerialPort read_port, byte[] read_buffer, SerialPort write_port)
+        {
+            AsyncCallback callback = new AsyncCallback(ReadCallback);
+            read_port.BaseStream.BeginRead(read_buffer, 0, read_buffer.Length, callback, new object[] { read_port, read_buffer, write_port });
+            Log($"Started bridging between {read_port.PortName} and {write_port.PortName}.");
+        }
+
+        private void ReadCallback(IAsyncResult ar)
+        {
+            object[] state = (object[])ar.AsyncState;
+            SerialPort read_port = (SerialPort)state[0];
+            byte[] read_buffer = (byte[])state[1];
+            SerialPort write_port = (SerialPort)state[2];
+            int count;
+
+            try
+            {
+                count = read_port.BaseStream.EndRead(ar);
+                Log($"Read {count} bytes from {read_port.PortName}.");
+            }
+            catch (Exception ex)
+            {
+                lock (state_lock)
+                {
+                    if (this.state == State.Running)
+                        this.state = stopping ? State.Closing : State.GotError;
+                }
+                if (this.state != State.GotError)
+                    return;
+                this.state = State.ErrorClosing;
+                Invoke(new Action(() =>
+                {
+                    MessageBox.Show("Communications error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    stop_bridge();
+                }));
+                return;
+            }
+
+            if (count > 0)
+            {
+                string message = Encoding.ASCII.GetString(read_buffer, 0, count);
+                messageBuffer.Append(message);
+                ProcessMessages();
+ 
+
+
+
+
+                if (write_port.IsOpen)
+                {
+                    try
+                    {
+                        write_port.Write(read_buffer, 0, count);
+                        Log($"Wrote {count} bytes to {write_port.PortName}.");
+                    }
+                    catch (Exception ex)
+                    {
+                        Invoke(new Action(() =>
+                        {
+                            MessageBox.Show("Error writing to port: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                            stop_bridge();
+                        }));
+                        return;
+                    }
+                }
+                else
+                {
+                    Invoke(new Action(() =>
+                    {
+                        MessageBox.Show("Write port is closed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                        stop_bridge();
+                    }));
+                    return;
+                }
+
+                bridge(read_port, read_buffer, write_port);
+            }
+        }
+
         private void ProcessMessages()
         {
             string bufferContent = messageBuffer.ToString();
@@ -265,7 +313,7 @@ namespace LiteCanSimProj
                 if (endIdx != -1)
                 {
                     string message = bufferContent.Substring(startIdx, endIdx - startIdx + 1);
-                    //if message contains more than 1 '<' trim the message to the last '<'
+                    // If message contains more than 1 '<' trim the message to the last '<'
                     if (message.Count(c => c == '<') > 1)
                     {
                         int index_of_last_ST = message.LastIndexOf('<');
@@ -273,46 +321,36 @@ namespace LiteCanSimProj
                     }
                     if (message.Count(c => c == '>') > 1)
                     {
-                        message = message.Substring(message.LastIndexOf('<'));
+                        message = message.Substring(message.LastIndexOf('>') + 1);
                     }
 
-                    if (message.Count(c => c == '<') == 1 && message.Count(c => c == '>') == 1)
+                    if (IsValid104Message(message, out helm1_int, out joyX1_int, out joyY1_int)) // Check if it is a valid 104 message
                     {
-                        if (message.StartsWith("<") && message.EndsWith(">"))
+                        if (isLaptopA_PCU)
                         {
-
-                            if (IsValid104Message(message)) // Check if it is a valid 104 message
-                            {
-                                if (isLaptopA_PCU)
-                                {
-                                    WriteToPort(AntennaSCport, message); // Write to AntennaC port
-                                }
-                                else
-                                {
-                                    WriteToPort(AntennaSCport, message); // Write to AntennaS port
-                                }
-                                DisplayMessage104(message);
-                            }
-                            else if (IsValid103Message(message)) // Check if it is a valid 103 message
-                            {
-                                if (isLaptopA_PCU)
-                                {
-                                    WriteToPort(PCURSCport, message); // Write to PCUdevice port
-                                }
-                                else
-                                {
-                                    WriteToPort(PCURSCport, message); // Write to RSCdevice port
-                                }
-                                DisplayMessage103(message);
-                            }
-
-                            bufferContent = bufferContent.Substring(endIdx + 1);
-                            startIdx = bufferContent.IndexOf('<');
-
+                            WriteToPort(AntennaSCport, message); // Write to AntennaSC port
                         }
+                        else
+                        {
+                            WriteToPort(AntennaSCport, message); // Write to AntennaSC port
+                        }
+                        DisplayMessage104(message, helm1_int, joyX1_int, joyY1_int);
+                    }
+                    else if (IsValid103Message(message, out helmA_int, out joyXA_int, out joyYA_int)) // Check if it is a valid 103 message
+                    {
+                        if (isLaptopA_PCU)
+                        {
+                            WriteToPort(PCURSCport, message); // Write to PCU device port
+                        }
+                        else
+                        {
+                            WriteToPort(PCURSCport, message); // Write to RSC device port
+                        }
+                        DisplayMessage103(message, helmA_int, joyXA_int, joyYA_int);
                     }
 
-
+                    bufferContent = bufferContent.Substring(endIdx + 1);
+                    startIdx = bufferContent.IndexOf('<');
                 }
                 else
                 {
@@ -326,21 +364,14 @@ namespace LiteCanSimProj
                 messageBuffer.Append(bufferContent);
             }
         }
+
+
         private void WriteToPort(SerialPort port, string message)
         {
             if (port.IsOpen)
             {
-                if (message.Count(c => c == '<') == 1 && message.Count(c => c == '>') == 1)
-                {
-                    if (message.StartsWith("<") && message.EndsWith(">"))
-                    {
-                        port.Write(message+"\n");
-                        Log($"Message '{message}' written to {port.PortName}.");
-                    }
-                }
-                else {
-                    Log($"Message '{message}' was Malformed");
-                }
+                port.Write(message);
+                Log($"Message '{message}' written to {port.PortName}.");
             }
             else
             {
@@ -348,25 +379,42 @@ namespace LiteCanSimProj
             }
         }
 
-        private bool IsValid104Message(string message)
+
+        private bool IsValid104Message(string message, out int helm1_int, out int joyx1_int, out int joyy1_int)
         {
-            int numberOfGTs = message.Count(c => c == '>');
-            int numberOfSTs = message.Count(c => c == '<');
-            if (numberOfGTs > 1) return false;
-            if (numberOfSTs > 1) return false;
+            helm1_int = joyx1_int = joyy1_int = 0; // Initialize output parameters
 
-            int index_of_last_ST = message.LastIndexOf('<');
-            int index_of_first_GT = message.IndexOf('>');
-
-
-            if (message.StartsWith("<") && message.Count(c => c == ',') == 7 && message.EndsWith(">"))
+            // Check the basic structure
+            if (message.StartsWith("<") && message.EndsWith(">"))
             {
-                return true;
+                // Remove the start and end characters
+                string content = message.Substring(1, message.Length - 2);
+
+                // Split the content by commas
+                string[] parts = content.Split(',');
+
+                // Ensure there are exactly eight parts
+                if (parts.Length != 8)
+                {
+                    return false;
+                }
+
+                // Validate and extract the specific integer values
+                if (int.TryParse(parts[1], out helm1_int) &&
+                    int.TryParse(parts[2], out joyx1_int) &&
+                    int.TryParse(parts[3], out joyy1_int))
+                {
+                    // All checks passed and values extracted
+                    return true;
+                }
             }
+
+            // Structure does not match or parsing failed
             return false;
         }
 
-        private bool IsValid103Message(string message)
+
+        private bool IsValid103Messagesimple(string message)
         {
             int numberOfGTs = message.Count(c => c == '<');
             int numberOfSTs = message.Count(c => c == '>');
@@ -379,31 +427,50 @@ namespace LiteCanSimProj
             }
             return false;
         }
-
-        private void DisplayMessage104(string message)
+        private bool IsValid103Message(string message, out int value1, out int value2, out int value3)
         {
-            Invoke(new Action(() =>
+            value1 = value2 = value3 = 0; // Initialize output parameters
+
+            // Check the basic structure
+            if (message.StartsWith("<A") && message.Count(c => c == ',') == 3 && message.EndsWith(">"))
             {
-                string formattedMessage = $"{lineNumber104}: {message}{Environment.NewLine}";
-                lineNumber104++;
 
-                if (tb_104types.Lines.Length >= 24)
-                {
-                    tb_104types.Clear();
-                }
-
-                tb_104types.AppendText(formattedMessage);
                 string content = message.Substring(0, message.Length - 1);
-                string[] parts = content.Split(',');
-                lbl_1helm.Text = parts[1];
-                lbl_1joyX.Text = parts[2];
-                lbl_1joyY.Text = parts[3];
 
-                Log($"Message '{message}' displayed in tb_104types.");
-            }));
+                // Split the content by commas
+                string[] parts = content.Split(',');
+
+
+
+                //string helm = parts[1];
+                //string joyX = parts[2];
+                //string joyY = parts[3];
+
+
+                //// Validate and extract the specific integer values
+                //if (int.TryParse(helm, out value1) &&
+                //    int.TryParse(joyX, out value2) &&
+                //    int.TryParse(joyY, out value3))
+                //{
+                //    // All checks passed and values extracted
+                //    return true;
+                //}
+
+                // Validate that each part is an integer and extract the values
+                if (int.TryParse(parts[1], out value1) && int.TryParse(parts[2], out value2) && int.TryParse(parts[3], out value3))
+                {
+                    // All checks passed and values extracted
+                    return true;
+                }
+            }
+
+            // Structure does not match or parsing failed
+            return false;
         }
 
-        private void DisplayMessage103(string message)
+
+
+        private void DisplayMessage103(string message, int helmA_int, int joyXA_int, int joyYA_int)
         {
             Invoke(new Action(() =>
             {
@@ -417,26 +484,38 @@ namespace LiteCanSimProj
 
                 tb_103types.AppendText(formattedMessage);
 
-                string content = message.Substring(0, message.Length - 1);
-                string[] parts = content.Split(',');
-                lbl_Ahelm.Text = parts[1];
-                lbl_AjoyX.Text = parts[2];
-                lbl_AjoyY.Text = parts[3];
+                // Display the extracted values
+                lbl_Ahelm.Text = helmA_int.ToString();
+                lbl_AjoyX.Text = joyXA_int.ToString();
+                lbl_AjoyY.Text = joyYA_int.ToString();
+
                 Log($"Message '{message}' displayed in tb_103types.");
             }));
         }
-        private void DisplayMessageRAWserial103(string message)
+
+    
+
+
+        private void DisplayMessage104(string message, int helm1_int, int joyx1_int, int joyy1_int)
         {
             Invoke(new Action(() =>
             {
-                tb_RAW103.AppendText(message);
-            }));
-        }
-        private void DisplayMessageRAWserial104(string message)
-        {
-            Invoke(new Action(() =>
-            {
-                tb_RAW104.AppendText(message);
+                string formattedMessage = $"{lineNumber104}: {message}{Environment.NewLine}";
+                lineNumber104++;
+
+                if (tb_104types.Lines.Length >= 24)
+                {
+                    tb_104types.Clear();
+                }
+
+                tb_104types.AppendText(formattedMessage);
+
+                // Display the extracted values
+                lbl_1helm.Text = helm1_int.ToString();
+                lbl_1joyX.Text = joyx1_int.ToString();
+                lbl_1joyY.Text = joyy1_int.ToString();
+
+                Log($"Message '{message}' displayed in tb_104types.");
             }));
         }
 
@@ -445,32 +524,17 @@ namespace LiteCanSimProj
             if (stopping)
                 return;
             stopping = true;
-            state = State.Closing;
+            if (PCURSCport != null && PCURSCport.IsOpen)
+                PCURSCport.Close();
+            if (AntennaSCport != null && AntennaSCport.IsOpen)
+                AntennaSCport.Close();
 
-            Task.Run(() =>
-            {
-                if (PCURSCport != null && PCURSCport.IsOpen)
-                {
-                    PCURSCport.Close();
-                    PCURSCport.Dispose();
-                }
-                if (AntennaSCport != null && AntennaSCport.IsOpen)
-                {
-                    AntennaSCport.Close();
-                    AntennaSCport.Dispose();
-                }
-
-                Invoke(new Action(() =>
-                {
-                    btnBridge.Text = "Start Bridge";
-                    comboBox_PCURSC.Enabled = true;
-                    comboBox_AntennaSC.Enabled = true;
-                    checkBoxLaptopType.Enabled = true;
-                    stopping = false;
-                    state = State.Idle;
-                    Log("Bridge stopped.");
-                }));
-            });
+            btnBridge.Text = "Start Bridge";
+            comboBox_PCURSC.Enabled = true;
+            comboBox_AntennaSC.Enabled = true;
+            stopping = false;
+            state = State.Idle;
+            Log("Bridge stopped.");
         }
 
         private void Log(string message)

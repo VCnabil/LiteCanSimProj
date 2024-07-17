@@ -171,7 +171,7 @@ namespace LiteCanSimProj
             read_port.BaseStream.BeginRead(read_buffer, 0, read_buffer.Length, callback, new object[] { read_port, read_buffer, write_port });
             Log($"Started bridging between {read_port.PortName} and {write_port.PortName}.");
         }
-
+         
         private void ReadCallback(IAsyncResult ar)
         {
             object[] state = (object[])ar.AsyncState;

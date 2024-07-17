@@ -40,8 +40,6 @@
             this.comboBox_PCURSC = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBoxLaptopType = new System.Windows.Forms.CheckBox();
-            this.tb_RAW104 = new System.Windows.Forms.TextBox();
-            this.tb_RAW103 = new System.Windows.Forms.TextBox();
             this.lbl_1joyY = new System.Windows.Forms.Label();
             this.lbl_1joyX = new System.Windows.Forms.Label();
             this.lbl_1helm = new System.Windows.Forms.Label();
@@ -73,7 +71,7 @@
             // lbl_104
             // 
             this.lbl_104.AutoSize = true;
-            this.lbl_104.Location = new System.Drawing.Point(721, 591);
+            this.lbl_104.Location = new System.Drawing.Point(725, 160);
             this.lbl_104.Name = "lbl_104";
             this.lbl_104.Size = new System.Drawing.Size(188, 25);
             this.lbl_104.TabIndex = 46;
@@ -82,7 +80,7 @@
             // lbl_103
             // 
             this.lbl_103.AutoSize = true;
-            this.lbl_103.Location = new System.Drawing.Point(496, 595);
+            this.lbl_103.Location = new System.Drawing.Point(500, 164);
             this.lbl_103.Name = "lbl_103";
             this.lbl_103.Size = new System.Drawing.Size(188, 25);
             this.lbl_103.TabIndex = 45;
@@ -90,7 +88,7 @@
             // 
             // tb_104types
             // 
-            this.tb_104types.Location = new System.Drawing.Point(726, 623);
+            this.tb_104types.Location = new System.Drawing.Point(730, 192);
             this.tb_104types.Multiline = true;
             this.tb_104types.Name = "tb_104types";
             this.tb_104types.Size = new System.Drawing.Size(684, 574);
@@ -98,7 +96,7 @@
             // 
             // tb_103types
             // 
-            this.tb_103types.Location = new System.Drawing.Point(12, 623);
+            this.tb_103types.Location = new System.Drawing.Point(16, 192);
             this.tb_103types.Multiline = true;
             this.tb_103types.Name = "tb_103types";
             this.tb_103types.Size = new System.Drawing.Size(684, 574);
@@ -157,27 +155,11 @@
             this.checkBoxLaptopType.Text = "is laptop PCU ?";
             this.checkBoxLaptopType.UseVisualStyleBackColor = true;
             // 
-            // tb_RAW104
-            // 
-            this.tb_RAW104.Location = new System.Drawing.Point(726, 153);
-            this.tb_RAW104.Multiline = true;
-            this.tb_RAW104.Name = "tb_RAW104";
-            this.tb_RAW104.Size = new System.Drawing.Size(684, 435);
-            this.tb_RAW104.TabIndex = 56;
-            // 
-            // tb_RAW103
-            // 
-            this.tb_RAW103.Location = new System.Drawing.Point(12, 153);
-            this.tb_RAW103.Multiline = true;
-            this.tb_RAW103.Name = "tb_RAW103";
-            this.tb_RAW103.Size = new System.Drawing.Size(684, 435);
-            this.tb_RAW103.TabIndex = 55;
-            // 
             // lbl_1joyY
             // 
             this.lbl_1joyY.AutoSize = true;
             this.lbl_1joyY.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_1joyY.Location = new System.Drawing.Point(1204, 1468);
+            this.lbl_1joyY.Location = new System.Drawing.Point(1205, 852);
             this.lbl_1joyY.Name = "lbl_1joyY";
             this.lbl_1joyY.Size = new System.Drawing.Size(156, 55);
             this.lbl_1joyY.TabIndex = 54;
@@ -187,7 +169,7 @@
             // 
             this.lbl_1joyX.AutoSize = true;
             this.lbl_1joyX.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_1joyX.Location = new System.Drawing.Point(1026, 1468);
+            this.lbl_1joyX.Location = new System.Drawing.Point(1027, 852);
             this.lbl_1joyX.Name = "lbl_1joyX";
             this.lbl_1joyX.Size = new System.Drawing.Size(156, 55);
             this.lbl_1joyX.TabIndex = 53;
@@ -197,7 +179,7 @@
             // 
             this.lbl_1helm.AutoSize = true;
             this.lbl_1helm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_1helm.Location = new System.Drawing.Point(805, 1468);
+            this.lbl_1helm.Location = new System.Drawing.Point(806, 852);
             this.lbl_1helm.Name = "lbl_1helm";
             this.lbl_1helm.Size = new System.Drawing.Size(168, 55);
             this.lbl_1helm.TabIndex = 52;
@@ -207,7 +189,7 @@
             // 
             this.lbl_AjoyY.AutoSize = true;
             this.lbl_AjoyY.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AjoyY.Location = new System.Drawing.Point(346, 1468);
+            this.lbl_AjoyY.Location = new System.Drawing.Point(347, 852);
             this.lbl_AjoyY.Name = "lbl_AjoyY";
             this.lbl_AjoyY.Size = new System.Drawing.Size(123, 55);
             this.lbl_AjoyY.TabIndex = 51;
@@ -217,7 +199,7 @@
             // 
             this.lbl_AjoyX.AutoSize = true;
             this.lbl_AjoyX.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AjoyX.Location = new System.Drawing.Point(178, 1468);
+            this.lbl_AjoyX.Location = new System.Drawing.Point(179, 852);
             this.lbl_AjoyX.Name = "lbl_AjoyX";
             this.lbl_AjoyX.Size = new System.Drawing.Size(123, 55);
             this.lbl_AjoyX.TabIndex = 50;
@@ -227,7 +209,7 @@
             // 
             this.lbl_Ahelm.AutoSize = true;
             this.lbl_Ahelm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Ahelm.Location = new System.Drawing.Point(19, 1468);
+            this.lbl_Ahelm.Location = new System.Drawing.Point(20, 852);
             this.lbl_Ahelm.Name = "lbl_Ahelm";
             this.lbl_Ahelm.Size = new System.Drawing.Size(132, 55);
             this.lbl_Ahelm.TabIndex = 49;
@@ -238,8 +220,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1500, 1566);
-            this.Controls.Add(this.tb_RAW104);
-            this.Controls.Add(this.tb_RAW103);
             this.Controls.Add(this.lbl_1joyY);
             this.Controls.Add(this.lbl_1joyX);
             this.Controls.Add(this.lbl_1helm);
@@ -279,8 +259,6 @@
         private System.Windows.Forms.ComboBox comboBox_PCURSC;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBoxLaptopType;
-        private System.Windows.Forms.TextBox tb_RAW104;
-        private System.Windows.Forms.TextBox tb_RAW103;
         private System.Windows.Forms.Label lbl_1joyY;
         private System.Windows.Forms.Label lbl_1joyX;
         private System.Windows.Forms.Label lbl_1helm;

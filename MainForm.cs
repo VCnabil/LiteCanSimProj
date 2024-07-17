@@ -18,6 +18,7 @@ namespace LiteCanSimProj
             btn_mybridgedisplay.Click += Open_BridgeForm;
             btn_SerialBridgeForm.Click += Open_SerialBridgeForm;
             btn_FormSerialTester.Click += Open_FormSerialTester;
+            btn_BridgeFormSync.Click += Open_BridgeFormSync;
         }
 
         private void Open_FormSerialTester(object sender, EventArgs e)
@@ -38,6 +39,13 @@ namespace LiteCanSimProj
         {
            BridgeForm bridgeForm = new BridgeForm(cb_auto.Checked);
             bridgeForm.Show();
+        }
+
+
+        private void Open_BridgeFormSync(object sender, EventArgs e)
+        {
+            BridgeFormSync bridgeFormSync = new BridgeFormSync(cb_auto.Checked);
+            bridgeFormSync.Show();
         }
     }
 }
