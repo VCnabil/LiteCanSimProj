@@ -59,6 +59,7 @@ namespace LiteCanSimProj
             else {
                 lbl_PCname.Text = Environment.MachineName;
             }
+            checkBoxLaptopType.Text = " isLaptopA_PCU PCU ? ASYNC";
         }
         private void OnOpenTesterForm(object sender, EventArgs e) {
 
@@ -77,6 +78,7 @@ namespace LiteCanSimProj
                 comboBox_PCURSC.SelectedItem = "COM9";
                 lbl_PCname.Text = "Remote Station Contoler";
                 this.BackColor = _Beige;
+                tb_RAW104.Hide();
             }
             else
             {
@@ -85,6 +87,7 @@ namespace LiteCanSimProj
                 comboBox_PCURSC.SelectedItem = "COM4";
                 lbl_PCname.Text = "Propulsion Control Unit";
                 this.BackColor = _paleblue;
+                tb_RAW103.Hide();
             }
 
             checkBoxLaptopType.Enabled = false;
@@ -234,15 +237,48 @@ namespace LiteCanSimProj
                 messageBuffer.Append(message);
                 ProcessMessages();
 
-                // Append the raw message to the respective text box
-                if (read_port == PCURSCport)
+                //if (isLaptopA_PCU)
+                //{
+                //    if (read_port == PCURSCport)
+                //    {
+                //        DisplayMessageRAWserial103(message);
+                //    }
+                //    else if (read_port == AntennaSCport)
+                //    {
+                //        DisplayMessageRAWserial104(message);
+                //    }
+
+                //}
+                //else {
+                //    // Append the raw message to the respective text box
+                //    if (read_port == PCURSCport)
+                //    {
+                //        DisplayMessageRAWserial104(message);
+                //    }
+                //    else if (read_port == AntennaSCport)
+                //    {
+                //        DisplayMessageRAWserial103(message);
+                //    }
+
+                //}
+                if (isLaptopA_PCU)
                 {
-                    DisplayMessageRAWserial104(message);
+                    if (read_port == AntennaSCport)
+                    {
+                        DisplayMessageRAWserial104(message);
+                    }
+
+
                 }
-                else if (read_port == AntennaSCport)
+                else
                 {
-                    DisplayMessageRAWserial103(message);
+                    if (read_port == AntennaSCport)
+                    {
+                        DisplayMessageRAWserial103(message);
+                    }
+
                 }
+
 
 
 

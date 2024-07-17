@@ -29,8 +29,8 @@ namespace LiteCanSimProj
         private int lineNumber104 = 1;
         private int lineNumber103 = 1;
         private Color _initialBackGroundColor;
-        private Color _Beige = Color.Beige;
-        private Color _paleblue = Color.PaleTurquoise;
+        private Color _Beige = Color.MistyRose;
+        private Color _paleblue = Color.CornflowerBlue;
         public BridgeFormSync()
         {
             InitializeComponent();
@@ -55,6 +55,9 @@ namespace LiteCanSimProj
             {
                 lbl_PCname.Text = Environment.MachineName;
             }
+            checkBoxLaptopType.Text = " isLaptopA_PCU PCU ? sync";
+
+
         }
 
         private void btnBridge_Click(object sender, EventArgs e)
@@ -109,7 +112,23 @@ namespace LiteCanSimProj
                         string message = Encoding.ASCII.GetString(readBuffer, 0, count);
                         messageBuffer.Append(message);
                         ProcessMessages();
+                        if (isLaptopA_PCU)
+                        {
+                            if (readPort == AntennaSCport)
+                            {
+                                DisplayMessageRAWserial104(message);
+                            }
+                           
 
+                        }
+                        else
+                        {
+                             if (readPort == AntennaSCport)
+                            {
+                                DisplayMessageRAWserial103(message);
+                            }
+
+                        }
                         if (writePort.IsOpen)
                         {
                             //writePort.Write(readBuffer, 0, count);
@@ -157,6 +176,7 @@ namespace LiteCanSimProj
                 comboBox_PCURSC.SelectedItem = "COM9";
                 lbl_PCname.Text = "Remote Station Contoler";
                 this.BackColor = _Beige;
+                tb_RAW104.Hide();
             }
             else
             {
@@ -165,6 +185,7 @@ namespace LiteCanSimProj
                 comboBox_PCURSC.SelectedItem = "COM4";
                 lbl_PCname.Text = "Propulsion Control Unit";
                 this.BackColor = _paleblue;
+                tb_RAW103.Hide();
             }
 
             checkBoxLaptopType.Enabled = false;
@@ -372,6 +393,12 @@ namespace LiteCanSimProj
                 }
 
                 tb_104types.AppendText(formattedMessage);
+                string content = message.Substring(0, message.Length - 1);
+                string[] parts = content.Split(',');
+                lbl_1helm.Text = parts[1];
+                lbl_1joyX.Text = parts[2];
+                lbl_1joyY.Text = parts[3];
+
                 Log($"Message '{message}' displayed in tb_104types.");
             }));
         }
@@ -389,7 +416,27 @@ namespace LiteCanSimProj
                 }
 
                 tb_103types.AppendText(formattedMessage);
+
+                string content = message.Substring(0, message.Length - 1);
+                string[] parts = content.Split(',');
+                lbl_Ahelm.Text = parts[1];
+                lbl_AjoyX.Text = parts[2];
+                lbl_AjoyY.Text = parts[3];
                 Log($"Message '{message}' displayed in tb_103types.");
+            }));
+        }
+        private void DisplayMessageRAWserial103(string message)
+        {
+            Invoke(new Action(() =>
+            {
+                tb_RAW103.AppendText(message);
+            }));
+        }
+        private void DisplayMessageRAWserial104(string message)
+        {
+            Invoke(new Action(() =>
+            {
+                tb_RAW104.AppendText(message);
             }));
         }
 
