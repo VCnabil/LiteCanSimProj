@@ -99,8 +99,13 @@ namespace LiteCanSimProj
                 }));
                 return;
             }
-            write_port.Write(read_buffer, 0, count);
-            this.bridge(read_port, read_buffer, write_port);
+            if (write_port.IsOpen) {
+                if (read_port.IsOpen) { 
+                    write_port.Write(read_buffer, 0, count);
+                    this.bridge(read_port, read_buffer, write_port);
+                
+                }
+            }
         }), (object)null);
 
         private void stop_bridge()
