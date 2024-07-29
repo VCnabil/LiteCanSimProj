@@ -1,4 +1,431 @@
 ﻿============================================================================
+CAN Messages From : PC
+VC_PGN_ID : 590
+PGN_32bit : 65261
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : LiteCanSimProj
+info: SVN: N/A
+Configuration : WRONOWSKI
+Project : Wronowski
+Type : N/A
+Comments : N/A
+Group : 0
+CTRLs : N/A
+============================================================================
+	0xFEED    ( PC ZEROING )
+
+            - Byte0 : Sensor A |XX*0
+                    - b0 : zeroA
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Sensor B |XX*0
+                    - b0 : zeroB
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+			- Byte2 : Sensor C |XX*0
+                    - b0 : zeroC
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+			- Byte3 : Sensor D |XX*0
+                    - b0 : zeroD
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+			- Byte4 : SendFormat |XX*1
+                    - b0 : 1Wron_0All1frame
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+			- Byte5 : Sensor Faults |XX*0
+                    - b0 : 0_12bitrez_1Raw
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+			- Byte6 : N/A
+
+			- Byte7 : N/A
+
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 590
+PGN_32bit : 65490
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: SVN: N/A
+Configuration : WRONOWSKI
+Project : Wronowski
+Type : N/A
+Comments : N/A
+Group : 0
+CTRLs : N/A
+============================================================================
+	0xFFD2    ( Unitinctrl A)
+
+            - Byte0 : Sensor Faults |XX*15
+                    - b0 : isInControl
+                    - b1 : Is_PORT
+                    - b2 : _A_isA
+                    - b3 : allowClutch
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+
+			- Byte2 : N/A
+
+			- Byte3 : N/A
+
+			- Byte4 : N/A
+
+			- Byte5 : N/A
+
+			- Byte6 : N/A
+
+			- Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 591
+PGN_32bit : 65490
+address Port: 01
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: SVN: N/A
+Configuration : WRONOWSKI
+Project : Wronowski
+Type : N/A
+Comments : N/A
+Group : 0
+CTRLs : N/A
+============================================================================
+	0xFFD2    ( Unitinctrl B )
+
+            - Byte0 : Sensor Faults |XX*14
+                    - b0 : isInControl
+                    - b1 : Is_PORT
+                    - b2 : _A_isA
+                    - b3 : allowClutch
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+
+			- Byte2 : N/A
+
+			- Byte3 : N/A
+
+			- Byte4 : N/A
+
+			- Byte5 : N/A
+
+			- Byte6 : N/A
+
+			- Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 500
+PGN_32bit : 65488
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: SVN: N/A
+Configuration : WRONOWSKI
+Project : Wronowski
+Type : N/A
+Comments : N/A
+Group : 0
+CTRLs : N/A
+============================================================================
+    0xFFD0    ( Command & Feedback #1 )
+
+            - Byte0 : SteerCom LO |B2(0,0,3600)
+
+            - Byte1 : SteerCom HI |B2
+ 
+            - Byte2 : SteerFbk LO |B2(0,0,3600)
+ 
+            - Byte3 : SteerFbk HI |B2
+
+            - Byte4 : EnginCom LO |B2(0,10,1000)
+
+            - Byte5 : EnginCom HI |B2
+
+            - Byte6 : EnginFbk LO |B2(0,10,1000)
+
+            - Byte7 : EnginFbk HI |B2
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 501
+PGN_32bit : 65489
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: SVN: N/A
+Configuration : WRONOWSKI
+Project : Wronowski
+Type : N/A
+Comments : N/A
+Group : 0
+CTRLs : N/A
+============================================================================
+	0xFFD1    ( Command & Feedback #2 )
+
+            - Byte0 : Clutch commands |XX*1
+                    - b0 : cltchcmd
+                    - b1 : cltchcmd
+                    - b2 : cltchcmd
+                    - b3 : bit3
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A  
+
+			- Byte1 : Clutch  feedbacks |XX*1
+					- b0 : cltchfbk
+					- b1 : cltchfbk
+					- b2 : cltchfbk
+					- b3 : bit3
+					- b4 : N/A
+					- b5 : N/A
+					- b6 : N/A
+					- b7 : N/A
+
+			- Byte2 : N/A
+
+			- Byte3 : N/A
+
+			- Byte4 : N/A
+
+			- Byte5 : N/A
+
+            - Byte6 : N/A
+
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 503
+PGN_32bit : 65491
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : 341.586.806
+info: SVN: N/A
+Configuration : WRONOWSKI
+Project : Wronowski
+Type : N/A
+Comments : N/A
+Group : 0
+CTRLs : N/A
+============================================================================
+	0xFFD3    ( Control Unit Sw Version )
+
+			- Byte0 : CU_Major LO |B2*341
+
+			- Byte1 : CU_Major HI |B2
+
+			- Byte2 : CU_Minor LO |B2*586
+
+			- Byte3 : CU_Minor HI |B2
+
+			- Byte4 : CU Revision LO |B2*806
+
+			- Byte5 : CU Revision HI |B2
+
+			- Byte6 : N/A
+
+			- Byte7 : N/A
+
+============================================================================
+CAN Messages From : AZM
+VC_PGN_ID : 504
+PGN_32bit : 65482
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : 341.586.806
+info: SVN: N/A
+Configuration : WRONOWSKI
+Project : Wronowski
+Type : N/A
+Comments : N/A
+Group : 0
+CTRLs : N/A
+============================================================================
+	0xFFCA    ( AZM Sw Version )
+
+			- Byte0 : AZM_Major LO |B2*341
+
+			- Byte1 : AZM_Major HI |B2
+
+			- Byte2 : AZM_Minor LO |B2*586
+
+			- Byte3 : AZM_Minor HI |B2
+
+			- Byte4 : AZM Revision LO |B2*806
+
+			- Byte5 : AZM Revision HI |B2
+
+			- Byte6 : N/A
+
+			- Byte7 : N/A
+
+============================================================================
+CAN Messages From : Clutch
+VC_PGN_ID : 505
+PGN_32bit : 65344
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : 326.586.2109
+info: SVN: N/A
+Configuration : WRONOWSKI
+Project : Wronowski
+Type : N/A
+Comments : N/A
+Group : 0
+CTRLs : N/A
+============================================================================
+	0xFF40    ( Clutch Sw Version )
+
+			- Byte0 : Clutch_Major LO |B2*326
+
+			- Byte1 : Clutch_Major HI |B2
+
+			- Byte2 : Clutch_Minor LO |B2*586
+
+			- Byte3 : Clutch_Minor HI |B2
+
+			- Byte4 : Clutch Revision LO |B2*2109
+
+			- Byte5 : Clutch Revision |B2
+
+			- Byte6 : N/A
+
+			- Byte7 : N/A
+			
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 188
+PGN_32bit : 65421
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version :  67.1010 Rev4476
+info: N/A
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFF8D    (   Faults   )
+
+            - Byte0 : Faults |XX
+                    - b0 : Calibration Fault
+                    - b1 : bClutch_CAN_FAULT_STA1
+                    - b2 : bStation3_CAN_FAULT
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Station 1&2 faults |XX
+                    - b0 : Station 1 Helm Fault
+                    - b1 : Station 1 Port Lever2 Fault
+                    - b2 : Station 1 Stbd Lever2 Fault
+                    - b3 : Station 2 Helm Fault
+                    - b4 : Station 2 Port Lever1 Fault
+                    - b5 : Station 2 Stbd Lever1 Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : Station 3&4 faults |XX
+                    - b0 : Station 3 Helm3 Fault
+                    - b1 : Station 3 JoyX Fault
+                    - b2 : Station 3 JoyY Fault
+                    - b3 : Station 4 Helm4 Fault
+                    - b4 : Station 4 JoyX Fault
+                    - b5 : Station 4 JoyY Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : SKIM faults |XX
+                    - b0 : bP_IOSKIM_Fault
+                    - b1 : bS_IOSKIM_Fault
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : crash stop flages |XX
+                    - b0 : bPCrashStopFlag
+                    - b1 : bSCrashStopFlag
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+============================================================================
 CAN Messages From : Control Unit
 VC_PGN_ID : 500
 PGN_32bit : 65400

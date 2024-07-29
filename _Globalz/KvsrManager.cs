@@ -1,4 +1,5 @@
 ﻿using Kvaser.CanLib;
+using System.Runtime.InteropServices;
 using System;
 using System.Windows.Forms;
 
@@ -19,6 +20,9 @@ namespace LiteCanSimProj._Globalz
         public event MessageReceivedHandler OnMessageReceived;
         byte[] datareceivedFFFA;
         int _channelsFound = 0;
+
+        private delegate void CanCallbackDelegate(int handle, IntPtr context, int notifyEvent);
+
 
         public int GetChannelsFound()
         {
@@ -111,9 +115,48 @@ namespace LiteCanSimProj._Globalz
                 _errormessage = $"Failed to set bus on for channel {channelIndex}" + errorsCnt.ToString();
                 return;
             }
+
+            // Set up the callback function for asynchronous CAN reading
+            CanCallbackDelegate callback = new CanCallbackDelegate(CanEventCallback);
+            GCHandle.Alloc(callback); // Prevent garbage collection of the callback
+            // Set notify flags to listen for RX events
+            int notifyFlags = Canlib.canNOTIFY_RX;
+            Canlib.canStatus result = Canlib.canSetNotify(handle, IntPtr.Zero, notifyFlags);
+            if (result != (int)Canlib.canStatus.canOK)
+            {
+                errorsCnt++;
+                _errormessage = $"Failed to set notify for channel {channelIndex}" + errorsCnt.ToString();
+                return;
+            }
+
             isOnBus = true;
         }
+        private void CanEventCallback(int handle, IntPtr context, int notifyEvent)
 
+        {
+            if (notifyEvent == Canlib.canEVENT_RX)
+
+            {
+                // Read the CAN message
+                int id;
+                byte[] msg = new byte[8];
+                int dlc;
+                int flags;
+                long timestamp;
+                Canlib.canStatus status = Canlib.canRead(handle, out id, msg, out dlc, out flags, out timestamp);
+                if (status == Canlib.canStatus.canOK)
+                {
+                    string message = $"Received Message: ID={id}, DLC={dlc}, Data={BitConverter.ToString(msg, 0, dlc)}, Timestamp={timestamp}";
+                    OnMessageReceived?.Invoke(message);
+                }
+                else
+                {
+                    errorsCnt++;
+                    _errormessage = "Failed to read CAN message";
+
+                }
+            }
+        }
         public void Close()
         {
             if (!_isOnBus1 && !_isOnBus2)

@@ -1,0 +1,691 @@
+{
+  "Title": "AB_wronwoski",
+  "AllPgnList": [
+    {
+      "IDpgn": 1,
+      "PGN_int": 419360000,
+      "PGN_strHEX": "0x18FEED00",
+      "DESCpgn": "from PC  PC ZEROING  ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Sensor A ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. zeroA"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "Sensor B ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. zeroB"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "Sensor C ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 2,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. zeroC"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 3,
+          "DESC": "Sensor D ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 3,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. zeroD"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 4,
+          "DESC": "SendFormat ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 1,
+          "INDEXLO": 4,
+          "INDEXHI": 4,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. 1Wron_0All1frame"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 5,
+          "DESC": "Sensor Faults ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 5,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. 0_12bitrez_1Raw"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 2,
+      "PGN_int": 419418624,
+      "PGN_strHEX": "0x18FFD200",
+      "DESCpgn": "from Control Unit  Unitinctrl A ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Sensor Faults ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 15,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. isInControl",
+            "1. Is_PORT",
+            "2. _A_isA",
+            "3. allowClutch"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 3,
+      "PGN_int": 419418625,
+      "PGN_strHEX": "0x18FFD201",
+      "DESCpgn": "from Control Unit  Unitinctrl B  ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Sensor Faults ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 14,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. isInControl",
+            "1. Is_PORT",
+            "2. _A_isA",
+            "3. allowClutch"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 4,
+      "PGN_int": 419418112,
+      "PGN_strHEX": "0x18FFD000",
+      "DESCpgn": "from Control Unit  Command & Feedback #1  unit A ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "SteerCom ",
+          "MIN": 0,
+          "MAX": 3600,
+          "DEF": 0,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "SteerFbk ",
+          "MIN": 0,
+          "MAX": 3600,
+          "DEF": 0,
+          "INDEXLO": 2,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 4,
+          "DESC": "EnginCom ",
+          "MIN": 0,
+          "MAX": 1000,
+          "DEF": 10,
+          "INDEXLO": 4,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 6,
+          "DESC": "EnginFbk ",
+          "MIN": 0,
+          "MAX": 1000,
+          "DEF": 10,
+          "INDEXLO": 6,
+          "INDEXHI": 7,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 5,
+      "PGN_int": 419418113,
+      "PGN_strHEX": "0x18FFD001",
+      "DESCpgn": "from Control Unit  Command & Feedback #1  unit B ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "SteerCom ",
+          "MIN": 0,
+          "MAX": 3600,
+          "DEF": 0,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "SteerFbk ",
+          "MIN": 0,
+          "MAX": 3600,
+          "DEF": 0,
+          "INDEXLO": 2,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 4,
+          "DESC": "EnginCom ",
+          "MIN": 0,
+          "MAX": 1000,
+          "DEF": 10,
+          "INDEXLO": 4,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 6,
+          "DESC": "EnginFbk ",
+          "MIN": 0,
+          "MAX": 1000,
+          "DEF": 10,
+          "INDEXLO": 6,
+          "INDEXHI": 7,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 6,
+      "PGN_int": 419418368,
+      "PGN_strHEX": "0x18FFD100",
+      "DESCpgn": "from Control Unit  Command & Feedback #2  unit A ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Clutch commands ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 1,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. cltchcmd",
+            "1. cltchcmd",
+            "2. cltchcmd",
+            "3. bit3"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "Clutch  feedbacks ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 1,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. cltchfbk",
+            "1. cltchfbk",
+            "2. cltchfbk",
+            "3. bit3"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 7,
+      "PGN_int": 419418369,
+      "PGN_strHEX": "0x18FFD101",
+      "DESCpgn": "from Control Unit  Command & Feedback #2  unit B ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Clutch commands ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 1,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. cltchcmd",
+            "1. cltchcmd",
+            "2. cltchcmd",
+            "3. bit3"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "Clutch  feedbacks ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 1,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. cltchfbk",
+            "1. cltchfbk",
+            "2. cltchfbk",
+            "3. bit3"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 8,
+      "PGN_int": 419418880,
+      "PGN_strHEX": "0x18FFD300",
+      "DESCpgn": "from Control Unit  Control Unit Sw Version  unit A",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "CU_Major ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 341,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "CU_Minor ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 586,
+          "INDEXLO": 2,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 4,
+          "DESC": "CU Revision ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 806,
+          "INDEXLO": 4,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 9,
+      "PGN_int": 419418881,
+      "PGN_strHEX": "0x18FFD301",
+      "DESCpgn": "from Control Unit  Control Unit Sw Version  unit B",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "CU_Major ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 341,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "CU_Minor ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 586,
+          "INDEXLO": 2,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 4,
+          "DESC": "CU Revision ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 806,
+          "INDEXLO": 4,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 10,
+      "PGN_int": 419416576,
+      "PGN_strHEX": "0x18FFCA00",
+      "DESCpgn": "from AZM  AZM Sw Version  unit A ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "AZM_Major ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 341,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "AZM_Minor ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 586,
+          "INDEXLO": 2,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 4,
+          "DESC": "AZM Revision ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 806,
+          "INDEXLO": 4,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 11,
+      "PGN_int": 419416577,
+      "PGN_strHEX": "0x18FFCA01",
+      "DESCpgn": "from AZM  AZM Sw Version  unit B ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "AZM_Major ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 341,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "AZM_Minor ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 586,
+          "INDEXLO": 2,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 4,
+          "DESC": "AZM Revision ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 806,
+          "INDEXLO": 4,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 12,
+      "PGN_int": 419381248,
+      "PGN_strHEX": "0x18FF4000",
+      "DESCpgn": "from Clutch  Clutch Sw Version  unit A ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Clutch_Major ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 326,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "Clutch_Minor ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 586,
+          "INDEXLO": 2,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 13,
+      "PGN_int": 419381249,
+      "PGN_strHEX": "0x18FF4001",
+      "DESCpgn": "from Clutch  Clutch Sw Version  unit B ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Clutch_Major ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 326,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "Clutch_Minor ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 586,
+          "INDEXLO": 2,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    }
+  ]
+}
