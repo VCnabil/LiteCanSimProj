@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LiteCanSimProj._MainUIs.MainForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,20 @@ namespace LiteCanSimProj
             btn_SerialBridgeForm.Click += Open_SerialBridgeForm;
             btn_FormSerialTester.Click += Open_FormSerialTester;
             btn_BridgeFormSync.Click += Open_BridgeFormSync;
+            btn_CanManip.Click += Btn_CanManip_Click;
+            btn_SeeThree.Click += Btn_SeeThree_Click;
+        }
+
+        private void Btn_SeeThree_Click(object sender, EventArgs e)
+        {
+            SeeThree form = new SeeThree();
+            form.Show();
+        }
+
+        private void Btn_CanManip_Click(object sender, EventArgs e)
+        {
+            CanManip_V0Form form = new CanManip_V0Form();
+            form.Show();
         }
 
         private void Open_FormSerialTester(object sender, EventArgs e)

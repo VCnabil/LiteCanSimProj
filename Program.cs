@@ -19,12 +19,12 @@ namespace LiteCanSimProj
             //Application.Run(new Form1());
             //  Application.Run(new FormBridge());
             // Application.Run(new Form2());
-            Application.Run(new CanManip_V0Form());
+           // Application.Run(new CanManip_V0Form());
             // Application.Run(new FormSerialTester());
             // Application.Run(new BridgeForm2Messagetypes());
             //  Application.Run(new BridgeForm()); //working for my compiled 103
            // Application.Run(new BridgeFormSync());
-           //  Application.Run(new MainForm()); For Serial Antena to antenna Bridging
+            Application.Run(new MainForm());// For Serial Antena to antenna Bridging
         }
     }
 }

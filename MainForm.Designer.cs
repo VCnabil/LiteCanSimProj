@@ -33,11 +33,13 @@
             this.btn_mybridgedisplay = new System.Windows.Forms.Button();
             this.cb_auto = new System.Windows.Forms.CheckBox();
             this.btn_BridgeFormSync = new System.Windows.Forms.Button();
+            this.btn_CanManip = new System.Windows.Forms.Button();
+            this.btn_SeeThree = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_FormSerialTester
             // 
-            this.btn_FormSerialTester.Location = new System.Drawing.Point(26, 12);
+            this.btn_FormSerialTester.Location = new System.Drawing.Point(12, 341);
             this.btn_FormSerialTester.Name = "btn_FormSerialTester";
             this.btn_FormSerialTester.Size = new System.Drawing.Size(252, 82);
             this.btn_FormSerialTester.TabIndex = 0;
@@ -46,7 +48,7 @@
             // 
             // btn_SerialBridgeForm
             // 
-            this.btn_SerialBridgeForm.Location = new System.Drawing.Point(26, 100);
+            this.btn_SerialBridgeForm.Location = new System.Drawing.Point(12, 429);
             this.btn_SerialBridgeForm.Name = "btn_SerialBridgeForm";
             this.btn_SerialBridgeForm.Size = new System.Drawing.Size(252, 82);
             this.btn_SerialBridgeForm.TabIndex = 1;
@@ -55,7 +57,7 @@
             // 
             // btn_mybridgedisplay
             // 
-            this.btn_mybridgedisplay.Location = new System.Drawing.Point(26, 307);
+            this.btn_mybridgedisplay.Location = new System.Drawing.Point(12, 636);
             this.btn_mybridgedisplay.Name = "btn_mybridgedisplay";
             this.btn_mybridgedisplay.Size = new System.Drawing.Size(191, 82);
             this.btn_mybridgedisplay.TabIndex = 3;
@@ -65,7 +67,7 @@
             // cb_auto
             // 
             this.cb_auto.AutoSize = true;
-            this.cb_auto.Location = new System.Drawing.Point(26, 188);
+            this.cb_auto.Location = new System.Drawing.Point(12, 517);
             this.cb_auto.Name = "cb_auto";
             this.cb_auto.Size = new System.Drawing.Size(162, 29);
             this.cb_auto.TabIndex = 4;
@@ -74,18 +76,38 @@
             // 
             // btn_BridgeFormSync
             // 
-            this.btn_BridgeFormSync.Location = new System.Drawing.Point(26, 219);
+            this.btn_BridgeFormSync.Location = new System.Drawing.Point(12, 548);
             this.btn_BridgeFormSync.Name = "btn_BridgeFormSync";
             this.btn_BridgeFormSync.Size = new System.Drawing.Size(191, 82);
             this.btn_BridgeFormSync.TabIndex = 5;
             this.btn_BridgeFormSync.Text = "BridgeFast";
             this.btn_BridgeFormSync.UseVisualStyleBackColor = true;
             // 
+            // btn_CanManip
+            // 
+            this.btn_CanManip.Location = new System.Drawing.Point(36, 28);
+            this.btn_CanManip.Name = "btn_CanManip";
+            this.btn_CanManip.Size = new System.Drawing.Size(242, 90);
+            this.btn_CanManip.TabIndex = 6;
+            this.btn_CanManip.Text = "PGN Manager";
+            this.btn_CanManip.UseVisualStyleBackColor = true;
+            // 
+            // btn_SeeThree
+            // 
+            this.btn_SeeThree.Location = new System.Drawing.Point(36, 125);
+            this.btn_SeeThree.Name = "btn_SeeThree";
+            this.btn_SeeThree.Size = new System.Drawing.Size(242, 116);
+            this.btn_SeeThree.TabIndex = 7;
+            this.btn_SeeThree.Text = "SeeThree";
+            this.btn_SeeThree.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 452);
+            this.ClientSize = new System.Drawing.Size(381, 757);
+            this.Controls.Add(this.btn_SeeThree);
+            this.Controls.Add(this.btn_CanManip);
             this.Controls.Add(this.btn_BridgeFormSync);
             this.Controls.Add(this.cb_auto);
             this.Controls.Add(this.btn_mybridgedisplay);
@@ -105,5 +127,7 @@
         private System.Windows.Forms.Button btn_mybridgedisplay;
         private System.Windows.Forms.CheckBox cb_auto;
         private System.Windows.Forms.Button btn_BridgeFormSync;
+        private System.Windows.Forms.Button btn_CanManip;
+        private System.Windows.Forms.Button btn_SeeThree;
     }
 }

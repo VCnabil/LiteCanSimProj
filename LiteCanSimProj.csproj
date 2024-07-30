@@ -88,12 +88,6 @@
     <Compile Include="BridgeFormSync.Designer.cs">
       <DependentUpon>BridgeFormSync.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormBridge.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +108,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeeThree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeeThree.Designer.cs">
+      <DependentUpon>SeeThree.cs</DependentUpon>
+    </Compile>
     <Compile Include="SerialBridgeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,9 +213,6 @@
     <EmbeddedResource Include="BridgeFormSync.resx">
       <DependentUpon>BridgeFormSync.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormBridge.resx">
       <DependentUpon>FormBridge.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +231,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SeeThree.resx">
+      <DependentUpon>SeeThree.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SerialBridgeForm.resx">
       <DependentUpon>SerialBridgeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +286,12 @@
     <None Include="_Proj_Data_Dir\_CCM_Trimmed\_Dynamic_Trimmed2.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="_Proj_Data_Dir\_OutDir\AB_wronwoski.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="_Proj_Data_Dir\_OutDir\B_E_B.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -298,7 +304,9 @@
     <Content Include="_Proj_Data_Dir\_BaseDir\_GroundZero.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="_Proj_Data_Dir\_OutDir\keephere.txt" />
+    <Content Include="_Proj_Data_Dir\_OutDir\keephere.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

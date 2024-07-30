@@ -30,13 +30,29 @@ namespace LiteCanSimProj._MainUIs.MainForms
             DoMeasure(5, 6);
             this.Width = G_PGN_CanManipV0_WindowParames.Width / 2;
             this.Height = G_PGN_CanManipV0_WindowParames.Height / 2;
+
+            string outputDir = GetOutputDir();
+            if (!Directory.Exists(outputDir))
+            {
+                Directory.CreateDirectory(outputDir);
+            }
+
             //list files in C:\___Root_VCI_Projects\Generic_VC_PGN_SIMULATOR\genericSim\VC_PGN_ManagerGUI\_Proj_Data_Dir\_OutDir\ in combobox comboBox_loadFileNames
             string[] files = System.IO.Directory.GetFiles(GetOutputDir(), "*.json");
             foreach (string file in files)
             {
                 comboBox_loadFileNames.Items.Add(System.IO.Path.GetFileName(file));
             }
-            comboBox_loadFileNames.SelectedIndex = 0;
+            if (comboBox_loadFileNames.Items.Count > 0)
+            {
+                comboBox_loadFileNames.SelectedIndex = 0;
+            }else
+            {
+                MessageBox.Show("No files found in the output directory.");
+            }
+
+
+          
             comboBox_loadFileNames.SelectedIndexChanged += ComboBox_loadFileNames_SelectedIndexChanged;
  
             label_selectedFilePath.Text = _filePathToLoad;

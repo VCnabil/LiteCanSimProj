@@ -28,7 +28,7 @@ namespace LiteCanSimProj
         private bool isLaptopA_PCU;
         private int lineNumber104 = 1;
         private int lineNumber103 = 1;
-        private Color _initialBackGroundColor;
+       // private Color _initialBackGroundColor;
         private Color _Beige = Color.Beige;
         private Color _paleblue = Color.PaleTurquoise;
         int helmA_int, joyYA_int, joyXA_int;
