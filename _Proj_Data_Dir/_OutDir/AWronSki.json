@@ -1,5 +1,5 @@
 {
-  "Title": "AB_wronwoski",
+  "Title": "AWronSki",
   "AllPgnList": [
     {
       "IDpgn": 1,
@@ -320,10 +320,9 @@
           "CTRL_TYOE_STR": "_8_bs",
           "ISSLIDER": false,
           "BitsList": [
-            "0. cltchcmd",
-            "1. cltchcmd",
-            "2. cltchcmd",
-            "3. bit3"
+            "0. cmd_AHD",
+            "1. cmd_REV",
+            "2. cmd_NUT"
           ],
           "Group1List": [],
           "Group2List": [],
@@ -340,10 +339,9 @@
           "CTRL_TYOE_STR": "_8_bs",
           "ISSLIDER": false,
           "BitsList": [
-            "0. cltchfbk",
-            "1. cltchfbk",
-            "2. cltchfbk",
-            "3. bit3"
+            "0. fbk_AHD",
+            "1. fbk_REV",
+            "2. fbk_NUT"
           ],
           "Group1List": [],
           "Group2List": [],
@@ -368,10 +366,9 @@
           "CTRL_TYOE_STR": "_8_bs",
           "ISSLIDER": false,
           "BitsList": [
-            "0. cltchcmd",
-            "1. cltchcmd",
-            "2. cltchcmd",
-            "3. bit3"
+            "0. cmd_AHD",
+            "1. cmd_REV",
+            "2. cmd_NUT"
           ],
           "Group1List": [],
           "Group2List": [],
@@ -388,10 +385,9 @@
           "CTRL_TYOE_STR": "_8_bs",
           "ISSLIDER": false,
           "BitsList": [
-            "0. cltchfbk",
-            "1. cltchfbk",
-            "2. cltchfbk",
-            "3. bit3"
+            "0. fbk_AHD",
+            "1. fbk_REV",
+            "2. fbk_NUT"
           ],
           "Group1List": [],
           "Group2List": [],
@@ -646,6 +642,21 @@
           "Group1List": [],
           "Group2List": [],
           "RemoteList": []
+        },
+        {
+          "ID": 4,
+          "DESC": "Clutch Revision ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 2109,
+          "INDEXLO": 4,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
         }
       ]
     },
@@ -678,6 +689,21 @@
           "DEF": 586,
           "INDEXLO": 2,
           "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 4,
+          "DESC": "Clutch Revision ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 2109,
+          "INDEXLO": 4,
+          "INDEXHI": 5,
           "CTRL_TYOE_STR": "_2_by",
           "ISSLIDER": false,
           "BitsList": [],

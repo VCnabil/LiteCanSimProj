@@ -22,8 +22,6 @@ namespace LiteCanSimProj._Globalz
         int _channelsFound = 0;
 
         private delegate void CanCallbackDelegate(int handle, IntPtr context, int notifyEvent);
-
-
         public int GetChannelsFound()
         {
             return _channelsFound;

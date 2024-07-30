@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.ucf_KvsrCanMod = new LiteCanSimProj._MainUIs.KvaserUCs.ucf_KvaserCanModule();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lbl_version = new System.Windows.Forms.Label();
             this.button_delete_selectedFile = new System.Windows.Forms.Button();
@@ -43,13 +42,6 @@
             this.textBox_Display = new System.Windows.Forms.TextBox();
             this.timer1_pingpong = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
-            // 
-            // ucf_KvsrCanMod
-            // 
-            this.ucf_KvsrCanMod.Location = new System.Drawing.Point(13, 13);
-            this.ucf_KvsrCanMod.Name = "ucf_KvsrCanMod";
-            this.ucf_KvsrCanMod.Size = new System.Drawing.Size(700, 94);
-            this.ucf_KvsrCanMod.TabIndex = 0;
             // 
             // flowLayoutPanel1
             // 
@@ -156,12 +148,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Display.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Display.Location = new System.Drawing.Point(4, 1466);
+            this.textBox_Display.Location = new System.Drawing.Point(20, 1466);
             this.textBox_Display.Margin = new System.Windows.Forms.Padding(0);
             this.textBox_Display.Multiline = true;
             this.textBox_Display.Name = "textBox_Display";
             this.textBox_Display.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_Display.Size = new System.Drawing.Size(2398, 460);
+            this.textBox_Display.Size = new System.Drawing.Size(325, 460);
             this.textBox_Display.TabIndex = 45;
             // 
             // CanManip_V0Form
@@ -170,18 +162,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(2425, 1969);
-            this.Controls.Add(this.textBox_Display);
-            this.Controls.Add(this.label_selectedFilePath);
-            this.Controls.Add(this.lbl_version);
-            this.Controls.Add(this.button_delete_selectedFile);
-            this.Controls.Add(this.cb_DoPingpong);
-            this.Controls.Add(this.button_makeNew);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.label_pgnsFound);
-            this.Controls.Add(this.comboBox_loadFileNames);
-            this.Controls.Add(this.btn_Load);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.ucf_KvsrCanMod);
             this.Name = "CanManip_V0Form";
             this.Text = "CanManip_V0Form";
             this.ResumeLayout(false);
