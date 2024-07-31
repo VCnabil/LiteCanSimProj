@@ -1,0 +1,519 @@
+﻿============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 171
+PGN_32bit : 65381
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: the pv connection is setup using a mask for all pgns, the adress is defined in code and this should be 29
+Configuration : SSRS_K12
+Project : N/A
+Type : N/A
+Comments : N/A
+Group : g02
+CTRLs : N/A
+============================================================================
+    0xFF65    (   Dynamic Positioning Information )
+
+            - Byte0 : DP Off,blocked,ovr,on |BL(0,0,4)
+ 
+            - Byte1 : tryOVRb2b3 |XX*0
+                    - b0 : isBlocked
+                    - b1 : ovrANDhelm
+                    - b2 : ovrANDjoy
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 171
+PGN_32bit : 65381
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: the pv connection is setup using a mask for all pgns, the adress is defined in code and this should be 29
+Configuration : original S_S_R_S_K_1_2_
+Project : N/A
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFF65    (   Dynamic Positioning state )
+
+            - Byte0 : DPState |XX*3
+                    - b0 : DPState
+                    - b1 : bit1 SwitchDP
+                    - b2 : bit2 
+                    - b3 : bit3
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : DPOverride thed divided by 2 and takes bit0 bit1 |BL
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 173
+PGN_32bit : 65363
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : SSRS_K12
+Project : N/A
+Type : N/A
+Comments : N/A
+Group : g00
+CTRLs : N/A
+============================================================================
+    0xFF53    (   System Information   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : AciveStation |BL(0,1,2)
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+
+            - Byte4 : opMode |XX*1
+                    - b0 : tr_dk
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : AUTOPILOT |XX
+                    - b0 : AutopilotON
+                    - b1 : Turn to Port
+                    - b2 : Turn to Stbd
+                    - b3 : N/A
+                    - b4 : TillerSelection
+                    - b5 : DPSwitch_Sta2
+                    - b6 : bAP_OverrideInEffect
+                    - b7 : apState
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 169
+PGN_32bit : 65369
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 10.1002 Rev6288
+info: cu adrress is 29 A&M 34
+Configuration : SSRS_K12
+Project : N/A
+Type : N/A
+Comments : N/A
+Group : g01
+CTRLs : N/A
+============================================================================
+    0xFF59    (   Raw Switch states   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+
+            - Byte2 : N/A
+
+            - Byte3 : N/A
+
+            - Byte4 : N/A
+
+            - Byte5 : N/A
+
+            - Byte6 : Autopilot |XX
+                    - b0 : Autopilot Switch
+                    - b1 : Autopilot Steer Port
+                    - b2 : Autopilot Steer Starboard
+                    - b3 : Operating Mode Docking
+                    - b4 : AutoPilot Override
+                    - b5 : DPSwitch_Sta2
+                    - b6 : bAP_OverrideInEffect
+                    - b7 : if Blocked_DPinControl
+
+            - Byte7 : tillerselect |XX
+                    - b0 : N/A
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : Sta1 Tiller Selec
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : Flip_Dutycycle
+                    - b7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 174
+PGN_32bit : 65276
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : SSRS_K12
+Project : N/A
+Type : N/A
+Comments : N/A
+Group : g03
+CTRLs : N/A
+============================================================================
+    0xFEFC    (   Indication   )
+
+            - Byte0 : Port BucketPos |BT(0,128,255)
+ 
+            - Byte1 : AP_OVERRIDE_HELM_PERCENT |BT(0,0,100)
+ 
+            - Byte2 : Stbd NozzlePos |BT(0,128,255)
+ 
+            - Byte3 : Port NozzlePos |BT(0,128,255)
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : Stbd BucketPos |BT(0,128,255)
+ 
+            - Byte6 : Port EngineCMD |BT(0,141,255)
+ 
+            - Byte7 : Stbd EngineCMD |BT(0,142,255)
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 172
+PGN_32bit : 65382
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: the pv connection is setup using a mask for all pgns, the adress is defined in code and this should be 29
+Configuration : SSRS_K12
+Project : N/A
+Type : N/A
+Comments : N/A
+Group : g04
+CTRLs : N/A
+============================================================================
+    0xFF66    (   DP Diagnostics 1   )
+
+            - Byte0 : JoyX LO |B2(0,430,1000)
+ 
+            - Byte1 : JoyX HI |B2
+ 
+            - Byte2 : JoyY LO |B2(0,390,1000)
+ 
+            - Byte3 : JoyY HI |B2
+ 
+            - Byte4 : Helm LO |B2(0,270,1000)
+ 
+            - Byte5 : Helm HI |B2
+ 
+            - Byte6 : IdleRPM LO |B2(0,700,4000)
+ 
+            - Byte7 : IdleRPM HI |B2
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 175
+PGN_32bit : 65328
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : SSRS_K12
+Project : N/A
+Type : N/A
+Comments : N/A
+Group : g05
+CTRLs : N/A
+============================================================================
+    0xFF30    (   CU to Clutch Panel Message   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : Major Software Version |BL*18
+ 
+            - Byte3 : Minor Software Version LO |B2*1048
+ 
+            - Byte4 : Minor Software Version HI |B2
+ 
+            - Byte5 : Software Revision LO |B2*9166
+ 
+            - Byte6 : Software Revision HI |B2
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 170
+PGN_32bit : 65380
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: Should look into how Calstatus is generated
+Configuration : SSRS_K12
+Project : N/A
+Type : N/A
+Comments : N/A
+Group : g06
+CTRLs : N/A
+============================================================================
+    0xFF64    (   Calibration   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : CalStatus |BL*0
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 176
+PGN_32bit : 65353
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : SSRS_K12
+Project : N/A
+Type : N/A
+Comments : N/A
+Group : g07
+CTRLs : N/A
+============================================================================
+    0xFF49    (   Faults   )
+
+            - Byte0 : Sensor Faults |XX
+                    - b0 : Stbd Bucket
+                    - b1 : Port Bucket
+                    - b2 : Stbd Nozzle
+                    - b3 : Port Nozzle
+                    - b4 : Stbd Tab
+                    - b5 : Port Tab
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Non Follow Up Faults |XX
+                    - b0 : Stbd Bucket NFU
+                    - b1 : Port Bucket NFU
+                    - b2 : Stbd Nozzle NFU
+                    - b3 : Port Nozzle NFU
+                    - b4 : Stbd Tab NFU
+                    - b5 : Port Tab NFU
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : Local Station 1 Comm Faults |XX
+                    - b0 : LocalSta 1 Idle Knob Fault
+                    - b1 : LocalSta 1 JoyStick Z Fault
+                    - b2 : LocalSta 1 Stbd Lever Fault
+                    - b3 : LocalSta 1 Port Lever Fault
+                    - b4 : LocalSta 1 Joy-Y Fault
+                    - b5 : LocalSta 1 Joy-X Fault
+                    - b6 : LocalSta 1 Tiller 2 Fault
+                    - b7 : N/A
+ 
+            - Byte3 : Local Station 2 comm Faults |XX
+                    - b0 : LocalSta 2 Idle Knob Fault
+                    - b1 : LocalSta 2 JoyStick Z Fault
+                    - b2 : LocalSta 2 Stbd Lever Fault
+                    - b3 : LocalSta 2 Port Lever Fault
+                    - b4 : LocalSta 2 Joy-Y Fault
+                    - b5 : LocalSta 2 Joy-X Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte4 : Remote Station Faults |XX
+                    - b0 : RemoteSta Idle Knob Fault
+                    - b1 : RemoteSta JoyStick Z Fault
+                    - b2 : RemoteSta Stbd Lever Fault
+                    - b3 : RemoteSta Port Lever Fault
+                    - b4 : RemoteSta Joy-Y Fault
+                    - b5 : RemoteSta Joy-X Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : General Faults |XX
+                    - b0 : Port Trim Fault
+                    - b1 : Port Roll Fault
+                    - b2 : AutoCal Fault
+                    - b3 : Autopilot Out of Range Fault
+                    - b4 : Stbd Trim Joystick Fault
+                    - b5 : Stbd Roll Joystick Fault
+                    - b6 : Hardware Fault
+                    - b7 : N/A
+ 
+            - Byte6 : Docking Faults |XX
+                    - b0 : Docking Mode Interlock Fault
+                    - b1 : Docking_Mode Clutch Mismatch
+                    - b2 : Docking_Mode Inboard Clutch Interlock
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : Communication Faults |XX
+                    - b0 : CAN Fault
+                    - b1 : Station 1 Clutch Panel CAN Fault
+                    - b2 : Station 2 Clutch Panel CAN Fault
+                    - b3 : Station 3 Clutch Panel CAN Fault
+                    - b4 : N/A
+                    - b5 : DP LCD CAN Fault
+                    - b6 : Remote Station Controller CAN Fault
+                    - b7 : N/A
+ 
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 378
+PGN_32bit : 61714
+address Port: 7F
+address Stbd: 7F
+priority    : 09
+Sending_Unit_Software_version : N/A
+info: standard gps
+Configuration : SSRS_K12
+Project : N/A
+Type : GPS
+Comments : N/A
+Group : p0
+CTRLs : N/A
+============================================================================
+    0xF112    (   GPS Heading     )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : GPS Heading LO |B2(0,3600,35999)
+ 
+            - Byte2 : GPS Heading HI |B2
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 163
+PGN_32bit : 65383
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: standard gps
+Configuration : SSRS_K12
+Project : N/A
+Type : GPS
+Comments : N/A
+Group : p1
+CTRLs : N/A
+============================================================================
+    0xFF67    (   DP Diagnostics 2   )
+
+            - Byte0 : Xi 32bit_0 |B4
+ 
+            - Byte1 : Xi 32bit_1 |B4
+ 
+            - Byte2 : Xi 32bit_2 |B4
+ 
+            - Byte3 : Xi 32bit_3 |B4
+ 
+            - Byte4 : Eta 32bit_0 |B4
+ 
+            - Byte5 : Eta 32bit_1 |B4
+ 
+            - Byte6 : Eta 32bit_2 |B4
+ 
+            - Byte7 : Eta 32bit_3 |B4
+ 
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 164
+PGN_32bit : 63489
+address Port: 7F
+address Stbd: 7F
+priority    : 09
+Sending_Unit_Software_version : 1.0000
+info: standard gps
+Configuration : SSRS_K12
+Project : N/A
+Type : GPS
+Comments : N/A
+Group : p2
+CTRLs : N/A
+============================================================================
+    0xF801    (   GPS POSITION   )
+
+            - Byte0 : GPS Latitude 32bit_0 |B4
+ 
+            - Byte1 : GPS Latitude 32bit_1 |B4
+ 
+            - Byte2 : GPS Latitude 32bit_2 |B4
+ 
+            - Byte3 : GPS Latitude 32bit_3 |B4
+ 
+            - Byte4 : GPS Longitude 32bit_0 |B4
+ 
+            - Byte5 : GPS Longitude 32bit_1 |B4
+ 
+            - Byte6 : GPS Longitude 32bit_2 |B4
+ 
+            - Byte7 : GPS Longitude 32bit_3 |B4

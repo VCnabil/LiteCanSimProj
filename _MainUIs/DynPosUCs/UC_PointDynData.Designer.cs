@@ -68,20 +68,21 @@
             // lbl_lat_DDM_A
             // 
             this.lbl_lat_DDM_A.AutoSize = true;
-            this.lbl_lat_DDM_A.Font = new System.Drawing.Font("Bookshelf Symbol 7", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_lat_DDM_A.Font = new System.Drawing.Font("Arial Narrow", 7F);
             this.lbl_lat_DDM_A.Location = new System.Drawing.Point(13, 218);
             this.lbl_lat_DDM_A.Name = "lbl_lat_DDM_A";
-            this.lbl_lat_DDM_A.Size = new System.Drawing.Size(166, 25);
+            this.lbl_lat_DDM_A.Size = new System.Drawing.Size(120, 23);
             this.lbl_lat_DDM_A.TabIndex = 234;
             this.lbl_lat_DDM_A.Text = "DD MM.123456";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bookshelf Symbol 7", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 7F);
             this.label1.Location = new System.Drawing.Point(13, 82);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 26);
+            this.label1.Size = new System.Drawing.Size(52, 23);
             this.label1.TabIndex = 233;
             this.label1.Text = "label1";
             // 

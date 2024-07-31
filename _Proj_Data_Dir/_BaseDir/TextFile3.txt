@@ -1,0 +1,368 @@
+﻿============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 569
+PGN_32bit : 65369
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info:this in cu code checks if bow thrust exist . ssrs config does noy have bow thrust
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : comments section
+Group : groupnumber
+CTRLs : N/A
+============================================================================
+    0xFF59    (   Raw Switch states   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : AutoPilot |XX
+                    - b0 : N/A
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : bAP_OverrideInEffect
+                    - b7 : N/A
+ 
+            - Byte7 : Autopilot |XX*0
+                    - b0 : N/A
+                    - b1 : ST 1 TC
+                    - b2 : ST 2 MODE SW: Docking
+                    - b3 : ST 2 TC SW REQ
+                    - b4 : ST 3 MODE SW: Docking
+                    - b5 : ST 3 TC SW REQ
+                    - b6 : N/A
+                    - b7 : Blocked_DPinControl
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 173
+PGN_32bit : 65363
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : comments section
+Group : groupnumber
+CTRLs : N/A
+============================================================================
+    0xFF53    (   System Information   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : AciveStation |BL(0,1,255)
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : AutoPilot Override Helm Percent |BT(0,0,100)
+ 
+            - Byte4 : NumHits ISRCAN2 PGN0xFF36 |BL(0,0,255)
+ 
+            - Byte5 : Autocal Stage |BL(0,0,255)
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 174
+PGN_32bit : 65276
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : comments section
+Group : groupnumber
+CTRLs : N/A
+============================================================================
+    0xFEFC    (   Indication   )
+
+            - Byte0 : Port BucketPos |BT(0,76,255)
+ 
+            - Byte1 : AP_OVERRIDE_HELM_PERCENT |BT(0,0,100)
+ 
+            - Byte2 : Stbd NozzlePos |BT(0,69,255)
+ 
+            - Byte3 : Port NozzlePos |BT(0,143,255)
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : Stbd BucketPos |BT(0,147,255)
+ 
+            - Byte6 : Port EngineCMD |BT(0,141,255)
+ 
+            - Byte7 : Stbd EngineCMD |BT(0,142,255)
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 171
+PGN_32bit : 65381
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : Tern 10.1003.6320
+info: N/A
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : N/A
+Group : g02
+CTRLs : N/A
+============================================================================
+    0xFF65    (   Dynamic Positioning Information )
+
+            - Byte0 : Off,prob,ovr,on |BL(0,0,4)
+ 
+            - Byte1 : tryOVRb2b3 |XX*0
+                    - b0 : isBlocked
+                    - b1 : DP ovr helm
+                    - b2 : DP ovr joy
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 172
+PGN_32bit : 65382
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: the pv connection is setup using a mask for all pgns, the adress is defined in code and this should be 29
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : comments section
+Group : groupnumber
+CTRLs : N/A
+============================================================================
+    0xFF66    (   DP Diagnostics 1   )
+
+            - Byte0 : JoyX LO |B2(0,430,1000)
+ 
+            - Byte1 : JoyX HI |B2
+ 
+            - Byte2 : JoyY LO |B2(0,390,1000)
+ 
+            - Byte3 : JoyY HI |B2
+ 
+            - Byte4 : Helm LO |B2(0,270,1000)
+ 
+            - Byte5 : Helm HI |B2
+ 
+            - Byte6 : IdleRPM LO |B2(0,700,4000)
+ 
+            - Byte7 : IdleRPM HI |B2
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 175
+PGN_32bit : 65328
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : comments section
+Group : groupnumber
+CTRLs : N/A
+============================================================================
+    0xFF30    (   CU to Clutch Panel Message   )
+
+            - Byte0 : idk? |BL(0,0,4)
+ 
+            - Byte1 : sta in ctrl? |BL(0,0,4)
+ 
+            - Byte2 : Major Software Version |BL*18
+ 
+            - Byte3 : Minor Software Version LO |B2*1048
+ 
+            - Byte4 : Minor Software Version HI |B2
+ 
+            - Byte5 : Software Revision LO |B2*9166
+ 
+            - Byte6 : Software Revision HI |B2
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 170
+PGN_32bit : 65380
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: Should look into how Calstatus is generated
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : comments section
+Group : groupnumber
+CTRLs : N/A
+============================================================================
+    0xFF64    (   Calibration Feedback  )
+
+            - Byte0 : OperationMode
+ 
+            - Byte1 : CalStatus |BL*0
+ 
+            - Byte2 : Cal2_Pos1 |BL*0
+ 
+            - Byte3 : Cal2_Pos2 |BL*0
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : Communication Faults |XX
+                    - b0 : bAutocal_Fault
+                    - b1 : bStandby
+                    - b2 : bMomentarySwitch
+                    - b3 : bCT_Waiting_For_Flag_Reset
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 176
+PGN_32bit : 65353
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : comments section
+Group : groupnumber
+CTRLs : N/A
+============================================================================
+    0xFF49    (   Faults   )
+
+            - Byte0 : Sensor Faults |XX
+                    - b0 : Stbd Bucket
+                    - b1 : Port Bucket
+                    - b2 : Stbd Nozzle
+                    - b3 : Port Nozzle
+                    - b4 : Stbd Tab
+                    - b5 : Port Tab
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Non Follow Up Faults |XX
+                    - b0 : Stbd Bucket NFU
+                    - b1 : Port Bucket NFU
+                    - b2 : Stbd Nozzle NFU
+                    - b3 : Port Nozzle NFU
+                    - b4 : Stbd Tab NFU
+                    - b5 : Port Tab NFU
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : Local Station 1 Comm Faults |XX
+                    - b0 : LocalSta 1 Idle Knob Fault
+                    - b1 : LocalSta 1 JoyStick Z Fault
+                    - b2 : LocalSta 1 Stbd Lever Fault
+                    - b3 : LocalSta 1 Port Lever Fault
+                    - b4 : LocalSta 1 Joy-Y Fault
+                    - b5 : LocalSta 1 Joy-X Fault
+                    - b6 : LocalSta 1 Tiller 2 Fault
+                    - b7 : N/A
+ 
+            - Byte3 : Local Station 2 comm Faults |XX
+                    - b0 : LocalSta 2 Idle Knob Fault
+                    - b1 : LocalSta 2 JoyStick Z Fault
+                    - b2 : LocalSta 2 Stbd Lever Fault
+                    - b3 : LocalSta 2 Port Lever Fault
+                    - b4 : LocalSta 2 Joy-Y Fault
+                    - b5 : LocalSta 2 Joy-X Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte4 : Remote Station Faults |XX
+                    - b0 : RemoteSta Idle Knob Fault
+                    - b1 : RemoteSta JoyStick Z Fault
+                    - b2 : RemoteSta Stbd Lever Fault
+                    - b3 : RemoteSta Port Lever Fault
+                    - b4 : RemoteSta Joy-Y Fault
+                    - b5 : RemoteSta Joy-X Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : General Faults |XX
+                    - b0 : Port Trim Fault
+                    - b1 : Port Roll Fault
+                    - b2 : AutoCal Fault
+                    - b3 : Autopilot Out of Range Fault
+                    - b4 : Stbd Trim Joystick Fault
+                    - b5 : Stbd Roll Joystick Fault
+                    - b6 : Hardware Fault
+                    - b7 : N/A
+ 
+            - Byte6 : Docking Faults |XX
+                    - b0 : Docking Mode Interlock Fault
+                    - b1 : Docking_Mode Clutch Mismatch
+                    - b2 : Docking_Mode Inboard Clutch Interlock
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : Communication Faults |XX
+                    - b0 : CAN Fault
+                    - b1 : Station 1 Clutch Panel CAN Fault
+                    - b2 : Station 2 Clutch Panel CAN Fault
+                    - b3 : Station 3 Clutch Panel CAN Fault
+                    - b4 : N/A
+                    - b5 : DP LCD CAN Fault
+                    - b6 : Remote Station Controller CAN Fault
+                    - b7 : N/A
+ 

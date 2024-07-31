@@ -32,7 +32,7 @@ namespace LiteCanSimProj
 
         private void Btn_CanManip_Click(object sender, EventArgs e)
         {
-            CanManip_V0Form form = new CanManip_V0Form();
+            CanManip_V1Form form = new CanManip_V1Form();
             form.Show();
         }
 

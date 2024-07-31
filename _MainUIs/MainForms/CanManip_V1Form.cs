@@ -15,60 +15,65 @@ using static LiteCanSimProj._Globalz.Helpers;
 using static LiteCanSimProj._Globalz.G_Properties;
 using static LiteCanSimProj._Globalz.G_Paths;
 using LiteCanSimProj._Globalz;
+using LiteCanSimProj._MainUIs.DynPosUCs;
 
 namespace LiteCanSimProj._MainUIs.MainForms
 {
-    public partial class CanManip_V0Form : Form
+    public partial class CanManip_V1Form : Form
     {
         string _fileToLoad = "";
         string _filePathToLoad = "";
         Project_DataObject project_DataObject = null;
         private List<UC_DataDisplayCTRL> _dataDisplayControls = new List<UC_DataDisplayCTRL>();
-        public CanManip_V0Form()
+
+        // Create a new timer for ping pong
+        Timer timer1_pingpong = new Timer();
+
+        UC_DP uC_DP1;
+            //this.uC_DP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            //this.uC_DP1.Location = new System.Drawing.Point(488, 1284);
+            //this.uC_DP1.Name = "uC_DP1";
+            //this.uC_DP1.Size = new System.Drawing.Size(1421, 560);
+            //this.uC_DP1.TabIndex = 57;
+
+        public CanManip_V1Form()
         {
             InitializeComponent();
+            uC_DP1 = new UC_DP();
+            this.Controls.Add(uC_DP1);
+            uC_DP1.Location = new Point(260, 660);
+            uC_DP1.Size = new Size(750, 300);
+             
+
             DoMeasure(5, 6);
             this.Width = G_PGN_CanManipV0_WindowParames.Width / 2;
             this.Height = G_PGN_CanManipV0_WindowParames.Height / 2;
 
+            // Ensure the output directory exists
             string outputDir = GetOutputDir();
             if (!Directory.Exists(outputDir))
             {
                 Directory.CreateDirectory(outputDir);
             }
 
-            //list files in C:\___Root_VCI_Projects\Generic_VC_PGN_SIMULATOR\genericSim\VC_PGN_ManagerGUI\_Proj_Data_Dir\_OutDir\ in combobox comboBox_loadFileNames
-            string[] files = System.IO.Directory.GetFiles(GetOutputDir(), "*.json");
-            foreach (string file in files)
-            {
-                comboBox_loadFileNames.Items.Add(System.IO.Path.GetFileName(file));
-            }
-            if (comboBox_loadFileNames.Items.Count > 0)
-            {
-                comboBox_loadFileNames.SelectedIndex = 0;
-            }else
-            {
-                MessageBox.Show("No files found in the output directory.");
-            }
+            // List files in the output directory in combobox
+            RefreshComboBoxWithFiles();
 
-
-          
             comboBox_loadFileNames.SelectedIndexChanged += ComboBox_loadFileNames_SelectedIndexChanged;
- 
+
             label_selectedFilePath.Text = _filePathToLoad;
             btn_Load.Click += Btn_LoadFile_Click;
             btnClear.Click += Btn_ClearDataDisplayCtrls_Click;
-
             button_delete_selectedFile.Click += Button_delete_selectedFile_Click;
             timer1_pingpong.Tick += Timer1_pingpong_Tick;
             timer1_pingpong.Start();
             Refresh_list_of_filesinOutdir();
             SetFilePathsAndNames();
-            this.ucf_KvsrCanMod.SetRefToListOfCtrls(_dataDisplayControls);
+            this.ucf_KvaserCanModule1.SetRefToListOfCtrls(_dataDisplayControls);
 
             button_makeNew.Click += Button_makeNew_Click;
-
         }
+
         private void Button_makeNew_Click(object sender, EventArgs e)
         {
             Dlete_GroundZeroJasonFile_if_existsat_path();
@@ -76,6 +81,7 @@ namespace LiteCanSimProj._MainUIs.MainForms
             pgn_Manager_ViewrGUI.FormClosed += new FormClosedEventHandler(pgn_Manager_ViewrGUI_FormClosed);
             pgn_Manager_ViewrGUI.Show();
         }
+
         private void pgn_Manager_ViewrGUI_FormClosed(object sender, FormClosedEventArgs e)
         {
             PGN_Manager_ViewerGUI form2 = sender as PGN_Manager_ViewerGUI;
@@ -86,17 +92,16 @@ namespace LiteCanSimProj._MainUIs.MainForms
 
             Refresh_list_of_filesinOutdir();
         }
+
         void Dlete_GroundZeroJasonFile_if_existsat_path()
         {
-
             string argpath = Get_Path_JSONFile();
             if (File.Exists(argpath))
             {
                 File.Delete(argpath);
             }
-
-
         }
+
         private void Timer1_pingpong_Tick(object sender, EventArgs e)
         {
             if (cb_DoPingpong.Checked)
@@ -116,20 +121,17 @@ namespace LiteCanSimProj._MainUIs.MainForms
                 {
                     if (G_IsMinimal)
                     {
-
-                        MessageBox.Show("Sorry, this is a working confing. pleasekeep it");
+                        MessageBox.Show("Sorry, this is a working config. please keep it");
                     }
                     else
                     {
-                        DialogResult dialogResult = MessageBox.Show("This file its tagged keep , remove it ?", "Confirm Delete", MessageBoxButtons.YesNo);
+                        DialogResult dialogResult = MessageBox.Show("This file is tagged keep, remove it?", "Confirm Delete", MessageBoxButtons.YesNo);
                         if (dialogResult == DialogResult.Yes)
                         {
                             DeleteSelectedFileIfExists(_filePathToDelete);
                             Refresh_list_of_filesinOutdir();
                         }
-
                     }
-
                 }
                 else
                 {
@@ -146,19 +148,26 @@ namespace LiteCanSimProj._MainUIs.MainForms
                 MessageBox.Show("Please select a file to delete.");
             }
         }
+
         void DeleteSelectedFileIfExists(string filepath)
         {
             if (System.IO.File.Exists(filepath))
             {
                 System.IO.File.Delete(filepath);
-                MessageBox.Show(filepath + "File deleted successfully.");
+                MessageBox.Show(filepath + " File deleted successfully.");
             }
             else
             {
                 MessageBox.Show(filepath + " does not exist.");
             }
         }
+
         void Refresh_list_of_filesinOutdir()
+        {
+            RefreshComboBoxWithFiles();
+        }
+
+        void RefreshComboBoxWithFiles()
         {
             comboBox_loadFileNames.Items.Clear();
             string[] files = System.IO.Directory.GetFiles(GetOutputDir(), "*.json");
@@ -166,15 +175,18 @@ namespace LiteCanSimProj._MainUIs.MainForms
             {
                 comboBox_loadFileNames.Items.Add(System.IO.Path.GetFileName(file));
             }
-            comboBox_loadFileNames.SelectedIndex = 0;
-            comboBox_loadFileNames.SelectedIndexChanged += ComboBox_loadFileNames_SelectedIndexChanged;
-            label_selectedFilePath.Text = _filePathToLoad;
 
+            if (comboBox_loadFileNames.Items.Count > 0)
+            {
+                comboBox_loadFileNames.SelectedIndex = 0;
+            }
         }
+
         private void Btn_ClearDataDisplayCtrls_Click(object sender, EventArgs e)
         {
             ClearUCDataDisplayCtrlsFlowPannel();
         }
+
         void Place_UC_DataDisplayCTRL_Flowpannel()
         {
             int MaxNumberOfUCs = 40;
@@ -187,6 +199,7 @@ namespace LiteCanSimProj._MainUIs.MainForms
                 _dataDisplayControls.Add(uc); // Keep track of it
             }
         }
+
         void ClearUCDataDisplayCtrlsFlowPannel()
         {
             foreach (var ctrl in _dataDisplayControls)
@@ -196,6 +209,7 @@ namespace LiteCanSimProj._MainUIs.MainForms
             }
             _dataDisplayControls.Clear();
         }
+
         void DoMeasure(int fontIndex, int argSize)
         {
             float lblW = 0.0f;
@@ -210,53 +224,59 @@ namespace LiteCanSimProj._MainUIs.MainForms
                 FontIndexSelected = fontIndex;
             }
             int _fullpgnBasewidth = G_Get_Base_PGN_Display_Width();
-            return;
+            // No need to return here, the method is void
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("Label Width: " + lblW);
             sb.AppendLine("Label Height: " + lblH);
             sb.AppendLine("Full PGN Base Width: " + _fullpgnBasewidth);
-            textBox_Display.Text = sb.ToString();
+            //textBox_Display.Text = sb.ToString();
         }
+
         private void ComboBox_loadFileNames_SelectedIndexChanged(object sender, EventArgs e)
         {
             SetFilePathsAndNames();
         }
+
         void SetFilePathsAndNames()
         {
-            _fileToLoad = comboBox_loadFileNames.SelectedItem.ToString();
-            _filePathToLoad = Path.Combine(GetOutputDir(), _fileToLoad);
-            // label_SelectedFilenameAndExt.Text = _fileToLoad;
-            label_selectedFilePath.Text = _filePathToLoad;
-            QuickDeserialize();
+            if (comboBox_loadFileNames.SelectedItem != null)
+            {
+                _fileToLoad = comboBox_loadFileNames.SelectedItem.ToString();
+                _filePathToLoad = Path.Combine(GetOutputDir(), _fileToLoad);
+                label_selectedFilePath.Text = _filePathToLoad;
+                QuickDeserialize();
+            }
         }
+
         private void Btn_LoadFile_Click(object sender, EventArgs e)
         {
-            //  Place_UC_DataDisplayCTRL();
             Place_UC_DataDisplayCTRL_Flowpannel();
         }
+
         void QuickDeserialize()
         {
             project_DataObject = null;
-            string json = System.IO.File.ReadAllText(_filePathToLoad);
-            project_DataObject = Newtonsoft.Json.JsonConvert.DeserializeObject<Project_DataObject>(json);
-            int Pgns_Inthisfile = project_DataObject.AllPgnList.Count;
-            label_pgnsFound.Text = Pgns_Inthisfile.ToString();
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Found " + Pgns_Inthisfile + " PGNs in this file");
-            foreach (Pgn_DataObject pgn in project_DataObject.AllPgnList)
+            if (File.Exists(_filePathToLoad))
             {
-                sb.AppendLine(pgn.DESCpgn);
-                foreach (Ctrl_DataObject ctrl in pgn.CtrlList)
+                string json = File.ReadAllText(_filePathToLoad);
+                project_DataObject = Newtonsoft.Json.JsonConvert.DeserializeObject<Project_DataObject>(json);
+                int Pgns_Inthisfile = project_DataObject.AllPgnList.Count;
+                label_pgnsFound.Text = Pgns_Inthisfile.ToString();
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine("Found " + Pgns_Inthisfile + " PGNs in this file");
+                foreach (Pgn_DataObject pgn in project_DataObject.AllPgnList)
                 {
-                    sb.AppendLine("   ctrl  " + ctrl.DESC);
+                    sb.AppendLine(pgn.DESCpgn);
+                    foreach (Ctrl_DataObject ctrl in pgn.CtrlList)
+                    {
+                        sb.AppendLine("   ctrl  " + ctrl.DESC);
+                    }
+                    sb.AppendLine("");
+                    sb.AppendLine("-------------");
+                    sb.AppendLine("");
                 }
-                sb.AppendLine("");
-                sb.AppendLine("-------------");
-                sb.AppendLine("");
+                //textBox_Display.Text = sb.ToString();
             }
-            textBox_Display.Text = sb.ToString();
         }
-
-
     }
 }

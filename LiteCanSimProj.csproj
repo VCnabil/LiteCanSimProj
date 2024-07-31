@@ -124,6 +124,12 @@
     </Compile>
     <Compile Include="_Globalz\SERIALMNGR_1.cs" />
     <Compile Include="_Globalz\SERIALMNGR_2.cs" />
+    <Compile Include="_MainUIs\DynPosUCs\UC_DP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\DynPosUCs\UC_DP.Designer.cs">
+      <DependentUpon>UC_DP.cs</DependentUpon>
+    </Compile>
     <Compile Include="_MainUIs\DynPosUCs\UC_PointDynData.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,6 +147,18 @@
     </Compile>
     <Compile Include="_MainUIs\KvaserUCs\UC_SerialConUI_ALT.Designer.cs">
       <DependentUpon>UC_SerialConUI_ALT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MainUIs\MainForms\CanManip_V1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\MainForms\CanManip_V1Form.Designer.cs">
+      <DependentUpon>CanManip_V1Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MainUIs\MainForms\CanManip_V2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\MainForms\CanManip_V2Form.Designer.cs">
+      <DependentUpon>CanManip_V2Form.cs</DependentUpon>
     </Compile>
     <Compile Include="_MainUIs\MainForms\SerialRadioForm.cs">
       <SubType>Form</SubType>
@@ -188,12 +206,6 @@
     </Compile>
     <Compile Include="_MainUIs\KvaserUCs\ucf_KvaserCanModule.Designer.cs">
       <DependentUpon>ucf_KvaserCanModule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="_MainUIs\MainForms\CanManip_V0Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="_MainUIs\MainForms\CanManip_V0Form.Designer.cs">
-      <DependentUpon>CanManip_V0Form.cs</DependentUpon>
     </Compile>
     <Compile Include="_MainUIs\MainForms\PGN_Manager_ViewerGUI.cs">
       <SubType>Form</SubType>
@@ -266,6 +278,9 @@
     <EmbeddedResource Include="_MainUIs\DynPosUCs\UC_360Rotor.resx">
       <DependentUpon>UC_360Rotor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\DynPosUCs\UC_DP.resx">
+      <DependentUpon>UC_DP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="_MainUIs\DynPosUCs\UC_PointDynData.resx">
       <DependentUpon>UC_PointDynData.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,8 +293,11 @@
     <EmbeddedResource Include="_MainUIs\KvaserUCs\UC_SerialConUI_ALT.resx">
       <DependentUpon>UC_SerialConUI_ALT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="_MainUIs\MainForms\CanManip_V0Form.resx">
-      <DependentUpon>CanManip_V0Form.cs</DependentUpon>
+    <EmbeddedResource Include="_MainUIs\MainForms\CanManip_V1Form.resx">
+      <DependentUpon>CanManip_V1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\MainForms\CanManip_V2Form.resx">
+      <DependentUpon>CanManip_V2Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="_MainUIs\MainForms\PGN_Manager_ViewerGUI.resx">
       <DependentUpon>PGN_Manager_ViewerGUI.cs</DependentUpon>
@@ -315,6 +333,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="_Proj_Data_Dir\_BaseDir\SSRS_6320.txt" />
+    <Content Include="_Proj_Data_Dir\_BaseDir\TempText.txt" />
+    <Content Include="_Proj_Data_Dir\_BaseDir\TempTextFile2.txt" />
+    <Content Include="_Proj_Data_Dir\_BaseDir\TextFile3.txt" />
     <Content Include="_Proj_Data_Dir\_BaseDir\_GroundZero_bkp.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

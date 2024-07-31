@@ -46,23 +46,25 @@
             // 
             // uC_PmyLON
             // 
-            this.uC_PmyLON.BackColor = System.Drawing.Color.LightSalmon;
+            this.uC_PmyLON.BackColor = System.Drawing.Color.LightGreen;
+            this.uC_PmyLON.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uC_PmyLON.Location = new System.Drawing.Point(269, 29);
             this.uC_PmyLON.Name = "uC_PmyLON";
             this.uC_PmyLON.Size = new System.Drawing.Size(259, 246);
             this.uC_PmyLON.TabIndex = 1;
-            this.uC_PmyLON.Z_IsLat = true;
-            this.uC_PmyLON.Z_Title = "na";
+            this.uC_PmyLON.Z_IsLat = false;
+            this.uC_PmyLON.Z_Title = "my lon";
             // 
             // uC_PmyLAT
             // 
-            this.uC_PmyLAT.BackColor = System.Drawing.Color.LightCyan;
+            this.uC_PmyLAT.BackColor = System.Drawing.Color.LightSalmon;
+            this.uC_PmyLAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uC_PmyLAT.Location = new System.Drawing.Point(3, 29);
             this.uC_PmyLAT.Name = "uC_PmyLAT";
             this.uC_PmyLAT.Size = new System.Drawing.Size(260, 246);
             this.uC_PmyLAT.TabIndex = 0;
             this.uC_PmyLAT.Z_IsLat = true;
-            this.uC_PmyLAT.Z_Title = "na";
+            this.uC_PmyLAT.Z_Title = "mylat";
             // 
             // UC_PLATPLOT
             // 

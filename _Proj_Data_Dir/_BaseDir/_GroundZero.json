@@ -3,8 +3,420 @@
   "VC_PGN_Text_Object": [
     {
       "vC_PGN": {
-        "From": "CIM",
+        "From": "Control Unit",
         "VC_PGN_ID": 0,
+        "PGN_32bit": 65369,
+        "adrs_Port": "29",
+        "adrs_Stbd": "29",
+        "priority": "18",
+        "Sending_Unit_Software_version": "1.0000",
+        "info": "this in cu code checks if bow thrust exist . ssrs config does noy have bow thrust",
+        "Configuration": "night",
+        "Project": "MATTS",
+        "Type": "N/A",
+        "Comments": "comments section",
+        "Group": "groupnumber",
+        "CTRLs": "N/A"
+      },
+      "vC_PGNData": {
+        "PGN": "0xFF59",
+        "DescritionPGN": "   Raw Switch states   ",
+        "DescritionByte0": "N/A",
+        "Byte0": [],
+        "DescritionByte1": "N/A",
+        "Byte1": [],
+        "DescritionByte2": "N/A",
+        "Byte2": [],
+        "DescritionByte3": "N/A",
+        "Byte3": [],
+        "DescritionByte4": "Autopilot Raw LO |B2(0,0,4000)",
+        "Byte4": [],
+        "DescritionByte5": "Autopilot Raw HI |B2",
+        "Byte5": [],
+        "DescritionByte6": "Autopilot |XX",
+        "Byte6": [
+          "AP swtich",
+          "Autopilot Steer Port",
+          "Autopilot Steer Starboard",
+          "is Docking",
+          "N/A",
+          "N/A",
+          "bAP_OverrideInEffect",
+          "Blocked_DPinControl"
+        ],
+        "DescritionByte7": "Autopilot |XX*0",
+        "Byte7": [
+          "N/A",
+          "ST1_Take ctrl",
+          "ST 2 MODE SW",
+          "ST 2 TC SW REQ",
+          "ST 3 MODE SW",
+          "ST 3 TC SW REQ",
+          "N/A",
+          "N/A"
+        ]
+      }
+    },
+    {
+      "vC_PGN": {
+        "From": "Control Unit",
+        "VC_PGN_ID": 1,
+        "PGN_32bit": 65363,
+        "adrs_Port": "29",
+        "adrs_Stbd": "29",
+        "priority": "18",
+        "Sending_Unit_Software_version": "1.0000",
+        "info": "cu adrress is 29 A&M 34",
+        "Configuration": "night",
+        "Project": "MATTS",
+        "Type": "N/A",
+        "Comments": "comments section",
+        "Group": "groupnumber",
+        "CTRLs": "N/A"
+      },
+      "vC_PGNData": {
+        "PGN": "0xFF53",
+        "DescritionPGN": "   System Information   ",
+        "DescritionByte0": "N/A",
+        "Byte0": [],
+        "DescritionByte1": "AciveStation |BL(0,1,255)",
+        "Byte1": [],
+        "DescritionByte2": "N/A",
+        "Byte2": [],
+        "DescritionByte3": "AutoPilot Override Helm Percent |BT(0,0,100)",
+        "Byte3": [],
+        "DescritionByte4": "NumHits ISRCAN2 PGN0xFF36 |BL(0,0,255)",
+        "Byte4": [],
+        "DescritionByte5": "Autocal Stage |BL(0,0,255)",
+        "Byte5": [],
+        "DescritionByte6": "N/A",
+        "Byte6": [],
+        "DescritionByte7": "N/A",
+        "Byte7": []
+      }
+    },
+    {
+      "vC_PGN": {
+        "From": "Control Unit",
+        "VC_PGN_ID": 2,
+        "PGN_32bit": 65276,
+        "adrs_Port": "29",
+        "adrs_Stbd": "29",
+        "priority": "18",
+        "Sending_Unit_Software_version": "1.0000",
+        "info": "cu adrress is 29 A&M 34",
+        "Configuration": "night",
+        "Project": "MATTS",
+        "Type": "N/A",
+        "Comments": "comments section",
+        "Group": "groupnumber",
+        "CTRLs": "N/A"
+      },
+      "vC_PGNData": {
+        "PGN": "0xFEFC",
+        "DescritionPGN": "   Indication   ",
+        "DescritionByte0": "Port BucketPos |BT(0,76,255)",
+        "Byte0": [],
+        "DescritionByte1": "AP_OVERRIDE_HELM_PERCENT |BT(0,0,100)",
+        "Byte1": [],
+        "DescritionByte2": "Stbd NozzlePos |BT(0,69,255)",
+        "Byte2": [],
+        "DescritionByte3": "Port NozzlePos |BT(0,143,255)",
+        "Byte3": [],
+        "DescritionByte4": "N/A",
+        "Byte4": [],
+        "DescritionByte5": "Stbd BucketPos |BT(0,147,255)",
+        "Byte5": [],
+        "DescritionByte6": "Port EngineCMD |BT(0,141,255)",
+        "Byte6": [],
+        "DescritionByte7": "Stbd EngineCMD |BT(0,142,255)",
+        "Byte7": []
+      }
+    },
+    {
+      "vC_PGN": {
+        "From": "Control Unit",
+        "VC_PGN_ID": 3,
+        "PGN_32bit": 65381,
+        "adrs_Port": "29",
+        "adrs_Stbd": "29",
+        "priority": "18",
+        "Sending_Unit_Software_version": "Tern 10.1003.6320",
+        "info": "N/A",
+        "Configuration": "night",
+        "Project": "MATTS",
+        "Type": "N/A",
+        "Comments": "N/A",
+        "Group": "g02",
+        "CTRLs": "N/A"
+      },
+      "vC_PGNData": {
+        "PGN": "0xFF65",
+        "DescritionPGN": "   Dynamic Positioning Information ",
+        "DescritionByte0": "Off,prob,ovr,on |BL(0,0,4)",
+        "Byte0": [],
+        "DescritionByte1": "tryOVRb2b3 |XX*0",
+        "Byte1": [
+          "isBlocked",
+          "DP ovr helm",
+          "DP ovr joy",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "DescritionByte2": "N/A",
+        "Byte2": [],
+        "DescritionByte3": "N/A",
+        "Byte3": [],
+        "DescritionByte4": "N/A",
+        "Byte4": [],
+        "DescritionByte5": "N/A",
+        "Byte5": [],
+        "DescritionByte6": "N/A",
+        "Byte6": [],
+        "DescritionByte7": "N/A",
+        "Byte7": []
+      }
+    },
+    {
+      "vC_PGN": {
+        "From": "Control Unit",
+        "VC_PGN_ID": 4,
+        "PGN_32bit": 65382,
+        "adrs_Port": "29",
+        "adrs_Stbd": "29",
+        "priority": "18",
+        "Sending_Unit_Software_version": "1.0000",
+        "info": "the pv connection is setup using a mask for all pgns, the adress is defined in code and this should be 29",
+        "Configuration": "night",
+        "Project": "MATTS",
+        "Type": "N/A",
+        "Comments": "comments section",
+        "Group": "groupnumber",
+        "CTRLs": "N/A"
+      },
+      "vC_PGNData": {
+        "PGN": "0xFF66",
+        "DescritionPGN": "   DP Diagnostics 1   ",
+        "DescritionByte0": "JoyX LO |B2(0,430,1000)",
+        "Byte0": [],
+        "DescritionByte1": "JoyX HI |B2",
+        "Byte1": [],
+        "DescritionByte2": "JoyY LO |B2(0,390,1000)",
+        "Byte2": [],
+        "DescritionByte3": "JoyY HI |B2",
+        "Byte3": [],
+        "DescritionByte4": "Helm LO |B2(0,270,1000)",
+        "Byte4": [],
+        "DescritionByte5": "Helm HI |B2",
+        "Byte5": [],
+        "DescritionByte6": "IdleRPM LO |B2(0,700,4000)",
+        "Byte6": [],
+        "DescritionByte7": "IdleRPM HI |B2",
+        "Byte7": []
+      }
+    },
+    {
+      "vC_PGN": {
+        "From": "Control Unit",
+        "VC_PGN_ID": 5,
+        "PGN_32bit": 65328,
+        "adrs_Port": "29",
+        "adrs_Stbd": "29",
+        "priority": "18",
+        "Sending_Unit_Software_version": "1.0000",
+        "info": "cu adrress is 29 A&M 34",
+        "Configuration": "night",
+        "Project": "MATTS",
+        "Type": "N/A",
+        "Comments": "comments section",
+        "Group": "groupnumber",
+        "CTRLs": "N/A"
+      },
+      "vC_PGNData": {
+        "PGN": "0xFF30",
+        "DescritionPGN": "   CU to Clutch Panel Message   ",
+        "DescritionByte0": "idk? |BL(0,0,4)",
+        "Byte0": [],
+        "DescritionByte1": "sta in ctrl? |BL(0,0,4)",
+        "Byte1": [],
+        "DescritionByte2": "Major Software Version |BL*18",
+        "Byte2": [],
+        "DescritionByte3": "Minor Software Version LO |B2*1048",
+        "Byte3": [],
+        "DescritionByte4": "Minor Software Version HI |B2",
+        "Byte4": [],
+        "DescritionByte5": "Software Revision LO |B2*9166",
+        "Byte5": [],
+        "DescritionByte6": "Software Revision HI |B2",
+        "Byte6": [],
+        "DescritionByte7": "N/A",
+        "Byte7": []
+      }
+    },
+    {
+      "vC_PGN": {
+        "From": "Control Unit",
+        "VC_PGN_ID": 6,
+        "PGN_32bit": 65380,
+        "adrs_Port": "29",
+        "adrs_Stbd": "29",
+        "priority": "18",
+        "Sending_Unit_Software_version": "1.0000",
+        "info": "Should look into how Calstatus is generated",
+        "Configuration": "night",
+        "Project": "MATTS",
+        "Type": "N/A",
+        "Comments": "comments section",
+        "Group": "groupnumber",
+        "CTRLs": "N/A"
+      },
+      "vC_PGNData": {
+        "PGN": "0xFF64",
+        "DescritionPGN": "   Calibration Feedback  ",
+        "DescritionByte0": "OperationMode",
+        "Byte0": [],
+        "DescritionByte1": "CalStatus |BL*0",
+        "Byte1": [],
+        "DescritionByte2": "Cal2_Pos1 |BL*0",
+        "Byte2": [],
+        "DescritionByte3": "Cal2_Pos2 |BL*0",
+        "Byte3": [],
+        "DescritionByte4": "N/A",
+        "Byte4": [],
+        "DescritionByte5": "N/A",
+        "Byte5": [],
+        "DescritionByte6": "N/A",
+        "Byte6": [],
+        "DescritionByte7": "Communication Faults |XX",
+        "Byte7": [
+          "bAutocal_Fault",
+          "bStandby",
+          "bMomentarySwitch",
+          "bCT_Waiting_For_Flag_Reset",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ]
+      }
+    },
+    {
+      "vC_PGN": {
+        "From": "Control Unit",
+        "VC_PGN_ID": 7,
+        "PGN_32bit": 65353,
+        "adrs_Port": "29",
+        "adrs_Stbd": "29",
+        "priority": "18",
+        "Sending_Unit_Software_version": "1.0000",
+        "info": "cu adrress is 29 A&M 34",
+        "Configuration": "night",
+        "Project": "MATTS",
+        "Type": "N/A",
+        "Comments": "comments section",
+        "Group": "groupnumber",
+        "CTRLs": "N/A"
+      },
+      "vC_PGNData": {
+        "PGN": "0xFF49",
+        "DescritionPGN": "   Faults   ",
+        "DescritionByte0": "Sensor Faults |XX",
+        "Byte0": [
+          "Stbd Bucket",
+          "Port Bucket",
+          "Stbd Nozzle",
+          "Port Nozzle",
+          "Stbd Tab",
+          "Port Tab",
+          "N/A",
+          "N/A"
+        ],
+        "DescritionByte1": "Non Follow Up Faults |XX",
+        "Byte1": [
+          "Stbd Bucket NFU",
+          "Port Bucket NFU",
+          "Stbd Nozzle NFU",
+          "Port Nozzle NFU",
+          "Stbd Tab NFU",
+          "Port Tab NFU",
+          "N/A",
+          "N/A"
+        ],
+        "DescritionByte2": "Local Station 1 Comm Faults |XX",
+        "Byte2": [
+          "LocalSta 1 Idle Knob Fault",
+          "LocalSta 1 JoyStick Z Fault",
+          "LocalSta 1 Stbd Lever Fault",
+          "LocalSta 1 Port Lever Fault",
+          "LocalSta 1 Joy-Y Fault",
+          "LocalSta 1 Joy-X Fault",
+          "LocalSta 1 Tiller 2 Fault",
+          "N/A"
+        ],
+        "DescritionByte3": "Local Station 2 comm Faults |XX",
+        "Byte3": [
+          "LocalSta 2 Idle Knob Fault",
+          "LocalSta 2 JoyStick Z Fault",
+          "LocalSta 2 Stbd Lever Fault",
+          "LocalSta 2 Port Lever Fault",
+          "LocalSta 2 Joy-Y Fault",
+          "LocalSta 2 Joy-X Fault",
+          "N/A",
+          "N/A"
+        ],
+        "DescritionByte4": "Remote Station Faults |XX",
+        "Byte4": [
+          "RemoteSta Idle Knob Fault",
+          "RemoteSta JoyStick Z Fault",
+          "RemoteSta Stbd Lever Fault",
+          "RemoteSta Port Lever Fault",
+          "RemoteSta Joy-Y Fault",
+          "RemoteSta Joy-X Fault",
+          "N/A",
+          "N/A"
+        ],
+        "DescritionByte5": "General Faults |XX",
+        "Byte5": [
+          "Port Trim Fault",
+          "Port Roll Fault",
+          "AutoCal Fault",
+          "Autopilot Out of Range Fault",
+          "Stbd Trim Joystick Fault",
+          "Stbd Roll Joystick Fault",
+          "Hardware Fault",
+          "N/A"
+        ],
+        "DescritionByte6": "Docking Faults |XX",
+        "Byte6": [
+          "Docking Mode Interlock Fault",
+          "Docking_Mode Clutch Mismatch",
+          "Docking_Mode Inboard Clutch Interlock",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "DescritionByte7": "Communication Faults |XX",
+        "Byte7": [
+          "CAN Fault",
+          "Station 1 Clutch Panel CAN Fault",
+          "Station 2 Clutch Panel CAN Fault",
+          "Station 3 Clutch Panel CAN Fault",
+          "N/A",
+          "DP LCD CAN Fault",
+          "Remote Station Controller CAN Fault",
+          "N/A"
+        ]
+      }
+    },
+    {
+      "vC_PGN": {
+        "From": "CIM",
+        "VC_PGN_ID": 8,
         "PGN_32bit": 65450,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -42,7 +454,7 @@
     {
       "vC_PGN": {
         "From": "A&M",
-        "VC_PGN_ID": 1,
+        "VC_PGN_ID": 9,
         "PGN_32bit": 65441,
         "adrs_Port": "01",
         "adrs_Stbd": "02",
@@ -98,7 +510,7 @@
     {
       "vC_PGN": {
         "From": "CIM",
-        "VC_PGN_ID": 2,
+        "VC_PGN_ID": 10,
         "PGN_32bit": 65450,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -136,7 +548,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 3,
+        "VC_PGN_ID": 11,
         "PGN_32bit": 65276,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -174,7 +586,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 4,
+        "VC_PGN_ID": 12,
         "PGN_32bit": 65424,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -212,7 +624,7 @@
     {
       "vC_PGN": {
         "From": "Control Units",
-        "VC_PGN_ID": 5,
+        "VC_PGN_ID": 13,
         "PGN_32bit": 65440,
         "adrs_Port": "01",
         "adrs_Stbd": "02",
@@ -250,7 +662,7 @@
     {
       "vC_PGN": {
         "From": "A&M station 1",
-        "VC_PGN_ID": 6,
+        "VC_PGN_ID": 14,
         "PGN_32bit": 65458,
         "adrs_Port": "01",
         "adrs_Stbd": "01",
@@ -288,7 +700,7 @@
     {
       "vC_PGN": {
         "From": "A&M station 2",
-        "VC_PGN_ID": 7,
+        "VC_PGN_ID": 15,
         "PGN_32bit": 65459,
         "adrs_Port": "02",
         "adrs_Stbd": "02",
@@ -326,7 +738,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit Clutch",
-        "VC_PGN_ID": 8,
+        "VC_PGN_ID": 16,
         "PGN_32bit": 65420,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -382,7 +794,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 9,
+        "VC_PGN_ID": 17,
         "PGN_32bit": 65422,
         "adrs_Port": "01",
         "adrs_Stbd": "02",
@@ -429,7 +841,7 @@
     {
       "vC_PGN": {
         "From": "PC",
-        "VC_PGN_ID": 10,
+        "VC_PGN_ID": 18,
         "PGN_32bit": 65261,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -521,7 +933,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 11,
+        "VC_PGN_ID": 19,
         "PGN_32bit": 65490,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -568,7 +980,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 12,
+        "VC_PGN_ID": 20,
         "PGN_32bit": 65490,
         "adrs_Port": "01",
         "adrs_Stbd": "01",
@@ -615,7 +1027,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 13,
+        "VC_PGN_ID": 21,
         "PGN_32bit": 65488,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -653,7 +1065,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 14,
+        "VC_PGN_ID": 22,
         "PGN_32bit": 65489,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -709,7 +1121,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 15,
+        "VC_PGN_ID": 23,
         "PGN_32bit": 65491,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -747,7 +1159,7 @@
     {
       "vC_PGN": {
         "From": "AZM",
-        "VC_PGN_ID": 16,
+        "VC_PGN_ID": 24,
         "PGN_32bit": 65482,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -785,7 +1197,7 @@
     {
       "vC_PGN": {
         "From": "Clutch",
-        "VC_PGN_ID": 17,
+        "VC_PGN_ID": 25,
         "PGN_32bit": 65344,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -823,7 +1235,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 18,
+        "VC_PGN_ID": 26,
         "PGN_32bit": 65421,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -906,7 +1318,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 19,
+        "VC_PGN_ID": 27,
         "PGN_32bit": 65400,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -944,7 +1356,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 20,
+        "VC_PGN_ID": 28,
         "PGN_32bit": 65399,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -982,439 +1394,18 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 21,
-        "PGN_32bit": 65381,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "N/A",
-        "Configuration": "B_E_B",
-        "Project": "N/A",
-        "Type": "N/A",
-        "Comments": "N/A",
-        "Group": "N/A",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF65",
-        "DescritionPGN": "   Dynamic Positioning Information ",
-        "DescritionByte0": "DP Off,blocked,ovr,on |BL(0,0,4)",
-        "Byte0": [],
-        "DescritionByte1": "tryOVRb2b3 |XX*0",
-        "Byte1": [
-          "isBlocked",
-          "ovrANDhelm",
-          "ovrANDjoy",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A"
-        ],
-        "DescritionByte2": "N/A",
-        "Byte2": [],
-        "DescritionByte3": "N/A",
-        "Byte3": [],
-        "DescritionByte4": "N/A",
-        "Byte4": [],
-        "DescritionByte5": "N/A",
-        "Byte5": [],
-        "DescritionByte6": "N/A",
-        "Byte6": [],
-        "DescritionByte7": "N/A",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 22,
-        "PGN_32bit": 65363,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "N/A",
-        "Configuration": "B_E_B",
-        "Project": "N/A",
-        "Type": "N/A",
-        "Comments": "N/A",
-        "Group": "N/A",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF53",
-        "DescritionPGN": "   System Information   ",
-        "DescritionByte0": "N/A",
-        "Byte0": [],
-        "DescritionByte1": "AciveStation |BL(0,1,2)",
-        "Byte1": [],
-        "DescritionByte2": "N/A",
-        "Byte2": [],
-        "DescritionByte3": "N/A",
-        "Byte3": [],
-        "DescritionByte4": "opMode |XX*1",
-        "Byte4": [
-          "tr_dk",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A"
-        ],
-        "DescritionByte5": "N/A",
-        "Byte5": [],
-        "DescritionByte6": "AUTOPILOT |XX",
-        "Byte6": [
-          "AutopilotON",
-          "Turn to Port",
-          "Turn to Stbd",
-          "N/A",
-          "TillerSelection",
-          "DPSwitch_Sta2",
-          "bAP_OverrideInEffect",
-          "apState"
-        ],
-        "DescritionByte7": "N/A",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 23,
-        "PGN_32bit": 65369,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "10.1002 Rev6288",
-        "info": "N/A",
-        "Configuration": "B_E_B",
-        "Project": "N/A",
-        "Type": "N/A",
-        "Comments": "N/A",
-        "Group": "N/A",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF59",
-        "DescritionPGN": "   Raw Switch states   ",
-        "DescritionByte0": "N/A",
-        "Byte0": [],
-        "DescritionByte1": "N/A",
-        "Byte1": [],
-        "DescritionByte2": "N/A",
-        "Byte2": [],
-        "DescritionByte3": "N/A",
-        "Byte3": [],
-        "DescritionByte4": "N/A",
-        "Byte4": [],
-        "DescritionByte5": "N/A",
-        "Byte5": [],
-        "DescritionByte6": "Autopilot |XX",
-        "Byte6": [
-          "Autopilot Switch",
-          "Autopilot Steer Port",
-          "Autopilot Steer Starboard",
-          "Operating Mode Docking",
-          "AutoPilot Override",
-          "DPSwitch_Sta2",
-          "bAP_OverrideInEffect",
-          "if Blocked_DPinControl"
-        ],
-        "DescritionByte7": "tillerselect |XX",
-        "Byte7": [
-          "N/A",
-          "N/A",
-          "N/A",
-          "Sta1 Tiller Selec",
-          "N/A",
-          "N/A",
-          "Flip_Dutycycle",
-          "N/A"
-        ]
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 24,
-        "PGN_32bit": 65276,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "N/A",
-        "Configuration": "B_E_B",
-        "Project": "N/A",
-        "Type": "N/A",
-        "Comments": "N/A",
-        "Group": "N/A",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFEFC",
-        "DescritionPGN": "   Indication   ",
-        "DescritionByte0": "Port BucketPos |BT(0,128,255)",
-        "Byte0": [],
-        "DescritionByte1": "AP_OVERRIDE_HELM_PERCENT |BT(0,0,100)",
-        "Byte1": [],
-        "DescritionByte2": "Stbd NozzlePos |BT(0,128,255)",
-        "Byte2": [],
-        "DescritionByte3": "Port NozzlePos |BT(0,128,255)",
-        "Byte3": [],
-        "DescritionByte4": "N/A",
-        "Byte4": [],
-        "DescritionByte5": "Stbd BucketPos |BT(0,128,255)",
-        "Byte5": [],
-        "DescritionByte6": "Port EngineCMD |BT(0,141,255)",
-        "Byte6": [],
-        "DescritionByte7": "Stbd EngineCMD |BT(0,142,255)",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 25,
-        "PGN_32bit": 65382,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "N/A",
-        "Configuration": "B_E_B",
-        "Project": "N/A",
-        "Type": "N/A",
-        "Comments": "N/A",
-        "Group": "N/A",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF66",
-        "DescritionPGN": "   DP Diagnostics 1   ",
-        "DescritionByte0": "JoyX LO |B2(0,430,1000)",
-        "Byte0": [],
-        "DescritionByte1": "JoyX HI |B2",
-        "Byte1": [],
-        "DescritionByte2": "JoyY LO |B2(0,390,1000)",
-        "Byte2": [],
-        "DescritionByte3": "JoyY HI |B2",
-        "Byte3": [],
-        "DescritionByte4": "Helm LO |B2(0,270,1000)",
-        "Byte4": [],
-        "DescritionByte5": "Helm HI |B2",
-        "Byte5": [],
-        "DescritionByte6": "IdleRPM LO |B2(0,700,4000)",
-        "Byte6": [],
-        "DescritionByte7": "IdleRPM HI |B2",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 26,
-        "PGN_32bit": 65328,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "N/A",
-        "Configuration": "B_E_B",
-        "Project": "N/A",
-        "Type": "N/A",
-        "Comments": "N/A",
-        "Group": "N/A",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF30",
-        "DescritionPGN": "   CU to Clutch Panel Message   ",
-        "DescritionByte0": "N/A",
-        "Byte0": [],
-        "DescritionByte1": "N/A",
-        "Byte1": [],
-        "DescritionByte2": "Major Software Version |BL*18",
-        "Byte2": [],
-        "DescritionByte3": "Minor Software Version LO |B2*1048",
-        "Byte3": [],
-        "DescritionByte4": "Minor Software Version HI |B2",
-        "Byte4": [],
-        "DescritionByte5": "Software Revision LO |B2*9166",
-        "Byte5": [],
-        "DescritionByte6": "Software Revision HI |B2",
-        "Byte6": [],
-        "DescritionByte7": "N/A",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 27,
-        "PGN_32bit": 65380,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "N/A",
-        "Configuration": "B_E_B",
-        "Project": "N/A",
-        "Type": "N/A",
-        "Comments": "N/A",
-        "Group": "N/A",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF64",
-        "DescritionPGN": "   Calibration   ",
-        "DescritionByte0": "N/A",
-        "Byte0": [],
-        "DescritionByte1": "CalStatus |BL*0",
-        "Byte1": [],
-        "DescritionByte2": "N/A",
-        "Byte2": [],
-        "DescritionByte3": "N/A",
-        "Byte3": [],
-        "DescritionByte4": "N/A",
-        "Byte4": [],
-        "DescritionByte5": "N/A",
-        "Byte5": [],
-        "DescritionByte6": "N/A",
-        "Byte6": [],
-        "DescritionByte7": "N/A",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 28,
-        "PGN_32bit": 65353,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "N/A",
-        "Configuration": "B_E_B",
-        "Project": "N/A",
-        "Type": "N/A",
-        "Comments": "N/A",
-        "Group": "N/A",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF49",
-        "DescritionPGN": "   Faults   ",
-        "DescritionByte0": "Sensor Faults |XX",
-        "Byte0": [
-          "Stbd Bucket",
-          "Port Bucket",
-          "Stbd Nozzle",
-          "Port Nozzle",
-          "Stbd Tab",
-          "Port Tab",
-          "N/A",
-          "N/A"
-        ],
-        "DescritionByte1": "Non Follow Up Faults |XX",
-        "Byte1": [
-          "Stbd Bucket NFU",
-          "Port Bucket NFU",
-          "Stbd Nozzle NFU",
-          "Port Nozzle NFU",
-          "Stbd Tab NFU",
-          "Port Tab NFU",
-          "N/A",
-          "N/A"
-        ],
-        "DescritionByte2": "Local Station 1 Comm Faults |XX",
-        "Byte2": [
-          "LocalSta 1 Idle Knob Fault",
-          "LocalSta 1 JoyStick Z Fault",
-          "LocalSta 1 Stbd Lever Fault",
-          "LocalSta 1 Port Lever Fault",
-          "LocalSta 1 Joy-Y Fault",
-          "LocalSta 1 Joy-X Fault",
-          "LocalSta 1 Tiller 2 Fault",
-          "N/A"
-        ],
-        "DescritionByte3": "Local Station 2 comm Faults |XX",
-        "Byte3": [
-          "LocalSta 2 Idle Knob Fault",
-          "LocalSta 2 JoyStick Z Fault",
-          "LocalSta 2 Stbd Lever Fault",
-          "LocalSta 2 Port Lever Fault",
-          "LocalSta 2 Joy-Y Fault",
-          "LocalSta 2 Joy-X Fault",
-          "N/A",
-          "N/A"
-        ],
-        "DescritionByte4": "Remote Station Faults |XX",
-        "Byte4": [
-          "RemoteSta Idle Knob Fault",
-          "RemoteSta JoyStick Z Fault",
-          "RemoteSta Stbd Lever Fault",
-          "RemoteSta Port Lever Fault",
-          "RemoteSta Joy-Y Fault",
-          "RemoteSta Joy-X Fault",
-          "N/A",
-          "N/A"
-        ],
-        "DescritionByte5": "General Faults |XX",
-        "Byte5": [
-          "Port Trim Fault",
-          "Port Roll Fault",
-          "AutoCal Fault",
-          "Autopilot Out of Range Fault",
-          "Stbd Trim Joystick Fault",
-          "Stbd Roll Joystick Fault",
-          "Hardware Fault",
-          "N/A"
-        ],
-        "DescritionByte6": "Docking Faults |XX",
-        "Byte6": [
-          "Docking Mode Interlock Fault",
-          "Docking_Mode Clutch Mismatch",
-          "Docking_Mode Inboard Clutch Interlock",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A"
-        ],
-        "DescritionByte7": "Communication Faults |XX",
-        "Byte7": [
-          "CAN Fault",
-          "Station 1 Clutch Panel CAN Fault",
-          "Station 2 Clutch Panel CAN Fault",
-          "Station 3 Clutch Panel CAN Fault",
-          "N/A",
-          "DP LCD CAN Fault",
-          "Remote Station Controller CAN Fault",
-          "N/A"
-        ]
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
         "VC_PGN_ID": 29,
         "PGN_32bit": 65381,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
         "priority": "18",
         "Sending_Unit_Software_version": "1.0000",
-        "info": "the pv connection is setup using a mask for all pgns, the adress is defined in code and this should be 29",
-        "Configuration": "SSRS_K12",
+        "info": "N/A",
+        "Configuration": "B_E_B",
         "Project": "N/A",
         "Type": "N/A",
         "Comments": "N/A",
-        "Group": "g02",
+        "Group": "N/A",
         "CTRLs": "N/A"
       },
       "vC_PGNData": {
@@ -1451,64 +1442,17 @@
       "vC_PGN": {
         "From": "Control Unit",
         "VC_PGN_ID": 30,
-        "PGN_32bit": 65381,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "the pv connection is setup using a mask for all pgns, the adress is defined in code and this should be 29",
-        "Configuration": "original S_S_R_S_K_1_2_",
-        "Project": "N/A",
-        "Type": "N/A",
-        "Comments": "N/A",
-        "Group": "N/A",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF65",
-        "DescritionPGN": "   Dynamic Positioning state ",
-        "DescritionByte0": "DPState |XX*3",
-        "Byte0": [
-          "DPState",
-          "bit1 SwitchDP",
-          "bit2",
-          "bit3",
-          "N/A",
-          "N/A",
-          "N/A",
-          "N/A"
-        ],
-        "DescritionByte1": "DPOverride thed divided by 2 and takes bit0 bit1 |BL",
-        "Byte1": [],
-        "DescritionByte2": "N/A",
-        "Byte2": [],
-        "DescritionByte3": "N/A",
-        "Byte3": [],
-        "DescritionByte4": "N/A",
-        "Byte4": [],
-        "DescritionByte5": "N/A",
-        "Byte5": [],
-        "DescritionByte6": "N/A",
-        "Byte6": [],
-        "DescritionByte7": "N/A",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 31,
         "PGN_32bit": 65363,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
         "priority": "18",
         "Sending_Unit_Software_version": "1.0000",
-        "info": "cu adrress is 29 A&M 34",
-        "Configuration": "SSRS_K12",
+        "info": "N/A",
+        "Configuration": "B_E_B",
         "Project": "N/A",
         "Type": "N/A",
         "Comments": "N/A",
-        "Group": "g00",
+        "Group": "N/A",
         "CTRLs": "N/A"
       },
       "vC_PGNData": {
@@ -1553,18 +1497,18 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 32,
+        "VC_PGN_ID": 31,
         "PGN_32bit": 65369,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
         "priority": "18",
         "Sending_Unit_Software_version": "10.1002 Rev6288",
-        "info": "cu adrress is 29 A&M 34",
-        "Configuration": "SSRS_K12",
+        "info": "N/A",
+        "Configuration": "B_E_B",
         "Project": "N/A",
         "Type": "N/A",
         "Comments": "N/A",
-        "Group": "g01",
+        "Group": "N/A",
         "CTRLs": "N/A"
       },
       "vC_PGNData": {
@@ -1609,18 +1553,18 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 33,
+        "VC_PGN_ID": 32,
         "PGN_32bit": 65276,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
         "priority": "18",
         "Sending_Unit_Software_version": "1.0000",
-        "info": "cu adrress is 29 A&M 34",
-        "Configuration": "SSRS_K12",
+        "info": "N/A",
+        "Configuration": "B_E_B",
         "Project": "N/A",
         "Type": "N/A",
         "Comments": "N/A",
-        "Group": "g03",
+        "Group": "N/A",
         "CTRLs": "N/A"
       },
       "vC_PGNData": {
@@ -1647,18 +1591,18 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 34,
+        "VC_PGN_ID": 33,
         "PGN_32bit": 65382,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
         "priority": "18",
         "Sending_Unit_Software_version": "1.0000",
-        "info": "the pv connection is setup using a mask for all pgns, the adress is defined in code and this should be 29",
-        "Configuration": "SSRS_K12",
+        "info": "N/A",
+        "Configuration": "B_E_B",
         "Project": "N/A",
         "Type": "N/A",
         "Comments": "N/A",
-        "Group": "g04",
+        "Group": "N/A",
         "CTRLs": "N/A"
       },
       "vC_PGNData": {
@@ -1685,18 +1629,18 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 35,
+        "VC_PGN_ID": 34,
         "PGN_32bit": 65328,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
         "priority": "18",
         "Sending_Unit_Software_version": "1.0000",
-        "info": "cu adrress is 29 A&M 34",
-        "Configuration": "SSRS_K12",
+        "info": "N/A",
+        "Configuration": "B_E_B",
         "Project": "N/A",
         "Type": "N/A",
         "Comments": "N/A",
-        "Group": "g05",
+        "Group": "N/A",
         "CTRLs": "N/A"
       },
       "vC_PGNData": {
@@ -1723,18 +1667,18 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 36,
+        "VC_PGN_ID": 35,
         "PGN_32bit": 65380,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
         "priority": "18",
         "Sending_Unit_Software_version": "1.0000",
-        "info": "Should look into how Calstatus is generated",
-        "Configuration": "SSRS_K12",
+        "info": "N/A",
+        "Configuration": "B_E_B",
         "Project": "N/A",
         "Type": "N/A",
         "Comments": "N/A",
-        "Group": "g06",
+        "Group": "N/A",
         "CTRLs": "N/A"
       },
       "vC_PGNData": {
@@ -1761,18 +1705,18 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 37,
+        "VC_PGN_ID": 36,
         "PGN_32bit": 65353,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
         "priority": "18",
         "Sending_Unit_Software_version": "1.0000",
-        "info": "cu adrress is 29 A&M 34",
-        "Configuration": "SSRS_K12",
+        "info": "N/A",
+        "Configuration": "B_E_B",
         "Project": "N/A",
         "Type": "N/A",
         "Comments": "N/A",
-        "Group": "g07",
+        "Group": "N/A",
         "CTRLs": "N/A"
       },
       "vC_PGNData": {
@@ -1870,122 +1814,8 @@
     },
     {
       "vC_PGN": {
-        "From": "GPS",
-        "VC_PGN_ID": 38,
-        "PGN_32bit": 61714,
-        "adrs_Port": "7F",
-        "adrs_Stbd": "7F",
-        "priority": "09",
-        "Sending_Unit_Software_version": "N/A",
-        "info": "standard gps",
-        "Configuration": "SSRS_K12",
-        "Project": "N/A",
-        "Type": "GPS",
-        "Comments": "N/A",
-        "Group": "p0",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xF112",
-        "DescritionPGN": "   GPS Heading     ",
-        "DescritionByte0": "N/A",
-        "Byte0": [],
-        "DescritionByte1": "GPS Heading LO |B2(0,3600,35999)",
-        "Byte1": [],
-        "DescritionByte2": "GPS Heading HI |B2",
-        "Byte2": [],
-        "DescritionByte3": "N/A",
-        "Byte3": [],
-        "DescritionByte4": "N/A",
-        "Byte4": [],
-        "DescritionByte5": "N/A",
-        "Byte5": [],
-        "DescritionByte6": "N/A",
-        "Byte6": [],
-        "DescritionByte7": "N/A",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 39,
-        "PGN_32bit": 65383,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "standard gps",
-        "Configuration": "SSRS_K12",
-        "Project": "N/A",
-        "Type": "GPS",
-        "Comments": "N/A",
-        "Group": "p1",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF67",
-        "DescritionPGN": "   DP Diagnostics 2   ",
-        "DescritionByte0": "Xi 32bit_0 |B4",
-        "Byte0": [],
-        "DescritionByte1": "Xi 32bit_1 |B4",
-        "Byte1": [],
-        "DescritionByte2": "Xi 32bit_2 |B4",
-        "Byte2": [],
-        "DescritionByte3": "Xi 32bit_3 |B4",
-        "Byte3": [],
-        "DescritionByte4": "Eta 32bit_0 |B4",
-        "Byte4": [],
-        "DescritionByte5": "Eta 32bit_1 |B4",
-        "Byte5": [],
-        "DescritionByte6": "Eta 32bit_2 |B4",
-        "Byte6": [],
-        "DescritionByte7": "Eta 32bit_3 |B4",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "GPS",
-        "VC_PGN_ID": 40,
-        "PGN_32bit": 63489,
-        "adrs_Port": "7F",
-        "adrs_Stbd": "7F",
-        "priority": "09",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "standard gps",
-        "Configuration": "SSRS_K12",
-        "Project": "N/A",
-        "Type": "GPS",
-        "Comments": "N/A",
-        "Group": "p2",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xF801",
-        "DescritionPGN": "   GPS POSITION   ",
-        "DescritionByte0": "GPS Latitude 32bit_0 |B4",
-        "Byte0": [],
-        "DescritionByte1": "GPS Latitude 32bit_1 |B4",
-        "Byte1": [],
-        "DescritionByte2": "GPS Latitude 32bit_2 |B4",
-        "Byte2": [],
-        "DescritionByte3": "GPS Latitude 32bit_3 |B4",
-        "Byte3": [],
-        "DescritionByte4": "GPS Longitude 32bit_0 |B4",
-        "Byte4": [],
-        "DescritionByte5": "GPS Longitude 32bit_1 |B4",
-        "Byte5": [],
-        "DescritionByte6": "GPS Longitude 32bit_2 |B4",
-        "Byte6": [],
-        "DescritionByte7": "GPS Longitude 32bit_3 |B4",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
         "From": "paramsXML",
-        "VC_PGN_ID": 41,
+        "VC_PGN_ID": 37,
         "PGN_32bit": 65301,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -2023,7 +1853,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit Guage Brightness",
-        "VC_PGN_ID": 42,
+        "VC_PGN_ID": 38,
         "PGN_32bit": 65186,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -2061,7 +1891,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit !sy",
-        "VC_PGN_ID": 43,
+        "VC_PGN_ID": 39,
         "PGN_32bit": 65276,
         "adrs_Port": "21",
         "adrs_Stbd": "21",
@@ -2099,7 +1929,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 44,
+        "VC_PGN_ID": 40,
         "PGN_32bit": 65276,
         "adrs_Port": "21",
         "adrs_Stbd": "21",
@@ -2137,7 +1967,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 45,
+        "VC_PGN_ID": 41,
         "PGN_32bit": 65276,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -2175,7 +2005,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit !sy",
-        "VC_PGN_ID": 46,
+        "VC_PGN_ID": 42,
         "PGN_32bit": 65276,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -2213,7 +2043,7 @@
     {
       "vC_PGN": {
         "From": "Indication Module - GPSI",
-        "VC_PGN_ID": 47,
+        "VC_PGN_ID": 43,
         "PGN_32bit": 65280,
         "adrs_Port": "21",
         "adrs_Stbd": "21",
@@ -2251,7 +2081,7 @@
     {
       "vC_PGN": {
         "From": "Indication Module - GPSI",
-        "VC_PGN_ID": 48,
+        "VC_PGN_ID": 44,
         "PGN_32bit": 65281,
         "adrs_Port": "21",
         "adrs_Stbd": "21",
@@ -2289,7 +2119,7 @@
     {
       "vC_PGN": {
         "From": "Indication Module - GPSI",
-        "VC_PGN_ID": 49,
+        "VC_PGN_ID": 45,
         "PGN_32bit": 65282,
         "adrs_Port": "21",
         "adrs_Stbd": "21",
@@ -2327,7 +2157,7 @@
     {
       "vC_PGN": {
         "From": "Indication Module - GPSI",
-        "VC_PGN_ID": 50,
+        "VC_PGN_ID": 46,
         "PGN_32bit": 65283,
         "adrs_Port": "21",
         "adrs_Stbd": "21",
@@ -2365,7 +2195,7 @@
     {
       "vC_PGN": {
         "From": "Indication Module - GPSI",
-        "VC_PGN_ID": 51,
+        "VC_PGN_ID": 47,
         "PGN_32bit": 65284,
         "adrs_Port": "21",
         "adrs_Stbd": "21",
@@ -2403,7 +2233,7 @@
     {
       "vC_PGN": {
         "From": "Indication Module - GPSI",
-        "VC_PGN_ID": 52,
+        "VC_PGN_ID": 48,
         "PGN_32bit": 65285,
         "adrs_Port": "21",
         "adrs_Stbd": "21",
@@ -2441,7 +2271,7 @@
     {
       "vC_PGN": {
         "From": "LCD  FF11",
-        "VC_PGN_ID": 53,
+        "VC_PGN_ID": 49,
         "PGN_32bit": 65297,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -2479,7 +2309,7 @@
     {
       "vC_PGN": {
         "From": "LCD  FF12",
-        "VC_PGN_ID": 54,
+        "VC_PGN_ID": 50,
         "PGN_32bit": 65298,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -2526,7 +2356,7 @@
     {
       "vC_PGN": {
         "From": "LCD  FF12",
-        "VC_PGN_ID": 55,
+        "VC_PGN_ID": 51,
         "PGN_32bit": 65298,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -2573,7 +2403,7 @@
     {
       "vC_PGN": {
         "From": "LCD",
-        "VC_PGN_ID": 56,
+        "VC_PGN_ID": 52,
         "PGN_32bit": 65298,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -2620,7 +2450,7 @@
     {
       "vC_PGN": {
         "From": "LCD  ff13",
-        "VC_PGN_ID": 57,
+        "VC_PGN_ID": 53,
         "PGN_32bit": 65299,
         "adrs_Port": "21",
         "adrs_Stbd": "21",
@@ -2667,7 +2497,7 @@
     {
       "vC_PGN": {
         "From": "LCD",
-        "VC_PGN_ID": 58,
+        "VC_PGN_ID": 54,
         "PGN_32bit": 65299,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -2714,7 +2544,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit calibration",
-        "VC_PGN_ID": 59,
+        "VC_PGN_ID": 55,
         "PGN_32bit": 65301,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -2752,7 +2582,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 60,
+        "VC_PGN_ID": 56,
         "PGN_32bit": 65301,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -2790,7 +2620,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 61,
+        "VC_PGN_ID": 57,
         "PGN_32bit": 65303,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -2837,7 +2667,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 62,
+        "VC_PGN_ID": 58,
         "PGN_32bit": 65304,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -2884,7 +2714,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 63,
+        "VC_PGN_ID": 59,
         "PGN_32bit": 65305,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -2931,7 +2761,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 64,
+        "VC_PGN_ID": 60,
         "PGN_32bit": 65312,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -2978,7 +2808,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 65,
+        "VC_PGN_ID": 61,
         "PGN_32bit": 65313,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3025,7 +2855,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 66,
+        "VC_PGN_ID": 62,
         "PGN_32bit": 65314,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3072,7 +2902,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 67,
+        "VC_PGN_ID": 63,
         "PGN_32bit": 65315,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3119,7 +2949,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 68,
+        "VC_PGN_ID": 64,
         "PGN_32bit": 65316,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3166,7 +2996,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 69,
+        "VC_PGN_ID": 65,
         "PGN_32bit": 65317,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3213,7 +3043,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 70,
+        "VC_PGN_ID": 66,
         "PGN_32bit": 65318,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3260,7 +3090,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 71,
+        "VC_PGN_ID": 67,
         "PGN_32bit": 65319,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3307,7 +3137,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 72,
+        "VC_PGN_ID": 68,
         "PGN_32bit": 65320,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3354,7 +3184,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 73,
+        "VC_PGN_ID": 69,
         "PGN_32bit": 65328,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3401,7 +3231,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 74,
+        "VC_PGN_ID": 70,
         "PGN_32bit": 65328,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3448,7 +3278,7 @@
     {
       "vC_PGN": {
         "From": "Clutch Panel",
-        "VC_PGN_ID": 75,
+        "VC_PGN_ID": 71,
         "PGN_32bit": 65329,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3495,7 +3325,7 @@
     {
       "vC_PGN": {
         "From": "Clutch Panel",
-        "VC_PGN_ID": 76,
+        "VC_PGN_ID": 72,
         "PGN_32bit": 65329,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3551,7 +3381,7 @@
     {
       "vC_PGN": {
         "From": "Clutch Panel #2",
-        "VC_PGN_ID": 77,
+        "VC_PGN_ID": 73,
         "PGN_32bit": 65330,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3598,7 +3428,7 @@
     {
       "vC_PGN": {
         "From": "Clutch Panel #2",
-        "VC_PGN_ID": 78,
+        "VC_PGN_ID": 74,
         "PGN_32bit": 65330,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3645,7 +3475,7 @@
     {
       "vC_PGN": {
         "From": "Clutch Panel #1",
-        "VC_PGN_ID": 79,
+        "VC_PGN_ID": 75,
         "PGN_32bit": 65330,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3683,7 +3513,7 @@
     {
       "vC_PGN": {
         "From": "Clutch Panel #1",
-        "VC_PGN_ID": 80,
+        "VC_PGN_ID": 76,
         "PGN_32bit": 65331,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3721,7 +3551,7 @@
     {
       "vC_PGN": {
         "From": "Clutch Panel #3",
-        "VC_PGN_ID": 81,
+        "VC_PGN_ID": 77,
         "PGN_32bit": 65332,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3768,7 +3598,7 @@
     {
       "vC_PGN": {
         "From": "Remote Station Controller",
-        "VC_PGN_ID": 82,
+        "VC_PGN_ID": 78,
         "PGN_32bit": 65334,
         "adrs_Port": "34",
         "adrs_Stbd": "34",
@@ -3815,7 +3645,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 83,
+        "VC_PGN_ID": 79,
         "PGN_32bit": 65353,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -3925,7 +3755,7 @@
     {
       "vC_PGN": {
         "From": "Remote Station Controller",
-        "VC_PGN_ID": 84,
+        "VC_PGN_ID": 80,
         "PGN_32bit": 65360,
         "adrs_Port": "34",
         "adrs_Stbd": "34",
@@ -3972,7 +3802,7 @@
     {
       "vC_PGN": {
         "From": "Remote Station Controller",
-        "VC_PGN_ID": 85,
+        "VC_PGN_ID": 81,
         "PGN_32bit": 65360,
         "adrs_Port": "34",
         "adrs_Stbd": "34",
@@ -4019,7 +3849,7 @@
     {
       "vC_PGN": {
         "From": "Remote Station Controller",
-        "VC_PGN_ID": 86,
+        "VC_PGN_ID": 82,
         "PGN_32bit": 65361,
         "adrs_Port": "34",
         "adrs_Stbd": "34",
@@ -4057,7 +3887,7 @@
     {
       "vC_PGN": {
         "From": "Remote Station Controller",
-        "VC_PGN_ID": 87,
+        "VC_PGN_ID": 83,
         "PGN_32bit": 65361,
         "adrs_Port": "34",
         "adrs_Stbd": "34",
@@ -4095,7 +3925,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 88,
+        "VC_PGN_ID": 84,
         "PGN_32bit": 65363,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -4142,7 +3972,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 89,
+        "VC_PGN_ID": 85,
         "PGN_32bit": 65363,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -4189,7 +4019,7 @@
     {
       "vC_PGN": {
         "From": "Remote Station Controller",
-        "VC_PGN_ID": 90,
+        "VC_PGN_ID": 86,
         "PGN_32bit": 65364,
         "adrs_Port": "34",
         "adrs_Stbd": "34",
@@ -4227,7 +4057,7 @@
     {
       "vC_PGN": {
         "From": "Remote Station Controller",
-        "VC_PGN_ID": 91,
+        "VC_PGN_ID": 87,
         "PGN_32bit": 65364,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -4265,7 +4095,7 @@
     {
       "vC_PGN": {
         "From": "Remote Station Controller",
-        "VC_PGN_ID": 92,
+        "VC_PGN_ID": 88,
         "PGN_32bit": 65365,
         "adrs_Port": "34",
         "adrs_Stbd": "34",
@@ -4303,7 +4133,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit Clutch",
-        "VC_PGN_ID": 93,
+        "VC_PGN_ID": 89,
         "PGN_32bit": 65420,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -4359,7 +4189,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 94,
+        "VC_PGN_ID": 90,
         "PGN_32bit": 65420,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -4415,7 +4245,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit faults",
-        "VC_PGN_ID": 95,
+        "VC_PGN_ID": 91,
         "PGN_32bit": 65421,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -4498,7 +4328,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 96,
+        "VC_PGN_ID": 92,
         "PGN_32bit": 65421,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -4590,7 +4420,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit  Station 1 CMC",
-        "VC_PGN_ID": 97,
+        "VC_PGN_ID": 93,
         "PGN_32bit": 65422,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -4637,7 +4467,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 98,
+        "VC_PGN_ID": 94,
         "PGN_32bit": 65422,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -4684,7 +4514,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit  Station 2 CMC",
-        "VC_PGN_ID": 99,
+        "VC_PGN_ID": 95,
         "PGN_32bit": 65423,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -4731,7 +4561,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 100,
+        "VC_PGN_ID": 96,
         "PGN_32bit": 65423,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -4778,7 +4608,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit  Software Version",
-        "VC_PGN_ID": 101,
+        "VC_PGN_ID": 97,
         "PGN_32bit": 65424,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -4816,7 +4646,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 102,
+        "VC_PGN_ID": 98,
         "PGN_32bit": 65424,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -4854,7 +4684,7 @@
     {
       "vC_PGN": {
         "From": "Alarm and Monitoring Unit",
-        "VC_PGN_ID": 103,
+        "VC_PGN_ID": 99,
         "PGN_32bit": 65440,
         "adrs_Port": "01",
         "adrs_Stbd": "02",
@@ -4892,7 +4722,7 @@
     {
       "vC_PGN": {
         "From": "A&M",
-        "VC_PGN_ID": 104,
+        "VC_PGN_ID": 100,
         "PGN_32bit": 65440,
         "adrs_Port": "01",
         "adrs_Stbd": "02",
@@ -4930,7 +4760,7 @@
     {
       "vC_PGN": {
         "From": "Alarms ?",
-        "VC_PGN_ID": 105,
+        "VC_PGN_ID": 101,
         "PGN_32bit": 65441,
         "adrs_Port": "01",
         "adrs_Stbd": "02",
@@ -4986,7 +4816,7 @@
     {
       "vC_PGN": {
         "From": "A&M",
-        "VC_PGN_ID": 106,
+        "VC_PGN_ID": 102,
         "PGN_32bit": 65441,
         "adrs_Port": "01",
         "adrs_Stbd": "02",
@@ -5051,7 +4881,7 @@
     {
       "vC_PGN": {
         "From": "A&M Unit",
-        "VC_PGN_ID": 107,
+        "VC_PGN_ID": 103,
         "PGN_32bit": 65442,
         "adrs_Port": "01",
         "adrs_Stbd": "02",
@@ -5098,7 +4928,7 @@
     {
       "vC_PGN": {
         "From": "station 1",
-        "VC_PGN_ID": 108,
+        "VC_PGN_ID": 104,
         "PGN_32bit": 65456,
         "adrs_Port": "80",
         "adrs_Stbd": "80",
@@ -5136,7 +4966,7 @@
     {
       "vC_PGN": {
         "From": "station 2",
-        "VC_PGN_ID": 109,
+        "VC_PGN_ID": 105,
         "PGN_32bit": 65457,
         "adrs_Port": "80",
         "adrs_Stbd": "80",
@@ -5174,7 +5004,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit Clutch Panel Brigthness station 1",
-        "VC_PGN_ID": 110,
+        "VC_PGN_ID": 106,
         "PGN_32bit": 65458,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -5212,7 +5042,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 111,
+        "VC_PGN_ID": 107,
         "PGN_32bit": 65458,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -5250,7 +5080,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit Clutch Panel Brigthness station 2",
-        "VC_PGN_ID": 112,
+        "VC_PGN_ID": 108,
         "PGN_32bit": 65459,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -5288,7 +5118,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 113,
+        "VC_PGN_ID": 109,
         "PGN_32bit": 65459,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -5326,7 +5156,7 @@
     {
       "vC_PGN": {
         "From": "LCD",
-        "VC_PGN_ID": 114,
+        "VC_PGN_ID": 110,
         "PGN_32bit": 65535,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -5364,7 +5194,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 115,
+        "VC_PGN_ID": 111,
         "PGN_32bit": 65313,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -5411,7 +5241,7 @@
     {
       "vC_PGN": {
         "From": "VMU",
-        "VC_PGN_ID": 116,
+        "VC_PGN_ID": 112,
         "PGN_32bit": 61481,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -5449,7 +5279,7 @@
     {
       "vC_PGN": {
         "From": "VMU",
-        "VC_PGN_ID": 117,
+        "VC_PGN_ID": 113,
         "PGN_32bit": 61482,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -5487,7 +5317,7 @@
     {
       "vC_PGN": {
         "From": "VMU",
-        "VC_PGN_ID": 118,
+        "VC_PGN_ID": 114,
         "PGN_32bit": 61485,
         "adrs_Port": "E2",
         "adrs_Stbd": "E2",
@@ -5525,7 +5355,7 @@
     {
       "vC_PGN": {
         "From": "GPS",
-        "VC_PGN_ID": 119,
+        "VC_PGN_ID": 115,
         "PGN_32bit": 61714,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -5563,7 +5393,7 @@
     {
       "vC_PGN": {
         "From": "GPS",
-        "VC_PGN_ID": 120,
+        "VC_PGN_ID": 116,
         "PGN_32bit": 63489,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -5601,7 +5431,7 @@
     {
       "vC_PGN": {
         "From": "GPS",
-        "VC_PGN_ID": 121,
+        "VC_PGN_ID": 117,
         "PGN_32bit": 61715,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -5639,7 +5469,7 @@
     {
       "vC_PGN": {
         "From": "GPS",
-        "VC_PGN_ID": 122,
+        "VC_PGN_ID": 118,
         "PGN_32bit": 63490,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -5677,7 +5507,7 @@
     {
       "vC_PGN": {
         "From": "GPS",
-        "VC_PGN_ID": 123,
+        "VC_PGN_ID": 119,
         "PGN_32bit": 61456,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -5715,7 +5545,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 124,
+        "VC_PGN_ID": 120,
         "PGN_32bit": 65313,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -5762,7 +5592,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 125,
+        "VC_PGN_ID": 121,
         "PGN_32bit": 65315,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -5809,7 +5639,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 126,
+        "VC_PGN_ID": 122,
         "PGN_32bit": 65316,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -5856,7 +5686,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 127,
+        "VC_PGN_ID": 123,
         "PGN_32bit": 65317,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -5903,7 +5733,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 128,
+        "VC_PGN_ID": 124,
         "PGN_32bit": 65318,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -5950,7 +5780,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 129,
+        "VC_PGN_ID": 125,
         "PGN_32bit": 65319,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -5997,7 +5827,7 @@
     {
       "vC_PGN": {
         "From": "SKIM Modules",
-        "VC_PGN_ID": 130,
+        "VC_PGN_ID": 126,
         "PGN_32bit": 65320,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -6044,7 +5874,7 @@
     {
       "vC_PGN": {
         "From": "Engine Controller",
-        "VC_PGN_ID": 131,
+        "VC_PGN_ID": 127,
         "PGN_32bit": 43776,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -6082,7 +5912,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 132,
+        "VC_PGN_ID": 128,
         "PGN_32bit": 65328,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -6138,7 +5968,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 133,
+        "VC_PGN_ID": 129,
         "PGN_32bit": 43786,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -6176,7 +6006,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 134,
+        "VC_PGN_ID": 130,
         "PGN_32bit": 43787,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -6214,7 +6044,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 135,
+        "VC_PGN_ID": 131,
         "PGN_32bit": 43788,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -6252,7 +6082,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 136,
+        "VC_PGN_ID": 132,
         "PGN_32bit": 65416,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -6290,7 +6120,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 137,
+        "VC_PGN_ID": 133,
         "PGN_32bit": 65417,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -6400,7 +6230,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 138,
+        "VC_PGN_ID": 134,
         "PGN_32bit": 65418,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -6438,7 +6268,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 139,
+        "VC_PGN_ID": 135,
         "PGN_32bit": 65421,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -6494,7 +6324,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 140,
+        "VC_PGN_ID": 136,
         "PGN_32bit": 65457,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -6532,7 +6362,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 141,
+        "VC_PGN_ID": 137,
         "PGN_32bit": 65458,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -6570,7 +6400,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 142,
+        "VC_PGN_ID": 138,
         "PGN_32bit": 65459,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -6608,7 +6438,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 143,
+        "VC_PGN_ID": 139,
         "PGN_32bit": 65460,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -6646,7 +6476,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 144,
+        "VC_PGN_ID": 140,
         "PGN_32bit": 65461,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -6684,7 +6514,7 @@
     {
       "vC_PGN": {
         "From": "Tab Control Unit",
-        "VC_PGN_ID": 145,
+        "VC_PGN_ID": 141,
         "PGN_32bit": 65420,
         "adrs_Port": "28",
         "adrs_Stbd": "28",
@@ -6722,7 +6552,7 @@
     {
       "vC_PGN": {
         "From": "Tab Control Unit",
-        "VC_PGN_ID": 146,
+        "VC_PGN_ID": 142,
         "PGN_32bit": 65415,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -6814,7 +6644,7 @@
     {
       "vC_PGN": {
         "From": "Tab Control Unit",
-        "VC_PGN_ID": 147,
+        "VC_PGN_ID": 143,
         "PGN_32bit": 65422,
         "adrs_Port": "28",
         "adrs_Stbd": "28",
@@ -6861,7 +6691,7 @@
     {
       "vC_PGN": {
         "From": "Tab Control Unit",
-        "VC_PGN_ID": 148,
+        "VC_PGN_ID": 144,
         "PGN_32bit": 65473,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -6899,7 +6729,7 @@
     {
       "vC_PGN": {
         "From": "Tab Control Unit",
-        "VC_PGN_ID": 149,
+        "VC_PGN_ID": 145,
         "PGN_32bit": 65474,
         "adrs_Port": "28",
         "adrs_Stbd": "28",
@@ -6937,7 +6767,7 @@
     {
       "vC_PGN": {
         "From": "Tab Control Unit",
-        "VC_PGN_ID": 150,
+        "VC_PGN_ID": 146,
         "PGN_32bit": 65475,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -6975,7 +6805,7 @@
     {
       "vC_PGN": {
         "From": "VMU",
-        "VC_PGN_ID": 151,
+        "VC_PGN_ID": 147,
         "PGN_32bit": 65456,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7013,7 +6843,7 @@
     {
       "vC_PGN": {
         "From": "Engine",
-        "VC_PGN_ID": 152,
+        "VC_PGN_ID": 148,
         "PGN_32bit": 61445,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -7051,7 +6881,7 @@
     {
       "vC_PGN": {
         "From": "Engine",
-        "VC_PGN_ID": 153,
+        "VC_PGN_ID": 149,
         "PGN_32bit": 65272,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7089,7 +6919,7 @@
     {
       "vC_PGN": {
         "From": "Engine",
-        "VC_PGN_ID": 154,
+        "VC_PGN_ID": 150,
         "PGN_32bit": 61444,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -7127,7 +6957,7 @@
     {
       "vC_PGN": {
         "From": "Engine",
-        "VC_PGN_ID": 155,
+        "VC_PGN_ID": 151,
         "PGN_32bit": 65263,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7165,7 +6995,7 @@
     {
       "vC_PGN": {
         "From": "Engine",
-        "VC_PGN_ID": 156,
+        "VC_PGN_ID": 152,
         "PGN_32bit": 65253,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -7203,7 +7033,7 @@
     {
       "vC_PGN": {
         "From": "Engine",
-        "VC_PGN_ID": 157,
+        "VC_PGN_ID": 153,
         "PGN_32bit": 65271,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7241,7 +7071,7 @@
     {
       "vC_PGN": {
         "From": "Engine",
-        "VC_PGN_ID": 158,
+        "VC_PGN_ID": 154,
         "PGN_32bit": 61443,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -7279,7 +7109,7 @@
     {
       "vC_PGN": {
         "From": "Engine",
-        "VC_PGN_ID": 159,
+        "VC_PGN_ID": 155,
         "PGN_32bit": 65247,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -7317,7 +7147,7 @@
     {
       "vC_PGN": {
         "From": "LCD",
-        "VC_PGN_ID": 160,
+        "VC_PGN_ID": 156,
         "PGN_32bit": 65423,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7355,7 +7185,7 @@
     {
       "vC_PGN": {
         "From": "Clutch Panel",
-        "VC_PGN_ID": 161,
+        "VC_PGN_ID": 157,
         "PGN_32bit": 65329,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7420,7 +7250,7 @@
     {
       "vC_PGN": {
         "From": "MRADS",
-        "VC_PGN_ID": 162,
+        "VC_PGN_ID": 158,
         "PGN_32bit": 65281,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7458,7 +7288,7 @@
     {
       "vC_PGN": {
         "From": "MRADS",
-        "VC_PGN_ID": 163,
+        "VC_PGN_ID": 159,
         "PGN_32bit": 65287,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7496,7 +7326,7 @@
     {
       "vC_PGN": {
         "From": "MRADS",
-        "VC_PGN_ID": 164,
+        "VC_PGN_ID": 160,
         "PGN_32bit": 65288,
         "adrs_Port": "06",
         "adrs_Stbd": "06",
@@ -7552,7 +7382,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 165,
+        "VC_PGN_ID": 161,
         "PGN_32bit": 65393,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7590,7 +7420,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 166,
+        "VC_PGN_ID": 162,
         "PGN_32bit": 65394,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7628,7 +7458,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 167,
+        "VC_PGN_ID": 163,
         "PGN_32bit": 65395,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7666,7 +7496,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 168,
+        "VC_PGN_ID": 164,
         "PGN_32bit": 65396,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7722,7 +7552,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 169,
+        "VC_PGN_ID": 165,
         "PGN_32bit": 65397,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7760,7 +7590,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 170,
+        "VC_PGN_ID": 166,
         "PGN_32bit": 65398,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7798,7 +7628,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 171,
+        "VC_PGN_ID": 167,
         "PGN_32bit": 65399,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7836,7 +7666,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 172,
+        "VC_PGN_ID": 168,
         "PGN_32bit": 65400,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7874,7 +7704,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 173,
+        "VC_PGN_ID": 169,
         "PGN_32bit": 65328,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7921,7 +7751,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 174,
+        "VC_PGN_ID": 170,
         "PGN_32bit": 65296,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7959,7 +7789,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 175,
+        "VC_PGN_ID": 171,
         "PGN_32bit": 65297,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -7997,7 +7827,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 176,
+        "VC_PGN_ID": 172,
         "PGN_32bit": 65298,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8098,7 +7928,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 177,
+        "VC_PGN_ID": 173,
         "PGN_32bit": 65299,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8136,7 +7966,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 178,
+        "VC_PGN_ID": 174,
         "PGN_32bit": 65301,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8174,7 +8004,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 179,
+        "VC_PGN_ID": 175,
         "PGN_32bit": 65302,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8221,7 +8051,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 180,
+        "VC_PGN_ID": 176,
         "PGN_32bit": 65376,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8277,7 +8107,7 @@
     {
       "vC_PGN": {
         "From": "Clucth Panel",
-        "VC_PGN_ID": 181,
+        "VC_PGN_ID": 177,
         "PGN_32bit": 65329,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8333,7 +8163,7 @@
     {
       "vC_PGN": {
         "From": "Clucth Panel",
-        "VC_PGN_ID": 182,
+        "VC_PGN_ID": 178,
         "PGN_32bit": 65331,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8380,7 +8210,7 @@
     {
       "vC_PGN": {
         "From": "GPS",
-        "VC_PGN_ID": 183,
+        "VC_PGN_ID": 179,
         "PGN_32bit": 61714,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8418,7 +8248,7 @@
     {
       "vC_PGN": {
         "From": "GPS",
-        "VC_PGN_ID": 184,
+        "VC_PGN_ID": 180,
         "PGN_32bit": 63489,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8456,7 +8286,7 @@
     {
       "vC_PGN": {
         "From": "GPS",
-        "VC_PGN_ID": 185,
+        "VC_PGN_ID": 181,
         "PGN_32bit": 61715,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8494,7 +8324,7 @@
     {
       "vC_PGN": {
         "From": "GPS",
-        "VC_PGN_ID": 186,
+        "VC_PGN_ID": 182,
         "PGN_32bit": 63490,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8532,7 +8362,7 @@
     {
       "vC_PGN": {
         "From": "GPS",
-        "VC_PGN_ID": 187,
+        "VC_PGN_ID": 183,
         "PGN_32bit": 61456,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8570,7 +8400,7 @@
     {
       "vC_PGN": {
         "From": "VMU",
-        "VC_PGN_ID": 188,
+        "VC_PGN_ID": 184,
         "PGN_32bit": 61481,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8608,7 +8438,7 @@
     {
       "vC_PGN": {
         "From": "VMU",
-        "VC_PGN_ID": 189,
+        "VC_PGN_ID": 185,
         "PGN_32bit": 61482,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8646,7 +8476,7 @@
     {
       "vC_PGN": {
         "From": "VMU",
-        "VC_PGN_ID": 190,
+        "VC_PGN_ID": 186,
         "PGN_32bit": 61485,
         "adrs_Port": "E2",
         "adrs_Stbd": "E2",
@@ -8684,7 +8514,7 @@
     {
       "vC_PGN": {
         "From": "LCD",
-        "VC_PGN_ID": 191,
+        "VC_PGN_ID": 187,
         "PGN_32bit": 65520,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8767,7 +8597,7 @@
     {
       "vC_PGN": {
         "From": "VMU",
-        "VC_PGN_ID": 192,
+        "VC_PGN_ID": 188,
         "PGN_32bit": 65300,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8805,7 +8635,7 @@
     {
       "vC_PGN": {
         "From": "test",
-        "VC_PGN_ID": 193,
+        "VC_PGN_ID": 189,
         "PGN_32bit": 65281,
         "adrs_Port": "01",
         "adrs_Stbd": "01",
@@ -8852,7 +8682,7 @@
     {
       "vC_PGN": {
         "From": "test",
-        "VC_PGN_ID": 194,
+        "VC_PGN_ID": 190,
         "PGN_32bit": 65280,
         "adrs_Port": "01",
         "adrs_Stbd": "01",
@@ -8890,7 +8720,7 @@
     {
       "vC_PGN": {
         "From": "A&M",
-        "VC_PGN_ID": 195,
+        "VC_PGN_ID": 191,
         "PGN_32bit": 65422,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8928,7 +8758,7 @@
     {
       "vC_PGN": {
         "From": "A&M",
-        "VC_PGN_ID": 196,
+        "VC_PGN_ID": 192,
         "PGN_32bit": 65364,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -8966,7 +8796,7 @@
     {
       "vC_PGN": {
         "From": "A&M",
-        "VC_PGN_ID": 197,
+        "VC_PGN_ID": 193,
         "PGN_32bit": 65423,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -9004,7 +8834,7 @@
     {
       "vC_PGN": {
         "From": "GPS",
-        "VC_PGN_ID": 198,
+        "VC_PGN_ID": 194,
         "PGN_32bit": 61714,
         "adrs_Port": "7F",
         "adrs_Stbd": "7F",
@@ -9041,310 +8871,8 @@
     },
     {
       "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 199,
-        "PGN_32bit": 65369,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "this in cu code checks if bow thrust exist . ssrs config does noy have bow thrust",
-        "Configuration": "na",
-        "Project": "PV780_102_1000",
-        "Type": "N/A",
-        "Comments": "Handler_SwitchStates",
-        "Group": "groupnumber",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF59",
-        "DescritionPGN": "   Raw Switch states   ",
-        "DescritionByte0": "N/A",
-        "Byte0": [],
-        "DescritionByte1": "N/A",
-        "Byte1": [],
-        "DescritionByte2": "N/A",
-        "Byte2": [],
-        "DescritionByte3": "N/A",
-        "Byte3": [],
-        "DescritionByte4": "AutoPilot.rawValue LO|B2(0,0,2000)",
-        "Byte4": [],
-        "DescritionByte5": "AutoPilot.rawValue HI|B2",
-        "Byte5": [],
-        "DescritionByte6": "Autopilot |XX",
-        "Byte6": [
-          "Autopilot Switch",
-          "Autopilot Steer Port",
-          "Autopilot Steer Starboard",
-          "Operating Mode Docking",
-          "AutoPilot Override",
-          "DPSwitch_Sta2",
-          "bAP_OverrideInEffect",
-          "if Blocked_DPinControl"
-        ],
-        "DescritionByte7": "Autopilot |XX*0",
-        "Byte7": [
-          "N/A",
-          "ST 1 TC",
-          "ST 2 MODE SW",
-          "ST 2 TC SW REQ",
-          "ST 3 MODE SW",
-          "ST 3 TC SW REQ",
-          "N/A",
-          "Blocked_DPinControl"
-        ]
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 200,
-        "PGN_32bit": 65378,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "N/A",
-        "info": "N/A",
-        "Configuration": "ssrs12",
-        "Project": "PV485_100_02 ssrs12",
-        "Type": "FeedBacks",
-        "Comments": "the pv project is setuo to registser Byte0 Byte1 as Helm sta1  and Byte34 Byte5 as Helm sta1 duplicate",
-        "Group": "ssrs12 LCD",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF62",
-        "DescritionPGN": "   ssrs12 Scaled Controle Com Noz FeedBacks   ",
-        "DescritionByte0": "N/A",
-        "Byte0": [],
-        "DescritionByte1": "N/A",
-        "Byte1": [],
-        "DescritionByte2": "Nozzle Feedback LO |B2(0,500,10000)",
-        "Byte2": [],
-        "DescritionByte3": "Nozzle Feedback HI |B2",
-        "Byte3": [],
-        "DescritionByte4": "N/A",
-        "Byte4": [],
-        "DescritionByte5": "N/A",
-        "Byte5": [],
-        "DescritionByte6": "Nozzle 2 Feedback LO |B2(0,500,10000)",
-        "Byte6": [],
-        "DescritionByte7": "Nozzle 2 Feedback HI |B2",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 201,
-        "PGN_32bit": 65379,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "N/A",
-        "info": "N/A",
-        "Configuration": "ssrs12",
-        "Project": "PV485_100_02 ssrs12",
-        "Type": "FeedBacks",
-        "Comments": "the pv project is setuo to registser Byte0 Byte1 as Bucket1 Pos  and Byte34 Byte5 as Bucket2 Pos",
-        "Group": "ssrs12 LCD",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF63",
-        "DescritionPGN": "   ssrs12 Scaled Controle Com Buck FeedBacks   ",
-        "DescritionByte0": "N/A",
-        "Byte0": [],
-        "DescritionByte1": "N/A",
-        "Byte1": [],
-        "DescritionByte2": "Bucket1 Feedback LO |B2(0,500,10000)",
-        "Byte2": [],
-        "DescritionByte3": "Bucket1 Feedback HI |B2",
-        "Byte3": [],
-        "DescritionByte4": "N/A",
-        "Byte4": [],
-        "DescritionByte5": "N/A",
-        "Byte5": [],
-        "DescritionByte6": "Bucket2 Feedback LO |B2(0,500,10000)",
-        "Byte6": [],
-        "DescritionByte7": "Bucket2 Feedback HI |B2",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 202,
-        "PGN_32bit": 65276,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "cu adrress is 29",
-        "Configuration": "ssrs12",
-        "Project": "PV485_100_02 ssrs12",
-        "Type": "N/A",
-        "Comments": "Byte0 2 3 and 5 are actually setup the pv project to register BKT1 feedback , Nozzle2 and Nozzle1 feedbacks and BKT2 feedback",
-        "Group": "ssrs12 LCD",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFEFC",
-        "DescritionPGN": "   FeedBacks From Control Unit   ",
-        "DescritionByte0": "N/A",
-        "Byte0": [],
-        "DescritionByte1": "Tab 1 Feedback |BT(0,127,255)",
-        "Byte1": [],
-        "DescritionByte2": "N/A",
-        "Byte2": [],
-        "DescritionByte3": "N/A",
-        "Byte3": [],
-        "DescritionByte4": "Tab2 Feedback |BT(0,127,255)",
-        "Byte4": [],
-        "DescritionByte5": "N/A",
-        "Byte5": [],
-        "DescritionByte6": "N/A",
-        "Byte6": [],
-        "DescritionByte7": "N/A",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 203,
-        "PGN_32bit": 65363,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "cu adrress is 29",
-        "Configuration": "ssrs12",
-        "Project": "PV485_100_02 ssrs12",
-        "Type": "N/A",
-        "Comments": "comments section",
-        "Group": "ssrs12 LCD",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF53",
-        "DescritionPGN": "   CAN Station Message   ",
-        "DescritionByte0": "N/A",
-        "Byte0": [],
-        "DescritionByte1": "AciveStation |BL(0,1,255)",
-        "Byte1": [],
-        "DescritionByte2": "N/A",
-        "Byte2": [],
-        "DescritionByte3": "AutoPilot Override Helm Percent |BT(0,0,100)",
-        "Byte3": [],
-        "DescritionByte4": "NumHits ISRCAN2 PGN0xFF36 |BL(0,0,255)",
-        "Byte4": [],
-        "DescritionByte5": "Autocal Stage |BL(0,0,255)",
-        "Byte5": [],
-        "DescritionByte6": "N/A",
-        "Byte6": [],
-        "DescritionByte7": "N/A",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 204,
-        "PGN_32bit": 65397,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "cu adrress is 29",
-        "Configuration": "ssrs12",
-        "Project": "PV485_100_02 ssrs12",
-        "Type": "N/A",
-        "Comments": "comments section",
-        "Group": "ssrs12 LCD",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF75",
-        "DescritionPGN": "   CU SW Versions  ",
-        "DescritionByte0": "Major Sofware Version |BL*87",
-        "Byte0": [],
-        "DescritionByte1": "Minor Software Version LO |B2*1003",
-        "Byte1": [],
-        "DescritionByte2": "Minor Software Version  HI |B2",
-        "Byte2": [],
-        "DescritionByte3": "Sofware Revision LO |B2*5766",
-        "Byte3": [],
-        "DescritionByte4": "Sofware Revision HI |B2",
-        "Byte4": [],
-        "DescritionByte5": "N/A",
-        "Byte5": [],
-        "DescritionByte6": "N/A",
-        "Byte6": [],
-        "DescritionByte7": "N/A",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 205,
-        "PGN_32bit": 65369,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "cu adrress is 29",
-        "Configuration": "ssrs12",
-        "Project": "PV485_100_02 ssrs12",
-        "Type": "N/A",
-        "Comments": "comments section",
-        "Group": "ssrs12 LCD",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF59",
-        "DescritionPGN": "   Control Lever Positions   ",
-        "DescritionByte0": "Port Lever position LO |B2(0,500,10000)",
-        "Byte0": [],
-        "DescritionByte1": "Port Lever position HI |B2",
-        "Byte1": [],
-        "DescritionByte2": "Stbd Lever position LO |B2(0,500,10000)",
-        "Byte2": [],
-        "DescritionByte3": "Stbd Lever position HI |B2",
-        "Byte3": [],
-        "DescritionByte4": "Autopilot Raw LO |B2(0,0,4000)",
-        "Byte4": [],
-        "DescritionByte5": "Autopilot Raw HI |B2",
-        "Byte5": [],
-        "DescritionByte6": "Autopilot |XX",
-        "Byte6": [
-          "Autopilot Switch",
-          "Autopilot Steer Port",
-          "Autopilot Steer Starboard",
-          "Operating Mode",
-          "AutoPilot Override",
-          "N/A",
-          "N/A",
-          "N/A"
-        ],
-        "DescritionByte7": "Sta Ctrl |XX",
-        "Byte7": [
-          "Station 1 Mode Switch",
-          "Station 1 CTRL REQ",
-          "Station 2 Mode Switch",
-          "Station 2 Control Requested",
-          "Station 3 Mode Switch",
-          "Station 3 CTRL REQ",
-          "N/A",
-          "AutoManual Trim Switch"
-        ]
-      }
-    },
-    {
-      "vC_PGN": {
         "From": "A&M",
-        "VC_PGN_ID": 206,
+        "VC_PGN_ID": 195,
         "PGN_32bit": 65442,
         "adrs_Port": "01",
         "adrs_Stbd": "02",
@@ -9391,7 +8919,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 207,
+        "VC_PGN_ID": 196,
         "PGN_32bit": 65418,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -9465,7 +8993,7 @@
     {
       "vC_PGN": {
         "From": "A&M",
-        "VC_PGN_ID": 208,
+        "VC_PGN_ID": 197,
         "PGN_32bit": 65441,
         "adrs_Port": "01",
         "adrs_Stbd": "02",
@@ -9538,7 +9066,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 209,
+        "VC_PGN_ID": 198,
         "PGN_32bit": 65420,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -9594,7 +9122,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 210,
+        "VC_PGN_ID": 199,
         "PGN_32bit": 65276,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -9632,7 +9160,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 211,
+        "VC_PGN_ID": 200,
         "PGN_32bit": 65421,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -9715,7 +9243,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 212,
+        "VC_PGN_ID": 201,
         "PGN_32bit": 65424,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -9753,7 +9281,7 @@
     {
       "vC_PGN": {
         "From": "CIM",
-        "VC_PGN_ID": 213,
+        "VC_PGN_ID": 202,
         "PGN_32bit": 65450,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -9791,7 +9319,7 @@
     {
       "vC_PGN": {
         "From": "A&M",
-        "VC_PGN_ID": 214,
+        "VC_PGN_ID": 203,
         "PGN_32bit": 65440,
         "adrs_Port": "01",
         "adrs_Stbd": "02",
@@ -9829,7 +9357,7 @@
     {
       "vC_PGN": {
         "From": "A&M",
-        "VC_PGN_ID": 215,
+        "VC_PGN_ID": 204,
         "PGN_32bit": 65442,
         "adrs_Port": "01",
         "adrs_Stbd": "02",
@@ -9876,7 +9404,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 216,
+        "VC_PGN_ID": 205,
         "PGN_32bit": 65418,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -9950,7 +9478,7 @@
     {
       "vC_PGN": {
         "From": "A&M",
-        "VC_PGN_ID": 217,
+        "VC_PGN_ID": 206,
         "PGN_32bit": 65441,
         "adrs_Port": "01",
         "adrs_Stbd": "02",
@@ -10014,7 +9542,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 218,
+        "VC_PGN_ID": 207,
         "PGN_32bit": 65420,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -10070,7 +9598,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 219,
+        "VC_PGN_ID": 208,
         "PGN_32bit": 65276,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -10108,7 +9636,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 220,
+        "VC_PGN_ID": 209,
         "PGN_32bit": 65421,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -10191,7 +9719,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 221,
+        "VC_PGN_ID": 210,
         "PGN_32bit": 65424,
         "adrs_Port": "00",
         "adrs_Stbd": "01",
@@ -10229,7 +9757,7 @@
     {
       "vC_PGN": {
         "From": "CIM",
-        "VC_PGN_ID": 222,
+        "VC_PGN_ID": 211,
         "PGN_32bit": 65450,
         "adrs_Port": "00",
         "adrs_Stbd": "00",
@@ -10267,7 +9795,7 @@
     {
       "vC_PGN": {
         "From": "A&M",
-        "VC_PGN_ID": 223,
+        "VC_PGN_ID": 212,
         "PGN_32bit": 65440,
         "adrs_Port": "01",
         "adrs_Stbd": "02",
@@ -10305,7 +9833,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 224,
+        "VC_PGN_ID": 213,
         "PGN_32bit": 65421,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -10343,7 +9871,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 225,
+        "VC_PGN_ID": 214,
         "PGN_32bit": 65421,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -10399,7 +9927,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 226,
+        "VC_PGN_ID": 215,
         "PGN_32bit": 65416,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -10437,7 +9965,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 227,
+        "VC_PGN_ID": 216,
         "PGN_32bit": 65417,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -10547,7 +10075,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 228,
+        "VC_PGN_ID": 217,
         "PGN_32bit": 65418,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -10585,7 +10113,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 229,
+        "VC_PGN_ID": 218,
         "PGN_32bit": 65328,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -10632,7 +10160,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 230,
+        "VC_PGN_ID": 219,
         "PGN_32bit": 65328,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -10688,7 +10216,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 231,
+        "VC_PGN_ID": 220,
         "PGN_32bit": 43968,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -10726,7 +10254,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 232,
+        "VC_PGN_ID": 221,
         "PGN_32bit": 43786,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -10764,7 +10292,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 233,
+        "VC_PGN_ID": 222,
         "PGN_32bit": 43787,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -10802,7 +10330,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 234,
+        "VC_PGN_ID": 223,
         "PGN_32bit": 43788,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -10840,7 +10368,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 235,
+        "VC_PGN_ID": 224,
         "PGN_32bit": 43788,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -10878,7 +10406,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 236,
+        "VC_PGN_ID": 225,
         "PGN_32bit": 65456,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -10916,7 +10444,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 237,
+        "VC_PGN_ID": 226,
         "PGN_32bit": 65457,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -10954,7 +10482,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 238,
+        "VC_PGN_ID": 227,
         "PGN_32bit": 65462,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -10992,7 +10520,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 239,
+        "VC_PGN_ID": 228,
         "PGN_32bit": 65458,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -11030,7 +10558,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 240,
+        "VC_PGN_ID": 229,
         "PGN_32bit": 65459,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -11068,7 +10596,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 241,
+        "VC_PGN_ID": 230,
         "PGN_32bit": 65460,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -11106,7 +10634,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 242,
+        "VC_PGN_ID": 231,
         "PGN_32bit": 65461,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -11144,7 +10672,7 @@
     {
       "vC_PGN": {
         "From": "Simulator",
-        "VC_PGN_ID": 243,
+        "VC_PGN_ID": 232,
         "PGN_32bit": 65408,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -11182,7 +10710,7 @@
     {
       "vC_PGN": {
         "From": "Simulator",
-        "VC_PGN_ID": 244,
+        "VC_PGN_ID": 233,
         "PGN_32bit": 65409,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -11220,7 +10748,7 @@
     {
       "vC_PGN": {
         "From": "Simulator",
-        "VC_PGN_ID": 245,
+        "VC_PGN_ID": 234,
         "PGN_32bit": 65410,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -11258,7 +10786,7 @@
     {
       "vC_PGN": {
         "From": "Simulator",
-        "VC_PGN_ID": 246,
+        "VC_PGN_ID": 235,
         "PGN_32bit": 65450,
         "adrs_Port": "10",
         "adrs_Stbd": "10",
@@ -11296,7 +10824,7 @@
     {
       "vC_PGN": {
         "From": "Simulator",
-        "VC_PGN_ID": 247,
+        "VC_PGN_ID": 236,
         "PGN_32bit": 65451,
         "adrs_Port": "10",
         "adrs_Stbd": "10",
@@ -11334,7 +10862,7 @@
     {
       "vC_PGN": {
         "From": "Simulator",
-        "VC_PGN_ID": 248,
+        "VC_PGN_ID": 237,
         "PGN_32bit": 61444,
         "adrs_Port": "10",
         "adrs_Stbd": "10",
@@ -11372,7 +10900,7 @@
     {
       "vC_PGN": {
         "From": "Simulator",
-        "VC_PGN_ID": 249,
+        "VC_PGN_ID": 238,
         "PGN_32bit": 61443,
         "adrs_Port": "10",
         "adrs_Stbd": "10",
@@ -11410,7 +10938,7 @@
     {
       "vC_PGN": {
         "From": "Simulator",
-        "VC_PGN_ID": 250,
+        "VC_PGN_ID": 239,
         "PGN_32bit": 65408,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -11448,7 +10976,7 @@
     {
       "vC_PGN": {
         "From": "Simulator",
-        "VC_PGN_ID": 251,
+        "VC_PGN_ID": 240,
         "PGN_32bit": 65409,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -11486,7 +11014,7 @@
     {
       "vC_PGN": {
         "From": "Simulator",
-        "VC_PGN_ID": 252,
+        "VC_PGN_ID": 241,
         "PGN_32bit": 65410,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -11524,7 +11052,7 @@
     {
       "vC_PGN": {
         "From": "Control Unit",
-        "VC_PGN_ID": 253,
+        "VC_PGN_ID": 242,
         "PGN_32bit": 65369,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -11571,7 +11099,7 @@
     {
       "vC_PGN": {
         "From": "Simulator",
-        "VC_PGN_ID": 254,
+        "VC_PGN_ID": 243,
         "PGN_32bit": 65450,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -11609,7 +11137,7 @@
     {
       "vC_PGN": {
         "From": "Simulator",
-        "VC_PGN_ID": 255,
+        "VC_PGN_ID": 244,
         "PGN_32bit": 65451,
         "adrs_Port": "29",
         "adrs_Stbd": "29",
@@ -11647,7 +11175,7 @@
     {
       "vC_PGN": {
         "From": "Simulator",
-        "VC_PGN_ID": 256,
+        "VC_PGN_ID": 245,
         "PGN_32bit": 61444,
         "adrs_Port": "01",
         "adrs_Stbd": "01",
@@ -11685,7 +11213,7 @@
     {
       "vC_PGN": {
         "From": "Simulator",
-        "VC_PGN_ID": 257,
+        "VC_PGN_ID": 246,
         "PGN_32bit": 61443,
         "adrs_Port": "01",
         "adrs_Stbd": "01",
@@ -11723,7 +11251,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 258,
+        "VC_PGN_ID": 247,
         "PGN_32bit": 65280,
         "adrs_Port": "28",
         "adrs_Stbd": "29",
@@ -11761,7 +11289,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 259,
+        "VC_PGN_ID": 248,
         "PGN_32bit": 65281,
         "adrs_Port": "28",
         "adrs_Stbd": "29",
@@ -11799,7 +11327,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 260,
+        "VC_PGN_ID": 249,
         "PGN_32bit": 65282,
         "adrs_Port": "28",
         "adrs_Stbd": "29",
@@ -11837,7 +11365,7 @@
     {
       "vC_PGN": {
         "From": "Drive Control Unit",
-        "VC_PGN_ID": 261,
+        "VC_PGN_ID": 250,
         "PGN_32bit": 65283,
         "adrs_Port": "28",
         "adrs_Stbd": "29",
@@ -11875,7 +11403,7 @@
     {
       "vC_PGN": {
         "From": "LCD",
-        "VC_PGN_ID": 262,
+        "VC_PGN_ID": 251,
         "PGN_32bit": 65520,
         "adrs_Port": "01",
         "adrs_Stbd": "01",
@@ -11913,7 +11441,7 @@
     {
       "vC_PGN": {
         "From": "LCD",
-        "VC_PGN_ID": 263,
+        "VC_PGN_ID": 252,
         "PGN_32bit": 65521,
         "adrs_Port": "01",
         "adrs_Stbd": "01",
@@ -11951,7 +11479,7 @@
     {
       "vC_PGN": {
         "From": "LCD",
-        "VC_PGN_ID": 264,
+        "VC_PGN_ID": 253,
         "PGN_32bit": 65522,
         "adrs_Port": "01",
         "adrs_Stbd": "01",
@@ -11989,7 +11517,7 @@
     {
       "vC_PGN": {
         "From": "LCD",
-        "VC_PGN_ID": 265,
+        "VC_PGN_ID": 254,
         "PGN_32bit": 65523,
         "adrs_Port": "01",
         "adrs_Stbd": "01",
@@ -12021,176 +11549,6 @@
         "DescritionByte6": "idkFaults |BL*0",
         "Byte6": [],
         "DescritionByte7": "idkFaults |BL*0",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 266,
-        "PGN_32bit": 65369,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "10.1002 Rev6288",
-        "info": "this in cu code checks if bow thrust exist . ssrs config does not have bow thrust",
-        "Configuration": "na",
-        "Project": "PV780_102_1000",
-        "Type": "N/A",
-        "Comments": "Handler_SwitchStates",
-        "Group": "groupnumber",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF59",
-        "DescritionPGN": "   Raw Switch states   ",
-        "DescritionByte0": "N/A",
-        "Byte0": [],
-        "DescritionByte1": "N/A",
-        "Byte1": [],
-        "DescritionByte2": "N/A",
-        "Byte2": [],
-        "DescritionByte3": "N/A",
-        "Byte3": [],
-        "DescritionByte4": "AutoPilot.rawValue LO|B2(0,0,2000)",
-        "Byte4": [],
-        "DescritionByte5": "AutoPilot.rawValue HI|B2",
-        "Byte5": [],
-        "DescritionByte6": "Autopilot |XX",
-        "Byte6": [
-          "Autopilot Switch",
-          "Autopilot Steer Port",
-          "Autopilot Steer Starboard",
-          "Operating Mode Docking",
-          "AutoPilot Override",
-          "DPSwitch_Sta2",
-          "bAP_OverrideInEffect",
-          "if Blocked_DPinControl"
-        ],
-        "DescritionByte7": "Autopilot |XX*0",
-        "Byte7": [
-          "N/A",
-          "ST 1 TC",
-          "ST 2 MODE SW",
-          "ST 2 TC SW REQ",
-          "ST 3 MODE SW",
-          "ST 3 TC SW REQ",
-          "N/A",
-          "Blocked_DPinControl"
-        ]
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "GPS",
-        "VC_PGN_ID": 267,
-        "PGN_32bit": 61714,
-        "adrs_Port": "7F",
-        "adrs_Stbd": "7F",
-        "priority": "09",
-        "Sending_Unit_Software_version": "N/A",
-        "info": "standard gps",
-        "Configuration": "oldssrsk12",
-        "Project": "N/A",
-        "Type": "GPS",
-        "Comments": "N/A",
-        "Group": "p0",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xF112",
-        "DescritionPGN": "   GPS Heading     ",
-        "DescritionByte0": "N/A",
-        "Byte0": [],
-        "DescritionByte1": "GPS Heading LO |B2(0,62829,62829)",
-        "Byte1": [],
-        "DescritionByte2": "GPS Heading HI |B2",
-        "Byte2": [],
-        "DescritionByte3": "N/A",
-        "Byte3": [],
-        "DescritionByte4": "N/A",
-        "Byte4": [],
-        "DescritionByte5": "N/A",
-        "Byte5": [],
-        "DescritionByte6": "N/A",
-        "Byte6": [],
-        "DescritionByte7": "N/A",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "Control Unit",
-        "VC_PGN_ID": 268,
-        "PGN_32bit": 65383,
-        "adrs_Port": "29",
-        "adrs_Stbd": "29",
-        "priority": "18",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "standard gps",
-        "Configuration": "oldssrsk12",
-        "Project": "N/A",
-        "Type": "GPS",
-        "Comments": "N/A",
-        "Group": "p1",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xFF67",
-        "DescritionPGN": "   DP Diagnostics 2   ",
-        "DescritionByte0": "Xi 32bit_0 |B4",
-        "Byte0": [],
-        "DescritionByte1": "Xi 32bit_1 |B4",
-        "Byte1": [],
-        "DescritionByte2": "Xi 32bit_2 |B4",
-        "Byte2": [],
-        "DescritionByte3": "Xi 32bit_3 |B4",
-        "Byte3": [],
-        "DescritionByte4": "Eta 32bit_0 |B4",
-        "Byte4": [],
-        "DescritionByte5": "Eta 32bit_1 |B4",
-        "Byte5": [],
-        "DescritionByte6": "Eta 32bit_2 |B4",
-        "Byte6": [],
-        "DescritionByte7": "Eta 32bit_3 |B4",
-        "Byte7": []
-      }
-    },
-    {
-      "vC_PGN": {
-        "From": "GPS",
-        "VC_PGN_ID": 269,
-        "PGN_32bit": 63489,
-        "adrs_Port": "7F",
-        "adrs_Stbd": "7F",
-        "priority": "09",
-        "Sending_Unit_Software_version": "1.0000",
-        "info": "standard gps",
-        "Configuration": "oldssrsk12",
-        "Project": "N/A",
-        "Type": "GPS",
-        "Comments": "N/A",
-        "Group": "p2",
-        "CTRLs": "N/A"
-      },
-      "vC_PGNData": {
-        "PGN": "0xF801",
-        "DescritionPGN": "   GPS POSITION   ",
-        "DescritionByte0": "GPS Latitude 32bit_0 |B4",
-        "Byte0": [],
-        "DescritionByte1": "GPS Latitude 32bit_1 |B4",
-        "Byte1": [],
-        "DescritionByte2": "GPS Latitude 32bit_2 |B4",
-        "Byte2": [],
-        "DescritionByte3": "GPS Latitude 32bit_3 |B4",
-        "Byte3": [],
-        "DescritionByte4": "GPS Longitude 32bit_0 |B4",
-        "Byte4": [],
-        "DescritionByte5": "GPS Longitude 32bit_1 |B4",
-        "Byte5": [],
-        "DescritionByte6": "GPS Longitude 32bit_2 |B4",
-        "Byte6": [],
-        "DescritionByte7": "GPS Longitude 32bit_3 |B4",
         "Byte7": []
       }
     }

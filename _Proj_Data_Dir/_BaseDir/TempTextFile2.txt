@@ -1,0 +1,220 @@
+﻿============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 177
+PGN_32bit : 65378
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : ssrs12
+Project : PV485_100_02 ssrs12
+Type : FeedBacks
+Comments : the pv project is setuo to registser Byte0 Byte1 as Helm sta1  and Byte34 Byte5 as Helm sta1 duplicate
+Group : ssrs12 LCD
+CTRLs : N/A
+============================================================================
+    0xFF62    (   ssrs12 Scaled Controle Com Noz FeedBacks   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : Nozzle Feedback LO |B2(0,500,10000)
+ 
+            - Byte3 : Nozzle Feedback HI |B2
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : Nozzle 2 Feedback LO |B2(0,500,10000)
+ 
+            - Byte7 : Nozzle 2 Feedback HI |B2
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 178
+PGN_32bit : 65379
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : ssrs12
+Project : PV485_100_02 ssrs12
+Type : FeedBacks
+Comments : the pv project is setuo to registser Byte0 Byte1 as Bucket1 Pos  and Byte34 Byte5 as Bucket2 Pos
+Group : ssrs12 LCD
+CTRLs : N/A
+============================================================================
+    0xFF63    (   ssrs12 Scaled Controle Com Buck FeedBacks   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : Bucket1 Feedback LO |B2(0,500,10000)
+ 
+            - Byte3 : Bucket1 Feedback HI |B2
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : Bucket2 Feedback LO |B2(0,500,10000)
+ 
+            - Byte7 : Bucket2 Feedback HI |B2
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 179
+PGN_32bit : 65276
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29
+Configuration : ssrs12
+Project : PV485_100_02 ssrs12
+Type : N/A
+Comments : Byte0 2 3 and 5 are actually setup the pv project to register BKT1 feedback , Nozzle2 and Nozzle1 feedbacks and BKT2 feedback
+Group : ssrs12 LCD
+CTRLs : N/A
+============================================================================
+    0xFEFC    (   FeedBacks From Control Unit   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : Tab 1 Feedback |BT(0,127,255)
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : Tab2 Feedback |BT(0,127,255)
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 180
+PGN_32bit : 65363
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29
+Configuration : ssrs12
+Project : PV485_100_02 ssrs12
+Type : N/A
+Comments : comments section
+Group : ssrs12 LCD
+CTRLs : N/A
+============================================================================
+    0xFF53    (   CAN Station Message   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : AciveStation |BL(0,1,255)
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : AutoPilot Override Helm Percent |BT(0,0,100)
+ 
+            - Byte4 : NumHits ISRCAN2 PGN0xFF36 |BL(0,0,255)
+ 
+            - Byte5 : Autocal Stage |BL(0,0,255)
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 181
+PGN_32bit : 65397
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29
+Configuration : ssrs12
+Project : PV485_100_02 ssrs12
+Type : N/A
+Comments : comments section
+Group : ssrs12 LCD
+CTRLs : N/A
+============================================================================
+    0xFF75    (   CU SW Versions  )
+
+            - Byte0 : Major Sofware Version |BL*87
+ 
+            - Byte1 : Minor Software Version LO |B2*1003
+ 
+            - Byte2 : Minor Software Version  HI |B2
+ 
+            - Byte3 : Sofware Revision LO |B2*5766
+ 
+            - Byte4 : Sofware Revision HI |B2
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 182
+PGN_32bit : 65369
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29
+Configuration : ssrs12
+Project : PV485_100_02 ssrs12
+Type : N/A
+Comments : comments section
+Group : ssrs12 LCD
+CTRLs : N/A
+============================================================================
+    0xFF59    (   Control Lever Positions   )
+
+            - Byte0 : Port Lever position LO |B2(0,500,10000)
+ 
+            - Byte1 : Port Lever position HI |B2
+ 
+            - Byte2 : Stbd Lever position LO |B2(0,500,10000)
+ 
+            - Byte3 : Stbd Lever position HI |B2
+ 
+            - Byte4 : Autopilot Raw LO |B2(0,0,4000)
+ 
+            - Byte5 : Autopilot Raw HI |B2
+ 
+            - Byte6 : Autopilot |XX
+                    - b0 : Autopilot Switch
+                    - b1 : Autopilot Steer Port
+                    - b2 : Autopilot Steer Starboard
+                    - b3 : Operating Mode
+                    - b4 : AutoPilot Override
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : Sta Ctrl |XX
+                    - b0 : Station 1 Mode Switch
+                    - b1 : Station 1 CTRL REQ
+                    - b2 : Station 2 Mode Switch
+                    - b3 : Station 2 Control Requested
+                    - b4 : Station 3 Mode Switch
+                    - b5 : Station 3 CTRL REQ
+                    - b6 : N/A
+                    - b7 : AutoManual Trim Switch
+ 
