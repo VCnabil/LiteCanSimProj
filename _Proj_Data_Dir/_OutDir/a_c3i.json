@@ -1,0 +1,166 @@
+{
+  "Title": "a_c3i",
+  "AllPgnList": [
+    {
+      "IDpgn": 1,
+      "PGN_int": 418382848,
+      "PGN_strHEX": "0x18F00400",
+      "DESCpgn": "from C31   Electronic Engine Controller 1  ",
+      "CtrlList": [
+        {
+          "ID": 3,
+          "DESC": "eng_RPM ",
+          "MIN": 0,
+          "MAX": 41000,
+          "DEF": 1000,
+          "INDEXLO": 3,
+          "INDEXHI": 4,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 2,
+      "PGN_int": 419360512,
+      "PGN_strHEX": "0x18FEEF00",
+      "DESCpgn": "from C31    Engine pressure  ",
+      "CtrlList": [
+        {
+          "ID": 3,
+          "DESC": "KPA ",
+          "MIN": 0,
+          "MAX": 250,
+          "DEF": 2,
+          "INDEXLO": 3,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 3,
+      "PGN_int": 419360256,
+      "PGN_strHEX": "0x18FEEE00",
+      "DESCpgn": "from C31    Engine Temperture  ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Temperture ",
+          "MIN": 0,
+          "MAX": 250,
+          "DEF": 100,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 4,
+      "PGN_int": 419361280,
+      "PGN_strHEX": "0x18FEF200",
+      "DESCpgn": "from C31    Fuel Economy   ",
+      "CtrlList": [
+        {
+          "ID": 1,
+          "DESC": "ECO ",
+          "MIN": 0,
+          "MAX": 250,
+          "DEF": 18,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 5,
+      "PGN_int": 419362560,
+      "PGN_strHEX": "0x18FEF700",
+      "DESCpgn": "from C31   Volts  ",
+      "CtrlList": [
+        {
+          "ID": 4,
+          "DESC": "Volts ",
+          "MIN": 0,
+          "MAX": 320,
+          "DEF": 10,
+          "INDEXLO": 4,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 6,
+      "PGN_int": 419357952,
+      "PGN_strHEX": "0x18FEE500",
+      "DESCpgn": "from C31   Engine Hours, Revolutions  ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "time ",
+          "MIN": 0,
+          "MAX": 10000,
+          "DEF": 265,
+          "INDEXLO": 0,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_4_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 7,
+      "PGN_int": 419321344,
+      "PGN_strHEX": "0x18FE5600",
+      "DESCpgn": "from C31   Engine status   ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Eng ",
+          "MIN": 0,
+          "MAX": 250,
+          "DEF": 0,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    }
+  ]
+}

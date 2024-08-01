@@ -16,6 +16,7 @@ using static LiteCanSimProj._Globalz.G_Properties;
 using static LiteCanSimProj._Globalz.G_Paths;
 using LiteCanSimProj._Globalz;
 using LiteCanSimProj._MainUIs.DynPosUCs;
+using LiteCanSimProj._MainUIs.DynGPSUCs;
 
 namespace LiteCanSimProj._MainUIs.MainForms
 {
@@ -28,21 +29,21 @@ namespace LiteCanSimProj._MainUIs.MainForms
 
         // Create a new timer for ping pong
         Timer timer1_pingpong = new Timer();
-
-        UC_DP uC_DP1;
-            //this.uC_DP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            //this.uC_DP1.Location = new System.Drawing.Point(488, 1284);
-            //this.uC_DP1.Name = "uC_DP1";
-            //this.uC_DP1.Size = new System.Drawing.Size(1421, 560);
-            //this.uC_DP1.TabIndex = 57;
+        uc_dpControl uC_DP1;
+        //  UC_DP uC_DP1;
+        //this.uC_DP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+        //this.uC_DP1.Location = new System.Drawing.Point(488, 1284);
+        //this.uC_DP1.Name = "uC_DP1";
+        //this.uC_DP1.Size = new System.Drawing.Size(1421, 560);
+        //this.uC_DP1.TabIndex = 57;
 
         public CanManip_V1Form()
         {
             InitializeComponent();
-            uC_DP1 = new UC_DP();
+            uC_DP1 = new uc_dpControl();
             this.Controls.Add(uC_DP1);
             uC_DP1.Location = new Point(260, 660);
-            uC_DP1.Size = new Size(750, 300);
+            //uC_DP1.Size = new Size(750, 300);
              
 
             DoMeasure(5, 6);

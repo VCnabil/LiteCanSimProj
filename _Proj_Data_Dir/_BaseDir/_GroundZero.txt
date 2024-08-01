@@ -1,4 +1,242 @@
 ﻿============================================================================
+CAN Messages From : C31
+VC_PGN_ID : 0
+PGN_32bit : 61444
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : C3I
+Project : C3I
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xF004    (  Electronic Engine Controller 1 )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : eng_RPM LO |B2(0,1000,41000)
+ 
+            - Byte4 : eng_RPM HI |B2
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : C31
+VC_PGN_ID : 0
+PGN_32bit : 65263
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : C3I
+Project : C3I
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFEEF   (   Engine pressure )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : KPA |BT(0,2,250)
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : C31
+VC_PGN_ID : 0
+PGN_32bit : 65262
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : C3I
+Project : C3I
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFEEE    (   Engine Temperture )
+
+            - Byte0 : Temperture |BT(0,100,250)
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : C31
+VC_PGN_ID : 0
+PGN_32bit : 65266
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : C3I
+Project : C3I
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFEF2   (   Fuel Economy  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : ECO |BT(0,18,250)
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : C31
+VC_PGN_ID : 0
+PGN_32bit : 65271
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : C3I
+Project : C3I
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFEF7    (  Volts )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : Volts LO |B2(0,10,320)
+ 
+            - Byte5 : Volts HI |B2 
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : C31
+VC_PGN_ID : 0
+PGN_32bit : 65253
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : C3I
+Project : C3I
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFEE5    (  Engine Hours, Revolutions )
+
+            - Byte0 : time 32bit_0 |B4(0,265,10000)
+ 
+            - Byte1 : time 32bit_1 |B4
+ 
+            - Byte2 : time 32bit_2 |B4
+ 
+            - Byte3 : time 32bit_3 |B4
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : C31
+VC_PGN_ID : 0
+PGN_32bit : 65110
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : C3I
+Project : C3I
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFE56    (  Engine status  )
+    
+            - Byte0 : Eng |BT(0,0,250)
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
 CAN Messages From : Control Unit
 VC_PGN_ID : 569
 PGN_32bit : 65369

@@ -242,5 +242,6 @@ namespace LiteCanSimProj._MainUIs.DynPosUCs
             //return $"{degrees}° {minutes:0.###}' {direction}";
             return $"{degrees} {minutes:0.####} {direction}";
         }
+    
     }
 }

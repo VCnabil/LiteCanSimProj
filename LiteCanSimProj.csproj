@@ -124,11 +124,29 @@
     </Compile>
     <Compile Include="_Globalz\SERIALMNGR_1.cs" />
     <Compile Include="_Globalz\SERIALMNGR_2.cs" />
+    <Compile Include="_MainUIs\debugUcs\UC_ByteOutputControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\debugUcs\UC_ByteOutputControl.Designer.cs">
+      <DependentUpon>UC_ByteOutputControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="_MainUIs\DynGPSUCs\uc_0_Point.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="_MainUIs\DynGPSUCs\uc_0_Point.Designer.cs">
       <DependentUpon>uc_0_Point.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MainUIs\DynGPSUCs\uc_1_GpsLocation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\DynGPSUCs\uc_1_GpsLocation.Designer.cs">
+      <DependentUpon>uc_1_GpsLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MainUIs\DynGPSUCs\uc_dpControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\DynGPSUCs\uc_dpControl.Designer.cs">
+      <DependentUpon>uc_dpControl.cs</DependentUpon>
     </Compile>
     <Compile Include="_MainUIs\DynPosUCs\UC_DP.cs">
       <SubType>UserControl</SubType>
@@ -275,8 +293,17 @@
     <EmbeddedResource Include="_MainUIs\CanManipUCs\UC_DataDisplayCTRL.resx">
       <DependentUpon>UC_DataDisplayCTRL.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\debugUcs\UC_ByteOutputControl.resx">
+      <DependentUpon>UC_ByteOutputControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="_MainUIs\DynGPSUCs\uc_0_Point.resx">
       <DependentUpon>uc_0_Point.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\DynGPSUCs\uc_1_GpsLocation.resx">
+      <DependentUpon>uc_1_GpsLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\DynGPSUCs\uc_dpControl.resx">
+      <DependentUpon>uc_dpControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="_MainUIs\DynPosUCs\UC_360Heading.resx">
       <DependentUpon>UC_360Heading.cs</DependentUpon>
@@ -344,6 +371,7 @@
   <ItemGroup>
     <Content Include="_Proj_Data_Dir\_BaseDir\SSRS_6320.txt" />
     <Content Include="_Proj_Data_Dir\_BaseDir\TempText.txt" />
+    <Content Include="_Proj_Data_Dir\_BaseDir\C3i_can.txt" />
     <Content Include="_Proj_Data_Dir\_BaseDir\TempTextFile2.txt" />
     <Content Include="_Proj_Data_Dir\_BaseDir\TextFile3.txt" />
     <Content Include="_Proj_Data_Dir\_BaseDir\_GroundZero_bkp.txt">

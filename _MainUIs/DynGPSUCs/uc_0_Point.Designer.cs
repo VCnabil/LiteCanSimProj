@@ -47,22 +47,20 @@
             // 
             // txb_Input
             // 
-            this.txb_Input.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txb_Input.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_Input.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_Input.Location = new System.Drawing.Point(0, 32);
             this.txb_Input.Margin = new System.Windows.Forms.Padding(2);
             this.txb_Input.Name = "txb_Input";
-            this.txb_Input.Size = new System.Drawing.Size(220, 32);
+            this.txb_Input.Size = new System.Drawing.Size(218, 44);
             this.txb_Input.TabIndex = 237;
             this.txb_Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txb_lat_DMS
             // 
-            this.txb_lat_DMS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txb_lat_DMS.BackColor = System.Drawing.SystemColors.Menu;
             this.txb_lat_DMS.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txb_lat_DMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_lat_DMS.Location = new System.Drawing.Point(-2, 83);
+            this.txb_lat_DMS.Location = new System.Drawing.Point(-2, 88);
             this.txb_lat_DMS.Margin = new System.Windows.Forms.Padding(2);
             this.txb_lat_DMS.Name = "txb_lat_DMS";
             this.txb_lat_DMS.Size = new System.Drawing.Size(220, 25);
@@ -71,7 +69,6 @@
             // 
             // txb_lat_Deci
             // 
-            this.txb_lat_Deci.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txb_lat_Deci.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txb_lat_Deci.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_lat_Deci.Location = new System.Drawing.Point(0, 126);
