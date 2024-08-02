@@ -83,7 +83,7 @@ namespace LiteCanSimProj._MainUIs.DynGPSUCs
         public uc_dpControl()
         {
 
-            InitializeComponent();
+            InitializeComponent();      
             btn_arive_0_0.Click += Btn_resetAll_Click;
             uC_PLATPLOT1ACT.Click += Uc_PointLatLonACT_Clicked;
             uC_PLATPLOT1CMD.Click += Uc_PointLatLon_CMD_Clicked;
@@ -102,31 +102,76 @@ namespace LiteCanSimProj._MainUIs.DynGPSUCs
 
         private void Btn_view_onMap_Click(object sender, EventArgs e)
         {
+           // Try_Map_2_pointsOnSameMap_V2(uC_PLATPLOT1CMD, uC_PLATPLOT1ACT);
+            Try_Map_2_pointsOnSameMap_V1(uC_PLATPLOT1CMD, uC_PLATPLOT1ACT);
+        }
+
+        void Try_Map_2_pointsOnSameMap_V1(uc_1_GpsLocation argPoint1, uc_1_GpsLocation argPoint2) { 
             // Get coordinates for the two points
-            double cmdLat = uC_PLATPLOT1CMD.Get_POINT_LAT().Get_me_COORDINATE_DOUBLE();
-            double cmdLon = uC_PLATPLOT1CMD.Get_POINT_LON().Get_me_COORDINATE_DOUBLE();
-            double actLat = uC_PLATPLOT1ACT.Get_POINT_LAT().Get_me_COORDINATE_DOUBLE();  
-            double actLon = uC_PLATPLOT1ACT.Get_POINT_LON().Get_me_COORDINATE_DOUBLE();
+            double cmdLat = argPoint1.Get_POINT_LAT().Get_me_COORDINATE_DOUBLE();
+            double cmdLon = argPoint1.Get_POINT_LON().Get_me_COORDINATE_DOUBLE();
+            double actLat = argPoint2.Get_POINT_LAT().Get_me_COORDINATE_DOUBLE();
+            double actLon = argPoint2.Get_POINT_LON().Get_me_COORDINATE_DOUBLE();
 
             // Construct the URL with both points uses maps and directions
-            //string url = "https://www.google.com/maps/dir/?api=1&origin=" +
-            //             cmdLat.ToString() + "," + cmdLon.ToString() +
-            //             "&destination=" + actLat.ToString() + "," + actLon.ToString();
+            string url = "https://www.google.com/maps/dir/?api=1&origin=" +
+                         cmdLat.ToString() + "," + cmdLon.ToString() +
+                         "&destination=" + actLat.ToString() + "," + actLon.ToString();
 
-            // Construct the URL with both points and a path between them
-            //string url = "https://www.google.com/maps/dir/?api=1" +
-            //             "&markers=" + cmdLat.ToString() + "," + cmdLon.ToString() +
-            //             "&markers=" + actLat.ToString() + "," + actLon.ToString() +
-            //             "&path=" + cmdLat.ToString() + "," + cmdLon.ToString() + "|" + actLat.ToString() + "," + actLon.ToString();
 
-            string url = "https://www.google.com/maps/@" +
-                   ((cmdLat + actLat) / 2).ToString() + "," + ((cmdLon + actLon) / 2).ToString() + ",10z" +
-                   "/data=!3m1!4b1!4m2!11m1!2e?markers=" +
-                   cmdLat.ToString() + "," + cmdLon.ToString() +
-                   "&markers=" + actLat.ToString() + "," + actLon.ToString();
             // Open the URL in the default web browser
             System.Diagnostics.Process.Start(url);
+        
+        }
+        void Try_Map_2_pointsOnSameMap_V2(uc_1_GpsLocation argPoint1, uc_1_GpsLocation argPoint2)
+        {
+            // Get coordinates for the two points
+            double cmdLat = argPoint1.Get_POINT_LAT().Get_me_COORDINATE_DOUBLE();
+            double cmdLon = argPoint1.Get_POINT_LON().Get_me_COORDINATE_DOUBLE();
+            double actLat = argPoint2.Get_POINT_LAT().Get_me_COORDINATE_DOUBLE();
+            double actLon = argPoint2.Get_POINT_LON().Get_me_COORDINATE_DOUBLE();
 
+            // Construct the URL with both points and a path between them
+            string url = "https://www.google.com/maps/dir/?api=1" +
+                         "&markers=" + cmdLat.ToString() + "," + cmdLon.ToString() +
+                         "&markers=" + actLat.ToString() + "," + actLon.ToString() +
+                         "&path=" + cmdLat.ToString() + "," + cmdLon.ToString() + "|" + actLat.ToString() + "," + actLon.ToString();
+
+            System.Diagnostics.Process.Start(url);
+        }
+
+        void Try_Map_2_pointsOnSameMap_V3(uc_1_GpsLocation argPoint1, uc_1_GpsLocation argPoint2)
+        {
+            // Get coordinates for the two points
+            double cmdLat = argPoint1.Get_POINT_LAT().Get_me_COORDINATE_DOUBLE();
+            double cmdLon = argPoint1.Get_POINT_LON().Get_me_COORDINATE_DOUBLE();
+            double actLat = argPoint2.Get_POINT_LAT().Get_me_COORDINATE_DOUBLE();
+            double actLon = argPoint2.Get_POINT_LON().Get_me_COORDINATE_DOUBLE();
+
+            // Construct the URL with both points and a path between them
+            string url = "https://www.google.com/maps/dir/?api=1" +
+                         "&markers=" + cmdLat.ToString() + "," + cmdLon.ToString() +
+                         "&markers=" + actLat.ToString() + "," + actLon.ToString() +
+                         "&path=" + cmdLat.ToString() + "," + cmdLon.ToString() + "|" + actLat.ToString() + "," + actLon.ToString();
+
+            System.Diagnostics.Process.Start(url);
+        }
+
+        void Try_Map_2_pointsOnSameMap_V4(uc_1_GpsLocation argPoint1, uc_1_GpsLocation argPoint2)
+        {
+            // Get coordinates for the two points
+            double cmdLat = argPoint1.Get_POINT_LAT().Get_me_COORDINATE_DOUBLE();
+            double cmdLon = argPoint1.Get_POINT_LON().Get_me_COORDINATE_DOUBLE();
+            double actLat = argPoint2.Get_POINT_LAT().Get_me_COORDINATE_DOUBLE();
+            double actLon = argPoint2.Get_POINT_LON().Get_me_COORDINATE_DOUBLE();
+
+            // Construct the URL with both points and a path between them
+            string url = "https://www.google.com/maps/dir/?api=1" +
+                         "&markers=" + cmdLat.ToString() + "," + cmdLon.ToString() +
+                         "&markers=" + actLat.ToString() + "," + actLon.ToString() +
+                         "&path=" + cmdLat.ToString() + "," + cmdLon.ToString() + "|" + actLat.ToString() + "," + actLon.ToString();
+
+            System.Diagnostics.Process.Start(url);
         }
 
         private void UpdateOffsets(double latA, double lonA, double latB, double lonB)
@@ -167,8 +212,8 @@ namespace LiteCanSimProj._MainUIs.DynGPSUCs
             tempoffset = ClacXiEtha.ComputeOffsetsXiEta_usingMatrix(deltaxValue, deltayValue, headingDoubleForXIEtha);
             temxiValue = (int)tempoffset[0];
             temetaValue = (int)tempoffset[1];
-            //lblXI2.Text = "xi: " + temxiValue.ToString();
-            //lblETA2.Text = "eTa: " + temetaValue.ToString();
+            lblXI2.Text = "xi: " + temxiValue.ToString();
+            lblETA2.Text = "eTa: " + temetaValue.ToString();
 
 
         }
@@ -241,11 +286,12 @@ namespace LiteCanSimProj._MainUIs.DynGPSUCs
         }
         private void Uc_PointLatLon_CMD_Clicked(object sender, EventArgs e)
         {
-            uC_PLATPLOT1CMD.SetLatLon_DoubleDouble(0.01, 0.01);
+            //uC_PLATPLOT1CMD.SetLatLon_DoubleDouble(0.01, 0.01);
         }
         private void Uc_PointLatLonACT_Clicked(object sender, EventArgs e)
         {
-            uC_PLATPLOT1ACT.SetLatLon_DoubleDouble(0.02, 0.02);
+            // uC_PLATPLOT1ACT.SetLatLon_DoubleDouble(0.02, 0.02);
+            uC_PLATPLOT1ACT.Copy_from_other(uC_PLATPLOT1CMD);
         }
         private void Btn_resetAll_Click(object sender, EventArgs e)
         {

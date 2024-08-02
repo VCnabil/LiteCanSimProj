@@ -226,5 +226,13 @@ namespace LiteCanSimProj._MainUIs.DynGPSUCs
         {
             return _my_COORDINATE_DOUBLE;
         }
+
+        public void Copy_from_otherPoint(uc_0_Point arg_other)
+        {
+            _my_COORDINATE_DOUBLE = arg_other.Get_me_COORDINATE_DOUBLE();
+            _my_COORD_x1E7 = arg_other.Get_me_COORD_x1E7();
+            txb_Input.Text = _my_COORDINATE_DOUBLE.ToString("F5", CultureInfo.InvariantCulture);
+            Read_textInouts_andUpdateDecimal();
+        }
     }
 }

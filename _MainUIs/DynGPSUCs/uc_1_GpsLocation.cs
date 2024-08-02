@@ -48,5 +48,10 @@ namespace LiteCanSimProj._MainUIs.DynGPSUCs
             uc_0_Plat.Init_withDouble(arg_lat);
             uc_0_Plon.Init_withDouble(arg_lon);
         }
+
+        public void Copy_from_other(uc_1_GpsLocation arg_other){
+            uc_0_Plat.Copy_from_otherPoint(arg_other.uc_0_Plat);
+            uc_0_Plon.Copy_from_otherPoint(arg_other.uc_0_Plon);
+        }
     }
 }
