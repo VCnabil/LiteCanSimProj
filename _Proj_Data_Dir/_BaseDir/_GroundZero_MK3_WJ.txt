@@ -1,0 +1,527 @@
+﻿============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 155
+PGN_32bit : 65424
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : Rev5766
+info: N/A
+Configuration : AD WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFF90    (   Software Version   )
+
+            - Byte0 : Major Sofware Version |BL*87
+ 
+            - Byte1 : Minor Software Version LO |B2*1003
+ 
+            - Byte2 : Minor Software Version  HI |B2
+ 
+            - Byte3 : Sofware Revision LO |B2*5766
+ 
+            - Byte4 : Sofware Revision HI |B2
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Units
+VC_PGN_ID : 156
+PGN_32bit : 65440
+address Port: 01
+address Stbd: 02
+priority    : 18
+Sending_Unit_Software_version : Rev5158?
+info: N/A
+Configuration : AD WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFFA0    (   A&M Software Version   )
+
+            - Byte0 : Major Software Version LO |B2*79
+ 
+            - Byte1 : Major Software Version HI |B2
+ 
+            - Byte2 : Minor Software Version LO |B2*1000
+ 
+            - Byte3 : Minor Software Version HI |B2
+ 
+            - Byte4 : Sofware Revision LO |B2*5158
+ 
+            - Byte5 : Sofware Revision HI |B2
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : CIM
+VC_PGN_ID : 153
+PGN_32bit : 65450
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 101.1000.5036
+info: N/A
+Configuration : AD WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFFAA    (  CIM Software Version   )
+
+            - Byte0 : CAN1/2 Buffer - Historic Max Size Since Powerup |BL(0,0,255)
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : Dimming Knob Level |BT(0,60,100)
+ 
+            - Byte3 : Major Sofware Version |BL*101
+ 
+            - Byte4 : Minor Sofware Version LO |B2*1000
+ 
+            - Byte5 : Minor Sofware Version HI |B2
+ 
+            - Byte6 : Software Revision LO |B2*5036
+ 
+            - Byte7 : Software Revision HI |B2
+
+============================================================================
+CAN Messages From : Control Unit Clutch
+VC_PGN_ID : 159
+PGN_32bit : 65420
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : rev6331
+info: N/A
+Configuration :  _WJ_
+Project : INFPB MK3
+Type : N/A
+Comments : -------------CU1 addres 00
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFF8C    (    system CU1 info    )
+
+            - Byte0 : Clutch Command |XX*18
+                    - b0 : CU1.P CLUT DIS
+                    - b1 : CU1.P CLUT AHD
+                    - b2 : CU1.P CLUT REV
+                    - b3 : CU1.S CLUT DIS
+                    - b4 : CU1.S CLUT AHD
+                    - b5 : CU1.S CLUT REV
+                    - b6 : CU1.P CLUT BLOCKED
+                    - b7 : CU1.S CLUT BLOCKED
+ 
+            - Byte1 : Switching Relay |XX*2
+                    - b0 : CU1.Swiych Relay Ctrl to CU B
+                    - b1 : CU1.Is  Active
+                    - b2 : CU1.Sta2 P Clutch Enable
+                    - b3 : CU1.Sta2 S Clutch Enable
+                    - b4 : CU1.Sta1 P.Enab-Steer
+                    - b5 : CU1.Sta1 S.Enab-Throt
+                    - b6 : CU1.Sta2 SteerMode
+                    - b7 : CU1.Sta2 ThrottleMode
+ 
+            - Byte2 : CU1.P_end_speed |BT(0,50,100)
+ 
+            - Byte3 : CU1.S_end_speed |BT(0,50,100)
+ 
+            - Byte4 : CU1.Idle level |BT(0,50,100)
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : CU1.STA-BRIDGE in CTRL |BL(1,1,20)
+ 
+            - Byte7 : Clutch fbk enum |XX*50
+                    - b0 : CU1.PCLUT DIS
+                    - b1 : CU1.PCLUT ENG
+                    - b2 : CU1.PCLUT BKFLSH
+                    - b3 : N/A
+                    - b4 : CU1.SCLUT DIS
+                    - b5 : CU1.SCLUT ENG
+                    - b6 : CU1.SCLUT BKFLSH
+                    - b7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit Clutch
+VC_PGN_ID : 159
+PGN_32bit : 65420
+address Port: 01
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : rev6331
+info: N/A
+Configuration :  _WJ_
+Project : INFPB MK3
+Type : N/A
+Comments : -------------CU 2 addres 01
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFF8C    (    system CU2 info    )
+
+            - Byte0 : Clutch Command |XX*18
+                    - b0 : Prt CLUT DIS
+                    - b1 : Prt CLUT AHD
+                    - b2 : Prt CLUT REV
+                    - b3 : Stbd CLUT DIS
+                    - b4 : Stbd CLUT AHD
+                    - b5 : Stbd CLUT REV
+                    - b6 : Prt CLUT BLOCKED
+                    - b7 : Stbd CLUT BLOCKED
+ 
+            - Byte1 : Switching Relay |XX
+                    - b0 : Swiych Relay Ctrl to CU B
+                    - b1 : Is Control Unit Active
+                    - b2 : Sta2 P Clutch Enable
+                    - b3 : Sta2 S Clutch Enable
+                    - b4 : Sta1 P.Enab-Steer
+                    - b5 : Sta1 S.Enab-Throt
+                    - b6 : Sta2 P.SteerMode
+                    - b7 : Sta2 S.ThrottleMode
+ 
+            - Byte2 : P_speed |BT(0,50,100)
+ 
+            - Byte3 : S_speed |BT(0,50,100)
+ 
+            - Byte4 : (WJ)Idlelvl |BT(0,50,100)
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 :  STA-BRIDGE in CTRol |BL(0,1,10)
+ 
+            - Byte7 : Clutch fbk enum |XX*50
+                    - b0 : PCLUT DIS
+                    - b1 : PCLUT ENG
+                    - b2 : PCLUT BKFLSH
+                    - b3 : N/A
+                    - b4 : SCLUT DIS
+                    - b5 : SCLUT ENG
+                    - b6 : SCLUT BKFLSH
+                    - b7 : N/A
+
+============================================================================
+CAN Messages From : A&M
+VC_PGN_ID : 152
+PGN_32bit : 65441
+address Port: 01
+address Stbd: 02
+priority    : 18
+Sending_Unit_Software_version : rev5158
+info: N/A
+Configuration : AD_WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFFA1    (   A&M HPU Faults and Switch States   )
+
+            - Byte0 : HPU Faults |XX
+                    - b0 : Low Hydraulic Press
+                    - b1 : Low Lb Oil Port
+                    - b2 : Low Lb Oil Stbd
+                    - b3 : High T Hydrolic Oil
+                    - b4 : AL Filter Blocked
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : switches |XX
+                    - b0 : Open Bridge Port Clutch Enable
+                    - b1 : Open Bridge Stbd Clutch Enable
+                    - b2 : Closed Bridge Port Clutch Enable
+                    - b3 : Closed Bridge Stbd Clutch Enable
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte3 : Station 1 Idle Knob LO |B2(0,50,500)
+ 
+            - Byte4 : Station 1 Idle Knob HI |B2
+ 
+            - Byte5 : Station 2 Idle Knob LO |B2(0,50,500)
+ 
+            - Byte6 : Station 2 Idle Knob HI |B2
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 154
+PGN_32bit : 65276
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : _WJ_
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : murphy
+CTRLs : N/A
+============================================================================
+    0xFEFC    (   INFPB MK3 WJonly FeedBacks   )
+
+            - Byte0 : P Bucket fbk |BT(0,127,254)
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : S Nozzle fbk |BT(0,127,254)
+ 
+            - Byte3 : P Nozzle fbk |BT(0,127,254)
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : S Bucket fbk |BT(0,127,254)
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 160
+PGN_32bit : 65422
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : _WJ_
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : murphy STATION 1 
+CTRLs : N/A
+============================================================================
+    0xFF8E    (   Station 1 Commands   )
+
+            - Byte0 : st1 P Azm Steer |BT(0,50,100)
+ 
+            - Byte1 : st1 S Azm Steer |BT(0,50,100)
+ 
+            - Byte2 : st1 Helm cmd |BT(0,50,100)
+ 
+            - Byte3 : st1 P Azm Lever |BT(0,50,100)
+ 
+            - Byte4 : st1 S Azm Lever |BT(0,50,100)
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : Station1 REQ |XX*0
+                    - b0 : st1 Req Ctrl
+                    - b1 : st1 Allows Transf
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 160
+PGN_32bit : 65422
+address Port: 01
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : _WJ_
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : murphy STATION 2 
+CTRLs : N/A
+============================================================================
+    0xFF8E    (   Station 1 Commands   )
+
+            - Byte0 : st2.P azm Steer |BT(0,50,100)
+ 
+            - Byte1 : st2.S azm Steer |BT(0,50,100)
+ 
+            - Byte2 : st2.Helm cmd |BT(0,50,100)
+ 
+            - Byte3 : st2.P AZM Lever |BT(0,50,100)
+ 
+            - Byte4 : st2.S AZM Lever |BT(0,50,100)
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : Station2 REQ |XX*0
+                    - b0 : st2.Req Ctrl
+                    - b1 : st2.Allows Transf
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+============================================================================
+CAN Messages From :  Control Unit
+VC_PGN_ID : 157
+PGN_32bit : 65458
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : AD_WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : murphy
+CTRLs : N/A
+============================================================================
+    0xFFB2    (   cu Brigthness sta 1   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : Sta 1 Dimming cmd |BT(0,45,100)
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From :  Control Unit
+VC_PGN_ID : 157
+PGN_32bit : 65459
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : AD_WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : murphy
+CTRLs : N/A
+============================================================================
+    0xFFB3    (   cu Brigthness sta 2   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : Sta 2 Dimming cmd |BT(0,45,100)
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 54
+PGN_32bit : 65421
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: port is 00 stbd is 01   
+Configuration : AD_WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : murphy
+CTRLs : N/A
+============================================================================
+    0xFF8D    (   Faults   )
+
+            - Byte0 : CU Faults |XX
+                    - b0 : Calibration fault
+                    - b1 : Control Unit to Closed-Bridge Dimming Panel Comm
+                    - b2 : Control Unit to Open-Bridge Dimming Panel Comm
+                    - b3 : Control Unit - Alarm & Monitoring Unit Comm
+                    - b4 : Clutch Enable Switches Disconnected
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Station 1 Faults |XX
+                    - b0 : Helm Signal fault
+                    - b1 : Port Azimuth Lever Signal fault
+                    - b2 : Stbd Azimuth Lever Signal fault
+                    - b3 : PORT Azimuth Steer Signal fault
+                    - b4 : Stbd Azimuth Steer Signal fault
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : Station 2 Faults |XX
+                    - b0 : Helm Fault
+                    - b1 : PORT Control Lever Fault
+                    - b2 : STBD Control Lever Fault
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte3 : Feedback Sensor Faults |XX
+                    - b0 : PORT Nozzle Feedback Fault
+                    - b1 : STBD Nozzle Feedback Fault
+                    - b2 : PORT Bucket Feedback Fault
+                    - b3 : STBD Bucket Feedback Fault
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte4 : Non-Follow-Up Faults |XX
+                    - b0 : PORT Nozzle Non-Follow-Up
+                    - b1 : STBD Nozzle Non-Follow-Up
+                    - b2 : PORT Bucket Non-Follow-Up
+                    - b3 : STBD Bucket Non-Follow-Up
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A

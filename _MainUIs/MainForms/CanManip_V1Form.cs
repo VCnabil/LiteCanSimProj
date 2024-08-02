@@ -17,6 +17,7 @@ using static LiteCanSimProj._Globalz.G_Paths;
 using LiteCanSimProj._Globalz;
 using LiteCanSimProj._MainUIs.DynPosUCs;
 using LiteCanSimProj._MainUIs.DynGPSUCs;
+using LiteCanSimProj._MainUIs.MainForms.Simships;
 
 namespace LiteCanSimProj._MainUIs.MainForms
 {
@@ -42,7 +43,12 @@ namespace LiteCanSimProj._MainUIs.MainForms
             InitializeComponent();
             uC_DP1 = new uc_dpControl();
             this.Controls.Add(uC_DP1);
-            uC_DP1.Location = new Point(260, 660);
+
+            int HeightOfFlow = this.flowLayoutPanel1.Height;
+            int Y_posOfFlow = this.flowLayoutPanel1.Location.Y;
+            int Y_pos_bellow_flow  = Y_posOfFlow + HeightOfFlow + 10;
+
+            uC_DP1.Location = new Point(260, Y_pos_bellow_flow);
             //uC_DP1.Size = new Size(750, 300);
              
 
@@ -66,6 +72,9 @@ namespace LiteCanSimProj._MainUIs.MainForms
             btn_Load.Click += Btn_LoadFile_Click;
             btnClear.Click += Btn_ClearDataDisplayCtrls_Click;
             button_delete_selectedFile.Click += Button_delete_selectedFile_Click;
+            btn_MK3_AD.Click += Button_Open_MK3_AD_Click;
+            btn_MK3_WJ.Click += Button_Open_MK3_WJ_Click;
+            btn_SSRS_K12.Click += Button_Open_SSRS_K12_Click;
             timer1_pingpong.Tick += Timer1_pingpong_Tick;
             timer1_pingpong.Start();
             Refresh_list_of_filesinOutdir();
@@ -75,6 +84,22 @@ namespace LiteCanSimProj._MainUIs.MainForms
             button_makeNew.Click += Button_makeNew_Click;
         }
 
+
+        private void Button_Open_MK3_AD_Click(object sender, EventArgs e)
+        {
+            INFPB_MK3_AD form_mk3AD = new INFPB_MK3_AD();
+            form_mk3AD.Show();
+        }
+        private void Button_Open_MK3_WJ_Click(object sender, EventArgs e)
+        {
+            INFPB_MK3_WJ form_mk3WJ = new INFPB_MK3_WJ();
+            form_mk3WJ.Show();
+        }
+        private void Button_Open_SSRS_K12_Click(object sender, EventArgs e)
+        {
+            SSRS_K12 form_ssrsk12 = new SSRS_K12();
+            form_ssrsk12.Show();
+        }
         private void Button_makeNew_Click(object sender, EventArgs e)
         {
             Dlete_GroundZeroJasonFile_if_existsat_path();

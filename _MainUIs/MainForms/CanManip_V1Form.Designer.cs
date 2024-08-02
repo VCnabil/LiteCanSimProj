@@ -41,6 +41,9 @@
             this.btn_Load = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.ucf_KvaserCanModule1 = new LiteCanSimProj._MainUIs.KvaserUCs.ucf_KvaserCanModule();
+            this.btn_MK3_AD = new System.Windows.Forms.Button();
+            this.btn_MK3_WJ = new System.Windows.Forms.Button();
+            this.btn_SSRS_K12 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_GPSDebug
@@ -127,7 +130,7 @@
             this.label_selectedFilePath.AutoSize = true;
             this.label_selectedFilePath.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label_selectedFilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_selectedFilePath.Location = new System.Drawing.Point(0, 1905);
+            this.label_selectedFilePath.Location = new System.Drawing.Point(0, 2148);
             this.label_selectedFilePath.Name = "label_selectedFilePath";
             this.label_selectedFilePath.Size = new System.Drawing.Size(46, 24);
             this.label_selectedFilePath.TabIndex = 48;
@@ -156,9 +159,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 162);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 162);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(2563, 1115);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(2712, 1410);
             this.flowLayoutPanel1.TabIndex = 45;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -169,12 +172,51 @@
             this.ucf_KvaserCanModule1.Size = new System.Drawing.Size(700, 94);
             this.ucf_KvaserCanModule1.TabIndex = 0;
             // 
+            // btn_MK3_AD
+            // 
+            this.btn_MK3_AD.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btn_MK3_AD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_MK3_AD.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btn_MK3_AD.Location = new System.Drawing.Point(1976, 19);
+            this.btn_MK3_AD.Name = "btn_MK3_AD";
+            this.btn_MK3_AD.Size = new System.Drawing.Size(160, 40);
+            this.btn_MK3_AD.TabIndex = 57;
+            this.btn_MK3_AD.Text = "MK3 AD";
+            this.btn_MK3_AD.UseVisualStyleBackColor = false;
+            // 
+            // btn_MK3_WJ
+            // 
+            this.btn_MK3_WJ.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btn_MK3_WJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_MK3_WJ.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btn_MK3_WJ.Location = new System.Drawing.Point(1976, 65);
+            this.btn_MK3_WJ.Name = "btn_MK3_WJ";
+            this.btn_MK3_WJ.Size = new System.Drawing.Size(160, 40);
+            this.btn_MK3_WJ.TabIndex = 58;
+            this.btn_MK3_WJ.Text = "MK3 WJ";
+            this.btn_MK3_WJ.UseVisualStyleBackColor = false;
+            // 
+            // btn_SSRS_K12
+            // 
+            this.btn_SSRS_K12.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btn_SSRS_K12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SSRS_K12.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btn_SSRS_K12.Location = new System.Drawing.Point(1976, 116);
+            this.btn_SSRS_K12.Name = "btn_SSRS_K12";
+            this.btn_SSRS_K12.Size = new System.Drawing.Size(160, 40);
+            this.btn_SSRS_K12.TabIndex = 59;
+            this.btn_SSRS_K12.Text = "SSRS K12";
+            this.btn_SSRS_K12.UseVisualStyleBackColor = false;
+            // 
             // CanManip_V1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(2588, 1929);
+            this.ClientSize = new System.Drawing.Size(2870, 2172);
+            this.Controls.Add(this.btn_SSRS_K12);
+            this.Controls.Add(this.btn_MK3_WJ);
+            this.Controls.Add(this.btn_MK3_AD);
             this.Controls.Add(this.btn_GPSDebug);
             this.Controls.Add(this.button_OCVdrawings);
             this.Controls.Add(this.lbl_version);
@@ -210,5 +252,8 @@
         private System.Windows.Forms.ComboBox comboBox_loadFileNames;
         private System.Windows.Forms.Button btn_Load;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btn_MK3_AD;
+        private System.Windows.Forms.Button btn_MK3_WJ;
+        private System.Windows.Forms.Button btn_SSRS_K12;
     }
 }
