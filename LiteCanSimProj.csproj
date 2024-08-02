@@ -359,6 +359,9 @@
     <EmbeddedResource Include="_MainUIs\DynPosUCs\UC_PLATPLOT.resx">
       <DependentUpon>UC_PLATPLOT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\MainForms\Simships\INFPB_MK3_AD.resx">
+      <DependentUpon>INFPB_MK3_AD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="_MainUIs\_SizingUCs\UCSizing.resx">
       <DependentUpon>UCSizing.cs</DependentUpon>
     </EmbeddedResource>

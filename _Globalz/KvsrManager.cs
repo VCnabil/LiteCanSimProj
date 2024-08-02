@@ -130,10 +130,8 @@ namespace LiteCanSimProj._Globalz
             isOnBus = true;
         }
         private void CanEventCallback(int handle, IntPtr context, int notifyEvent)
-
         {
             if (notifyEvent == Canlib.canEVENT_RX)
-
             {
                 // Read the CAN message
                 int id;
@@ -144,7 +142,7 @@ namespace LiteCanSimProj._Globalz
                 Canlib.canStatus status = Canlib.canRead(handle, out id, msg, out dlc, out flags, out timestamp);
                 if (status == Canlib.canStatus.canOK)
                 {
-                    string message = $"Received Message: ID={id}, DLC={dlc}, Data={BitConverter.ToString(msg, 0, dlc)}, Timestamp={timestamp}";
+                    string message = $"ID,{id}, DLC={dlc}, Data={BitConverter.ToString(msg, 0, dlc)}, Timestamp={timestamp}";
                     OnMessageReceived?.Invoke(message);
                 }
                 else
