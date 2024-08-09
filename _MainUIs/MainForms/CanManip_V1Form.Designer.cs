@@ -44,6 +44,7 @@
             this.btn_MK3_AD = new System.Windows.Forms.Button();
             this.btn_MK3_WJ = new System.Windows.Forms.Button();
             this.btn_SSRS_K12 = new System.Windows.Forms.Button();
+            this.btn_SANFRANsim = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_GPSDebug
@@ -208,12 +209,25 @@
             this.btn_SSRS_K12.Text = "SSRS K12";
             this.btn_SSRS_K12.UseVisualStyleBackColor = false;
             // 
+            // btn_SANFRANsim
+            // 
+            this.btn_SANFRANsim.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btn_SANFRANsim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SANFRANsim.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btn_SANFRANsim.Location = new System.Drawing.Point(2151, 19);
+            this.btn_SANFRANsim.Name = "btn_SANFRANsim";
+            this.btn_SANFRANsim.Size = new System.Drawing.Size(160, 40);
+            this.btn_SANFRANsim.TabIndex = 60;
+            this.btn_SANFRANsim.Text = "SANFRAN";
+            this.btn_SANFRANsim.UseVisualStyleBackColor = false;
+            // 
             // CanManip_V1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(2870, 2172);
+            this.Controls.Add(this.btn_SANFRANsim);
             this.Controls.Add(this.btn_SSRS_K12);
             this.Controls.Add(this.btn_MK3_WJ);
             this.Controls.Add(this.btn_MK3_AD);
@@ -255,5 +269,6 @@
         private System.Windows.Forms.Button btn_MK3_AD;
         private System.Windows.Forms.Button btn_MK3_WJ;
         private System.Windows.Forms.Button btn_SSRS_K12;
+        private System.Windows.Forms.Button btn_SANFRANsim;
     }
 }

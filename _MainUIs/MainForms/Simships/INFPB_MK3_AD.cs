@@ -81,8 +81,36 @@ namespace LiteCanSimProj._MainUIs.MainForms.Simships
 
 
         }
+
+        void Update_All_Labels_for_Trackbars() {
+            // example naming lbl_AD_Nozz_fbk_1 is the label for tb_AD_Nozz_fbk_1
+            lbl_AD_Nozz_fbk_1.Text=  tb_AD_Nozz_fbk_1.Value.ToString();
+            lbl_AD_Nozz_fbk_2.Text = tb_AD_Nozz_fbk_2.Value.ToString();
+            lbl_P_buck_fbk_1.Text = tb_P_buck_fbk_1.Value.ToString();
+            lbl_P_buck_fbk_2.Text = tb_P_buck_fbk_2.Value.ToString();
+            lbl_PThro_AHD_1.Text = tb_PThro_AHD_1.Value.ToString();
+            lbl_PThro_AHD_2.Text = tb_PThro_AHD_2.Value.ToString();
+            lbl_PThro_REV_1.Text = (100-tb_PThro_REV_1.Value).ToString();
+            lbl_PThro_REV_2.Text = (100-tb_PThro_REV_2.Value).ToString();
+            lbl_S_buck_fbk_1.Text = tb_S_buck_fbk_1.Value.ToString();
+            lbl_S_buck_fbk_2.Text = tb_S_buck_fbk_2.Value.ToString();
+            lbl_SThro_AHD_1.Text = tb_SThro_AHD_1.Value.ToString();
+            lbl_SThro_AHD_2.Text = tb_SThro_AHD_2.Value.ToString();
+            lbl_SThro_REV_1.Text = (100-tb_SThro_REV_1.Value).ToString();
+            lbl_SThro_REV_2.Text = (100-tb_SThro_REV_2.Value).ToString();
+            lbl_DimmingKnob.Text = tb_DimmingKnob.Value.ToString();
+            lbl_Helm_1.Text = tb_Helm_1.Value.ToString();
+            lbl_Helm_2.Text = tb_Helm_2.Value.ToString();
+            lbl_Ptrim_1.Text = tb_Ptrim_1.Value.ToString();
+            lbl_Ptrim_2.Text = tb_Ptrim_2.Value.ToString();
+            lbl_Strim_1.Text = tb_Strim_1.Value.ToString();
+            lbl_Strim_2.Text = tb_Strim_2.Value.ToString();
+
+        }
         private void CheckIsOnBusStatus(object sender, EventArgs e)
         {
+            Update_All_Labels_for_Trackbars();
+
             if (rb_Active_CU1.Checked)
             {
 
@@ -139,31 +167,58 @@ namespace LiteCanSimProj._MainUIs.MainForms.Simships
             if (rb_CU1_B0b4.Checked) _core__FF8C_forCU2[0] |= 1 << 4;
             if (rb_CU1_B0b5.Checked) _core__FF8C_forCU2[0] |= 1 << 5;
 
+
+
+            //  - Byte1 : Switching Relay |XX*2
+            //          - b0 : CU1.Swiych Relay Ctrl to CU B
+            //          - b1 : CU1.Is Active
+            //          - b2 : CU1.Sta2 P Clutch Enable
+            //          - b3 : CU1.Sta2 S Clutch Enable
+            //          - b4 : CU1.Sta1 P Clutch Enable
+            //          - b5 : CU1.Sta1 S Clutch Enable
+            //          - b6 : N/A
+            //          - b7 : N/A
+
             _core__FF8C_forCU1[1] = 0;
             if (rb_Active_CU1.Checked) _core__FF8C_forCU1[1] |= 1 << 1;
+            if (cb_Sta2_PCluEnable.Checked) _core__FF8C_forCU1[1] |= 1 << 2;
+            if (cb_Sta2_SCluEnable.Checked) _core__FF8C_forCU1[1] |= 1 << 3;
+            if(cb_Sta1_PCluEnable.Checked) _core__FF8C_forCU1[1] |= 1 << 4;
+            if (cb_Sta1_SCluEnable.Checked) _core__FF8C_forCU1[1] |= 1 << 5;
 
 
             _core__FF8C_forCU2[1] = 0;
             if (rb_Active_CU2.Checked) _core__FF8C_forCU2[1] |= 1 << 1;
+            if (cb_Sta2_PCluEnable.Checked) _core__FF8C_forCU2[1] |= 1 << 2;
+            if (cb_Sta2_SCluEnable.Checked) _core__FF8C_forCU2[1] |= 1 << 3;
+            if (cb_Sta1_PCluEnable.Checked) _core__FF8C_forCU2[1] |= 1 << 4;
+            if (cb_Sta1_SCluEnable.Checked) _core__FF8C_forCU2[1] |= 1 << 5;
+
+            // - Byte2 : CU2.PPort Engine AHD |BT(0,50,100)
+            // - Byte3 : CU2.PPort Engine REV |BT(0,50,100)
+            // - Byte4 : CU2.PStbd Engine AHD |BT(0,50,100)
+            // - Byte5 : CU2.PStbd Engine REV |BT(0,50,100)
+
             _core__FF8C_forCU1[2] = 0;
+            _core__FF8C_forCU1[2] = (byte)(100-tb_PThro_AHD_1.Value); 
             _core__FF8C_forCU1[3] = 0;
+            _core__FF8C_forCU1[3] = (byte)(100-tb_PThro_REV_1.Value);
             _core__FF8C_forCU1[4] = 0;
+            _core__FF8C_forCU1[4] = (byte)(100-tb_SThro_AHD_1.Value);
             _core__FF8C_forCU1[5] = 0;
-            _core__FF8C_forCU1[2] = (byte)tb_PThro_AHD_1.Value; 
-            _core__FF8C_forCU1[3] = (byte)tb_PThro_REV_1.Value;
-            _core__FF8C_forCU1[4] = (byte)tb_SThro_AHD_1.Value;
-            _core__FF8C_forCU1[5] = (byte)tb_SThro_REV_1.Value;
+            _core__FF8C_forCU1[5] = (byte)(100-tb_SThro_REV_1.Value);
 
             _core__FF8C_forCU2[2] = 0;
+            _core__FF8C_forCU2[2] = (byte)(100 - tb_PThro_AHD_2.Value);
             _core__FF8C_forCU2[3] = 0;
+            _core__FF8C_forCU2[3] = (byte)(100 - tb_PThro_REV_2.Value);
             _core__FF8C_forCU2[4] = 0;
+            _core__FF8C_forCU2[4] = (byte)(100 - tb_SThro_AHD_2.Value);
             _core__FF8C_forCU2[5] = 0;
-            _core__FF8C_forCU2[2] = (byte)tb_PThro_AHD_2.Value;
-            _core__FF8C_forCU2[3] = (byte)tb_PThro_REV_2.Value;
-            _core__FF8C_forCU2[4] = (byte)tb_SThro_AHD_2.Value;
-            _core__FF8C_forCU2[5] = (byte)tb_SThro_REV_2.Value;
+            _core__FF8C_forCU2[5] = (byte)(100 - tb_SThro_REV_2.Value);
 
-
+            // - Byte6 : Station in Control |BL(0,1,5)
+            // - Byte7 : N/A
             _core__FF8C_forCU1[6] = 0;
             _core__FF8C_forCU2[6] = 0;
 
@@ -177,6 +232,7 @@ namespace LiteCanSimProj._MainUIs.MainForms.Simships
                 _core__FF8C_forCU2[6] = (byte)2;
 
             }
+      
 
             _StaCMD_CU1__FF8E[0] = 0;
             _StaCMD_CU1__FF8E[1] = 0;

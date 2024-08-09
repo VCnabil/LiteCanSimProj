@@ -255,6 +255,12 @@
     <Compile Include="_MainUIs\MainForms\Simships\INFPB_MK3_WJ.Designer.cs">
       <DependentUpon>INFPB_MK3_WJ.cs</DependentUpon>
     </Compile>
+    <Compile Include="_MainUIs\MainForms\Simships\SANFRANSim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_MainUIs\MainForms\Simships\SANFRANSim.Designer.cs">
+      <DependentUpon>SANFRANSim.cs</DependentUpon>
+    </Compile>
     <Compile Include="_MainUIs\MainForms\Simships\SSRS_K12.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -362,6 +368,12 @@
     <EmbeddedResource Include="_MainUIs\MainForms\Simships\INFPB_MK3_AD.resx">
       <DependentUpon>INFPB_MK3_AD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\MainForms\Simships\INFPB_MK3_WJ.resx">
+      <DependentUpon>INFPB_MK3_WJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MainUIs\MainForms\Simships\SANFRANSim.resx">
+      <DependentUpon>SANFRANSim.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="_MainUIs\_SizingUCs\UCSizing.resx">
       <DependentUpon>UCSizing.cs</DependentUpon>
     </EmbeddedResource>
@@ -390,10 +402,15 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="_Proj_Data_Dir\_BaseDir\SANFRANPVonly.txt" />
+    <Content Include="_Proj_Data_Dir\_BaseDir\SANFRANPVdefinition.txt" />
     <Content Include="_Proj_Data_Dir\_BaseDir\SSRS_6320.txt" />
     <Content Include="_Proj_Data_Dir\_BaseDir\TempText.txt" />
     <Content Include="_Proj_Data_Dir\_BaseDir\C3i_can.txt" />
-    <Content Include="_Proj_Data_Dir\_BaseDir\TempTextFile2.txt" />
+    <Content Include="_Proj_Data_Dir\_BaseDir\SANFRAN.txt" />
+    <Content Include="_Proj_Data_Dir\_BaseDir\_GroundZero_SFREBILD.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="_Proj_Data_Dir\_BaseDir\_GroundZero_MK3_AD.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

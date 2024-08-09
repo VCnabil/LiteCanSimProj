@@ -1,0 +1,733 @@
+﻿============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 195
+PGN_32bit : 65420
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 67.1010_Rev4476
+info: 5612589.437	2	18ff8c29	4	8	43	f2	3	7c	11	0	0	0	275810913	00:00.0
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFF8C    (   Software Version )
+
+            - Byte0 : Major Sofware Version |BL*67
+ 
+            - Byte1 : Minor Software Version LO |B2*1010
+ 
+            - Byte2 : Minor Software Version  HI |B2
+ 
+            - Byte3 : Sofware Revision LO |B2*4476
+ 
+            - Byte4 : Sofware Revision HI |B2
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 58
+PGN_32bit : 65423
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments : 5612589.445	2	18ff8f29	4	8	0	4	0	0	c3	0	66	0	275810918	00:00.1
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+    0xFF8F    (   Engine Commands   )
+
+            - Byte0 : Sbtd_Sahft RPM ahd |BT(0,127,255)
+ 
+            - Byte1 : Port_Sahft RPM ahd |BT(0,127,255)
+ 
+            - Byte2 : stbd_Sahft RPM rev |BT(0,127,255)
+ 
+            - Byte3 : port_Sahft RPM rev |BT(0,127,255)
+ 
+            - Byte4 : SF_P_actual RPM LO |B2(0,100,4000)
+ 
+            - Byte5 : SF_P_actual RPM HI |B2
+ 
+            - Byte6 : SF_S_actual RPM LO |B2(0,100,4000)
+ 
+            - Byte7 : SF_S_actual RPM HI |B2
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 188
+PGN_32bit : 65421
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version :  67.1010 Rev4476
+info: 5612589.459	2	18 ff8d 29	4	8	0	0	0	0	0	1	0	0	275810924	00:00.1
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments : N/A
+Group : log - mrads
+CTRLs : N/A
+============================================================================
+    0xFF8D    (   Faults   )
+
+            - Byte0 : Faults |XX
+                    - b0 : Calibration Fault
+                    - b1 : bClutch_CAN_FAULT_STA1
+                    - b2 : bStation3_CAN_FAULT
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Station 1&2 faults |XX
+                    - b0 : Station 1 Helm Fault
+                    - b1 : Station 1 Port Lever2 Fault
+                    - b2 : Station 1 Stbd Lever2 Fault
+                    - b3 : Station 2 Helm Fault
+                    - b4 : Station 2 Port Lever1 Fault
+                    - b5 : Station 2 Stbd Lever1 Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : Station 3&4 faults |XX
+                    - b0 : Station 3 Helm3 Fault
+                    - b1 : Station 3 JoyX Fault
+                    - b2 : Station 3 JoyY Fault
+                    - b3 : Station 4 Helm4 Fault
+                    - b4 : Station 4 JoyX Fault
+                    - b5 : Station 4 JoyY Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : ActiveCuID mrads |BL(0,0,255)
+ 
+            - Byte6 : SKIM faults |XX
+                    - b0 : bP_IOSKIM_Fault
+                    - b1 : bS_IOSKIM_Fault
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : crash stop flages |XX
+                    - b0 : bPCrashStopFlag
+                    - b1 : bSCrashStopFlag
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 215
+PGN_32bit : 65328
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: 5612589.43	2	18ff3029	4	8	1	1	55	2	0	0	0	0	275810909	00:00.0
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFF30    ( Drive Control Clutch and RPM Signals )
+
+            - Byte0 : Stbd? Actual Shaft RPM LO |B2(0,0,10000)
+ 
+            - Byte1 : Stbd? Actual Shaft RPM HI |B2
+ 
+            - Byte2 : Port? Actual Shaft RPM LO |B2(0,0,10000)
+ 
+            - Byte3 : Port? Actual Shaft RPM HI |B2
+ 
+            - Byte4 : Clutch commands |XX
+                    - b0 : Stbd Clutch Ahead Command
+                    - b1 : Port Clutch Ahead Command
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : Stbd Clutch Reverse Command
+                    - b5 : Port Clutch Reverse Command
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 82
+PGN_32bit : 61456
+address Port: 7f
+address Stbd: 7f
+priority    : 0d
+Sending_Unit_Software_version : N/A
+info: 5612590.136	1	0df0107f	4	8	0	f0	a2	4d	20	56	cd	2a	275811259	00:00.7 GPS Time
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments :  the log shows more data than mrads itself
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+    0xF010    (   GPS Time CCMNew   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : days LO |B2
+ 
+            - Byte3 : days HI |B2
+ 
+            - Byte4 : GPS ticks 32bit_0 |B4
+ 
+            - Byte5 : GPS ticks 32bit_1 |B4
+ 
+            - Byte6 : GPS ticks 32bit_2 |B4
+ 
+            - Byte7 : GPS ticks 32bit_3 |B4
+
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 78
+PGN_32bit : 61714
+address Port: 7f
+address Stbd: 7f
+priority    : 09
+Sending_Unit_Software_version : N/A
+info: 5612589.414	1	9f1127f	4	8	0	17	d4	ff	7f	b6	8	fd	275810902	00:00.0
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments :  the log shows more data than mrads itself
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+    0xF112    (   GPS SANFRAN    )
+
+            - Byte0 : GPS Heading LO |B2
+ 
+            - Byte1 : GPS Heading HI |B2
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 80
+PGN_32bit : 61715
+address Port: 7f
+address Stbd: 7f
+priority    : 0d
+Sending_Unit_Software_version : N/A
+info: 5612589.616	1	0df1137f	4	8	0	39	ea	ff	ff	1	ff	ff	275810995	00:00.2 GPS rate of turn
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments :  the log shows more data than mrads itself
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+    0xF113    (   GPS RateOfTurn CCMNew   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : GPS RateOfTurn 32bit_0 |B4(0,0,10000)
+ 
+            - Byte2 : GPS RateOfTurn 32bit_1 |B4
+ 
+            - Byte3 : GPS RateOfTurn 32bit_2 |B4
+ 
+            - Byte4 : GPS RateOfTurn 32bit_3 |B4
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 143
+PGN_32bit : 63489
+address Port: 7f
+address Stbd: 7f
+priority    : 09
+Sending_Unit_Software_version : N/A
+info: 5612599.614	1	09f8017f	4	8	2	ba	92	16	6b	e7	2	b7	275815850	00:10.2 GPS Latlon
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments :  the log shows more data than mrads itself
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+    0xF801    (   GPS Lat Lon  StandardShips   )
+
+            - Byte0 : GPS Latitude 32bit_0 |B4(0,0,10000)
+ 
+            - Byte1 : GPS Latitude 32bit_1 |B4
+ 
+            - Byte2 : GPS Latitude 32bit_2 |B4
+ 
+            - Byte3 : GPS Latitude 32bit_3 |B4
+ 
+            - Byte4 : GPS Longitude 32bit_0 |B4(0,0,10000)
+ 
+            - Byte5 : GPS Longitude 32bit_1 |B4
+ 
+            - Byte6 : GPS Longitude 32bit_2 |B4
+ 
+            - Byte7 : GPS Longitude 32bit_3 |B4
+
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 145
+PGN_32bit : 63490
+address Port: 7f
+address Stbd: 7f
+priority    : 09
+Sending_Unit_Software_version : N/A
+info: 5612589.413	1	09f8027f	4	8	0	fc	8d	e2	20	1	ff	ff	275810900	00:00.0 GPS speed-course over gound
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments :  the log shows more data than mrads itself
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+    0xF802    (   GPS Speed Course OverGround StandardShips   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : GPS Speed OverGround LO |B2(0,0,800)
+ 
+            - Byte3 : GPS Speed OverGround HI |B2
+ 
+            - Byte4 : GPS Course OverGround LO |B2(0,0,800)
+ 
+            - Byte5 : GPS Course OverGround HI |B2
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Clutch Panel
+VC_PGN_ID : 120
+PGN_32bit : 65329
+address Port: 34
+address Stbd: 34
+priority    : 0c
+Sending_Unit_Software_version : N/A
+info: 5612599.628	2	0cff3134	4	8	1	0	0	1b	0	1	1	0	275815857	00:10.2
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments :  the log shows more data than mrads itself
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+    0xFF31    (   Clutch Panel    )
+
+            - Byte0 : Clutch Panel Switches |XX
+                    - b0 : Trolling ONOFF Switch
+                    - b1 : Backup AutoSwitch
+                    - b2 : Integrated Manual Switch
+                    - b3 : Drive Control Unit Communication Timeout
+                    - b4 : Stbd RPM Stall
+                    - b5 : Port RPM Stall
+                    - b6 : Invalid Clutch Command At Startup
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : Clutch Panel Commands |XX
+                    - b0 : Stbd Engage AHD Cmd
+                    - b1 : Port Engage AHD Cmd
+                    - b2 : Stbd Disengage Cmd
+                    - b3 : Port Disengage Cmd
+                    - b4 : Stbd Engage REV Cmd
+                    - b5 : Port Engage REV Cmd
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : Clutch Panel Feedbacks |XX
+                    - b0 : Stbd Engage AHD Feedback
+                    - b1 : Port Engage AHD Feedback
+                    - b2 : Stbd Disengage Feedback
+                    - b3 : Port Disengage Feedback
+                    - b4 : Stbd Engage REV Feedback
+                    - b5 : Port Engage REV Feedback
+                    - b6 : N/A
+                    - b7 : N/A
+
+============================================================================
+CAN Messages From : Clutch Unit
+VC_PGN_ID : 213
+PGN_32bit : 65417
+address Port: 34
+address Stbd: 34
+priority    : 0c
+Sending_Unit_Software_version : N/A
+info: 5612590.327	2	0cff8934	4	8	2	0	14	99	0	0	0	0	275811352	00:00.9
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments :  the log shows more data than mrads itself
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+    0xFF89    ( Clutch information )
+
+            - Byte0 : Major Software Version |BL*69
+ 
+            - Byte1 : Minor Software Version |BL*69
+ 
+            - Byte2 : Software Revision LO |B2*1459
+ 
+            - Byte3 : Software Revision HI |B2
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : A&M skim80
+VC_PGN_ID : 192
+PGN_32bit : 65442
+address Port: 80
+address Stbd: 80
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: 5612589.548	2	18ffa280	4	8	8d	2	ff	ff	ff	ff	ff	ff	275810965	00:00.2 Skim80 rpm
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments :  N/A
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+    0xFFA2    (   A&M SKIM MTU Signals??   )
+
+            - Byte0 : skim80rpm LO |B2(0,0,4000)
+ 
+            - Byte1 : skim80rpm HI |B2
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : A&M skim80
+VC_PGN_ID : 192
+PGN_32bit : 65447
+address Port: 80
+address Stbd: 80
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: 5612589.548	2	18ffa280	4	8	8d	2	ff	ff	ff	ff	ff	ff	275810965	00:00.2 Skim80 rpm
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments :  N/A
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+    0xFFA7    (   A&M MkV MTU Signals??   )
+
+            - Byte0 : skim80bool |XX*252
+                    - b0 : manual zero and
+                    - b1 : manual zero
+                    - b2 : idk
+                    - b3 : idk2
+                    - b4 : idk3
+                    - b5 : idk4
+                    - b6 : idk5
+                    - b7 : idk6
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : A&M skim81
+VC_PGN_ID : 191
+PGN_32bit : 65440
+address Port: 81
+address Stbd: 81
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: 5612589.509	2	18ffa081	4	8	8d	2	ff	ff	ff	ff	ff	ff	275810942	00:00.1 Skim81 rpm
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments :  N/A
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+    0xFFA0    (   A&M SKIM MTU Signals??   )
+
+            - Byte0 : skim81rpm LO |B2(0,0,4000)
+ 
+            - Byte1 : skim81rpm HI |B2
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : A&M skim81
+VC_PGN_ID : 192
+PGN_32bit : 65446
+address Port: 80
+address Stbd: 80
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: 5612589.511	2	18ffa681	4	8	fc	ff	ff	ff	ff	ff	ff	ff	275810947	00:00.1 Skim81 manual?
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments :  N/A
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+    0xFFA6    (   A&M MkV MTU Signals??   )
+
+            - Byte0 : skim81bool |XX*252
+                    - b0 : manual zero and
+                    - b1 : manual zero
+                    - b2 : idk
+                    - b3 : idk2
+                    - b4 : idk3
+                    - b5 : idk4
+                    - b6 : idk5
+                    - b7 : idk6
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 801
+PGN_32bit : 65280
+address Port: 28
+address Stbd: 28
+priority    : 0c
+Sending_Unit_Software_version : no idea
+info: N/A
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments :  N/A
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+	0xFF00    ( GOOD PORT INDIK )
+
+			- Byte0 : portSideLEFT NOZ_2 LO |B2(0,225,520)		
+            
+			- Byte1 : portSideLEFT NOZ_2 HI |B2
+
+            - Byte2 : N/A
+
+            - Byte3 : N/A
+
+            - Byte4 : N/A
+
+            - Byte5 : N/A
+
+            - Byte6 : N/A
+
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 801
+PGN_32bit : 65281
+address Port: 28
+address Stbd: 28
+priority    : 0c
+Sending_Unit_Software_version : no idea
+info: N/A
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments :  N/A
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+	0xFF01    (  GOOD STBD INDIK )
+
+			- Byte0 : portSideRIGHT NOZ_4 LO |B2(0,225,520)			
+            
+			- Byte1 : portSideRIGHT NOZ_4 HI |B2
+
+            - Byte2 : N/A
+
+            - Byte3 : N/A
+
+            - Byte4 : N/A
+
+            - Byte5 : N/A
+
+            - Byte6 : N/A
+
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 801
+PGN_32bit : 65282
+address Port: 28
+address Stbd: 28
+priority    : 0c
+Sending_Unit_Software_version : no idea
+info: N/A
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments :  N/A
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+	0xFF02    ( left right BUK 2 )
+
+			- Byte0 : leftmostBUK 2 LO |B2(0,225,520)
+            
+			- Byte1 : leftmostBUK 2 HI |B2
+
+            - Byte2 : N/A
+
+            - Byte3 : N/A
+
+            - Byte4 : N/A
+
+            - Byte5 : N/A
+
+            - Byte6 : N/A
+
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 801
+PGN_32bit : 65283
+address Port: 28
+address Stbd: 28
+priority    : 0c
+Sending_Unit_Software_version : no idea
+info: N/A
+Configuration : SANFRAN
+Project : N/A
+Type : N/A
+Comments :  N/A
+Group : log pv mrads
+CTRLs : N/A
+============================================================================
+	0xFF03    ( left right BUK 4 )
+
+			- Byte0 : InnerLEFT BUK 4 LO |B2(0,225,520)			
+            
+			- Byte1 : InnerLEFT BUK 4 HI |B2
+
+            - Byte2 : N/A
+
+            - Byte3 : N/A
+
+            - Byte4 : N/A
+
+            - Byte5 : N/A
+
+            - Byte6 : N/A
+
+            - Byte7 : N/A

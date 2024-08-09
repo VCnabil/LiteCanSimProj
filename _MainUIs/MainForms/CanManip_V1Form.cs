@@ -75,6 +75,7 @@ namespace LiteCanSimProj._MainUIs.MainForms
             btn_MK3_AD.Click += Button_Open_MK3_AD_Click;
             btn_MK3_WJ.Click += Button_Open_MK3_WJ_Click;
             btn_SSRS_K12.Click += Button_Open_SSRS_K12_Click;
+            btn_SANFRANsim.Click += Btn_SANFRANsim_Click;
             timer1_pingpong.Tick += Timer1_pingpong_Tick;
             timer1_pingpong.Start();
             Refresh_list_of_filesinOutdir();
@@ -84,6 +85,17 @@ namespace LiteCanSimProj._MainUIs.MainForms
             button_makeNew.Click += Button_makeNew_Click;
         }
 
+        private void Btn_SANFRANsim_Click(object sender, EventArgs e)
+        {
+            SANFRANSim SANFRAN_simulationform = new SANFRANSim();
+            SANFRAN_simulationform.Show();
+        }
+
+        private void Button_Open_SANFRANSim_Click(object sender, EventArgs e)
+        {
+            INFPB_MK3_AD form_mk3AD = new INFPB_MK3_AD();
+            form_mk3AD.Show();
+        }
 
         private void Button_Open_MK3_AD_Click(object sender, EventArgs e)
         {

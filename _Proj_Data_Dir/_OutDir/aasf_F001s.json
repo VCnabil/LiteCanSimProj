@@ -1,0 +1,666 @@
+{
+  "Title": "aasf_F001s",
+  "AllPgnList": [
+    {
+      "IDpgn": 1,
+      "PGN_int": 218038312,
+      "PGN_strHEX": "0x0CFF0028",
+      "DESCpgn": "from Drive Control Unit  GOOD PORT INDIK  ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "portSideLEFT NOZ_2 ",
+          "MIN": 0,
+          "MAX": 520,
+          "DEF": 225,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 2,
+      "PGN_int": 218038568,
+      "PGN_strHEX": "0x0CFF0128",
+      "DESCpgn": "from Drive Control Unit   GOOD STBD INDIK  ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "portSideRIGHT NOZ_4 ",
+          "MIN": 0,
+          "MAX": 520,
+          "DEF": 225,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 3,
+      "PGN_int": 218038824,
+      "PGN_strHEX": "0x0CFF0228",
+      "DESCpgn": "from Drive Control Unit  left right BUK 2  ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "leftmostBUK 2 ",
+          "MIN": 0,
+          "MAX": 520,
+          "DEF": 225,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 4,
+      "PGN_int": 218039080,
+      "PGN_strHEX": "0x0CFF0328",
+      "DESCpgn": "from Drive Control Unit  left right BUK 4  ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "InnerLEFT BUK 4 ",
+          "MIN": 0,
+          "MAX": 520,
+          "DEF": 225,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 5,
+      "PGN_int": 419400745,
+      "PGN_strHEX": "0x18FF8C29",
+      "DESCpgn": "from Control Unit    Software Version  ",
+      "CtrlList": [
+        {
+          "ID": 1,
+          "DESC": "Minor Software Version ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 1010,
+          "INDEXLO": 1,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 3,
+          "DESC": "Sofware Revision ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 4476,
+          "INDEXLO": 3,
+          "INDEXHI": 4,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 0,
+          "DESC": "Major Sofware Version ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 67,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 6,
+      "PGN_int": 419401513,
+      "PGN_strHEX": "0x18FF8F29",
+      "DESCpgn": "from Control Unit    Engine Commands    ",
+      "CtrlList": [
+        {
+          "ID": 4,
+          "DESC": "SF_P_actual RPM ",
+          "MIN": 0,
+          "MAX": 4000,
+          "DEF": 100,
+          "INDEXLO": 4,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 6,
+          "DESC": "SF_S_actual RPM ",
+          "MIN": 0,
+          "MAX": 4000,
+          "DEF": 100,
+          "INDEXLO": 6,
+          "INDEXHI": 7,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 0,
+          "DESC": "Sbtd_Sahft RPM ahd ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 127,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "Port_Sahft RPM ahd ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 127,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "stbd_Sahft RPM rev ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 127,
+          "INDEXLO": 2,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 3,
+          "DESC": "port_Sahft RPM rev ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 127,
+          "INDEXLO": 3,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 7,
+      "PGN_int": 419401001,
+      "PGN_strHEX": "0x18FF8D29",
+      "DESCpgn": "from Control Unit    Faults    ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Faults ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Calibration Fault",
+            "1. bClutch_CAN_FAULT_STA1",
+            "2. bStation3_CAN_FAULT"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "Station 1&2 faults ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Station 1 Helm Fault",
+            "1. Station 1 Port Lever2 Fault",
+            "2. Station 1 Stbd Lever2 Fault",
+            "3. Station 2 Helm Fault",
+            "4. Station 2 Port Lever1 Fault",
+            "5. Station 2 Stbd Lever1 Fault"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "Station 3&4 faults ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 2,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Station 3 Helm3 Fault",
+            "1. Station 3 JoyX Fault",
+            "2. Station 3 JoyY Fault",
+            "3. Station 4 Helm4 Fault",
+            "4. Station 4 JoyX Fault",
+            "5. Station 4 JoyY Fault"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 6,
+          "DESC": "SKIM faults ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 6,
+          "INDEXHI": 6,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. bP_IOSKIM_Fault",
+            "1. bS_IOSKIM_Fault"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 7,
+          "DESC": "crash stop flages ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 7,
+          "INDEXHI": 7,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. bPCrashStopFlag",
+            "1. bSCrashStopFlag"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 5,
+          "DESC": "ActiveCuID mrads ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 5,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 8,
+      "PGN_int": 419377193,
+      "PGN_strHEX": "0x18FF3029",
+      "DESCpgn": "from Drive Control Unit  Drive Control Clutch and ",
+      "CtrlList": [
+        {
+          "ID": 4,
+          "DESC": "Clutch commands ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 4,
+          "INDEXHI": 4,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Stbd Clutch Ahead Command",
+            "1. Port Clutch Ahead Command",
+            "4. Stbd Clutch Reverse Command",
+            "5. Port Clutch Reverse Command"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 0,
+          "DESC": "Stbd? Actual Shaft RPM ",
+          "MIN": 0,
+          "MAX": 10000,
+          "DEF": 0,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "Port? Actual Shaft RPM ",
+          "MIN": 0,
+          "MAX": 10000,
+          "DEF": 0,
+          "INDEXLO": 2,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 9,
+      "PGN_int": 218050868,
+      "PGN_strHEX": "0x0CFF3134",
+      "DESCpgn": "from Clutch Panel    Clutch Panel     ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Clutch Panel Switches ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Trolling ONOFF Switch",
+            "1. Backup AutoSwitch",
+            "2. Integrated Manual Switch",
+            "3. Drive Control Unit Communicati",
+            "4. Stbd RPM Stall",
+            "5. Port RPM Stall",
+            "6. Invalid Clutch Command At Star"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 6,
+          "DESC": "Clutch Panel Commands ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 6,
+          "INDEXHI": 6,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Stbd Engage AHD Cmd",
+            "1. Port Engage AHD Cmd",
+            "2. Stbd Disengage Cmd",
+            "3. Port Disengage Cmd",
+            "4. Stbd Engage REV Cmd",
+            "5. Port Engage REV Cmd"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 7,
+          "DESC": "Clutch Panel Feedbacks ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 7,
+          "INDEXHI": 7,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Stbd Engage AHD Feedback",
+            "1. Port Engage AHD Feedback",
+            "2. Stbd Disengage Feedback",
+            "3. Port Disengage Feedback",
+            "4. Stbd Engage REV Feedback",
+            "5. Port Engage REV Feedback"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 10,
+      "PGN_int": 218073396,
+      "PGN_strHEX": "0x0CFF8934",
+      "DESCpgn": "from Clutch Unit  Clutch information  ",
+      "CtrlList": [
+        {
+          "ID": 2,
+          "DESC": "Software Revision ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 14597,
+          "INDEXLO": 2,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 0,
+          "DESC": "Major Software Version ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 69,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "Minor Software Version ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 69,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 11,
+      "PGN_int": 419406464,
+      "PGN_strHEX": "0x18FFA280",
+      "DESCpgn": "from A&M skim80    A&M SKIM MTU Signals??    ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "skim80rpm ",
+          "MIN": 0,
+          "MAX": 4000,
+          "DEF": 0,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 12,
+      "PGN_int": 419407744,
+      "PGN_strHEX": "0x18FFA780",
+      "DESCpgn": "from A&M skim80    A&M MkV MTU Signals??    ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "skim80bool ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 252,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. manual zero and",
+            "1. manual zero",
+            "2. idk",
+            "3. idk2",
+            "4. idk3",
+            "5. idk4",
+            "6. idk5",
+            "7. idk6"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 13,
+      "PGN_int": 419405953,
+      "PGN_strHEX": "0x18FFA081",
+      "DESCpgn": "from A&M skim81    A&M SKIM MTU Signals??    ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "skim81rpm ",
+          "MIN": 0,
+          "MAX": 4000,
+          "DEF": 0,
+          "INDEXLO": 0,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 14,
+      "PGN_int": 419407488,
+      "PGN_strHEX": "0x18FFA680",
+      "DESCpgn": "from A&M skim81    A&M MkV MTU Signals??    ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "skim81bool ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 252,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. manual zero and",
+            "1. manual zero",
+            "2. idk",
+            "3. idk2",
+            "4. idk3",
+            "5. idk4",
+            "6. idk5",
+            "7. idk6"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    }
+  ]
+}

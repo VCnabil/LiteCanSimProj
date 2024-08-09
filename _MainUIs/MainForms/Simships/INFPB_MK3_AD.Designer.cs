@@ -72,13 +72,13 @@
             this.tb_S_buck_fbk_1 = new System.Windows.Forms.TrackBar();
             this.tb_P_buck_fbk_1 = new System.Windows.Forms.TrackBar();
             this.lbl_S_buck_fbk_1 = new System.Windows.Forms.Label();
-            this.lb_P_buck_fbk_1 = new System.Windows.Forms.Label();
+            this.lbl_P_buck_fbk_1 = new System.Windows.Forms.Label();
             this.lbl_AD_Nozz_fbk_1 = new System.Windows.Forms.Label();
             this.tb_AD_Nozz_fbk_1 = new System.Windows.Forms.TrackBar();
             this.lbl_AD_Nozz_fbk_2 = new System.Windows.Forms.Label();
             this.tb_AD_Nozz_fbk_2 = new System.Windows.Forms.TrackBar();
-            this.lb_S_buck_fbk_2 = new System.Windows.Forms.Label();
-            this.lb_P_buck_fbk_2 = new System.Windows.Forms.Label();
+            this.lbl_S_buck_fbk_2 = new System.Windows.Forms.Label();
+            this.lbl_P_buck_fbk_2 = new System.Windows.Forms.Label();
             this.tb_S_buck_fbk_2 = new System.Windows.Forms.TrackBar();
             this.tb_P_buck_fbk_2 = new System.Windows.Forms.TrackBar();
             this.lbl_SThro_REV_1 = new System.Windows.Forms.Label();
@@ -89,6 +89,10 @@
             this.tb_SThro_REV_2 = new System.Windows.Forms.TrackBar();
             this.lbl_SThro_AHD_2 = new System.Windows.Forms.Label();
             this.tb_SThro_AHD_2 = new System.Windows.Forms.TrackBar();
+            this.cb_Sta1_SCluEnable = new System.Windows.Forms.CheckBox();
+            this.cb_Sta1_PCluEnable = new System.Windows.Forms.CheckBox();
+            this.cb_Sta2_SCluEnable = new System.Windows.Forms.CheckBox();
+            this.cb_Sta2_PCluEnable = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.tb_DimmingKnob)).BeginInit();
             this.groupBox_ActiveCu.SuspendLayout();
             this.groupBox_clutchPortCMD.SuspendLayout();
@@ -118,7 +122,7 @@
             // 
             // tb_CAN_Bus_View
             // 
-            this.tb_CAN_Bus_View.Location = new System.Drawing.Point(497, 21);
+            this.tb_CAN_Bus_View.Location = new System.Drawing.Point(1227, 12);
             this.tb_CAN_Bus_View.Multiline = true;
             this.tb_CAN_Bus_View.Name = "tb_CAN_Bus_View";
             this.tb_CAN_Bus_View.Size = new System.Drawing.Size(951, 477);
@@ -126,7 +130,7 @@
             // 
             // tb_DimmingKnob
             // 
-            this.tb_DimmingKnob.Location = new System.Drawing.Point(32, 52);
+            this.tb_DimmingKnob.Location = new System.Drawing.Point(230, 12);
             this.tb_DimmingKnob.Maximum = 255;
             this.tb_DimmingKnob.Name = "tb_DimmingKnob";
             this.tb_DimmingKnob.Size = new System.Drawing.Size(412, 90);
@@ -138,7 +142,7 @@
             // lbl_DimmingKnob
             // 
             this.lbl_DimmingKnob.AutoSize = true;
-            this.lbl_DimmingKnob.Location = new System.Drawing.Point(36, 24);
+            this.lbl_DimmingKnob.Location = new System.Drawing.Point(37, 27);
             this.lbl_DimmingKnob.Name = "lbl_DimmingKnob";
             this.lbl_DimmingKnob.Size = new System.Drawing.Size(128, 25);
             this.lbl_DimmingKnob.TabIndex = 3;
@@ -150,7 +154,7 @@
             this.groupBox_ActiveCu.Controls.Add(this.rb_Active_CU2);
             this.groupBox_ActiveCu.Controls.Add(this.rb_Active_CU1);
             this.groupBox_ActiveCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox_ActiveCu.Location = new System.Drawing.Point(32, 124);
+            this.groupBox_ActiveCu.Location = new System.Drawing.Point(989, 502);
             this.groupBox_ActiveCu.Name = "groupBox_ActiveCu";
             this.groupBox_ActiveCu.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox_ActiveCu.Size = new System.Drawing.Size(211, 112);
@@ -188,7 +192,7 @@
             this.groupBox_clutchPortCMD.Controls.Add(this.rb_CU1_B0b1);
             this.groupBox_clutchPortCMD.Controls.Add(this.rb_CU1_B0b0);
             this.groupBox_clutchPortCMD.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox_clutchPortCMD.Location = new System.Drawing.Point(37, 261);
+            this.groupBox_clutchPortCMD.Location = new System.Drawing.Point(845, 600);
             this.groupBox_clutchPortCMD.Name = "groupBox_clutchPortCMD";
             this.groupBox_clutchPortCMD.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox_clutchPortCMD.Size = new System.Drawing.Size(127, 145);
@@ -245,7 +249,7 @@
             this.groupBox2.Controls.Add(this.rb_MainStation);
             this.groupBox2.Controls.Add(this.rb_otherStation);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(267, 124);
+            this.groupBox2.Location = new System.Drawing.Point(989, 633);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(211, 112);
@@ -273,7 +277,7 @@
             this.groupBox_clutchStbdCMD.Controls.Add(this.rb_CU1_B0b4);
             this.groupBox_clutchStbdCMD.Controls.Add(this.rb_CU1_B0b3);
             this.groupBox_clutchStbdCMD.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox_clutchStbdCMD.Location = new System.Drawing.Point(201, 261);
+            this.groupBox_clutchStbdCMD.Location = new System.Drawing.Point(1206, 600);
             this.groupBox_clutchStbdCMD.Name = "groupBox_clutchStbdCMD";
             this.groupBox_clutchStbdCMD.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox_clutchStbdCMD.Size = new System.Drawing.Size(130, 145);
@@ -316,7 +320,7 @@
             // lbl_Ptrim_1
             // 
             this.lbl_Ptrim_1.AutoSize = true;
-            this.lbl_Ptrim_1.Location = new System.Drawing.Point(175, 595);
+            this.lbl_Ptrim_1.Location = new System.Drawing.Point(262, 1259);
             this.lbl_Ptrim_1.Name = "lbl_Ptrim_1";
             this.lbl_Ptrim_1.Size = new System.Drawing.Size(85, 25);
             this.lbl_Ptrim_1.TabIndex = 9;
@@ -324,7 +328,7 @@
             // 
             // tb_Ptrim_1
             // 
-            this.tb_Ptrim_1.Location = new System.Drawing.Point(171, 623);
+            this.tb_Ptrim_1.Location = new System.Drawing.Point(178, 1288);
             this.tb_Ptrim_1.Maximum = 100;
             this.tb_Ptrim_1.Name = "tb_Ptrim_1";
             this.tb_Ptrim_1.Size = new System.Drawing.Size(280, 90);
@@ -336,7 +340,7 @@
             // lbl_Ptrim_2
             // 
             this.lbl_Ptrim_2.AutoSize = true;
-            this.lbl_Ptrim_2.Location = new System.Drawing.Point(903, 595);
+            this.lbl_Ptrim_2.Location = new System.Drawing.Point(1429, 1319);
             this.lbl_Ptrim_2.Name = "lbl_Ptrim_2";
             this.lbl_Ptrim_2.Size = new System.Drawing.Size(85, 25);
             this.lbl_Ptrim_2.TabIndex = 11;
@@ -344,7 +348,7 @@
             // 
             // tb_Ptrim_2
             // 
-            this.tb_Ptrim_2.Location = new System.Drawing.Point(899, 623);
+            this.tb_Ptrim_2.Location = new System.Drawing.Point(1425, 1347);
             this.tb_Ptrim_2.Maximum = 100;
             this.tb_Ptrim_2.Name = "tb_Ptrim_2";
             this.tb_Ptrim_2.Size = new System.Drawing.Size(280, 90);
@@ -356,7 +360,7 @@
             // lbl_Strim_2
             // 
             this.lbl_Strim_2.AutoSize = true;
-            this.lbl_Strim_2.Location = new System.Drawing.Point(1197, 595);
+            this.lbl_Strim_2.Location = new System.Drawing.Point(1723, 1319);
             this.lbl_Strim_2.Name = "lbl_Strim_2";
             this.lbl_Strim_2.Size = new System.Drawing.Size(97, 25);
             this.lbl_Strim_2.TabIndex = 15;
@@ -364,7 +368,7 @@
             // 
             // tb_Strim_2
             // 
-            this.tb_Strim_2.Location = new System.Drawing.Point(1193, 623);
+            this.tb_Strim_2.Location = new System.Drawing.Point(1719, 1347);
             this.tb_Strim_2.Maximum = 100;
             this.tb_Strim_2.Name = "tb_Strim_2";
             this.tb_Strim_2.Size = new System.Drawing.Size(280, 90);
@@ -376,7 +380,7 @@
             // lbl_Strim_1
             // 
             this.lbl_Strim_1.AutoSize = true;
-            this.lbl_Strim_1.Location = new System.Drawing.Point(485, 595);
+            this.lbl_Strim_1.Location = new System.Drawing.Point(557, 1260);
             this.lbl_Strim_1.Name = "lbl_Strim_1";
             this.lbl_Strim_1.Size = new System.Drawing.Size(85, 25);
             this.lbl_Strim_1.TabIndex = 13;
@@ -384,7 +388,7 @@
             // 
             // tb_Strim_1
             // 
-            this.tb_Strim_1.Location = new System.Drawing.Point(481, 623);
+            this.tb_Strim_1.Location = new System.Drawing.Point(464, 1288);
             this.tb_Strim_1.Maximum = 100;
             this.tb_Strim_1.Name = "tb_Strim_1";
             this.tb_Strim_1.Size = new System.Drawing.Size(280, 90);
@@ -396,15 +400,15 @@
             // lbl_Helm_2
             // 
             this.lbl_Helm_2.AutoSize = true;
-            this.lbl_Helm_2.Location = new System.Drawing.Point(1094, 717);
+            this.lbl_Helm_2.Location = new System.Drawing.Point(1569, 1145);
             this.lbl_Helm_2.Name = "lbl_Helm_2";
-            this.lbl_Helm_2.Size = new System.Drawing.Size(85, 25);
+            this.lbl_Helm_2.Size = new System.Drawing.Size(76, 25);
             this.lbl_Helm_2.TabIndex = 19;
-            this.lbl_Helm_2.Text = "P trim 2";
+            this.lbl_Helm_2.Text = "helm 2";
             // 
             // tb_Helm_2
             // 
-            this.tb_Helm_2.Location = new System.Drawing.Point(1090, 745);
+            this.tb_Helm_2.Location = new System.Drawing.Point(1565, 1173);
             this.tb_Helm_2.Maximum = 100;
             this.tb_Helm_2.Name = "tb_Helm_2";
             this.tb_Helm_2.Size = new System.Drawing.Size(280, 90);
@@ -416,7 +420,7 @@
             // lbl_Helm_1
             // 
             this.lbl_Helm_1.AutoSize = true;
-            this.lbl_Helm_1.Location = new System.Drawing.Point(366, 717);
+            this.lbl_Helm_1.Location = new System.Drawing.Point(396, 1110);
             this.lbl_Helm_1.Name = "lbl_Helm_1";
             this.lbl_Helm_1.Size = new System.Drawing.Size(79, 25);
             this.lbl_Helm_1.TabIndex = 17;
@@ -424,7 +428,7 @@
             // 
             // tb_Helm_1
             // 
-            this.tb_Helm_1.Location = new System.Drawing.Point(362, 745);
+            this.tb_Helm_1.Location = new System.Drawing.Point(299, 1138);
             this.tb_Helm_1.Maximum = 100;
             this.tb_Helm_1.Name = "tb_Helm_1";
             this.tb_Helm_1.Size = new System.Drawing.Size(280, 90);
@@ -435,7 +439,7 @@
             // 
             // tb_PThro_AHD_1
             // 
-            this.tb_PThro_AHD_1.Location = new System.Drawing.Point(33, 820);
+            this.tb_PThro_AHD_1.Location = new System.Drawing.Point(37, 885);
             this.tb_PThro_AHD_1.Maximum = 100;
             this.tb_PThro_AHD_1.Name = "tb_PThro_AHD_1";
             this.tb_PThro_AHD_1.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -448,27 +452,28 @@
             // lbl_PThro_AHD_1
             // 
             this.lbl_PThro_AHD_1.AutoSize = true;
-            this.lbl_PThro_AHD_1.Location = new System.Drawing.Point(28, 1103);
+            this.lbl_PThro_AHD_1.Location = new System.Drawing.Point(36, 838);
             this.lbl_PThro_AHD_1.Name = "lbl_PThro_AHD_1";
-            this.lbl_PThro_AHD_1.Size = new System.Drawing.Size(143, 25);
+            this.lbl_PThro_AHD_1.Size = new System.Drawing.Size(118, 25);
             this.lbl_PThro_AHD_1.TabIndex = 21;
-            this.lbl_PThro_AHD_1.Text = "P throt AHD 1";
+            this.lbl_PThro_AHD_1.Text = "PengAHD1";
             // 
             // lbl_PThro_REV_1
             // 
             this.lbl_PThro_REV_1.AutoSize = true;
-            this.lbl_PThro_REV_1.Location = new System.Drawing.Point(165, 1103);
+            this.lbl_PThro_REV_1.Location = new System.Drawing.Point(24, 1440);
             this.lbl_PThro_REV_1.Name = "lbl_PThro_REV_1";
-            this.lbl_PThro_REV_1.Size = new System.Drawing.Size(149, 25);
+            this.lbl_PThro_REV_1.Size = new System.Drawing.Size(117, 25);
             this.lbl_PThro_REV_1.TabIndex = 23;
-            this.lbl_PThro_REV_1.Text = "P Throt REV 1";
+            this.lbl_PThro_REV_1.Text = "PengREV1";
             // 
             // tb_PThro_REV_1
             // 
-            this.tb_PThro_REV_1.Location = new System.Drawing.Point(170, 820);
+            this.tb_PThro_REV_1.Location = new System.Drawing.Point(36, 1157);
             this.tb_PThro_REV_1.Maximum = 100;
             this.tb_PThro_REV_1.Name = "tb_PThro_REV_1";
             this.tb_PThro_REV_1.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.tb_PThro_REV_1.RightToLeftLayout = true;
             this.tb_PThro_REV_1.Size = new System.Drawing.Size(90, 280);
             this.tb_PThro_REV_1.TabIndex = 22;
             this.tb_PThro_REV_1.TickFrequency = 10;
@@ -478,7 +483,7 @@
             // lbl_PThro_REV_2
             // 
             this.lbl_PThro_REV_2.AutoSize = true;
-            this.lbl_PThro_REV_2.Location = new System.Drawing.Point(921, 1092);
+            this.lbl_PThro_REV_2.Location = new System.Drawing.Point(1283, 1456);
             this.lbl_PThro_REV_2.Name = "lbl_PThro_REV_2";
             this.lbl_PThro_REV_2.Size = new System.Drawing.Size(129, 25);
             this.lbl_PThro_REV_2.TabIndex = 27;
@@ -486,7 +491,7 @@
             // 
             // tb_PThro_REV_2
             // 
-            this.tb_PThro_REV_2.Location = new System.Drawing.Point(926, 809);
+            this.tb_PThro_REV_2.Location = new System.Drawing.Point(1288, 1173);
             this.tb_PThro_REV_2.Maximum = 100;
             this.tb_PThro_REV_2.Name = "tb_PThro_REV_2";
             this.tb_PThro_REV_2.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -499,7 +504,7 @@
             // lbl_PThro_AHD_2
             // 
             this.lbl_PThro_AHD_2.AutoSize = true;
-            this.lbl_PThro_AHD_2.Location = new System.Drawing.Point(784, 1092);
+            this.lbl_PThro_AHD_2.Location = new System.Drawing.Point(1283, 842);
             this.lbl_PThro_AHD_2.Name = "lbl_PThro_AHD_2";
             this.lbl_PThro_AHD_2.Size = new System.Drawing.Size(123, 25);
             this.lbl_PThro_AHD_2.TabIndex = 25;
@@ -507,7 +512,7 @@
             // 
             // tb_PThro_AHD_2
             // 
-            this.tb_PThro_AHD_2.Location = new System.Drawing.Point(789, 809);
+            this.tb_PThro_AHD_2.Location = new System.Drawing.Point(1288, 884);
             this.tb_PThro_AHD_2.Maximum = 100;
             this.tb_PThro_AHD_2.Name = "tb_PThro_AHD_2";
             this.tb_PThro_AHD_2.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -520,7 +525,7 @@
             // cb_Sta1_REQ_B7_b0
             // 
             this.cb_Sta1_REQ_B7_b0.AutoSize = true;
-            this.cb_Sta1_REQ_B7_b0.Location = new System.Drawing.Point(12, 684);
+            this.cb_Sta1_REQ_B7_b0.Location = new System.Drawing.Point(250, 838);
             this.cb_Sta1_REQ_B7_b0.Name = "cb_Sta1_REQ_B7_b0";
             this.cb_Sta1_REQ_B7_b0.Size = new System.Drawing.Size(157, 29);
             this.cb_Sta1_REQ_B7_b0.TabIndex = 28;
@@ -530,7 +535,7 @@
             // cb_Sta1_allow_B7_b1
             // 
             this.cb_Sta1_allow_B7_b1.AutoSize = true;
-            this.cb_Sta1_allow_B7_b1.Location = new System.Drawing.Point(12, 731);
+            this.cb_Sta1_allow_B7_b1.Location = new System.Drawing.Point(428, 838);
             this.cb_Sta1_allow_B7_b1.Name = "cb_Sta1_allow_B7_b1";
             this.cb_Sta1_allow_B7_b1.Size = new System.Drawing.Size(214, 29);
             this.cb_Sta1_allow_B7_b1.TabIndex = 29;
@@ -540,7 +545,7 @@
             // cb_Sta2_allow_B7_b1
             // 
             this.cb_Sta2_allow_B7_b1.AutoSize = true;
-            this.cb_Sta2_allow_B7_b1.Location = new System.Drawing.Point(1403, 902);
+            this.cb_Sta2_allow_B7_b1.Location = new System.Drawing.Point(1728, 832);
             this.cb_Sta2_allow_B7_b1.Name = "cb_Sta2_allow_B7_b1";
             this.cb_Sta2_allow_B7_b1.Size = new System.Drawing.Size(214, 29);
             this.cb_Sta2_allow_B7_b1.TabIndex = 31;
@@ -550,7 +555,7 @@
             // cb_Sta2_REQ_B7_b0
             // 
             this.cb_Sta2_REQ_B7_b0.AutoSize = true;
-            this.cb_Sta2_REQ_B7_b0.Location = new System.Drawing.Point(1403, 855);
+            this.cb_Sta2_REQ_B7_b0.Location = new System.Drawing.Point(1488, 832);
             this.cb_Sta2_REQ_B7_b0.Name = "cb_Sta2_REQ_B7_b0";
             this.cb_Sta2_REQ_B7_b0.Size = new System.Drawing.Size(157, 29);
             this.cb_Sta2_REQ_B7_b0.TabIndex = 30;
@@ -559,7 +564,7 @@
             // 
             // tb_S_buck_fbk_1
             // 
-            this.tb_S_buck_fbk_1.Location = new System.Drawing.Point(209, 1145);
+            this.tb_S_buck_fbk_1.Location = new System.Drawing.Point(634, 973);
             this.tb_S_buck_fbk_1.Maximum = 100;
             this.tb_S_buck_fbk_1.Name = "tb_S_buck_fbk_1";
             this.tb_S_buck_fbk_1.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -571,7 +576,7 @@
             // 
             // tb_P_buck_fbk_1
             // 
-            this.tb_P_buck_fbk_1.Location = new System.Drawing.Point(72, 1145);
+            this.tb_P_buck_fbk_1.Location = new System.Drawing.Point(180, 973);
             this.tb_P_buck_fbk_1.Maximum = 100;
             this.tb_P_buck_fbk_1.Name = "tb_P_buck_fbk_1";
             this.tb_P_buck_fbk_1.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -584,25 +589,25 @@
             // lbl_S_buck_fbk_1
             // 
             this.lbl_S_buck_fbk_1.AutoSize = true;
-            this.lbl_S_buck_fbk_1.Location = new System.Drawing.Point(220, 1428);
+            this.lbl_S_buck_fbk_1.Location = new System.Drawing.Point(615, 925);
             this.lbl_S_buck_fbk_1.Name = "lbl_S_buck_fbk_1";
-            this.lbl_S_buck_fbk_1.Size = new System.Drawing.Size(151, 25);
+            this.lbl_S_buck_fbk_1.Size = new System.Drawing.Size(109, 25);
             this.lbl_S_buck_fbk_1.TabIndex = 35;
-            this.lbl_S_buck_fbk_1.Text = "S Bucket fbk 1";
+            this.lbl_S_buck_fbk_1.Text = "SbukFbk1";
             // 
-            // lb_P_buck_fbk_1
+            // lbl_P_buck_fbk_1
             // 
-            this.lb_P_buck_fbk_1.AutoSize = true;
-            this.lb_P_buck_fbk_1.Location = new System.Drawing.Point(37, 1428);
-            this.lb_P_buck_fbk_1.Name = "lb_P_buck_fbk_1";
-            this.lb_P_buck_fbk_1.Size = new System.Drawing.Size(151, 25);
-            this.lb_P_buck_fbk_1.TabIndex = 34;
-            this.lb_P_buck_fbk_1.Text = "P Bucket fbk 1";
+            this.lbl_P_buck_fbk_1.AutoSize = true;
+            this.lbl_P_buck_fbk_1.Location = new System.Drawing.Point(160, 926);
+            this.lbl_P_buck_fbk_1.Name = "lbl_P_buck_fbk_1";
+            this.lbl_P_buck_fbk_1.Size = new System.Drawing.Size(109, 25);
+            this.lbl_P_buck_fbk_1.TabIndex = 34;
+            this.lbl_P_buck_fbk_1.Text = "PbukFbk1";
             // 
             // lbl_AD_Nozz_fbk_1
             // 
             this.lbl_AD_Nozz_fbk_1.AutoSize = true;
-            this.lbl_AD_Nozz_fbk_1.Location = new System.Drawing.Point(375, 1290);
+            this.lbl_AD_Nozz_fbk_1.Location = new System.Drawing.Point(375, 953);
             this.lbl_AD_Nozz_fbk_1.Name = "lbl_AD_Nozz_fbk_1";
             this.lbl_AD_Nozz_fbk_1.Size = new System.Drawing.Size(126, 25);
             this.lbl_AD_Nozz_fbk_1.TabIndex = 37;
@@ -610,7 +615,7 @@
             // 
             // tb_AD_Nozz_fbk_1
             // 
-            this.tb_AD_Nozz_fbk_1.Location = new System.Drawing.Point(371, 1318);
+            this.tb_AD_Nozz_fbk_1.Location = new System.Drawing.Point(299, 981);
             this.tb_AD_Nozz_fbk_1.Maximum = 100;
             this.tb_AD_Nozz_fbk_1.Name = "tb_AD_Nozz_fbk_1";
             this.tb_AD_Nozz_fbk_1.Size = new System.Drawing.Size(280, 90);
@@ -622,7 +627,7 @@
             // lbl_AD_Nozz_fbk_2
             // 
             this.lbl_AD_Nozz_fbk_2.AutoSize = true;
-            this.lbl_AD_Nozz_fbk_2.Location = new System.Drawing.Point(1298, 1290);
+            this.lbl_AD_Nozz_fbk_2.Location = new System.Drawing.Point(1626, 926);
             this.lbl_AD_Nozz_fbk_2.Name = "lbl_AD_Nozz_fbk_2";
             this.lbl_AD_Nozz_fbk_2.Size = new System.Drawing.Size(126, 25);
             this.lbl_AD_Nozz_fbk_2.TabIndex = 43;
@@ -630,7 +635,7 @@
             // 
             // tb_AD_Nozz_fbk_2
             // 
-            this.tb_AD_Nozz_fbk_2.Location = new System.Drawing.Point(1294, 1318);
+            this.tb_AD_Nozz_fbk_2.Location = new System.Drawing.Point(1565, 979);
             this.tb_AD_Nozz_fbk_2.Maximum = 100;
             this.tb_AD_Nozz_fbk_2.Name = "tb_AD_Nozz_fbk_2";
             this.tb_AD_Nozz_fbk_2.Size = new System.Drawing.Size(280, 90);
@@ -641,25 +646,25 @@
             // 
             // lb_S_buck_fbk_2
             // 
-            this.lb_S_buck_fbk_2.AutoSize = true;
-            this.lb_S_buck_fbk_2.Location = new System.Drawing.Point(1143, 1428);
-            this.lb_S_buck_fbk_2.Name = "lb_S_buck_fbk_2";
-            this.lb_S_buck_fbk_2.Size = new System.Drawing.Size(151, 25);
-            this.lb_S_buck_fbk_2.TabIndex = 41;
-            this.lb_S_buck_fbk_2.Text = "S Bucket fbk 1";
+            this.lbl_S_buck_fbk_2.AutoSize = true;
+            this.lbl_S_buck_fbk_2.Location = new System.Drawing.Point(1837, 926);
+            this.lbl_S_buck_fbk_2.Name = "lb_S_buck_fbk_2";
+            this.lbl_S_buck_fbk_2.Size = new System.Drawing.Size(151, 25);
+            this.lbl_S_buck_fbk_2.TabIndex = 41;
+            this.lbl_S_buck_fbk_2.Text = "S Bucket fbk 1";
             // 
             // lb_P_buck_fbk_2
             // 
-            this.lb_P_buck_fbk_2.AutoSize = true;
-            this.lb_P_buck_fbk_2.Location = new System.Drawing.Point(960, 1428);
-            this.lb_P_buck_fbk_2.Name = "lb_P_buck_fbk_2";
-            this.lb_P_buck_fbk_2.Size = new System.Drawing.Size(151, 25);
-            this.lb_P_buck_fbk_2.TabIndex = 40;
-            this.lb_P_buck_fbk_2.Text = "P Bucket fbk 1";
+            this.lbl_P_buck_fbk_2.AutoSize = true;
+            this.lbl_P_buck_fbk_2.Location = new System.Drawing.Point(1445, 925);
+            this.lbl_P_buck_fbk_2.Name = "lb_P_buck_fbk_2";
+            this.lbl_P_buck_fbk_2.Size = new System.Drawing.Size(151, 25);
+            this.lbl_P_buck_fbk_2.TabIndex = 40;
+            this.lbl_P_buck_fbk_2.Text = "P Bucket fbk 1";
             // 
             // tb_S_buck_fbk_2
             // 
-            this.tb_S_buck_fbk_2.Location = new System.Drawing.Point(1132, 1145);
+            this.tb_S_buck_fbk_2.Location = new System.Drawing.Point(1898, 973);
             this.tb_S_buck_fbk_2.Maximum = 100;
             this.tb_S_buck_fbk_2.Name = "tb_S_buck_fbk_2";
             this.tb_S_buck_fbk_2.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -671,7 +676,7 @@
             // 
             // tb_P_buck_fbk_2
             // 
-            this.tb_P_buck_fbk_2.Location = new System.Drawing.Point(995, 1145);
+            this.tb_P_buck_fbk_2.Location = new System.Drawing.Point(1459, 973);
             this.tb_P_buck_fbk_2.Maximum = 100;
             this.tb_P_buck_fbk_2.Name = "tb_P_buck_fbk_2";
             this.tb_P_buck_fbk_2.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -684,18 +689,19 @@
             // lbl_SThro_REV_1
             // 
             this.lbl_SThro_REV_1.AutoSize = true;
-            this.lbl_SThro_REV_1.Location = new System.Drawing.Point(499, 1103);
+            this.lbl_SThro_REV_1.Location = new System.Drawing.Point(763, 1439);
             this.lbl_SThro_REV_1.Name = "lbl_SThro_REV_1";
-            this.lbl_SThro_REV_1.Size = new System.Drawing.Size(149, 25);
+            this.lbl_SThro_REV_1.Size = new System.Drawing.Size(117, 25);
             this.lbl_SThro_REV_1.TabIndex = 47;
-            this.lbl_SThro_REV_1.Text = "S Throt REV 1";
+            this.lbl_SThro_REV_1.Text = "SengREV1";
             // 
             // tb_SThro_REV_1
             // 
-            this.tb_SThro_REV_1.Location = new System.Drawing.Point(492, 820);
+            this.tb_SThro_REV_1.Location = new System.Drawing.Point(768, 1156);
             this.tb_SThro_REV_1.Maximum = 100;
             this.tb_SThro_REV_1.Name = "tb_SThro_REV_1";
             this.tb_SThro_REV_1.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.tb_SThro_REV_1.RightToLeftLayout = true;
             this.tb_SThro_REV_1.Size = new System.Drawing.Size(90, 280);
             this.tb_SThro_REV_1.TabIndex = 46;
             this.tb_SThro_REV_1.TickFrequency = 10;
@@ -705,15 +711,15 @@
             // lbl_SThro_AHD_1
             // 
             this.lbl_SThro_AHD_1.AutoSize = true;
-            this.lbl_SThro_AHD_1.Location = new System.Drawing.Point(350, 1103);
+            this.lbl_SThro_AHD_1.Location = new System.Drawing.Point(763, 836);
             this.lbl_SThro_AHD_1.Name = "lbl_SThro_AHD_1";
-            this.lbl_SThro_AHD_1.Size = new System.Drawing.Size(143, 25);
+            this.lbl_SThro_AHD_1.Size = new System.Drawing.Size(118, 25);
             this.lbl_SThro_AHD_1.TabIndex = 45;
-            this.lbl_SThro_AHD_1.Text = "S throt AHD 1";
+            this.lbl_SThro_AHD_1.Text = "SengAHD1";
             // 
             // tb_SThro_AHD_1
             // 
-            this.tb_SThro_AHD_1.Location = new System.Drawing.Point(355, 820);
+            this.tb_SThro_AHD_1.Location = new System.Drawing.Point(768, 884);
             this.tb_SThro_AHD_1.Maximum = 100;
             this.tb_SThro_AHD_1.Name = "tb_SThro_AHD_1";
             this.tb_SThro_AHD_1.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -726,7 +732,7 @@
             // lbl_SThro_REV_2
             // 
             this.lbl_SThro_REV_2.AutoSize = true;
-            this.lbl_SThro_REV_2.Location = new System.Drawing.Point(1222, 1092);
+            this.lbl_SThro_REV_2.Location = new System.Drawing.Point(2026, 1440);
             this.lbl_SThro_REV_2.Name = "lbl_SThro_REV_2";
             this.lbl_SThro_REV_2.Size = new System.Drawing.Size(129, 25);
             this.lbl_SThro_REV_2.TabIndex = 51;
@@ -734,7 +740,7 @@
             // 
             // tb_SThro_REV_2
             // 
-            this.tb_SThro_REV_2.Location = new System.Drawing.Point(1227, 809);
+            this.tb_SThro_REV_2.Location = new System.Drawing.Point(2031, 1157);
             this.tb_SThro_REV_2.Maximum = 100;
             this.tb_SThro_REV_2.Name = "tb_SThro_REV_2";
             this.tb_SThro_REV_2.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -747,7 +753,7 @@
             // lbl_SThro_AHD_2
             // 
             this.lbl_SThro_AHD_2.AutoSize = true;
-            this.lbl_SThro_AHD_2.Location = new System.Drawing.Point(1085, 1092);
+            this.lbl_SThro_AHD_2.Location = new System.Drawing.Point(2008, 836);
             this.lbl_SThro_AHD_2.Name = "lbl_SThro_AHD_2";
             this.lbl_SThro_AHD_2.Size = new System.Drawing.Size(123, 25);
             this.lbl_SThro_AHD_2.TabIndex = 49;
@@ -755,7 +761,7 @@
             // 
             // tb_SThro_AHD_2
             // 
-            this.tb_SThro_AHD_2.Location = new System.Drawing.Point(1090, 809);
+            this.tb_SThro_AHD_2.Location = new System.Drawing.Point(2031, 864);
             this.tb_SThro_AHD_2.Maximum = 100;
             this.tb_SThro_AHD_2.Name = "tb_SThro_AHD_2";
             this.tb_SThro_AHD_2.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -765,11 +771,55 @@
             this.tb_SThro_AHD_2.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.tb_SThro_AHD_2.Value = 50;
             // 
+            // cb_Sta1_SCluEnable
+            // 
+            this.cb_Sta1_SCluEnable.AutoSize = true;
+            this.cb_Sta1_SCluEnable.Location = new System.Drawing.Point(261, 479);
+            this.cb_Sta1_SCluEnable.Name = "cb_Sta1_SCluEnable";
+            this.cb_Sta1_SCluEnable.Size = new System.Drawing.Size(248, 29);
+            this.cb_Sta1_SCluEnable.TabIndex = 53;
+            this.cb_Sta1_SCluEnable.Text = "cb_Sta1_SCluEnable";
+            this.cb_Sta1_SCluEnable.UseVisualStyleBackColor = true;
+            // 
+            // cb_Sta1_PCluEnable
+            // 
+            this.cb_Sta1_PCluEnable.AutoSize = true;
+            this.cb_Sta1_PCluEnable.Location = new System.Drawing.Point(42, 479);
+            this.cb_Sta1_PCluEnable.Name = "cb_Sta1_PCluEnable";
+            this.cb_Sta1_PCluEnable.Size = new System.Drawing.Size(213, 29);
+            this.cb_Sta1_PCluEnable.TabIndex = 52;
+            this.cb_Sta1_PCluEnable.Text = "Sta1_PCluEnable";
+            this.cb_Sta1_PCluEnable.UseVisualStyleBackColor = true;
+            // 
+            // cb_Sta2_SCluEnable
+            // 
+            this.cb_Sta2_SCluEnable.AutoSize = true;
+            this.cb_Sta2_SCluEnable.Location = new System.Drawing.Point(1670, 556);
+            this.cb_Sta2_SCluEnable.Name = "cb_Sta2_SCluEnable";
+            this.cb_Sta2_SCluEnable.Size = new System.Drawing.Size(213, 29);
+            this.cb_Sta2_SCluEnable.TabIndex = 55;
+            this.cb_Sta2_SCluEnable.Text = "Sta2_SCluEnable";
+            this.cb_Sta2_SCluEnable.UseVisualStyleBackColor = true;
+            // 
+            // cb_Sta2_PCluEnable
+            // 
+            this.cb_Sta2_PCluEnable.AutoSize = true;
+            this.cb_Sta2_PCluEnable.Location = new System.Drawing.Point(1451, 556);
+            this.cb_Sta2_PCluEnable.Name = "cb_Sta2_PCluEnable";
+            this.cb_Sta2_PCluEnable.Size = new System.Drawing.Size(213, 29);
+            this.cb_Sta2_PCluEnable.TabIndex = 54;
+            this.cb_Sta2_PCluEnable.Text = "Sta2_PCluEnable";
+            this.cb_Sta2_PCluEnable.UseVisualStyleBackColor = true;
+            // 
             // INFPB_MK3_AD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1743, 1462);
+            this.ClientSize = new System.Drawing.Size(2295, 1569);
+            this.Controls.Add(this.cb_Sta2_SCluEnable);
+            this.Controls.Add(this.cb_Sta2_PCluEnable);
+            this.Controls.Add(this.cb_Sta1_SCluEnable);
+            this.Controls.Add(this.cb_Sta1_PCluEnable);
             this.Controls.Add(this.lbl_SThro_REV_2);
             this.Controls.Add(this.tb_SThro_REV_2);
             this.Controls.Add(this.lbl_SThro_AHD_2);
@@ -780,14 +830,14 @@
             this.Controls.Add(this.tb_SThro_AHD_1);
             this.Controls.Add(this.lbl_AD_Nozz_fbk_2);
             this.Controls.Add(this.tb_AD_Nozz_fbk_2);
-            this.Controls.Add(this.lb_S_buck_fbk_2);
-            this.Controls.Add(this.lb_P_buck_fbk_2);
+            this.Controls.Add(this.lbl_S_buck_fbk_2);
+            this.Controls.Add(this.lbl_P_buck_fbk_2);
             this.Controls.Add(this.tb_S_buck_fbk_2);
             this.Controls.Add(this.tb_P_buck_fbk_2);
             this.Controls.Add(this.lbl_AD_Nozz_fbk_1);
             this.Controls.Add(this.tb_AD_Nozz_fbk_1);
             this.Controls.Add(this.lbl_S_buck_fbk_1);
-            this.Controls.Add(this.lb_P_buck_fbk_1);
+            this.Controls.Add(this.lbl_P_buck_fbk_1);
             this.Controls.Add(this.tb_S_buck_fbk_1);
             this.Controls.Add(this.tb_P_buck_fbk_1);
             this.Controls.Add(this.cb_Sta2_allow_B7_b1);
@@ -901,13 +951,13 @@
         private System.Windows.Forms.TrackBar tb_S_buck_fbk_1;
         private System.Windows.Forms.TrackBar tb_P_buck_fbk_1;
         private System.Windows.Forms.Label lbl_S_buck_fbk_1;
-        private System.Windows.Forms.Label lb_P_buck_fbk_1;
+        private System.Windows.Forms.Label lbl_P_buck_fbk_1;
         private System.Windows.Forms.Label lbl_AD_Nozz_fbk_1;
         private System.Windows.Forms.TrackBar tb_AD_Nozz_fbk_1;
         private System.Windows.Forms.Label lbl_AD_Nozz_fbk_2;
         private System.Windows.Forms.TrackBar tb_AD_Nozz_fbk_2;
-        private System.Windows.Forms.Label lb_S_buck_fbk_2;
-        private System.Windows.Forms.Label lb_P_buck_fbk_2;
+        private System.Windows.Forms.Label lbl_S_buck_fbk_2;
+        private System.Windows.Forms.Label lbl_P_buck_fbk_2;
         private System.Windows.Forms.TrackBar tb_S_buck_fbk_2;
         private System.Windows.Forms.TrackBar tb_P_buck_fbk_2;
         private System.Windows.Forms.Label lbl_SThro_REV_1;
@@ -918,5 +968,9 @@
         private System.Windows.Forms.TrackBar tb_SThro_REV_2;
         private System.Windows.Forms.Label lbl_SThro_AHD_2;
         private System.Windows.Forms.TrackBar tb_SThro_AHD_2;
+        private System.Windows.Forms.CheckBox cb_Sta1_SCluEnable;
+        private System.Windows.Forms.CheckBox cb_Sta1_PCluEnable;
+        private System.Windows.Forms.CheckBox cb_Sta2_SCluEnable;
+        private System.Windows.Forms.CheckBox cb_Sta2_PCluEnable;
     }
 }

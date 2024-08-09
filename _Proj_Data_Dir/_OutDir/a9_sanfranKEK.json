@@ -1,0 +1,353 @@
+{
+  "Title": "a9_sanfranKEK",
+  "AllPgnList": [
+    {
+      "IDpgn": 1,
+      "PGN_int": 419400745,
+      "PGN_strHEX": "0x18FF8C29",
+      "DESCpgn": "from KEK   KEK Software Version  ",
+      "CtrlList": [
+        {
+          "ID": 1,
+          "DESC": "Minor Software Version ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 1010,
+          "INDEXLO": 1,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 3,
+          "DESC": "Sofware Revision ",
+          "MIN": 0,
+          "MAX": 65535,
+          "DEF": 4476,
+          "INDEXLO": 3,
+          "INDEXHI": 4,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 0,
+          "DESC": "Major Sofware Version ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 67,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 2,
+      "PGN_int": 419377972,
+      "PGN_strHEX": "0x18FF3334",
+      "DESCpgn": "from KEK    KEK clutch soft vers    unit A ",
+      "CtrlList": [
+        {
+          "ID": 5,
+          "DESC": "Major Sofware Version ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 2,
+          "INDEXLO": 5,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 6,
+          "DESC": "Minor Sofware Version ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 12,
+          "INDEXLO": 6,
+          "INDEXHI": 6,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 7,
+          "DESC": "Sofware Revision ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 123,
+          "INDEXLO": 7,
+          "INDEXHI": 7,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 3,
+      "PGN_int": 0,
+      "PGN_strHEX": "0x00000000",
+      "DESCpgn": "from KEK    KEK clutch soft vers    unit B ",
+      "CtrlList": [
+        {
+          "ID": 5,
+          "DESC": "Major Sofware Version ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 2,
+          "INDEXLO": 5,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 6,
+          "DESC": "Minor Sofware Version ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 12,
+          "INDEXLO": 6,
+          "INDEXHI": 6,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 7,
+          "DESC": "Sofware Revision ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 123,
+          "INDEXLO": 7,
+          "INDEXHI": 7,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 4,
+      "PGN_int": 419369987,
+      "PGN_strHEX": "0x18FF1403",
+      "DESCpgn": "from IDK    Commands ?    ",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "CAN adr ",
+          "MIN": 0,
+          "MAX": 4,
+          "DEF": 1,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "CAN CMD TYPE ",
+          "MIN": 0,
+          "MAX": 10,
+          "DEF": 1,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "CAN CMD DATA ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 1,
+          "INDEXLO": 2,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 5,
+      "PGN_int": 419363881,
+      "PGN_strHEX": "0x18FEFC29",
+      "DESCpgn": "from Control Unit     FeedBacks    ",
+      "CtrlList": [
+        {
+          "ID": 2,
+          "DESC": "P Nozzle fbk ",
+          "MIN": 0,
+          "MAX": 254,
+          "DEF": 127,
+          "INDEXLO": 2,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 3,
+          "DESC": "S Nozzle fbk ",
+          "MIN": 0,
+          "MAX": 254,
+          "DEF": 127,
+          "INDEXLO": 3,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 6,
+      "PGN_int": 419401513,
+      "PGN_strHEX": "0x18FF8F29",
+      "DESCpgn": "from Control Unit    Engine Commands    ",
+      "CtrlList": [
+        {
+          "ID": 4,
+          "DESC": "SF_P_actual RPM ",
+          "MIN": 0,
+          "MAX": 4000,
+          "DEF": 100,
+          "INDEXLO": 4,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 6,
+          "DESC": "SF_S_actual RPM ",
+          "MIN": 0,
+          "MAX": 4000,
+          "DEF": 100,
+          "INDEXLO": 6,
+          "INDEXHI": 7,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 0,
+          "DESC": "Sbtd_Sahft RPM ahd ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 127,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "Port_Sahft RPM ahd ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 127,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "stbd_Sahft RPM rev ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 127,
+          "INDEXLO": 2,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 3,
+          "DESC": "port_Sahft RPM rev ",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 127,
+          "INDEXLO": 3,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    }
+  ]
+}

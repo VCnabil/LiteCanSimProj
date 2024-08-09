@@ -1,4 +1,1398 @@
 ﻿============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 155
+PGN_32bit : 65424
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : Rev5766
+info: N/A
+Configuration : MK3AD MK3WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFF90    (   Software Version   )
+
+            - Byte0 : Major Sofware Version |BL*87
+ 
+            - Byte1 : Minor Software Version LO |B2*1003
+ 
+            - Byte2 : Minor Software Version  HI |B2
+ 
+            - Byte3 : Sofware Revision LO |B2*5766
+ 
+            - Byte4 : Sofware Revision HI |B2
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Units
+VC_PGN_ID : 156
+PGN_32bit : 65440
+address Port: 01
+address Stbd: 02
+priority    : 18
+Sending_Unit_Software_version : Rev5158?
+info: N/A
+Configuration : MK3AD MK3WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFFA0    (   A&M Software Version   )
+
+            - Byte0 : Major Software Version LO |B2*79
+ 
+            - Byte1 : Major Software Version HI |B2
+ 
+            - Byte2 : Minor Software Version LO |B2*1000
+ 
+            - Byte3 : Minor Software Version HI |B2
+ 
+            - Byte4 : Sofware Revision LO |B2*5158
+ 
+            - Byte5 : Sofware Revision HI |B2
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : CIM
+VC_PGN_ID : 153
+PGN_32bit : 65450
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 101.1000.5036
+info: N/A
+Configuration : MK3AD MK3WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFFAA    (  CIM Software Version   )
+
+            - Byte0 : CAN1/2 Buffer - Historic Max Size Since Powerup |BL(0,0,255)
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : Dimming Knob Level |BT(0,60,100)
+ 
+            - Byte3 : Major Sofware Version |BL*101
+ 
+            - Byte4 : Minor Sofware Version LO |B2*1000
+ 
+            - Byte5 : Minor Sofware Version HI |B2
+ 
+            - Byte6 : Software Revision LO |B2*5036
+ 
+            - Byte7 : Software Revision HI |B2
+
+============================================================================
+CAN Messages From :  Control Unit
+VC_PGN_ID : 157
+PGN_32bit : 65458
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : MK3AD MK3WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : murphy
+CTRLs : N/A
+============================================================================
+    0xFFB2    (   cu Brigthness sta 1   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : Sta 1 Dimming cmd |BT(0,45,100)
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From :  Control Unit
+VC_PGN_ID : 157
+PGN_32bit : 65459
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : MK3AD MK3WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFFB3    (   cu Brigthness sta 2   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : Sta 2 Dimming cmd |BT(0,45,100)
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 54
+PGN_32bit : 65421
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: port is 00 stbd is 01   
+Configuration : MK3AD MK3WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFF8D    (   Faults   )
+
+            - Byte0 : CU Faults |XX
+                    - b0 : Calibration fault
+                    - b1 : Control Unit to Closed-Bridge Dimming Panel Comm
+                    - b2 : Control Unit to Open-Bridge Dimming Panel Comm
+                    - b3 : Control Unit - Alarm & Monitoring Unit Comm
+                    - b4 : Clutch Enable Switches Disconnected
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Station 1 Faults |XX
+                    - b0 : Helm Signal fault
+                    - b1 : Port Azimuth Lever Signal fault
+                    - b2 : Stbd Azimuth Lever Signal fault
+                    - b3 : PORT Azimuth Steer Signal fault
+                    - b4 : Stbd Azimuth Steer Signal fault
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : Station 2 Faults |XX
+                    - b0 : Helm Fault
+                    - b1 : PORT Control Lever Fault
+                    - b2 : STBD Control Lever Fault
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte3 : Feedback Sensor Faults |XX
+                    - b0 : PORT Nozzle Feedback Fault
+                    - b1 : STBD Nozzle Feedback Fault
+                    - b2 : PORT Bucket Feedback Fault
+                    - b3 : STBD Bucket Feedback Fault
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte4 : Non-Follow-Up Faults |XX
+                    - b0 : PORT Nozzle Non-Follow-Up
+                    - b1 : STBD Nozzle Non-Follow-Up
+                    - b2 : PORT Bucket Non-Follow-Up
+                    - b3 : STBD Bucket Non-Follow-Up
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit Clutch
+VC_PGN_ID : 159
+PGN_32bit : 65420
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : rev6331
+info: N/A
+Configuration :  MK3AD
+Project : INFPB MK3
+Type : N/A
+Comments : -------------CU1 addres 00
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFF8C    (    system CU1 info    )
+
+            - Byte0 : Clutch Command |XX*18
+                    - b0 : CU1.P CLUT DIS
+                    - b1 : CU1.P CLUT AHD
+                    - b2 : CU1.P CLUT REV
+                    - b3 : CU1.S CLUT DIS
+                    - b4 : CU1.S CLUT AHD
+                    - b5 : CU1.S CLUT REV
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Switching Relay |XX*2
+                    - b0 : Switching Relay to CU2
+                    - b1 : Is Control Unit Active 
+                    - b2 : Station 2 Port Clutch Enable 
+                    - b3 : Station 2 Stbd Clutch Enable 
+                    - b4 : Station 1 Port Clutch Enable
+                    - b5 : Station 1 Stbd Clutch Enable
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : CU1.PPort Engine AHD |BT(0,50,100)
+
+            - Byte3 : CU1.PPort Engine REV |BT(0,50,100)
+ 
+            - Byte4 : CU1.PStbd Engine AHD |BT(0,50,100)
+ 
+            - Byte5 : CU1.PStbd Engine REV |BT(0,50,100)
+
+            - Byte6 : Station in Control |BL(0,1,5)
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit Clutch
+VC_PGN_ID : 159
+PGN_32bit : 65420
+address Port: 01
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : rev6331
+info: N/A
+Configuration :  MK3AD
+Project : INFPB MK3
+Type : N/A
+Comments : -------------CU2 addres 01
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFF8C    (    system CU2 info    )
+
+            - Byte0 : Clutch Command |XX*18
+                    - b0 : CU2.P CLUT DIS
+                    - b1 : CU2.P CLUT AHD
+                    - b2 : CU2.P CLUT REV
+                    - b3 : CU2.S CLUT DIS
+                    - b4 : CU2.S CLUT AHD
+                    - b5 : CU2.S CLUT REV
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Switching Relay |XX
+                    - b0 : Switching Relay to CU2
+                    - b1 : Is Control Unit Active 
+                    - b2 : Station 2 Port Clutch Enable 
+                    - b3 : Station 2 Stbd Clutch Enable 
+                    - b4 : Station 1 Port Clutch Enable
+                    - b5 : Station 1 Stbd Clutch Enable
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : CU2.PPort Engine AHD |BT(0,50,100)
+
+            - Byte3 : CU2.PPort Engine REV |BT(0,50,100)
+ 
+            - Byte4 : CU2.PStbd Engine AHD |BT(0,50,100)
+ 
+            - Byte5 : CU2.PStbd Engine REV |BT(0,50,100)
+
+            - Byte6 : Station in Control |BL(0,1,5)
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit Clutch
+VC_PGN_ID : 159
+PGN_32bit : 65420
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : rev6331
+info: N/A
+Configuration :  MK3WJ
+Project : INFPB MK3
+Type : N/A
+Comments : -------------CU1 addres 00
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFF8C    (    system CU1 info    )
+
+            - Byte0 : Clutch Command |XX*18
+                    - b0 : CU1.P CLUT DIS
+                    - b1 : CU1.P CLUT AHD
+                    - b2 : CU1.P CLUT REV
+                    - b3 : CU1.S CLUT DIS
+                    - b4 : CU1.S CLUT AHD
+                    - b5 : CU1.S CLUT REV
+                    - b6 : CU1.P CLUT BLOCKED
+                    - b7 : CU1.S CLUT BLOCKED
+ 
+            - Byte1 : Switching Relay |XX*2
+                    - b0 : CU1.Swiych Relay Ctrl to CU B
+                    - b1 : CU1.Is  Active
+                    - b2 : CU1.Sta2 P Clutch Enable
+                    - b3 : CU1.Sta2 S Clutch Enable
+                    - b4 : CU1.Sta1 P.Enab-Steer
+                    - b5 : CU1.Sta1 S.Enab-Throt
+                    - b6 : CU1.Sta2 SteerMode
+                    - b7 : CU1.Sta2 ThrottleMode
+ 
+            - Byte2 : CU1.P_end_speed |BT(0,50,100)
+ 
+            - Byte3 : CU1.S_end_speed |BT(0,50,100)
+ 
+            - Byte4 : CU1.Idle level |BT(0,50,100)
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : CU1.STA-BRIDGE in CTRL |BL(1,1,20)
+ 
+            - Byte7 : Clutch fbk enum |XX*50
+                    - b0 : CU1.PCLUT DIS
+                    - b1 : CU1.PCLUT ENG
+                    - b2 : CU1.PCLUT BKFLSH
+                    - b3 : N/A
+                    - b4 : CU1.SCLUT DIS
+                    - b5 : CU1.SCLUT ENG
+                    - b6 : CU1.SCLUT BKFLSH
+                    - b7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit Clutch
+VC_PGN_ID : 159
+PGN_32bit : 65420
+address Port: 01
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : rev6331
+info: N/A
+Configuration :  MK3WJ
+Project : INFPB MK3
+Type : N/A
+Comments : -------------CU 2 addres 01
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFF8C    (    system CU2 info    )
+
+            - Byte0 : Clutch Command |XX*18
+                    - b0 : Prt CLUT DIS
+                    - b1 : Prt CLUT AHD
+                    - b2 : Prt CLUT REV
+                    - b3 : Stbd CLUT DIS
+                    - b4 : Stbd CLUT AHD
+                    - b5 : Stbd CLUT REV
+                    - b6 : Prt CLUT BLOCKED
+                    - b7 : Stbd CLUT BLOCKED
+ 
+            - Byte1 : Switching Relay |XX
+                    - b0 : Swiych Relay Ctrl to CU B
+                    - b1 : Is Control Unit Active
+                    - b2 : Sta2 P Clutch Enable
+                    - b3 : Sta2 S Clutch Enable
+                    - b4 : Sta1 P.Enab-Steer
+                    - b5 : Sta1 S.Enab-Throt
+                    - b6 : Sta2 P.SteerMode
+                    - b7 : Sta2 S.ThrottleMode
+ 
+            - Byte2 : P_speed |BT(0,50,100)
+ 
+            - Byte3 : S_speed |BT(0,50,100)
+ 
+            - Byte4 : (WJ)Idlelvl |BT(0,50,100)
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 :  STA-BRIDGE in CTRol |BL(0,1,10)
+ 
+            - Byte7 : Clutch fbk enum |XX*50
+                    - b0 : PCLUT DIS
+                    - b1 : PCLUT ENG
+                    - b2 : PCLUT BKFLSH
+                    - b3 : N/A
+                    - b4 : SCLUT DIS
+                    - b5 : SCLUT ENG
+                    - b6 : SCLUT BKFLSH
+                    - b7 : N/A
+
+============================================================================
+CAN Messages From : A&M
+VC_PGN_ID : 152
+PGN_32bit : 65441
+address Port: 01
+address Stbd: 02
+priority    : 18
+Sending_Unit_Software_version : rev5158
+info: N/A
+Configuration : MK3AD
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : murphy
+CTRLs : N/A
+============================================================================
+    0xFFA1    (   A&M HPU Faults and Switch States   )
+
+            - Byte0 : HPU Faults |XX
+                    - b0 : Hydraulic Press HIGH
+                    - b1 : Hydraulic TEMP HIGH
+                    - b2 : Low Lb Oil TEMP HIGH
+                    - b3 : Low Lb Oil Press low
+                    - b4 : Filter Blocked
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : A&M
+VC_PGN_ID : 152
+PGN_32bit : 65441
+address Port: 01
+address Stbd: 02
+priority    : 18
+Sending_Unit_Software_version : rev5158
+info: N/A
+Configuration : MK3WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : CORE
+CTRLs : N/A
+============================================================================
+    0xFFA1    (   A&M HPU Faults and Switch States   )
+
+            - Byte0 : HPU Faults |XX
+                    - b0 : Low Hydraulic Press
+                    - b1 : Low Lb Oil Port
+                    - b2 : Low Lb Oil Stbd
+                    - b3 : High T Hydrolic Oil
+                    - b4 : AL Filter Blocked
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : switches |XX
+                    - b0 : Open Bridge Port Clutch Enable
+                    - b1 : Open Bridge Stbd Clutch Enable
+                    - b2 : Closed Bridge Port Clutch Enable
+                    - b3 : Closed Bridge Stbd Clutch Enable
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte3 : Station 1 Idle Knob LO |B2(0,50,500)
+ 
+            - Byte4 : Station 1 Idle Knob HI |B2
+ 
+            - Byte5 : Station 2 Idle Knob LO |B2(0,50,500)
+ 
+            - Byte6 : Station 2 Idle Knob HI |B2
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 154
+PGN_32bit : 65276
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : MK3AD
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : murphy
+CTRLs : N/A
+============================================================================
+    0xFEFC    (   INFPB MK3 combined FeedBacks   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : P Bucket fbk |BT(0,50,100)
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : Nozzles fbk |BT(0,50,100)
+ 
+            - Byte7 : S Bucket fbk |BT(0,50,100)
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 154
+PGN_32bit : 65276
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : MK3WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : murphy
+CTRLs : N/A
+============================================================================
+    0xFEFC    (   INFPB MK3 WJonly FeedBacks   )
+
+            - Byte0 : P Bucket fbk |BT(0,127,254)
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : S Nozzle fbk |BT(0,127,254)
+ 
+            - Byte3 : P Nozzle fbk |BT(0,127,254)
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : S Bucket fbk |BT(0,127,254)
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 160
+PGN_32bit : 65422
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : MK3AD
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : murphy
+CTRLs : N/A
+============================================================================
+    0xFF8E    (   Station 1 Commands   )
+
+            - Byte0 : St1 P Trim CMD |BT(0,50,100)
+ 
+            - Byte1 : St1 S Trim CMD |BT(0,50,100)
+ 
+            - Byte2 : Station 1 Helm |BT(0,50,100)
+ 
+            - Byte3 : St1 P Throttle AHD CMD |BT(0,50,100)
+ 
+            - Byte4 : St1 P Throttle REV CMD |BT(0,50,100)
+ 
+            - Byte5 : St1 S Throttle AHD CMD |BT(0,50,100)
+ 
+            - Byte6 : St1 S Throttle REV CMD |BT(0,50,100)
+ 
+            - Byte7 : Station1 REQ |XX
+                    - b0 : st1 Req Ctrl
+                    - b1 : st1 Allows Transf
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 160
+PGN_32bit : 65422
+address Port: 01
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : MK3AD
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : murphy
+CTRLs : N/A
+============================================================================
+    0xFF8E    (   Station 2 Commands   )
+
+            - Byte0 : St2 P Trim CMD |BT(0,50,100)
+ 
+            - Byte1 : St2 S Trim CMD |BT(0,50,100)
+ 
+            - Byte2 : Station 2 Helm |BT(0,50,100)
+ 
+            - Byte3 : St2 P Throttle AHD CMD |BT(0,50,100)
+ 
+            - Byte4 : St2 P Throttle REV CMD |BT(0,50,100)
+ 
+            - Byte5 : St2 S Throttle AHD CMD |BT(0,50,100)
+ 
+            - Byte6 : St2 S Throttle REV CMD |BT(0,50,100)
+ 
+            - Byte7 : Station1 REQ |XX
+                    - b0 : st1 Req Ctrl
+                    - b1 : st1 Allows Transf
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 160
+PGN_32bit : 65422
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : MK3WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : murphy STATION 1 
+CTRLs : N/A
+============================================================================
+    0xFF8E    (   Station 1 Commands   )
+
+            - Byte0 : st1 P Azm Steer |BT(0,50,100)
+ 
+            - Byte1 : st1 S Azm Steer |BT(0,50,100)
+ 
+            - Byte2 : st1 Helm cmd |BT(0,50,100)
+ 
+            - Byte3 : st1 P Azm Lever |BT(0,50,100)
+ 
+            - Byte4 : st1 S Azm Lever |BT(0,50,100)
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : Station1 REQ |XX*0
+                    - b0 : st1 Req Ctrl
+                    - b1 : st1 Allows Transf
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 160
+PGN_32bit : 65422
+address Port: 01
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : MK3WJ
+Project : INFPB MK3
+Type : N/A
+Comments : N/A
+Group : murphy STATION 2 
+CTRLs : N/A
+============================================================================
+    0xFF8E    (   Station 1 Commands   )
+
+            - Byte0 : st2.P azm Steer |BT(0,50,100)
+ 
+            - Byte1 : st2.S azm Steer |BT(0,50,100)
+ 
+            - Byte2 : st2.Helm cmd |BT(0,50,100)
+ 
+            - Byte3 : st2.P AZM Lever |BT(0,50,100)
+ 
+            - Byte4 : st2.S AZM Lever |BT(0,50,100)
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : Station2 REQ |XX*0
+                    - b0 : st2.Req Ctrl
+                    - b1 : st2.Allows Transf
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+============================================================================
+CAN Messages From : C31
+VC_PGN_ID : 0
+PGN_32bit : 61444
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : C3I
+Project : C3I
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xF004    (  Electronic Engine Controller 1 )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : eng_RPM LO |B2(0,1000,41000)
+ 
+            - Byte4 : eng_RPM HI |B2
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : C31
+VC_PGN_ID : 0
+PGN_32bit : 65263
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : C3I
+Project : C3I
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFEEF   (   Engine pressure )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : KPA |BT(0,2,250)
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : C31
+VC_PGN_ID : 0
+PGN_32bit : 65262
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : C3I
+Project : C3I
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFEEE    (   Engine Temperture )
+
+            - Byte0 : Temperture |BT(0,100,250)
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : C31
+VC_PGN_ID : 0
+PGN_32bit : 65266
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : C3I
+Project : C3I
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFEF2   (   Fuel Economy  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : ECO |BT(0,18,250)
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : C31
+VC_PGN_ID : 0
+PGN_32bit : 65271
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : C3I
+Project : C3I
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFEF7    (  Volts )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : Volts LO |B2(0,10,320)
+ 
+            - Byte5 : Volts HI |B2 
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : C31
+VC_PGN_ID : 0
+PGN_32bit : 65253
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : C3I
+Project : C3I
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFEE5    (  Engine Hours, Revolutions )
+
+            - Byte0 : time 32bit_0 |B4(0,265,10000)
+ 
+            - Byte1 : time 32bit_1 |B4
+ 
+            - Byte2 : time 32bit_2 |B4
+ 
+            - Byte3 : time 32bit_3 |B4
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : C31
+VC_PGN_ID : 0
+PGN_32bit : 65110
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: N/A
+Configuration : C3I
+Project : C3I
+Type : N/A
+Comments : N/A
+Group : N/A
+CTRLs : N/A
+============================================================================
+    0xFE56    (  Engine status  )
+    
+            - Byte0 : Eng |BT(0,0,250)
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 569
+PGN_32bit : 65369
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info:this in cu code checks if bow thrust exist . ssrs config does noy have bow thrust
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : comments section
+Group : groupnumber
+CTRLs : N/A
+============================================================================
+    0xFF59    (   Raw Switch states   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : Autopilot Raw LO |B2(0,0,4000)
+ 
+            - Byte5 : Autopilot Raw HI |B2
+ 
+            - Byte6 : Autopilot |XX
+                    - b0 : AP swtich
+                    - b1 : Autopilot Steer Port
+                    - b2 : Autopilot Steer Starboard
+                    - b3 : is Docking
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : bAP_OverrideInEffect
+                    - b7 : Blocked_DPinControl
+ 
+            - Byte7 : Autopilot |XX*0
+                    - b0 : N/A
+                    - b1 : ST1_Take ctrl
+                    - b2 : ST 2 MODE SW: Docking
+                    - b3 : ST 2 TC SW REQ
+                    - b4 : ST 3 MODE SW: Docking
+                    - b5 : ST 3 TC SW REQ
+                    - b6 : N/A
+                    - b7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 173
+PGN_32bit : 65363
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : comments section
+Group : groupnumber
+CTRLs : N/A
+============================================================================
+    0xFF53    (   System Information   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : AciveStation |BL(0,1,255)
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : AutoPilot Override Helm Percent |BT(0,0,100)
+ 
+            - Byte4 : NumHits ISRCAN2 PGN0xFF36 |BL(0,0,255)
+ 
+            - Byte5 : Autocal Stage |BL(0,0,255)
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 174
+PGN_32bit : 65276
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : comments section
+Group : groupnumber
+CTRLs : N/A
+============================================================================
+    0xFEFC    (   Indication   )
+
+            - Byte0 : Port BucketPos |BT(0,76,255)
+ 
+            - Byte1 : AP_OVERRIDE_HELM_PERCENT |BT(0,0,100)
+ 
+            - Byte2 : Stbd NozzlePos |BT(0,69,255)
+ 
+            - Byte3 : Port NozzlePos |BT(0,143,255)
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : Stbd BucketPos |BT(0,147,255)
+ 
+            - Byte6 : Port EngineCMD |BT(0,141,255)
+ 
+            - Byte7 : Stbd EngineCMD |BT(0,142,255)
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 171
+PGN_32bit : 65381
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : Tern 10.1003.6320
+info: N/A
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : N/A
+Group : g02
+CTRLs : N/A
+============================================================================
+    0xFF65    (   Dynamic Positioning Information )
+
+            - Byte0 : Off,prob,ovr,on |BL(0,0,4)
+ 
+            - Byte1 : tryOVRb2b3 |XX*0
+                    - b0 : isBlocked
+                    - b1 : DP ovr helm
+                    - b2 : DP ovr joy
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 172
+PGN_32bit : 65382
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: the pv connection is setup using a mask for all pgns, the adress is defined in code and this should be 29
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : comments section
+Group : groupnumber
+CTRLs : N/A
+============================================================================
+    0xFF66    (   DP Diagnostics 1   )
+
+            - Byte0 : JoyX LO |B2(0,430,1000)
+ 
+            - Byte1 : JoyX HI |B2
+ 
+            - Byte2 : JoyY LO |B2(0,390,1000)
+ 
+            - Byte3 : JoyY HI |B2
+ 
+            - Byte4 : Helm LO |B2(0,270,1000)
+ 
+            - Byte5 : Helm HI |B2
+ 
+            - Byte6 : IdleRPM LO |B2(0,700,4000)
+ 
+            - Byte7 : IdleRPM HI |B2
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 175
+PGN_32bit : 65328
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : comments section
+Group : groupnumber
+CTRLs : N/A
+============================================================================
+    0xFF30    (   CU to Clutch Panel Message   )
+
+            - Byte0 : idk? |BL(0,0,4)
+ 
+            - Byte1 : sta in ctrl? |BL(0,0,4)
+ 
+            - Byte2 : Major Software Version |BL*18
+ 
+            - Byte3 : Minor Software Version LO |B2*1048
+ 
+            - Byte4 : Minor Software Version HI |B2
+ 
+            - Byte5 : Software Revision LO |B2*9166
+ 
+            - Byte6 : Software Revision HI |B2
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 170
+PGN_32bit : 65380
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: Should look into how Calstatus is generated
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : comments section
+Group : groupnumber
+CTRLs : N/A
+============================================================================
+    0xFF64    (   Calibration Feedback  )
+
+            - Byte0 : OperationMode
+ 
+            - Byte1 : CalStatus |BL*0
+ 
+            - Byte2 : Cal2_Pos1 |BL*0
+ 
+            - Byte3 : Cal2_Pos2 |BL*0
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : Communication Faults |XX
+                    - b0 : bAutocal_Fault
+                    - b1 : bStandby
+                    - b2 : bMomentarySwitch
+                    - b3 : bCT_Waiting_For_Flag_Reset
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 176
+PGN_32bit : 65353
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : night
+Project : MATTS
+Type : N/A
+Comments : comments section
+Group : groupnumber
+CTRLs : N/A
+============================================================================
+    0xFF49    (   Faults   )
+
+            - Byte0 : Sensor Faults |XX
+                    - b0 : Stbd Bucket
+                    - b1 : Port Bucket
+                    - b2 : Stbd Nozzle
+                    - b3 : Port Nozzle
+                    - b4 : Stbd Tab
+                    - b5 : Port Tab
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Non Follow Up Faults |XX
+                    - b0 : Stbd Bucket NFU
+                    - b1 : Port Bucket NFU
+                    - b2 : Stbd Nozzle NFU
+                    - b3 : Port Nozzle NFU
+                    - b4 : Stbd Tab NFU
+                    - b5 : Port Tab NFU
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : Local Station 1 Comm Faults |XX
+                    - b0 : LocalSta 1 Idle Knob Fault
+                    - b1 : LocalSta 1 JoyStick Z Fault
+                    - b2 : LocalSta 1 Stbd Lever Fault
+                    - b3 : LocalSta 1 Port Lever Fault
+                    - b4 : LocalSta 1 Joy-Y Fault
+                    - b5 : LocalSta 1 Joy-X Fault
+                    - b6 : LocalSta 1 Tiller 2 Fault
+                    - b7 : N/A
+ 
+            - Byte3 : Local Station 2 comm Faults |XX
+                    - b0 : LocalSta 2 Idle Knob Fault
+                    - b1 : LocalSta 2 JoyStick Z Fault
+                    - b2 : LocalSta 2 Stbd Lever Fault
+                    - b3 : LocalSta 2 Port Lever Fault
+                    - b4 : LocalSta 2 Joy-Y Fault
+                    - b5 : LocalSta 2 Joy-X Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte4 : Remote Station Faults |XX
+                    - b0 : RemoteSta Idle Knob Fault
+                    - b1 : RemoteSta JoyStick Z Fault
+                    - b2 : RemoteSta Stbd Lever Fault
+                    - b3 : RemoteSta Port Lever Fault
+                    - b4 : RemoteSta Joy-Y Fault
+                    - b5 : RemoteSta Joy-X Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : General Faults |XX
+                    - b0 : Port Trim Fault
+                    - b1 : Port Roll Fault
+                    - b2 : AutoCal Fault
+                    - b3 : Autopilot Out of Range Fault
+                    - b4 : Stbd Trim Joystick Fault
+                    - b5 : Stbd Roll Joystick Fault
+                    - b6 : Hardware Fault
+                    - b7 : N/A
+ 
+            - Byte6 : Docking Faults |XX
+                    - b0 : Docking Mode Interlock Fault
+                    - b1 : Docking_Mode Clutch Mismatch
+                    - b2 : Docking_Mode Inboard Clutch Interlock
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : Communication Faults |XX
+                    - b0 : CAN Fault
+                    - b1 : Station 1 Clutch Panel CAN Fault
+                    - b2 : Station 2 Clutch Panel CAN Fault
+                    - b3 : Station 3 Clutch Panel CAN Fault
+                    - b4 : N/A
+                    - b5 : DP LCD CAN Fault
+                    - b6 : Remote Station Controller CAN Fault
+                    - b7 : N/A
+  
+============================================================================
 CAN Messages From : PC
 VC_PGN_ID : 590
 PGN_32bit : 65261
@@ -218,20 +1612,20 @@ CTRLs : N/A
 	0xFFD1    ( Command & Feedback #2 )
 
             - Byte0 : Clutch commands |XX*1
-                    - b0 : cltchcmd
-                    - b1 : cltchcmd
-                    - b2 : cltchcmd
-                    - b3 : bit3
+                    - b0 : cmd_AHD
+                    - b1 : cmd_REV
+                    - b2 : cmd_NUT
+                    - b3 : N/A
                     - b4 : N/A
                     - b5 : N/A
                     - b6 : N/A
                     - b7 : N/A  
 
 			- Byte1 : Clutch  feedbacks |XX*1
-					- b0 : cltchfbk
-					- b1 : cltchfbk
-					- b2 : cltchfbk
-					- b3 : bit3
+					- b0 : fbk_AHD
+					- b1 : fbk_REV
+					- b2 : fbk_NUT
+					- b3 : N/A
 					- b4 : N/A
 					- b5 : N/A
 					- b6 : N/A
@@ -345,86 +1739,12 @@ CTRLs : N/A
 
 			- Byte4 : Clutch Revision LO |B2*2109
 
-			- Byte5 : Clutch Revision |B2
+			- Byte5 : Clutch Revision HI |B2
 
 			- Byte6 : N/A
 
 			- Byte7 : N/A
 			
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 188
-PGN_32bit : 65421
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version :  67.1010 Rev4476
-info: N/A
-Configuration : SANFRAN
-Project : N/A
-Type : N/A
-Comments : N/A
-Group : N/A
-CTRLs : N/A
-============================================================================
-    0xFF8D    (   Faults   )
-
-            - Byte0 : Faults |XX
-                    - b0 : Calibration Fault
-                    - b1 : bClutch_CAN_FAULT_STA1
-                    - b2 : bStation3_CAN_FAULT
-                    - b3 : N/A
-                    - b4 : N/A
-                    - b5 : N/A
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte1 : Station 1&2 faults |XX
-                    - b0 : Station 1 Helm Fault
-                    - b1 : Station 1 Port Lever2 Fault
-                    - b2 : Station 1 Stbd Lever2 Fault
-                    - b3 : Station 2 Helm Fault
-                    - b4 : Station 2 Port Lever1 Fault
-                    - b5 : Station 2 Stbd Lever1 Fault
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte2 : Station 3&4 faults |XX
-                    - b0 : Station 3 Helm3 Fault
-                    - b1 : Station 3 JoyX Fault
-                    - b2 : Station 3 JoyY Fault
-                    - b3 : Station 4 Helm4 Fault
-                    - b4 : Station 4 JoyX Fault
-                    - b5 : Station 4 JoyY Fault
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte3 : N/A
- 
-            - Byte4 : N/A
- 
-            - Byte5 : N/A
- 
-            - Byte6 : SKIM faults |XX
-                    - b0 : bP_IOSKIM_Fault
-                    - b1 : bS_IOSKIM_Fault
-                    - b2 : N/A
-                    - b3 : N/A
-                    - b4 : N/A
-                    - b5 : N/A
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte7 : crash stop flages |XX
-                    - b0 : bPCrashStopFlag
-                    - b1 : bSCrashStopFlag
-                    - b2 : N/A
-                    - b3 : N/A
-                    - b4 : N/A
-                    - b5 : N/A
-                    - b6 : N/A
-                    - b7 : N/A
-
 ============================================================================
 CAN Messages From : Control Unit
 VC_PGN_ID : 500
@@ -868,526 +2188,6 @@ CTRLs : N/A
                     - b5 : DP LCD CAN Fault
                     - b6 : Remote Station Controller CAN Fault
                     - b7 : N/A
-
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 171
-PGN_32bit : 65381
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 1.0000
-info: the pv connection is setup using a mask for all pgns, the adress is defined in code and this should be 29
-Configuration : SSRS_K12
-Project : N/A
-Type : N/A
-Comments : N/A
-Group : g02
-CTRLs : N/A
-============================================================================
-    0xFF65    (   Dynamic Positioning Information )
-
-            - Byte0 : DP Off,blocked,ovr,on |BL(0,0,4)
- 
-            - Byte1 : tryOVRb2b3 |XX*0
-                    - b0 : isBlocked
-                    - b1 : ovrANDhelm
-                    - b2 : ovrANDjoy
-                    - b3 : N/A
-                    - b4 : N/A
-                    - b5 : N/A
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte2 : N/A
- 
-            - Byte3 : N/A
- 
-            - Byte4 : N/A
- 
-            - Byte5 : N/A
- 
-            - Byte6 : N/A
- 
-            - Byte7 : N/A
-
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 171
-PGN_32bit : 65381
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 1.0000
-info: the pv connection is setup using a mask for all pgns, the adress is defined in code and this should be 29
-Configuration : original S_S_R_S_K_1_2_
-Project : N/A
-Type : N/A
-Comments : N/A
-Group : N/A
-CTRLs : N/A
-============================================================================
-    0xFF65    (   Dynamic Positioning state )
-
-            - Byte0 : DPState |XX*3
-                    - b0 : DPState
-                    - b1 : bit1 SwitchDP
-                    - b2 : bit2 
-                    - b3 : bit3
-                    - b4 : N/A
-                    - b5 : N/A
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte1 : DPOverride thed divided by 2 and takes bit0 bit1 |BL
- 
-            - Byte2 : N/A
- 
-            - Byte3 : N/A
- 
-            - Byte4 : N/A
- 
-            - Byte5 : N/A
- 
-            - Byte6 : N/A
- 
-            - Byte7 : N/A
-
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 173
-PGN_32bit : 65363
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 1.0000
-info: cu adrress is 29 A&M 34
-Configuration : SSRS_K12
-Project : N/A
-Type : N/A
-Comments : N/A
-Group : g00
-CTRLs : N/A
-============================================================================
-    0xFF53    (   System Information   )
-
-            - Byte0 : N/A
- 
-            - Byte1 : AciveStation |BL(0,1,2)
- 
-            - Byte2 : N/A
- 
-            - Byte3 : N/A
-
-            - Byte4 : opMode |XX*1
-                    - b0 : tr_dk
-                    - b1 : N/A
-                    - b2 : N/A
-                    - b3 : N/A
-                    - b4 : N/A
-                    - b5 : N/A
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte5 : N/A
- 
-            - Byte6 : AUTOPILOT |XX
-                    - b0 : AutopilotON
-                    - b1 : Turn to Port
-                    - b2 : Turn to Stbd
-                    - b3 : N/A
-                    - b4 : TillerSelection
-                    - b5 : DPSwitch_Sta2
-                    - b6 : bAP_OverrideInEffect
-                    - b7 : apState
- 
-            - Byte7 : N/A
-
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 169
-PGN_32bit : 65369
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 10.1002 Rev6288
-info: cu adrress is 29 A&M 34
-Configuration : SSRS_K12
-Project : N/A
-Type : N/A
-Comments : N/A
-Group : g01
-CTRLs : N/A
-============================================================================
-    0xFF59    (   Raw Switch states   )
-
-            - Byte0 : N/A
- 
-            - Byte1 : N/A
-
-            - Byte2 : N/A
-
-            - Byte3 : N/A
-
-            - Byte4 : N/A
-
-            - Byte5 : N/A
-
-            - Byte6 : Autopilot |XX
-                    - b0 : Autopilot Switch
-                    - b1 : Autopilot Steer Port
-                    - b2 : Autopilot Steer Starboard
-                    - b3 : Operating Mode Docking
-                    - b4 : AutoPilot Override
-                    - b5 : DPSwitch_Sta2
-                    - b6 : bAP_OverrideInEffect
-                    - b7 : if Blocked_DPinControl
-
-            - Byte7 : tillerselect |XX
-                    - b0 : N/A
-                    - b1 : N/A
-                    - b2 : N/A
-                    - b3 : Sta1 Tiller Selec
-                    - b4 : N/A
-                    - b5 : N/A
-                    - b6 : Flip_Dutycycle
-                    - b7 : N/A
-
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 174
-PGN_32bit : 65276
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 1.0000
-info: cu adrress is 29 A&M 34
-Configuration : SSRS_K12
-Project : N/A
-Type : N/A
-Comments : N/A
-Group : g03
-CTRLs : N/A
-============================================================================
-    0xFEFC    (   Indication   )
-
-            - Byte0 : Port BucketPos |BT(0,128,255)
- 
-            - Byte1 : AP_OVERRIDE_HELM_PERCENT |BT(0,0,100)
- 
-            - Byte2 : Stbd NozzlePos |BT(0,128,255)
- 
-            - Byte3 : Port NozzlePos |BT(0,128,255)
- 
-            - Byte4 : N/A
- 
-            - Byte5 : Stbd BucketPos |BT(0,128,255)
- 
-            - Byte6 : Port EngineCMD |BT(0,141,255)
- 
-            - Byte7 : Stbd EngineCMD |BT(0,142,255)
- 
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 172
-PGN_32bit : 65382
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 1.0000
-info: the pv connection is setup using a mask for all pgns, the adress is defined in code and this should be 29
-Configuration : SSRS_K12
-Project : N/A
-Type : N/A
-Comments : N/A
-Group : g04
-CTRLs : N/A
-============================================================================
-    0xFF66    (   DP Diagnostics 1   )
-
-            - Byte0 : JoyX LO |B2(0,430,1000)
- 
-            - Byte1 : JoyX HI |B2
- 
-            - Byte2 : JoyY LO |B2(0,390,1000)
- 
-            - Byte3 : JoyY HI |B2
- 
-            - Byte4 : Helm LO |B2(0,270,1000)
- 
-            - Byte5 : Helm HI |B2
- 
-            - Byte6 : IdleRPM LO |B2(0,700,4000)
- 
-            - Byte7 : IdleRPM HI |B2
- 
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 175
-PGN_32bit : 65328
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 1.0000
-info: cu adrress is 29 A&M 34
-Configuration : SSRS_K12
-Project : N/A
-Type : N/A
-Comments : N/A
-Group : g05
-CTRLs : N/A
-============================================================================
-    0xFF30    (   CU to Clutch Panel Message   )
-
-            - Byte0 : N/A
- 
-            - Byte1 : N/A
- 
-            - Byte2 : Major Software Version |BL*18
- 
-            - Byte3 : Minor Software Version LO |B2*1048
- 
-            - Byte4 : Minor Software Version HI |B2
- 
-            - Byte5 : Software Revision LO |B2*9166
- 
-            - Byte6 : Software Revision HI |B2
- 
-            - Byte7 : N/A
-
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 170
-PGN_32bit : 65380
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 1.0000
-info: Should look into how Calstatus is generated
-Configuration : SSRS_K12
-Project : N/A
-Type : N/A
-Comments : N/A
-Group : g06
-CTRLs : N/A
-============================================================================
-    0xFF64    (   Calibration   )
-
-            - Byte0 : N/A
- 
-            - Byte1 : CalStatus |BL*0
- 
-            - Byte2 : N/A
- 
-            - Byte3 : N/A
- 
-            - Byte4 : N/A
- 
-            - Byte5 : N/A
- 
-            - Byte6 : N/A
- 
-            - Byte7 : N/A
- 
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 176
-PGN_32bit : 65353
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 1.0000
-info: cu adrress is 29 A&M 34
-Configuration : SSRS_K12
-Project : N/A
-Type : N/A
-Comments : N/A
-Group : g07
-CTRLs : N/A
-============================================================================
-    0xFF49    (   Faults   )
-
-            - Byte0 : Sensor Faults |XX
-                    - b0 : Stbd Bucket
-                    - b1 : Port Bucket
-                    - b2 : Stbd Nozzle
-                    - b3 : Port Nozzle
-                    - b4 : Stbd Tab
-                    - b5 : Port Tab
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte1 : Non Follow Up Faults |XX
-                    - b0 : Stbd Bucket NFU
-                    - b1 : Port Bucket NFU
-                    - b2 : Stbd Nozzle NFU
-                    - b3 : Port Nozzle NFU
-                    - b4 : Stbd Tab NFU
-                    - b5 : Port Tab NFU
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte2 : Local Station 1 Comm Faults |XX
-                    - b0 : LocalSta 1 Idle Knob Fault
-                    - b1 : LocalSta 1 JoyStick Z Fault
-                    - b2 : LocalSta 1 Stbd Lever Fault
-                    - b3 : LocalSta 1 Port Lever Fault
-                    - b4 : LocalSta 1 Joy-Y Fault
-                    - b5 : LocalSta 1 Joy-X Fault
-                    - b6 : LocalSta 1 Tiller 2 Fault
-                    - b7 : N/A
- 
-            - Byte3 : Local Station 2 comm Faults |XX
-                    - b0 : LocalSta 2 Idle Knob Fault
-                    - b1 : LocalSta 2 JoyStick Z Fault
-                    - b2 : LocalSta 2 Stbd Lever Fault
-                    - b3 : LocalSta 2 Port Lever Fault
-                    - b4 : LocalSta 2 Joy-Y Fault
-                    - b5 : LocalSta 2 Joy-X Fault
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte4 : Remote Station Faults |XX
-                    - b0 : RemoteSta Idle Knob Fault
-                    - b1 : RemoteSta JoyStick Z Fault
-                    - b2 : RemoteSta Stbd Lever Fault
-                    - b3 : RemoteSta Port Lever Fault
-                    - b4 : RemoteSta Joy-Y Fault
-                    - b5 : RemoteSta Joy-X Fault
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte5 : General Faults |XX
-                    - b0 : Port Trim Fault
-                    - b1 : Port Roll Fault
-                    - b2 : AutoCal Fault
-                    - b3 : Autopilot Out of Range Fault
-                    - b4 : Stbd Trim Joystick Fault
-                    - b5 : Stbd Roll Joystick Fault
-                    - b6 : Hardware Fault
-                    - b7 : N/A
- 
-            - Byte6 : Docking Faults |XX
-                    - b0 : Docking Mode Interlock Fault
-                    - b1 : Docking_Mode Clutch Mismatch
-                    - b2 : Docking_Mode Inboard Clutch Interlock
-                    - b3 : N/A
-                    - b4 : N/A
-                    - b5 : N/A
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte7 : Communication Faults |XX
-                    - b0 : CAN Fault
-                    - b1 : Station 1 Clutch Panel CAN Fault
-                    - b2 : Station 2 Clutch Panel CAN Fault
-                    - b3 : Station 3 Clutch Panel CAN Fault
-                    - b4 : N/A
-                    - b5 : DP LCD CAN Fault
-                    - b6 : Remote Station Controller CAN Fault
-                    - b7 : N/A
- 
-============================================================================
-CAN Messages From : GPS
-VC_PGN_ID : 378
-PGN_32bit : 61714
-address Port: 7F
-address Stbd: 7F
-priority    : 09
-Sending_Unit_Software_version : N/A
-info: standard gps
-Configuration : SSRS_K12
-Project : N/A
-Type : GPS
-Comments : N/A
-Group : p0
-CTRLs : N/A
-============================================================================
-    0xF112    (   GPS Heading     )
-
-            - Byte0 : N/A
- 
-            - Byte1 : GPS Heading LO |B2(0,3600,35999)
- 
-            - Byte2 : GPS Heading HI |B2
- 
-            - Byte3 : N/A
- 
-            - Byte4 : N/A
- 
-            - Byte5 : N/A
- 
-            - Byte6 : N/A
- 
-            - Byte7 : N/A
-
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 163
-PGN_32bit : 65383
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 1.0000
-info: standard gps
-Configuration : SSRS_K12
-Project : N/A
-Type : GPS
-Comments : N/A
-Group : p1
-CTRLs : N/A
-============================================================================
-    0xFF67    (   DP Diagnostics 2   )
-
-            - Byte0 : Xi 32bit_0 |B4
- 
-            - Byte1 : Xi 32bit_1 |B4
- 
-            - Byte2 : Xi 32bit_2 |B4
- 
-            - Byte3 : Xi 32bit_3 |B4
- 
-            - Byte4 : Eta 32bit_0 |B4
- 
-            - Byte5 : Eta 32bit_1 |B4
- 
-            - Byte6 : Eta 32bit_2 |B4
- 
-            - Byte7 : Eta 32bit_3 |B4
- 
-============================================================================
-CAN Messages From : GPS
-VC_PGN_ID : 164
-PGN_32bit : 63489
-address Port: 7F
-address Stbd: 7F
-priority    : 09
-Sending_Unit_Software_version : 1.0000
-info: standard gps
-Configuration : SSRS_K12
-Project : N/A
-Type : GPS
-Comments : N/A
-Group : p2
-CTRLs : N/A
-============================================================================
-    0xF801    (   GPS POSITION   )
-
-            - Byte0 : GPS Latitude 32bit_0 |B4
- 
-            - Byte1 : GPS Latitude 32bit_1 |B4
- 
-            - Byte2 : GPS Latitude 32bit_2 |B4
- 
-            - Byte3 : GPS Latitude 32bit_3 |B4
- 
-            - Byte4 : GPS Longitude 32bit_0 |B4
- 
-            - Byte5 : GPS Longitude 32bit_1 |B4
- 
-            - Byte6 : GPS Longitude 32bit_2 |B4
- 
-            - Byte7 : GPS Longitude 32bit_3 |B4
 
 ============================================================================
 CAN Messages From : paramsXML
@@ -4170,41 +4970,7 @@ CTRLs : N/A
             - Byte6 : N/A
  
             - Byte7 : N/A
- 
-============================================================================
-CAN Messages From : CIM
-VC_PGN_ID : 66
-PGN_32bit : 65450
-address Port: 00
-address Stbd: 00
-priority    : 18
-Sending_Unit_Software_version : N/A
-info: address is 00 sent by MKV_GUI
-Configuration : INFPB
-Project : INFPB MKV MK3
-Type : N/A
-Comments : 101 1000 5036
-Group : groupnumber
-CTRLs : N/A
-============================================================================
-    0xFFAA    (   CIM Software Version   )
 
-            - Byte0 : CAN1/2 Buffer - Historic Max Size Since Powerup |BL(0,0,255)
- 
-            - Byte1 : N/A
- 
-            - Byte2 : Dimming Knob Level |BT(0,60,100)
- 
-            - Byte3 : Major Sofware Version |BL*101
- 
-            - Byte4 : Minor Sofware Version LO |B2*1000
- 
-            - Byte5 : Minor Sofware Version HI |B2
- 
-            - Byte6 : Software Revision LO |B2*5036
- 
-            - Byte7 : Software Revision HI |B2
- 
 ============================================================================
 CAN Messages From : station 1
 VC_PGN_ID : 67
@@ -7520,352 +8286,6 @@ CTRLs : N/A
             - Byte7 : N/A
  
 ============================================================================
-CAN Messages From : A&M
-VC_PGN_ID : 152
-PGN_32bit : 65441
-address Port: 01
-address Stbd: 02
-priority    : 18
-Sending_Unit_Software_version : rev5158
-info: N/A
-Configuration : MK3
-Project : INFPB
-Type : Faults
-Comments : N/A
-Group : N/A
-CTRLs : N/A
-============================================================================
-    0xFFA1    (   A&M HPU Faults and Switch States   )
-
-            - Byte0 : HPU Faults |XX
-                    - b0 : Low Hydraulic Press
-                    - b1 : Low Lb Oil Port
-                    - b2 : Low Lb Oil Stbd
-                    - b3 : High T Hydrolic Oil
-                    - b4 : AL Filter Blocked
-                    - b5 : N/A
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte1 : N/A
- 
-            - Byte2 : switches |XX
-                    - b0 : Open Bridge Port Clutch Enable
-                    - b1 : Open Bridge Stbd Clutch Enable
-                    - b2 : Closed Bridge Port Clutch Enable
-                    - b3 : Closed Bridge Stbd Clutch Enable
-                    - b4 : N/A
-                    - b5 : N/A
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte3 : Station 1 Idle Knob LO |B2(0,50,500)
- 
-            - Byte4 : Station 1 Idle Knob HI |B2
- 
-            - Byte5 : Station 2 Idle Knob LO |B2(0,50,500)
- 
-            - Byte6 : Station 2 Idle Knob HI |B2
- 
-            - Byte7 : N/A
- 
-============================================================================
-CAN Messages From : CIM
-VC_PGN_ID : 153
-PGN_32bit : 65450
-address Port: 00
-address Stbd: 00
-priority    : 18
-Sending_Unit_Software_version : N/A
-info: N/A
-Configuration : MK3
-Project : INFPB
-Type : Version
-Comments : 101 1000 5036
-Group : MK3 LCD
-CTRLs : N/A
-============================================================================
-    0xFFAA    (   CIM Software Version   )
-
-            - Byte0 : CAN1/2 Buffer - Historic Max Size Since Powerup |BL(0,0,255)
- 
-            - Byte1 : N/A
- 
-            - Byte2 : Dimming Knob Level |BT(0,60,100)
- 
-            - Byte3 : Major Sofware Version |BL*101
- 
-            - Byte4 : Minor Sofware Version LO |B2*1000
- 
-            - Byte5 : Minor Sofware Version HI |B2
- 
-            - Byte6 : Software Revision LO |B2*5036
- 
-            - Byte7 : Software Revision HI |B2
- 
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 154
-PGN_32bit : 65276
-address Port: 00
-address Stbd: 01
-priority    : 18
-Sending_Unit_Software_version : N/A
-info: N/A
-Configuration : MK3
-Project : INFPB
-Type : FeedBacks
-Comments : comments section
-Group : MK3 LCD
-CTRLs : N/A
-============================================================================
-    0xFEFC    (   INFPB MK3 FeedBacks   )
-
-            - Byte0 : test Feedback |BT(0,50,100)
- 
-            - Byte1 : Port Bucket Feedback |BT(0,50,100)
- 
-            - Byte2 : test Feedback |BT(0,50,100)
- 
-            - Byte3 : test Feedback |BT(0,50,100)
- 
-            - Byte4 : Stbd Nozzle Feedback |BT(0,50,100)
- 
-            - Byte5 : test Feedback |BT(0,50,100)
- 
-            - Byte6 : Port Nozzle Feedback |BT(0,50,100)
- 
-            - Byte7 : Stbd Bucket Feedback |BT(0,50,100)
- 
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 155
-PGN_32bit : 65424
-address Port: 00
-address Stbd: 01
-priority    : 18
-Sending_Unit_Software_version : Rev5766
-info: N/A
-Configuration : MK3
-Project : INFPB
-Type : Version
-Comments : comments section
-Group : MK3 LCD
-CTRLs : N/A
-============================================================================
-    0xFF90    (   Software Version   )
-
-            - Byte0 : Major Sofware Version |BL*87
- 
-            - Byte1 : Minor Software Version LO |B2*1003
- 
-            - Byte2 : Minor Software Version  HI |B2
- 
-            - Byte3 : Sofware Revision LO |B2*5766
- 
-            - Byte4 : Sofware Revision HI |B2
- 
-            - Byte5 : N/A
- 
-            - Byte6 : N/A
- 
-            - Byte7 : N/A
- 
-============================================================================
-CAN Messages From : Control Units
-VC_PGN_ID : 156
-PGN_32bit : 65440
-address Port: 01
-address Stbd: 02
-priority    : 18
-Sending_Unit_Software_version : Rev5158
-info: N/A
-Configuration : MK3
-Project : INFPB
-Type : Version
-Comments : N/A
-Group : MK3 LCD
-CTRLs : N/A
-============================================================================
-    0xFFA0    (   A&M Software Version   )
-
-            - Byte0 : Major Software Version LO |B2*79
- 
-            - Byte1 : Major Software Version HI |B2
- 
-            - Byte2 : Minor Software Version LO |B2*1000
- 
-            - Byte3 : Minor Software Version HI |B2
- 
-            - Byte4 : Sofware Revision LO |B2*5158
- 
-            - Byte5 : Sofware Revision HI |B2
- 
-            - Byte6 : N/A
- 
-            - Byte7 : N/A
- 
-============================================================================
-CAN Messages From : A&M station 1
-VC_PGN_ID : 157
-PGN_32bit : 65458
-address Port: 01
-address Stbd: 01
-priority    : 18
-Sending_Unit_Software_version : N/A
-info: N/A
-Configuration : MK3
-Project : INFPB
-Type : Command
-Comments : N/A
-Group : MK3 LCD
-CTRLs : N/A
-============================================================================
-    0xFFB2    (   Clutch Panel Brigthness sta 1   )
-
-            - Byte0 : Station 1 DimmingCommand |BT(0,60,100)
- 
-            - Byte1 : N/A
- 
-            - Byte2 : N/A
- 
-            - Byte3 : N/A
- 
-            - Byte4 : N/A
- 
-            - Byte5 : N/A
- 
-            - Byte6 : N/A
- 
-            - Byte7 : N/A
- 
-============================================================================
-CAN Messages From : A&M station 2
-VC_PGN_ID : 158
-PGN_32bit : 65459
-address Port: 02
-address Stbd: 02
-priority    : 18
-Sending_Unit_Software_version : N/A
-info: N/A
-Configuration : MK3
-Project : INFPB
-Type : Command
-Comments : N/A
-Group : MK3 LCD
-CTRLs : N/A
-============================================================================
-    0xFFB3    (   Clutch Panel Brigthness sta 2   )
-
-            - Byte0 : Station 2  DimmingCommand |BT(0,60,100)
- 
-            - Byte1 : N/A
- 
-            - Byte2 : N/A
- 
-            - Byte3 : N/A
- 
-            - Byte4 : N/A
- 
-            - Byte5 : N/A
- 
-            - Byte6 : N/A
- 
-            - Byte7 : N/A
- 
-============================================================================
-CAN Messages From : Control Unit Clutch
-VC_PGN_ID : 159
-PGN_32bit : 65420
-address Port: 00
-address Stbd: 01
-priority    : 18
-Sending_Unit_Software_version : N/A
-info: N/A
-Configuration : MK3
-Project : INFPB
-Type : Command
-Comments : N/A
-Group : MK3 LCD
-CTRLs : N/A
-============================================================================
-    0xFF8C    (    Clutch Command    )
-
-            - Byte0 : Clutch Command |XX
-                    - b0 : Port Clutch Command Disengage
-                    - b1 : Port Clutch Command Ahead
-                    - b2 : Port Clutch Command Reverse
-                    - b3 : Stbd Clutch Command Disengage
-                    - b4 : Stbd Clutch Command Ahead
-                    - b5 : Stbd Clutch Command Reverse
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte1 : Switching Relay |XX
-                    - b0 : Swiych Relay Ctrl to CU B
-                    - b1 : Is Control Unit Active
-                    - b2 : Station 2 Port Clutch Enable
-                    - b3 : Station 2 Stbd Clutch Enable
-                    - b4 : Station 1 Port Clutch Enable
-                    - b5 : Station 1 Stbd Clutch Enable
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte2 : Port Engine Command AHD |BT(0,50,100)
- 
-            - Byte3 : Port Engine Command REV |BT(0,50,100)
- 
-            - Byte4 : Stbd Engine Command AHD |BT(0,50,100)
- 
-            - Byte5 : Stbd Engine Command REV |BT(0,50,100)
- 
-            - Byte6 : Station in Control |BL(0,1,3)
- 
-            - Byte7 : N/A
- 
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 160
-PGN_32bit : 65422
-address Port: 01
-address Stbd: 02
-priority    : 18
-Sending_Unit_Software_version : N/A
-info: N/A
-Configuration : MK3
-Project : INFPB
-Type : Command
-Comments : N/A
-Group : MK3 LCD
-CTRLs : N/A
-============================================================================
-    0xFF8E    (   Station 1 Commands   )
-
-            - Byte0 : Port Azimuth Steer CMD |BT(0,50,100)
- 
-            - Byte1 : Stbd Azimuth Steer CMD |BT(0,50,100)
- 
-            - Byte2 : Helm CMD |BT(0,50,100)
- 
-            - Byte3 : Port Azimuth Lever CMD |BT(0,50,100)
- 
-            - Byte4 : Stbd Azimuth Lever CMD |BT(0,50,100)
- 
-            - Byte5 : N/A
- 
-            - Byte6 : N/A
- 
-            - Byte7 : Station REQ |XX
-                    - b0 : Requesting Control
-                    - b1 : Allowing Transfer
-                    - b2 : N/A
-                    - b3 : N/A
-                    - b4 : N/A
-                    - b5 : N/A
-                    - b6 : N/A
-                    - b7 : N/A
- 
-============================================================================
 CAN Messages From : test
 VC_PGN_ID : 161
 PGN_32bit : 65281
@@ -8076,277 +8496,7 @@ CTRLs : N/A
             - Byte6 : N/A
  
             - Byte7 : N/A
- 
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 569
-PGN_32bit : 65369
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 1.0000
-info:this in cu code checks if bow thrust exist . ssrs config does noy have bow thrust
-Configuration : na
-Project : PV780_102_1000
-Type : N/A
-Comments : Handler_SwitchStates 
-Group : groupnumber
-CTRLs : N/A
-============================================================================
-    0xFF59    (   Raw Switch states   )
-
-            - Byte0 : N/A
- 
-            - Byte1 : N/A
- 
-            - Byte2 : N/A
- 
-            - Byte3 : N/A
- 
-            - Byte4 : AutoPilot.rawValue LO|B2(0,0,2000)
- 
-            - Byte5 : AutoPilot.rawValue HI|B2
-
-            - Byte6 : Autopilot |XX
-                    - b0 : Autopilot Switch
-                    - b1 : Autopilot Steer Port
-                    - b2 : Autopilot Steer Starboard
-                    - b3 : Operating Mode Docking
-                    - b4 : AutoPilot Override
-                    - b5 : DPSwitch_Sta2
-                    - b6 : bAP_OverrideInEffect
-                    - b7 : if Blocked_DPinControl
- 
-            - Byte7 : Autopilot |XX*0
-                    - b0 : N/A
-                    - b1 : ST 1 TC
-                    - b2 : ST 2 MODE SW: Docking
-                    - b3 : ST 2 TC SW REQ
-                    - b4 : ST 3 MODE SW: Docking
-                    - b5 : ST 3 TC SW REQ
-                    - b6 : N/A
-                    - b7 : Blocked_DPinControl
- 
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 177
-PGN_32bit : 65378
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : N/A
-info: N/A
-Configuration : ssrs12
-Project : PV485_100_02 ssrs12
-Type : FeedBacks
-Comments : the pv project is setuo to registser Byte0 Byte1 as Helm sta1  and Byte34 Byte5 as Helm sta1 duplicate
-Group : ssrs12 LCD
-CTRLs : N/A
-============================================================================
-    0xFF62    (   ssrs12 Scaled Controle Com Noz FeedBacks   )
-
-            - Byte0 : N/A
- 
-            - Byte1 : N/A
- 
-            - Byte2 : Nozzle Feedback LO |B2(0,500,10000)
- 
-            - Byte3 : Nozzle Feedback HI |B2
- 
-            - Byte4 : N/A
- 
-            - Byte5 : N/A
- 
-            - Byte6 : Nozzle 2 Feedback LO |B2(0,500,10000)
- 
-            - Byte7 : Nozzle 2 Feedback HI |B2
- 
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 178
-PGN_32bit : 65379
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : N/A
-info: N/A
-Configuration : ssrs12
-Project : PV485_100_02 ssrs12
-Type : FeedBacks
-Comments : the pv project is setuo to registser Byte0 Byte1 as Bucket1 Pos  and Byte34 Byte5 as Bucket2 Pos
-Group : ssrs12 LCD
-CTRLs : N/A
-============================================================================
-    0xFF63    (   ssrs12 Scaled Controle Com Buck FeedBacks   )
-
-            - Byte0 : N/A
- 
-            - Byte1 : N/A
- 
-            - Byte2 : Bucket1 Feedback LO |B2(0,500,10000)
- 
-            - Byte3 : Bucket1 Feedback HI |B2
- 
-            - Byte4 : N/A
- 
-            - Byte5 : N/A
- 
-            - Byte6 : Bucket2 Feedback LO |B2(0,500,10000)
- 
-            - Byte7 : Bucket2 Feedback HI |B2
- 
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 179
-PGN_32bit : 65276
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 1.0000
-info: cu adrress is 29
-Configuration : ssrs12
-Project : PV485_100_02 ssrs12
-Type : N/A
-Comments : Byte0 2 3 and 5 are actually setup the pv project to register BKT1 feedback , Nozzle2 and Nozzle1 feedbacks and BKT2 feedback
-Group : ssrs12 LCD
-CTRLs : N/A
-============================================================================
-    0xFEFC    (   FeedBacks From Control Unit   )
-
-            - Byte0 : N/A
- 
-            - Byte1 : Tab 1 Feedback |BT(0,127,255)
- 
-            - Byte2 : N/A
- 
-            - Byte3 : N/A
- 
-            - Byte4 : Tab2 Feedback |BT(0,127,255)
- 
-            - Byte5 : N/A
- 
-            - Byte6 : N/A
- 
-            - Byte7 : N/A
- 
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 180
-PGN_32bit : 65363
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 1.0000
-info: cu adrress is 29
-Configuration : ssrs12
-Project : PV485_100_02 ssrs12
-Type : N/A
-Comments : comments section
-Group : ssrs12 LCD
-CTRLs : N/A
-============================================================================
-    0xFF53    (   CAN Station Message   )
-
-            - Byte0 : N/A
- 
-            - Byte1 : AciveStation |BL(0,1,255)
- 
-            - Byte2 : N/A
- 
-            - Byte3 : AutoPilot Override Helm Percent |BT(0,0,100)
- 
-            - Byte4 : NumHits ISRCAN2 PGN0xFF36 |BL(0,0,255)
- 
-            - Byte5 : Autocal Stage |BL(0,0,255)
- 
-            - Byte6 : N/A
- 
-            - Byte7 : N/A
- 
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 181
-PGN_32bit : 65397
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 1.0000
-info: cu adrress is 29
-Configuration : ssrs12
-Project : PV485_100_02 ssrs12
-Type : N/A
-Comments : comments section
-Group : ssrs12 LCD
-CTRLs : N/A
-============================================================================
-    0xFF75    (   CU SW Versions  )
-
-            - Byte0 : Major Sofware Version |BL*87
- 
-            - Byte1 : Minor Software Version LO |B2*1003
- 
-            - Byte2 : Minor Software Version  HI |B2
- 
-            - Byte3 : Sofware Revision LO |B2*5766
- 
-            - Byte4 : Sofware Revision HI |B2
- 
-            - Byte5 : N/A
- 
-            - Byte6 : N/A
- 
-            - Byte7 : N/A
- 
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 182
-PGN_32bit : 65369
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 1.0000
-info: cu adrress is 29
-Configuration : ssrs12
-Project : PV485_100_02 ssrs12
-Type : N/A
-Comments : comments section
-Group : ssrs12 LCD
-CTRLs : N/A
-============================================================================
-    0xFF59    (   Control Lever Positions   )
-
-            - Byte0 : Port Lever position LO |B2(0,500,10000)
- 
-            - Byte1 : Port Lever position HI |B2
- 
-            - Byte2 : Stbd Lever position LO |B2(0,500,10000)
- 
-            - Byte3 : Stbd Lever position HI |B2
- 
-            - Byte4 : Autopilot Raw LO |B2(0,0,4000)
- 
-            - Byte5 : Autopilot Raw HI |B2
- 
-            - Byte6 : Autopilot |XX
-                    - b0 : Autopilot Switch
-                    - b1 : Autopilot Steer Port
-                    - b2 : Autopilot Steer Starboard
-                    - b3 : Operating Mode
-                    - b4 : AutoPilot Override
-                    - b5 : N/A
-                    - b6 : N/A
-                    - b7 : N/A
- 
-            - Byte7 : Sta Ctrl |XX
-                    - b0 : Station 1 Mode Switch
-                    - b1 : Station 1 CTRL REQ
-                    - b2 : Station 2 Mode Switch
-                    - b3 : Station 2 Control Requested
-                    - b4 : Station 3 Mode Switch
-                    - b5 : Station 3 CTRL REQ
-                    - b6 : N/A
-                    - b7 : AutoManual Trim Switch
- 
+  
 ============================================================================
 CAN Messages From : A&M
 VC_PGN_ID : 183
@@ -10744,155 +10894,3 @@ CTRLs : N/A
 			- Byte6 : idkFaults |BL*0
 
 			- Byte7 : idkFaults |BL*0
-
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 569
-PGN_32bit : 65369
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 10.1002 Rev6288
-info:this in cu code checks if bow thrust exist . ssrs config does not have bow thrust
-Configuration : na
-Project : PV780_102_1000
-Type : N/A
-Comments : Handler_SwitchStates 
-Group : groupnumber
-CTRLs : N/A
-============================================================================
-    0xFF59    (   Raw Switch states   )
-
-            - Byte0 : N/A
- 
-            - Byte1 : N/A
- 
-            - Byte2 : N/A
- 
-            - Byte3 : N/A
- 
-            - Byte4 : AutoPilot.rawValue LO|B2(0,0,2000)
- 
-            - Byte5 : AutoPilot.rawValue HI|B2
-
-            - Byte6 : Autopilot |XX
-                    - b0 : Autopilot Switch
-                    - b1 : Autopilot Steer Port
-                    - b2 : Autopilot Steer Starboard
-                    - b3 : Operating Mode Docking
-                    - b4 : AutoPilot Override
-                    - b5 : DPSwitch_Sta2
-                    - b6 : bAP_OverrideInEffect
-                    - b7 : if Blocked_DPinControl
- 
-            - Byte7 : Autopilot |XX*0
-                    - b0 : N/A
-                    - b1 : ST 1 TC
-                    - b2 : ST 2 MODE SW: Docking
-                    - b3 : ST 2 TC SW REQ
-                    - b4 : ST 3 MODE SW: Docking
-                    - b5 : ST 3 TC SW REQ
-                    - b6 : N/A
-                    - b7 : Blocked_DPinControl
-
-============================================================================
-CAN Messages From : GPS
-VC_PGN_ID : 378
-PGN_32bit : 61714
-address Port: 7F
-address Stbd: 7F
-priority    : 09
-Sending_Unit_Software_version : N/A
-info: standard gps
-Configuration : oldssrsk12
-Project : N/A
-Type : GPS
-Comments : N/A
-Group : p0
-CTRLs : N/A
-============================================================================
-    0xF112    (   GPS Heading     )
-
-            - Byte0 : N/A
- 
-            - Byte1 : GPS Heading LO |B2(0,62829,62829)
- 
-            - Byte2 : GPS Heading HI |B2
- 
-            - Byte3 : N/A
- 
-            - Byte4 : N/A
- 
-            - Byte5 : N/A
- 
-            - Byte6 : N/A
- 
-            - Byte7 : N/A
-
-============================================================================
-CAN Messages From : Control Unit
-VC_PGN_ID : 163
-PGN_32bit : 65383
-address Port: 29
-address Stbd: 29
-priority    : 18
-Sending_Unit_Software_version : 1.0000
-info: standard gps
-Configuration : oldssrsk12
-Project : N/A
-Type : GPS
-Comments : N/A
-Group : p1
-CTRLs : N/A
-============================================================================
-    0xFF67    (   DP Diagnostics 2   )
-
-            - Byte0 : Xi 32bit_0 |B4
- 
-            - Byte1 : Xi 32bit_1 |B4
- 
-            - Byte2 : Xi 32bit_2 |B4
- 
-            - Byte3 : Xi 32bit_3 |B4
- 
-            - Byte4 : Eta 32bit_0 |B4
- 
-            - Byte5 : Eta 32bit_1 |B4
- 
-            - Byte6 : Eta 32bit_2 |B4
- 
-            - Byte7 : Eta 32bit_3 |B4
-
-============================================================================
-CAN Messages From : GPS
-VC_PGN_ID : 164
-PGN_32bit : 63489
-address Port: 7F
-address Stbd: 7F
-priority    : 09
-Sending_Unit_Software_version : 1.0000
-info: standard gps
-Configuration : oldssrsk12
-Project : N/A
-Type : GPS
-Comments : N/A
-Group : p2
-CTRLs : N/A
-============================================================================
-    0xF801    (   GPS POSITION   )
-
-            - Byte0 : GPS Latitude 32bit_0 |B4
- 
-            - Byte1 : GPS Latitude 32bit_1 |B4
- 
-            - Byte2 : GPS Latitude 32bit_2 |B4
- 
-            - Byte3 : GPS Latitude 32bit_3 |B4
- 
-            - Byte4 : GPS Longitude 32bit_0 |B4
- 
-            - Byte5 : GPS Longitude 32bit_1 |B4
- 
-            - Byte6 : GPS Longitude 32bit_2 |B4
- 
-            - Byte7 : GPS Longitude 32bit_3 |B4
